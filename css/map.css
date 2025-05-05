@@ -1,0 +1,3228 @@
+@media (min-width: 1920px) and (max-width: 2560px) {
+.map{
+    height: auto;
+    /* margin-bottom: 20px; */
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-top: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    /* border-radius: 20px; */
+    /* overflow: hidden; */
+    margin-top: 32%;
+    /* background-color: #000 !important; */
+    /* background-color: #000 !important; */
+    
+}
+.world{
+    padding-top: 2%;
+    /* background-color: #000 !important; */
+    border-radius: 20px;
+    padding-bottom: 2%;
+    overflow: clip;
+    /* background-color: rgba(0, 0, 0, 0.1) !important; */
+    opacity: 1;
+}
+.worldimg {
+    position: relative;
+    text-align: center;
+    margin-top: 6%;
+    /* margin-left: 20%; */
+    /* height: 750px; */
+  }
+  .worldimg > img {
+    /* filter: brightness(70%); */
+    /* filter:invert(88%); */
+    /* filter: drop-shadow(180px 180px #000); */
+    /* filter: grayscale(80%) drop-shadow(00%) brightness(0%); */
+    /* box-shadow: inset 180px 180px 0px #000; */
+    position: relative;
+     margin-left: 14%;
+     /* padding-bottom: 14%; */
+/* overflow: hidden; */
+    /* margin-bottom: 4%; */
+    width: 100%;
+    /* height: 80%; */
+    opacity: 1;
+  }
+  
+  .countries {
+    position: relative;
+    bottom: 8px;
+    left: 16px;
+  }
+  .countries > button {
+    position: absolute;
+    background-color: lightgray !important;
+    border-radius: 40px;
+    width: 2px;
+    height: 12px;
+    transform: scale(0);
+    opacity: 0;
+    animation: mapdots linear forwards;
+    animation-timeline: view();
+    /* animation-range-start: 100px;
+    animation-range-end: 100px; */
+  
+    /* animation-duration: 400ms; */
+    /* animation-name: mapdots; */
+    animation-range: contain 0% contain 24%;
+    /* animation-fill-mode: both; */
+    animation-duration: 1s;
+    border: none !important;
+  }
+  /* button:hover {
+    animation: hvr-ripple-out 400ms ;
+  } */
+  
+  @-webkit-keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out1 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    /* animation-iteration-count: infinite; */
+  }
+  .hvr-ripple-out1:before {
+    content: "";
+    position: absolute;
+    border: #9b7c45 solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out1:hover:before,
+  .hvr-ripple-out1:focus:before,
+  .hvr-ripple-out1:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+    /* animation-iteration-count: 2; */
+  }
+  @-webkit-keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+  }
+  .hvr-ripple-out:before {
+    content: "";
+    position: absolute;
+    border: lightgray solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out:hover:before,
+  .hvr-ripple-out:focus:before,
+  .hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+  }
+  
+  .uk {
+    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+    width: 24px !important;
+    height: 24px !important;
+    bottom: 562px;
+    left:768px;
+    animation-delay: 1s;
+    animation-range: entry 60% contain 10% !important;
+    transform: scale(0);
+    opacity: 0;
+  }
+  .uae {
+    bottom: 434px;
+    left: 966px;
+    animation-delay: 1s;
+  }
+  .usa {
+    bottom: 510px;
+    left: 448px;
+    animation-delay: 1s;
+  }
+  .germany {
+    bottom: 560px;
+    left: 820px;
+    animation-delay: 1s;
+  }
+  .france {
+    bottom: 548px;
+    left: 796px;
+    animation-delay: 1s;
+  }
+  .italy {
+    bottom: 518px;
+    left: 828px;
+    animation-delay: 1s;
+  }
+  .spain {
+    bottom: 510px;
+    left: 770px;
+    animation-delay: 1s;
+  }
+  .china {
+    bottom: 480px;
+    left: 1120px;
+    animation-delay: 1s;
+  }
+  .canada {
+    bottom: 588px;
+    left: 420px;
+    animation-delay: 1s;
+  }
+  .turkey {
+    bottom: 510px;
+    left: 900px;
+    animation-delay: 1s;
+  }
+  .australia {
+    bottom: 226px;
+    left: 1236px;
+    animation-delay: 1s;
+  }
+  .india {
+    bottom: 400px;
+    left: 1040px;
+    animation-delay: 1s;
+  }
+  .ksa {
+    bottom: 424px;
+    left: 936px;
+    animation-delay: 1s;
+  }
+  .southafrica {
+    bottom: 224px;
+    left: 860px;
+    animation-delay: 1s;
+  }
+  @keyframes mapdots {
+    20% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 0.2;
+      transform: scale(0.2);
+    }
+    60% {
+      opacity: 0.4;
+      transform: scale(0.4);
+    }
+    80% {
+      opacity: 0.8;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* .canvuae {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 240px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 204px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 301deg;
+    transition: 1s linear;
+    transform-origin: right;
+  } */
+  /* .uae:click, .canvuae{
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 246px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 185px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 305deg;
+    transition: 300ms;
+  
+  } */
+  /*.usa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 355px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -202px;
+    left: 188px;
+    margin-left: -1px;
+    rotate: 81deg;
+  }
+  .germany:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 30px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -16px;
+    left: -14px;
+    margin-left: -1px;
+    rotate: 287deg;
+  }
+  .france:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 18px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -14px;
+    left: 2px;
+    margin-left: -1px;
+    rotate: 336deg;
+  }
+  .italy:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 65px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -55px;
+    left: -20px;
+    margin-left: -1px;
+    rotate: 315deg;
+  }
+  .spain:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 49px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -49px;
+    left: 9px;
+    margin-left: -1px;
+    rotate: 6deg;
+  }
+  .china:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 412px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -258px;
+    left: -198px;
+    margin-left: -1px;
+    rotate: 285.5deg;
+  }
+  .canada:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 400px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -178px;
+    left: 214px;
+    margin-left: -1px;
+    rotate: 94.5deg;
+  }
+  .turkey:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 140px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -100px;
+    left: -60px;
+    margin-left: -1px;
+    rotate: 297deg;
+  }
+  .australia:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 596px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -468px;
+    left: -238px;
+    margin-left: -1px;
+    rotate: 305.5deg;
+  }
+  .india:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 314px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -223px;
+    left: -137px;
+    margin-left: -1px;
+    rotate: 296.5deg;
+  }
+  .ksa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 208px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -172px;
+    left: -78px;
+    margin-left: -1px;
+    rotate: 311deg;
+  }
+  .southafrica:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 370px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -362px;
+    left: -40px;
+    margin-left: -1px;
+    rotate: 346deg;
+  } */
+  .accordion {
+    width: 18% !important;
+    position: absolute;
+    top: 8%;
+    left: -14%;
+    border: none;
+    /* border-bottom: 2px whitesmoke; */
+    background: #000;
+  }
+  .accordion-item {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: gray !important;
+  }
+  .accordion-button {
+    font-size: 14px !important;
+    background-color: #fff !important;
+    filter: invert(100%) saturate(100%);
+  }
+  .accordion-body {
+    /* width: 18px !important;
+    height: 18px !important; */
+    background-color: #000 !important;
+  }
+  
+  .accordion-header {
+    padding-left: 0 !important;
+  }
+  .canva {
+    /* background-color: #191970 !important; */
+    background-color: #9b7c45 !important;
+    border: none !important;
+    color: whitesmoke !important;
+    font-size: 12px !important;
+  }
+  .offcanvas {
+    background: transparent !important;
+    width: 640px;
+    transition-duration: 0.4s !important;
+    animation-fill-mode: both;
+  }
+  .offcanvas-title {
+    color: whitesmoke;
+    font-size: 28px !important;
+  }
+  
+  .offcanvas-backdrop.show {
+    opacity: 1;
+    /* background-color: transparent; */
+    backdrop-filter: blur(0%);
+  }
+  .offcanvas-body {
+    width: 640px;
+    align-content: center;
+    overflow: hidden !important;
+  }
+  .more {
+    border-radius: 24px;
+  }
+  .offcanvas-header {
+    height: 280px !important;
+    align-items: end !important;
+  }
+  .btn-close {
+    width: 40px !important;
+    height: 40px !important;
+    filter: invert(100%) opacity(1) brightness(100%) grayscale(#fff);
+  }
+}
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .map{
+      height: auto;
+      /* margin-bottom: 20px; */
+      background-color: transparent !important;
+      border: 48px solid transparent;
+      border-top: 48px solid transparent;
+      border-bottom: 24px solid transparent;
+      /* border-radius: 20px; */
+      /* overflow: hidden; */
+      margin-top: 32%;
+      /* background-color: #000 !important; */
+      /* background-color: #000 !important; */
+      
+  }
+  .world{
+      padding-top: 2%;
+      /* background-color: #000 !important; */
+      border-radius: 20px;
+      padding-bottom: 2%;
+      overflow: clip;
+      /* background-color: rgba(0, 0, 0, 0.1) !important; */
+      opacity: 1;
+  }
+  .worldimg {
+      position: relative;
+      text-align: center;
+      margin-top: 6%;
+      /* margin-left: 20%; */
+      /* height: 750px; */
+    }
+    .worldimg > img {
+      /* filter: brightness(70%); */
+      /* filter:invert(88%); */
+      /* filter: drop-shadow(180px 180px #000); */
+      /* filter: grayscale(80%) drop-shadow(00%) brightness(0%); */
+      /* box-shadow: inset 180px 180px 0px #000; */
+      position: relative;
+       margin-left: 14%;
+       /* padding-bottom: 14%; */
+  /* overflow: hidden; */
+      /* margin-bottom: 4%; */
+      width: 100%;
+      /* height: 80%; */
+      opacity: 1;
+    }
+    
+    .countries {
+      position: relative;
+      bottom: 8px;
+      left: 16px;
+    }
+    .countries > button {
+      position: absolute;
+      background-color: lightgray !important;
+      border-radius: 40px;
+      width: 2px;
+      height: 12px;
+      transform: scale(0);
+      opacity: 0;
+      animation: mapdots linear forwards;
+      animation-timeline: view();
+      /* animation-range-start: 100px;
+      animation-range-end: 100px; */
+    
+      /* animation-duration: 400ms; */
+      /* animation-name: mapdots; */
+      animation-range: contain 0% contain 24%;
+      /* animation-fill-mode: both; */
+      animation-duration: 1s;
+      border: none !important;
+    }
+    /* button:hover {
+      animation: hvr-ripple-out 400ms ;
+    } */
+    
+    @-webkit-keyframes hvr-ripple-out1 {
+      100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+      }
+    }
+    @keyframes hvr-ripple-out1 {
+      100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+      }
+    }
+    .hvr-ripple-out1 {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      /* animation-iteration-count: infinite; */
+    }
+    .hvr-ripple-out1:before {
+      content: "";
+      position: absolute;
+      border: #9b7c45 solid 6px;
+      border-radius: 14px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    .hvr-ripple-out1:hover:before,
+    .hvr-ripple-out1:focus:before,
+    .hvr-ripple-out1:active:before {
+      -webkit-animation-name: hvr-ripple-out;
+      animation-name: hvr-ripple-out;
+      /* animation-iteration-count: 2; */
+    }
+    @-webkit-keyframes hvr-ripple-out {
+      100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+      }
+    }
+    @keyframes hvr-ripple-out {
+      100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+      }
+    }
+    .hvr-ripple-out {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+    }
+    .hvr-ripple-out:before {
+      content: "";
+      position: absolute;
+      border: lightgray solid 6px;
+      border-radius: 14px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    .hvr-ripple-out:hover:before,
+    .hvr-ripple-out:focus:before,
+    .hvr-ripple-out:active:before {
+      -webkit-animation-name: hvr-ripple-out;
+      animation-name: hvr-ripple-out;
+    }
+    
+    .uk {
+      background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+      width: 24px !important;
+      height: 24px !important;
+      bottom: 562px;
+      left:768px;
+      animation-delay: 1s;
+      animation-range: entry 60% contain 10% !important;
+      transform: scale(0);
+      opacity: 0;
+    }
+    .uae {
+      bottom: 434px;
+      left: 966px;
+      animation-delay: 1s;
+    }
+    .usa {
+      bottom: 510px;
+      left: 448px;
+      animation-delay: 1s;
+    }
+    .germany {
+      bottom: 560px;
+      left: 820px;
+      animation-delay: 1s;
+    }
+    .france {
+      bottom: 548px;
+      left: 796px;
+      animation-delay: 1s;
+    }
+    .italy {
+      bottom: 518px;
+      left: 828px;
+      animation-delay: 1s;
+    }
+    .spain {
+      bottom: 510px;
+      left: 770px;
+      animation-delay: 1s;
+    }
+    .china {
+      bottom: 480px;
+      left: 1120px;
+      animation-delay: 1s;
+    }
+    .canada {
+      bottom: 588px;
+      left: 420px;
+      animation-delay: 1s;
+    }
+    .turkey {
+      bottom: 510px;
+      left: 900px;
+      animation-delay: 1s;
+    }
+    .australia {
+      bottom: 226px;
+      left: 1236px;
+      animation-delay: 1s;
+    }
+    .india {
+      bottom: 400px;
+      left: 1040px;
+      animation-delay: 1s;
+    }
+    .ksa {
+      bottom: 424px;
+      left: 936px;
+      animation-delay: 1s;
+    }
+    .southafrica {
+      bottom: 224px;
+      left: 860px;
+      animation-delay: 1s;
+    }
+    @keyframes mapdots {
+      20% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      40% {
+        opacity: 0.2;
+        transform: scale(0.2);
+      }
+      60% {
+        opacity: 0.4;
+        transform: scale(0.4);
+      }
+      80% {
+        opacity: 0.8;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    /* .canvuae {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 240px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: 204px;
+      left: 720px;
+      margin-left: -1px;
+      rotate: 301deg;
+      transition: 1s linear;
+      transform-origin: right;
+    } */
+    /* .uae:click, .canvuae{
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 246px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: 185px;
+      left: 720px;
+      margin-left: -1px;
+      rotate: 305deg;
+      transition: 300ms;
+    
+    } */
+    /*.usa:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 355px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -202px;
+      left: 188px;
+      margin-left: -1px;
+      rotate: 81deg;
+    }
+    .germany:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 30px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -16px;
+      left: -14px;
+      margin-left: -1px;
+      rotate: 287deg;
+    }
+    .france:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 18px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -14px;
+      left: 2px;
+      margin-left: -1px;
+      rotate: 336deg;
+    }
+    .italy:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 65px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -55px;
+      left: -20px;
+      margin-left: -1px;
+      rotate: 315deg;
+    }
+    .spain:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 49px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -49px;
+      left: 9px;
+      margin-left: -1px;
+      rotate: 6deg;
+    }
+    .china:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 412px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -258px;
+      left: -198px;
+      margin-left: -1px;
+      rotate: 285.5deg;
+    }
+    .canada:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 400px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -178px;
+      left: 214px;
+      margin-left: -1px;
+      rotate: 94.5deg;
+    }
+    .turkey:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 140px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -100px;
+      left: -60px;
+      margin-left: -1px;
+      rotate: 297deg;
+    }
+    .australia:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 596px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -468px;
+      left: -238px;
+      margin-left: -1px;
+      rotate: 305.5deg;
+    }
+    .india:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 314px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -223px;
+      left: -137px;
+      margin-left: -1px;
+      rotate: 296.5deg;
+    }
+    .ksa:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 208px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -172px;
+      left: -78px;
+      margin-left: -1px;
+      rotate: 311deg;
+    }
+    .southafrica:before {
+      position: absolute;
+      border: 1px solid #c5a86e;
+      width: 0;
+      height: 370px;
+      display: block;
+      content: "";
+      left: 50%;
+      z-index: 1;
+      top: -362px;
+      left: -40px;
+      margin-left: -1px;
+      rotate: 346deg;
+    } */
+    .accordion {
+      width: 18% !important;
+      position: absolute;
+      top: 8%;
+      left: -14%;
+      border: none;
+      /* border-bottom: 2px whitesmoke; */
+      background: #000;
+    }
+    .accordion-item {
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: gray !important;
+    }
+    .accordion-button {
+      font-size: 14px !important;
+      background-color: #fff !important;
+      filter: invert(100%) saturate(100%);
+    }
+    .accordion-body {
+      /* width: 18px !important;
+      height: 18px !important; */
+      background-color: #000 !important;
+    }
+    
+    .accordion-header {
+      padding-left: 0 !important;
+    }
+    .canva {
+      /* background-color: #191970 !important; */
+      background-color: #9b7c45 !important;
+      border: none !important;
+      color: whitesmoke !important;
+      font-size: 12px !important;
+    }
+    .offcanvas {
+      background: transparent !important;
+      width: 640px;
+      transition-duration: 0.4s !important;
+      animation-fill-mode: both;
+    }
+    .offcanvas-title {
+      color: whitesmoke;
+      font-size: 28px !important;
+    }
+    
+    .offcanvas-backdrop.show {
+      opacity: 1;
+      /* background-color: transparent; */
+      backdrop-filter: blur(0%);
+    }
+    .offcanvas-body {
+      width: 640px;
+      align-content: center;
+      overflow: hidden !important;
+    }
+    .more {
+      border-radius: 24px;
+    }
+    .offcanvas-header {
+      height: 280px !important;
+      align-items: end !important;
+    }
+    .btn-close {
+      width: 40px !important;
+      height: 40px !important;
+      filter: invert(100%) opacity(1) brightness(100%) grayscale(#fff);
+    }
+  }
+@media (min-width: 1200px) and (max-width: 1400px) {
+.map{
+    height: auto;
+    /* margin-bottom: 20px; */
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-top: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    /* border-radius: 20px; */
+    /* overflow: hidden; */
+    margin-top: 28%;
+    /* background-color: #000 !important; */
+    /* background-color: #000 !important; */
+    
+}
+.world{
+    padding-top: 2%;
+    /* background-color: #000 !important; */
+    border-radius: 20px;
+    padding-bottom: 2%;
+    overflow: clip;
+    /* background-color: rgba(0, 0, 0, 0.1) !important; */
+    opacity: 1;
+}
+.worldimg {
+    position: relative;
+    text-align: center;
+    margin-top: 6%;
+    /* margin-left: 20%; */
+    /* height: 750px; */
+  }
+  .worldimg > img {
+    /* filter: brightness(70%); */
+    /* filter:invert(88%); */
+    /* filter: drop-shadow(180px 180px #000); */
+    /* filter: grayscale(80%) drop-shadow(00%) brightness(0%); */
+    /* box-shadow: inset 180px 180px 0px #000; */
+    position: relative;
+     margin-left: 14%;
+     /* padding-bottom: 14%; */
+/* overflow: hidden; */
+    /* margin-bottom: 4%; */
+    width: 100%;
+    /* height: 80%; */
+    opacity: 1;
+  }
+  
+  .countries {
+    position: relative;
+    bottom: 8px;
+    left: 16px;
+  }
+  .countries > button {
+    position: absolute;
+    background-color: lightgray !important;
+    border-radius: 40px;
+    width: 2px;
+    height: 12px;
+    transform: scale(0);
+    opacity: 0;
+    animation: mapdots linear forwards;
+    animation-timeline: view();
+    /* animation-range-start: 100px;
+    animation-range-end: 100px; */
+  
+    /* animation-duration: 400ms; */
+    /* animation-name: mapdots; */
+    animation-range: contain 0% contain 24%;
+    /* animation-fill-mode: both; */
+    animation-duration: 1s;
+    border: none !important;
+  }
+  /* button:hover {
+    animation: hvr-ripple-out 400ms ;
+  } */
+  
+  @-webkit-keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out1 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    /* animation-iteration-count: infinite; */
+  }
+  .hvr-ripple-out1:before {
+    content: "";
+    position: absolute;
+    border: #9b7c45 solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out1:hover:before,
+  .hvr-ripple-out1:focus:before,
+  .hvr-ripple-out1:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+    /* animation-iteration-count: 2; */
+  }
+  @-webkit-keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+  }
+  .hvr-ripple-out:before {
+    content: "";
+    position: absolute;
+    border: lightgray solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out:hover:before,
+  .hvr-ripple-out:focus:before,
+  .hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+  }
+  
+  .uk {
+    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+    width: 24px !important;
+    height: 24px !important;
+    bottom: 562px;
+    left:768px;
+    animation-delay: 1s;
+    animation-range: entry 60% contain 10% !important;
+    transform: scale(0);
+    opacity: 0;
+  }
+  .uae {
+    bottom: 434px;
+    left: 966px;
+    animation-delay: 1s;
+  }
+  .usa {
+    bottom: 510px;
+    left: 448px;
+    animation-delay: 1s;
+  }
+  .germany {
+    bottom: 560px;
+    left: 820px;
+    animation-delay: 1s;
+  }
+  .france {
+    bottom: 548px;
+    left: 796px;
+    animation-delay: 1s;
+  }
+  .italy {
+    bottom: 518px;
+    left: 828px;
+    animation-delay: 1s;
+  }
+  .spain {
+    bottom: 510px;
+    left: 770px;
+    animation-delay: 1s;
+  }
+  .china {
+    bottom: 480px;
+    left: 1120px;
+    animation-delay: 1s;
+  }
+  .canada {
+    bottom: 588px;
+    left: 420px;
+    animation-delay: 1s;
+  }
+  .turkey {
+    bottom: 510px;
+    left: 900px;
+    animation-delay: 1s;
+  }
+  .australia {
+    bottom: 226px;
+    left: 1236px;
+    animation-delay: 1s;
+  }
+  .india {
+    bottom: 400px;
+    left: 1040px;
+    animation-delay: 1s;
+  }
+  .ksa {
+    bottom: 424px;
+    left: 936px;
+    animation-delay: 1s;
+  }
+  .southafrica {
+    bottom: 224px;
+    left: 860px;
+    animation-delay: 1s;
+  }
+  @keyframes mapdots {
+    20% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 0.2;
+      transform: scale(0.2);
+    }
+    60% {
+      opacity: 0.4;
+      transform: scale(0.4);
+    }
+    80% {
+      opacity: 0.8;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* .canvuae {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 240px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 204px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 301deg;
+    transition: 1s linear;
+    transform-origin: right;
+  } */
+  /* .uae:click, .canvuae{
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 246px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 185px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 305deg;
+    transition: 300ms;
+  
+  } */
+  /*.usa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 355px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -202px;
+    left: 188px;
+    margin-left: -1px;
+    rotate: 81deg;
+  }
+  .germany:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 30px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -16px;
+    left: -14px;
+    margin-left: -1px;
+    rotate: 287deg;
+  }
+  .france:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 18px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -14px;
+    left: 2px;
+    margin-left: -1px;
+    rotate: 336deg;
+  }
+  .italy:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 65px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -55px;
+    left: -20px;
+    margin-left: -1px;
+    rotate: 315deg;
+  }
+  .spain:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 49px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -49px;
+    left: 9px;
+    margin-left: -1px;
+    rotate: 6deg;
+  }
+  .china:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 412px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -258px;
+    left: -198px;
+    margin-left: -1px;
+    rotate: 285.5deg;
+  }
+  .canada:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 400px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -178px;
+    left: 214px;
+    margin-left: -1px;
+    rotate: 94.5deg;
+  }
+  .turkey:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 140px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -100px;
+    left: -60px;
+    margin-left: -1px;
+    rotate: 297deg;
+  }
+  .australia:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 596px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -468px;
+    left: -238px;
+    margin-left: -1px;
+    rotate: 305.5deg;
+  }
+  .india:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 314px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -223px;
+    left: -137px;
+    margin-left: -1px;
+    rotate: 296.5deg;
+  }
+  .ksa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 208px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -172px;
+    left: -78px;
+    margin-left: -1px;
+    rotate: 311deg;
+  }
+  .southafrica:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 370px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -362px;
+    left: -40px;
+    margin-left: -1px;
+    rotate: 346deg;
+  } */
+  .accordion {
+    width: 18% !important;
+    position: absolute;
+    top: 8%;
+    left: -14%;
+    border: none;
+    /* border-bottom: 2px whitesmoke; */
+    background: #000;
+  }
+  .accordion-item {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: gray !important;
+  }
+  .accordion-button {
+    font-size: 14px !important;
+    background-color: #fff !important;
+    filter: invert(100%) saturate(100%);
+  }
+  .accordion-body {
+    /* width: 18px !important;
+    height: 18px !important; */
+    background-color: #000 !important;
+  }
+  
+  .accordion-header {
+    padding-left: 0 !important;
+  }
+  .canva {
+    /* background-color: #191970 !important; */
+    background-color: #9b7c45 !important;
+    border: none !important;
+    color: whitesmoke !important;
+    font-size: 12px !important;
+  }
+  .offcanvas {
+    background: transparent !important;
+    width: 640px;
+    transition-duration: 0.4s !important;
+    animation-fill-mode: both;
+  }
+  .offcanvas-title {
+    color: whitesmoke;
+    font-size: 28px !important;
+  }
+  
+  .offcanvas-backdrop.show {
+    opacity: 1;
+    /* background-color: transparent; */
+    backdrop-filter: blur(0%);
+  }
+  .offcanvas-body {
+    width: 640px;
+    align-content: center;
+    overflow: hidden !important;
+  }
+  .more {
+    border-radius: 24px;
+  }
+  .offcanvas-header {
+    height: 280px !important;
+    align-items: end !important;
+  }
+  .btn-close {
+    width: 40px !important;
+    height: 40px !important;
+    filter: invert(100%) opacity(1) brightness(100%) grayscale(#fff);
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+.map{
+    height: auto;
+    /* margin-bottom: 20px; */
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-top: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    /* border-radius: 20px; */
+    /* overflow: hidden; */
+    margin-top: 28%;
+    /* background-color: #000 !important; */
+    /* background-color: #000 !important; */
+    
+}
+.world{
+    padding-top: 2%;
+    /* background-color: #000 !important; */
+    border-radius: 20px;
+    padding-bottom: 2%;
+    overflow: clip;
+    /* background-color: rgba(0, 0, 0, 0.1) !important; */
+    opacity: 1;
+}
+.worldimg {
+    position: relative;
+    text-align: center;
+    margin-top: 6%;
+    /* margin-left: 20%; */
+    /* height: 750px; */
+  }
+  .worldimg > img {
+    /* filter: brightness(70%); */
+    /* filter:invert(88%); */
+    /* filter: drop-shadow(180px 180px #000); */
+    /* filter: grayscale(80%) drop-shadow(00%) brightness(0%); */
+    /* box-shadow: inset 180px 180px 0px #000; */
+    position: relative;
+     margin-left: 14%;
+     /* padding-bottom: 14%; */
+/* overflow: hidden; */
+    /* margin-bottom: 4%; */
+    width: 100%;
+    /* height: 80%; */
+    opacity: 1;
+  }
+  
+  .countries {
+    position: relative;
+    bottom: 8px;
+    left: 16px;
+  }
+  .countries > button {
+    position: absolute;
+    background-color: lightgray !important;
+    border-radius: 40px;
+    width: 2px;
+    height: 12px;
+    transform: scale(0);
+    opacity: 0;
+    animation: mapdots linear forwards;
+    animation-timeline: view();
+    /* animation-range-start: 100px;
+    animation-range-end: 100px; */
+  
+    /* animation-duration: 400ms; */
+    /* animation-name: mapdots; */
+    animation-range: contain 0% contain 24%;
+    /* animation-fill-mode: both; */
+    animation-duration: 1s;
+    border: none !important;
+  }
+  /* button:hover {
+    animation: hvr-ripple-out 400ms ;
+  } */
+  
+  @-webkit-keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out1 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    /* animation-iteration-count: infinite; */
+  }
+  .hvr-ripple-out1:before {
+    content: "";
+    position: absolute;
+    border: #9b7c45 solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out1:hover:before,
+  .hvr-ripple-out1:focus:before,
+  .hvr-ripple-out1:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+    /* animation-iteration-count: 2; */
+  }
+  @-webkit-keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+  }
+  .hvr-ripple-out:before {
+    content: "";
+    position: absolute;
+    border: lightgray solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out:hover:before,
+  .hvr-ripple-out:focus:before,
+  .hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+  }
+  
+  .uk {
+    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+    width: 24px !important;
+    height: 24px !important;
+    bottom: 562px;
+    left:768px;
+    animation-delay: 1s;
+    animation-range: entry 60% contain 10% !important;
+    transform: scale(0);
+    opacity: 0;
+  }
+  .uae {
+    bottom: 434px;
+    left: 966px;
+    animation-delay: 1s;
+  }
+  .usa {
+    bottom: 510px;
+    left: 448px;
+    animation-delay: 1s;
+  }
+  .germany {
+    bottom: 560px;
+    left: 820px;
+    animation-delay: 1s;
+  }
+  .france {
+    bottom: 548px;
+    left: 796px;
+    animation-delay: 1s;
+  }
+  .italy {
+    bottom: 518px;
+    left: 828px;
+    animation-delay: 1s;
+  }
+  .spain {
+    bottom: 510px;
+    left: 770px;
+    animation-delay: 1s;
+  }
+  .china {
+    bottom: 480px;
+    left: 1120px;
+    animation-delay: 1s;
+  }
+  .canada {
+    bottom: 588px;
+    left: 420px;
+    animation-delay: 1s;
+  }
+  .turkey {
+    bottom: 510px;
+    left: 900px;
+    animation-delay: 1s;
+  }
+  .australia {
+    bottom: 226px;
+    left: 1236px;
+    animation-delay: 1s;
+  }
+  .india {
+    bottom: 400px;
+    left: 1040px;
+    animation-delay: 1s;
+  }
+  .ksa {
+    bottom: 424px;
+    left: 936px;
+    animation-delay: 1s;
+  }
+  .southafrica {
+    bottom: 224px;
+    left: 860px;
+    animation-delay: 1s;
+  }
+  @keyframes mapdots {
+    20% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 0.2;
+      transform: scale(0.2);
+    }
+    60% {
+      opacity: 0.4;
+      transform: scale(0.4);
+    }
+    80% {
+      opacity: 0.8;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* .canvuae {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 240px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 204px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 301deg;
+    transition: 1s linear;
+    transform-origin: right;
+  } */
+  /* .uae:click, .canvuae{
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 246px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 185px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 305deg;
+    transition: 300ms;
+  
+  } */
+  /*.usa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 355px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -202px;
+    left: 188px;
+    margin-left: -1px;
+    rotate: 81deg;
+  }
+  .germany:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 30px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -16px;
+    left: -14px;
+    margin-left: -1px;
+    rotate: 287deg;
+  }
+  .france:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 18px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -14px;
+    left: 2px;
+    margin-left: -1px;
+    rotate: 336deg;
+  }
+  .italy:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 65px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -55px;
+    left: -20px;
+    margin-left: -1px;
+    rotate: 315deg;
+  }
+  .spain:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 49px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -49px;
+    left: 9px;
+    margin-left: -1px;
+    rotate: 6deg;
+  }
+  .china:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 412px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -258px;
+    left: -198px;
+    margin-left: -1px;
+    rotate: 285.5deg;
+  }
+  .canada:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 400px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -178px;
+    left: 214px;
+    margin-left: -1px;
+    rotate: 94.5deg;
+  }
+  .turkey:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 140px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -100px;
+    left: -60px;
+    margin-left: -1px;
+    rotate: 297deg;
+  }
+  .australia:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 596px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -468px;
+    left: -238px;
+    margin-left: -1px;
+    rotate: 305.5deg;
+  }
+  .india:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 314px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -223px;
+    left: -137px;
+    margin-left: -1px;
+    rotate: 296.5deg;
+  }
+  .ksa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 208px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -172px;
+    left: -78px;
+    margin-left: -1px;
+    rotate: 311deg;
+  }
+  .southafrica:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 370px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -362px;
+    left: -40px;
+    margin-left: -1px;
+    rotate: 346deg;
+  } */
+  .accordion {
+    width: 18% !important;
+    position: absolute;
+    top: 8%;
+    left: -14%;
+    border: none;
+    /* border-bottom: 2px whitesmoke; */
+    background: #000;
+  }
+  .accordion-item {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: gray !important;
+  }
+  .accordion-button {
+    font-size: 14px !important;
+    background-color: #fff !important;
+    filter: invert(100%) saturate(100%);
+  }
+  .accordion-body {
+    /* width: 18px !important;
+    height: 18px !important; */
+    background-color: #000 !important;
+  }
+  
+  .accordion-header {
+    padding-left: 0 !important;
+  }
+  .canva {
+    /* background-color: #191970 !important; */
+    background-color: #9b7c45 !important;
+    border: none !important;
+    color: whitesmoke !important;
+    font-size: 12px !important;
+  }
+  .offcanvas {
+    background: transparent !important;
+    width: 640px;
+    transition-duration: 0.4s !important;
+    animation-fill-mode: both;
+  }
+  .offcanvas-title {
+    color: whitesmoke;
+    font-size: 28px !important;
+  }
+  
+  .offcanvas-backdrop.show {
+    opacity: 1;
+    /* background-color: transparent; */
+    backdrop-filter: blur(0%);
+  }
+  .offcanvas-body {
+    width: 640px;
+    align-content: center;
+    overflow: hidden !important;
+  }
+  .more {
+    border-radius: 24px;
+  }
+  .offcanvas-header {
+    height: 280px !important;
+    align-items: end !important;
+  }
+  .btn-close {
+    width: 40px !important;
+    height: 40px !important;
+    filter: invert(100%) opacity(1) brightness(100%) grayscale(#fff);
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+.map{
+    height: auto;
+    /* margin-bottom: 20px; */
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-top: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    /* border-radius: 20px; */
+    /* overflow: hidden; */
+    margin-top: 28%;
+    /* background-color: #000 !important; */
+    /* background-color: #000 !important; */
+    
+}
+.world{
+    padding-top: 2%;
+    /* background-color: #000 !important; */
+    border-radius: 20px;
+    padding-bottom: 2%;
+    overflow: clip;
+    /* background-color: rgba(0, 0, 0, 0.1) !important; */
+    opacity: 1;
+}
+.worldimg {
+    position: relative;
+    text-align: center;
+    margin-top: 6%;
+    /* margin-left: 20%; */
+    /* height: 750px; */
+  }
+  .worldimg > img {
+    /* filter: brightness(70%); */
+    /* filter:invert(88%); */
+    /* filter: drop-shadow(180px 180px #000); */
+    /* filter: grayscale(80%) drop-shadow(00%) brightness(0%); */
+    /* box-shadow: inset 180px 180px 0px #000; */
+    position: relative;
+     margin-left: 14%;
+     /* padding-bottom: 14%; */
+/* overflow: hidden; */
+    /* margin-bottom: 4%; */
+    width: 100%;
+    /* height: 80%; */
+    opacity: 1;
+  }
+  
+  .countries {
+    position: relative;
+    bottom: 8px;
+    left: 16px;
+  }
+  .countries > button {
+    position: absolute;
+    background-color: lightgray !important;
+    border-radius: 40px;
+    width: 2px;
+    height: 12px;
+    transform: scale(0);
+    opacity: 0;
+    animation: mapdots linear forwards;
+    animation-timeline: view();
+    /* animation-range-start: 100px;
+    animation-range-end: 100px; */
+  
+    /* animation-duration: 400ms; */
+    /* animation-name: mapdots; */
+    animation-range: contain 0% contain 24%;
+    /* animation-fill-mode: both; */
+    animation-duration: 1s;
+    border: none !important;
+  }
+  /* button:hover {
+    animation: hvr-ripple-out 400ms ;
+  } */
+  
+  @-webkit-keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out1 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    /* animation-iteration-count: infinite; */
+  }
+  .hvr-ripple-out1:before {
+    content: "";
+    position: absolute;
+    border: #9b7c45 solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out1:hover:before,
+  .hvr-ripple-out1:focus:before,
+  .hvr-ripple-out1:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+    /* animation-iteration-count: 2; */
+  }
+  @-webkit-keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+  }
+  .hvr-ripple-out:before {
+    content: "";
+    position: absolute;
+    border: lightgray solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out:hover:before,
+  .hvr-ripple-out:focus:before,
+  .hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+  }
+  
+  .uk {
+    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+    width: 24px !important;
+    height: 24px !important;
+    bottom: 562px;
+    left:768px;
+    animation-delay: 1s;
+    animation-range: entry 60% contain 10% !important;
+    transform: scale(0);
+    opacity: 0;
+  }
+  .uae {
+    bottom: 434px;
+    left: 966px;
+    animation-delay: 1s;
+  }
+  .usa {
+    bottom: 510px;
+    left: 448px;
+    animation-delay: 1s;
+  }
+  .germany {
+    bottom: 560px;
+    left: 820px;
+    animation-delay: 1s;
+  }
+  .france {
+    bottom: 548px;
+    left: 796px;
+    animation-delay: 1s;
+  }
+  .italy {
+    bottom: 518px;
+    left: 828px;
+    animation-delay: 1s;
+  }
+  .spain {
+    bottom: 510px;
+    left: 770px;
+    animation-delay: 1s;
+  }
+  .china {
+    bottom: 480px;
+    left: 1120px;
+    animation-delay: 1s;
+  }
+  .canada {
+    bottom: 588px;
+    left: 420px;
+    animation-delay: 1s;
+  }
+  .turkey {
+    bottom: 510px;
+    left: 900px;
+    animation-delay: 1s;
+  }
+  .australia {
+    bottom: 226px;
+    left: 1236px;
+    animation-delay: 1s;
+  }
+  .india {
+    bottom: 400px;
+    left: 1040px;
+    animation-delay: 1s;
+  }
+  .ksa {
+    bottom: 424px;
+    left: 936px;
+    animation-delay: 1s;
+  }
+  .southafrica {
+    bottom: 224px;
+    left: 860px;
+    animation-delay: 1s;
+  }
+  @keyframes mapdots {
+    20% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 0.2;
+      transform: scale(0.2);
+    }
+    60% {
+      opacity: 0.4;
+      transform: scale(0.4);
+    }
+    80% {
+      opacity: 0.8;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* .canvuae {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 240px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 204px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 301deg;
+    transition: 1s linear;
+    transform-origin: right;
+  } */
+  /* .uae:click, .canvuae{
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 246px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 185px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 305deg;
+    transition: 300ms;
+  
+  } */
+  /*.usa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 355px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -202px;
+    left: 188px;
+    margin-left: -1px;
+    rotate: 81deg;
+  }
+  .germany:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 30px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -16px;
+    left: -14px;
+    margin-left: -1px;
+    rotate: 287deg;
+  }
+  .france:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 18px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -14px;
+    left: 2px;
+    margin-left: -1px;
+    rotate: 336deg;
+  }
+  .italy:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 65px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -55px;
+    left: -20px;
+    margin-left: -1px;
+    rotate: 315deg;
+  }
+  .spain:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 49px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -49px;
+    left: 9px;
+    margin-left: -1px;
+    rotate: 6deg;
+  }
+  .china:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 412px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -258px;
+    left: -198px;
+    margin-left: -1px;
+    rotate: 285.5deg;
+  }
+  .canada:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 400px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -178px;
+    left: 214px;
+    margin-left: -1px;
+    rotate: 94.5deg;
+  }
+  .turkey:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 140px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -100px;
+    left: -60px;
+    margin-left: -1px;
+    rotate: 297deg;
+  }
+  .australia:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 596px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -468px;
+    left: -238px;
+    margin-left: -1px;
+    rotate: 305.5deg;
+  }
+  .india:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 314px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -223px;
+    left: -137px;
+    margin-left: -1px;
+    rotate: 296.5deg;
+  }
+  .ksa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 208px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -172px;
+    left: -78px;
+    margin-left: -1px;
+    rotate: 311deg;
+  }
+  .southafrica:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 370px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -362px;
+    left: -40px;
+    margin-left: -1px;
+    rotate: 346deg;
+  } */
+  .accordion {
+    width: 18% !important;
+    position: absolute;
+    top: 8%;
+    left: -14%;
+    border: none;
+    /* border-bottom: 2px whitesmoke; */
+    background: #000;
+  }
+  .accordion-item {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: gray !important;
+  }
+  .accordion-button {
+    font-size: 14px !important;
+    background-color: #fff !important;
+    filter: invert(100%) saturate(100%);
+  }
+  .accordion-body {
+    /* width: 18px !important;
+    height: 18px !important; */
+    background-color: #000 !important;
+  }
+  
+  .accordion-header {
+    padding-left: 0 !important;
+  }
+  .canva {
+    /* background-color: #191970 !important; */
+    background-color: #9b7c45 !important;
+    border: none !important;
+    color: whitesmoke !important;
+    font-size: 12px !important;
+  }
+  .offcanvas {
+    background: transparent !important;
+    width: 640px;
+    transition-duration: 0.4s !important;
+    animation-fill-mode: both;
+  }
+  .offcanvas-title {
+    color: whitesmoke;
+    font-size: 28px !important;
+  }
+  
+  .offcanvas-backdrop.show {
+    opacity: 1;
+    /* background-color: transparent; */
+    backdrop-filter: blur(0%);
+  }
+  .offcanvas-body {
+    width: 640px;
+    align-content: center;
+    overflow: hidden !important;
+  }
+  .more {
+    border-radius: 24px;
+  }
+  .offcanvas-header {
+    height: 280px !important;
+    align-items: end !important;
+  }
+  .btn-close {
+    width: 40px !important;
+    height: 40px !important;
+    filter: invert(100%) opacity(1) brightness(100%) grayscale(#fff);
+  }
+}
+@media (max-width: 576px) {
+.map{
+    height: auto;
+    /* margin-bottom: 20px; */
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-top: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    /* border-radius: 20px; */
+    /* overflow: hidden; */
+    margin-top: 28%;
+    /* background-color: #000 !important; */
+    /* background-color: #000 !important; */
+    
+}
+.world{
+    padding-top: 2%;
+    /* background-color: #000 !important; */
+    border-radius: 20px;
+    padding-bottom: 2%;
+    overflow: clip;
+    /* background-color: rgba(0, 0, 0, 0.1) !important; */
+    opacity: 1;
+}
+.worldimg {
+    position: relative;
+    text-align: center;
+    margin-top: 6%;
+    /* margin-left: 20%; */
+    /* height: 750px; */
+  }
+  .worldimg > img {
+    /* filter: brightness(70%); */
+    /* filter:invert(88%); */
+    /* filter: drop-shadow(180px 180px #000); */
+    /* filter: grayscale(80%) drop-shadow(00%) brightness(0%); */
+    /* box-shadow: inset 180px 180px 0px #000; */
+    position: relative;
+     margin-left: 14%;
+     /* padding-bottom: 14%; */
+/* overflow: hidden; */
+    /* margin-bottom: 4%; */
+    width: 100%;
+    /* height: 80%; */
+    opacity: 1;
+  }
+  
+  .countries {
+    position: relative;
+    bottom: 8px;
+    left: 16px;
+  }
+  .countries > button {
+    position: absolute;
+    background-color: lightgray !important;
+    border-radius: 40px;
+    width: 2px;
+    height: 12px;
+    transform: scale(0);
+    opacity: 0;
+    animation: mapdots linear forwards;
+    animation-timeline: view();
+    /* animation-range-start: 100px;
+    animation-range-end: 100px; */
+  
+    /* animation-duration: 400ms; */
+    /* animation-name: mapdots; */
+    animation-range: contain 0% contain 24%;
+    /* animation-fill-mode: both; */
+    animation-duration: 1s;
+    border: none !important;
+  }
+  /* button:hover {
+    animation: hvr-ripple-out 400ms ;
+  } */
+  
+  @-webkit-keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out1 {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out1 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    /* animation-iteration-count: infinite; */
+  }
+  .hvr-ripple-out1:before {
+    content: "";
+    position: absolute;
+    border: #9b7c45 solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out1:hover:before,
+  .hvr-ripple-out1:focus:before,
+  .hvr-ripple-out1:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+    /* animation-iteration-count: 2; */
+  }
+  @-webkit-keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+  }
+  .hvr-ripple-out:before {
+    content: "";
+    position: absolute;
+    border: lightgray solid 6px;
+    border-radius: 14px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .hvr-ripple-out:hover:before,
+  .hvr-ripple-out:focus:before,
+  .hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+  }
+  
+  .uk {
+    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+    width: 24px !important;
+    height: 24px !important;
+    bottom: 562px;
+    left:768px;
+    animation-delay: 1s;
+    animation-range: entry 60% contain 10% !important;
+    transform: scale(0);
+    opacity: 0;
+  }
+  .uae {
+    bottom: 434px;
+    left: 966px;
+    animation-delay: 1s;
+  }
+  .usa {
+    bottom: 510px;
+    left: 448px;
+    animation-delay: 1s;
+  }
+  .germany {
+    bottom: 560px;
+    left: 820px;
+    animation-delay: 1s;
+  }
+  .france {
+    bottom: 548px;
+    left: 796px;
+    animation-delay: 1s;
+  }
+  .italy {
+    bottom: 518px;
+    left: 828px;
+    animation-delay: 1s;
+  }
+  .spain {
+    bottom: 510px;
+    left: 770px;
+    animation-delay: 1s;
+  }
+  .china {
+    bottom: 480px;
+    left: 1120px;
+    animation-delay: 1s;
+  }
+  .canada {
+    bottom: 588px;
+    left: 420px;
+    animation-delay: 1s;
+  }
+  .turkey {
+    bottom: 510px;
+    left: 900px;
+    animation-delay: 1s;
+  }
+  .australia {
+    bottom: 226px;
+    left: 1236px;
+    animation-delay: 1s;
+  }
+  .india {
+    bottom: 400px;
+    left: 1040px;
+    animation-delay: 1s;
+  }
+  .ksa {
+    bottom: 424px;
+    left: 936px;
+    animation-delay: 1s;
+  }
+  .southafrica {
+    bottom: 224px;
+    left: 860px;
+    animation-delay: 1s;
+  }
+  @keyframes mapdots {
+    20% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 0.2;
+      transform: scale(0.2);
+    }
+    60% {
+      opacity: 0.4;
+      transform: scale(0.4);
+    }
+    80% {
+      opacity: 0.8;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* .canvuae {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 240px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 204px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 301deg;
+    transition: 1s linear;
+    transform-origin: right;
+  } */
+  /* .uae:click, .canvuae{
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 246px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: 185px;
+    left: 720px;
+    margin-left: -1px;
+    rotate: 305deg;
+    transition: 300ms;
+  
+  } */
+  /*.usa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 355px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -202px;
+    left: 188px;
+    margin-left: -1px;
+    rotate: 81deg;
+  }
+  .germany:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 30px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -16px;
+    left: -14px;
+    margin-left: -1px;
+    rotate: 287deg;
+  }
+  .france:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 18px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -14px;
+    left: 2px;
+    margin-left: -1px;
+    rotate: 336deg;
+  }
+  .italy:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 65px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -55px;
+    left: -20px;
+    margin-left: -1px;
+    rotate: 315deg;
+  }
+  .spain:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 49px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -49px;
+    left: 9px;
+    margin-left: -1px;
+    rotate: 6deg;
+  }
+  .china:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 412px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -258px;
+    left: -198px;
+    margin-left: -1px;
+    rotate: 285.5deg;
+  }
+  .canada:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 400px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -178px;
+    left: 214px;
+    margin-left: -1px;
+    rotate: 94.5deg;
+  }
+  .turkey:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 140px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -100px;
+    left: -60px;
+    margin-left: -1px;
+    rotate: 297deg;
+  }
+  .australia:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 596px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -468px;
+    left: -238px;
+    margin-left: -1px;
+    rotate: 305.5deg;
+  }
+  .india:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 314px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -223px;
+    left: -137px;
+    margin-left: -1px;
+    rotate: 296.5deg;
+  }
+  .ksa:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 208px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -172px;
+    left: -78px;
+    margin-left: -1px;
+    rotate: 311deg;
+  }
+  .southafrica:before {
+    position: absolute;
+    border: 1px solid #c5a86e;
+    width: 0;
+    height: 370px;
+    display: block;
+    content: "";
+    left: 50%;
+    z-index: 1;
+    top: -362px;
+    left: -40px;
+    margin-left: -1px;
+    rotate: 346deg;
+  } */
+  .accordion {
+    width: 18% !important;
+    position: absolute;
+    top: 8%;
+    left: -14%;
+    border: none;
+    /* border-bottom: 2px whitesmoke; */
+    background: #000;
+  }
+  .accordion-item {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: gray !important;
+  }
+  .accordion-button {
+    font-size: 14px !important;
+    background-color: #fff !important;
+    filter: invert(100%) saturate(100%);
+  }
+  .accordion-body {
+    /* width: 18px !important;
+    height: 18px !important; */
+    background-color: #000 !important;
+  }
+  
+  .accordion-header {
+    padding-left: 0 !important;
+  }
+  .canva {
+    /* background-color: #191970 !important; */
+    background-color: #9b7c45 !important;
+    border: none !important;
+    color: whitesmoke !important;
+    font-size: 12px !important;
+  }
+  .offcanvas {
+    background: transparent !important;
+    width: 640px;
+    transition-duration: 0.4s !important;
+    animation-fill-mode: both;
+  }
+  .offcanvas-title {
+    color: whitesmoke;
+    font-size: 28px !important;
+  }
+  
+  .offcanvas-backdrop.show {
+    opacity: 1;
+    /* background-color: transparent; */
+    backdrop-filter: blur(0%);
+  }
+  .offcanvas-body {
+    width: 640px;
+    align-content: center;
+    overflow: hidden !important;
+  }
+  .more {
+    border-radius: 24px;
+  }
+  .offcanvas-header {
+    height: 280px !important;
+    align-items: end !important;
+  }
+  .btn-close {
+    width: 40px !important;
+    height: 40px !important;
+    filter: invert(100%) opacity(1) brightness(100%) grayscale(#fff);
+  }
+}

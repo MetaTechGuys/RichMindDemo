@@ -1,0 +1,798 @@
+@media (min-width: 1920px) and (max-width: 2560px) {
+  .strategy {
+    width: 100%;
+    /* display: flex; */
+    height: auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  .strathelp {
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+  }
+
+  /* .title{
+    position: absolute;
+    transform: scale(0);
+    opacity: 0 ;
+    animation: fadettbp linear forwards;
+    animation-timeline: view();
+    animation-range: contain 0% contain 20%;
+      transition: 1s;
+    animation-duration: 1s;
+  }
+
+  @keyframes fadettbp {
+    20% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 0.2;
+      transform: scale(0.2);
+    }
+    60% {
+      opacity: 0.4;
+      transform: scale(0.4);
+    }
+    80% {
+      opacity: 0.8;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  } */
+  .pillar {
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 33%;
+    float: left;
+    position: relative;
+    > img {
+      width: 50%;
+      opacity: 0.48;
+      /* padding-left: 28px; */
+    }
+    > div {
+      padding-left: 40px;
+      margin-bottom: 40px;
+      position: absolute;
+      top: 24%;
+      > h6 {
+        color: whitesmoke;
+        font-size: 36px;
+        padding-top: 20px;
+        /* text-align: center; */
+        margin-bottom: 28px;
+      }
+      > span {
+        display: block;
+        color: whitesmoke;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 28px;
+        /* padding-bottom: 50px; */
+      }
+    }
+  }
+  .pillars {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+  }
+  .textstrat {
+    padding-top: 140px;
+    padding-left: 140px;
+    width: 100%;
+    height: 10vh !important;
+    /* float: left; */
+    > h4 {
+      color: whitesmoke;
+      font-size: 48px;
+      /* text-align: center; */
+      /* margin-bottom: 20px; */
+    }
+  }
+  .market3 {
+    margin-top: 14px;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    color: whitesmoke;
+    > span {
+      /* margin-top: 100px; */
+      padding-left: 12px;
+    }
+    > img {
+      margin-bottom: 4px;
+    }
+  }
+}
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .strategy {
+    width: 100%;
+    /* display: flex; */
+    height: auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  .strathelp {
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+  }
+
+  /* .title{
+    position: absolute;
+    transform: scale(0);
+    opacity: 0 ;
+    animation: fadettbp linear forwards;
+    animation-timeline: view();
+    animation-range: contain 0% contain 20%;
+      transition: 1s;
+    animation-duration: 1s;
+  }
+
+  @keyframes fadettbp {
+    20% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 0.2;
+      transform: scale(0.2);
+    }
+    60% {
+      opacity: 0.4;
+      transform: scale(0.4);
+    }
+    80% {
+      opacity: 0.8;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  } */
+  .pillar {
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 33%;
+    float: left;
+    position: relative;
+    > img {
+      width: 50%;
+      opacity: 0.48;
+      /* padding-left: 28px; */
+    }
+    > div {
+      padding-left: 40px;
+      margin-bottom: 40px;
+      position: absolute;
+      top: 24%;
+      > h6 {
+        color: whitesmoke;
+        font-size: 36px;
+        padding-top: 20px;
+        /* text-align: center; */
+        margin-bottom: 28px;
+      }
+      > span {
+        display: block;
+        color: whitesmoke;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 28px;
+        /* padding-bottom: 50px; */
+      }
+    }
+  }
+  .pillars {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+  }
+  .textstrat {
+    padding-top: 140px;
+    padding-left: 140px;
+    width: 100%;
+    height: 10vh !important;
+    /* float: left; */
+    > h4 {
+      color: whitesmoke;
+      font-size: 48px;
+      /* text-align: center; */
+      /* margin-bottom: 20px; */
+    }
+  }
+  .market3 {
+    margin-top: 14px;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    color: whitesmoke;
+    > span {
+      /* margin-top: 100px; */
+      padding-left: 12px;
+    }
+    > img {
+      margin-bottom: 4px;
+    }
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .strategy {
+    width: 100%;
+    /* display: flex; */
+    height: auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  .strathelp {
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+  }
+
+  /* .title{
+            position: absolute;
+            transform: scale(0);
+            opacity: 0 ;
+            animation: fadettbp linear forwards;
+            animation-timeline: view();
+            animation-range: contain 0% contain 20%;
+              transition: 1s;
+            animation-duration: 1s;
+          }
+        
+          @keyframes fadettbp {
+            20% {
+              opacity: 0;
+              transform: scale(0);
+            }
+            40% {
+              opacity: 0.2;
+              transform: scale(0.2);
+            }
+            60% {
+              opacity: 0.4;
+              transform: scale(0.4);
+            }
+            80% {
+              opacity: 0.8;
+              transform: scale(0.8);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          } */
+  .pillar {
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 33%;
+    float: left;
+    position: relative;
+    > img {
+      width: 50%;
+      opacity: 0.48;
+      /* padding-left: 28px; */
+    }
+    > div {
+      padding-left: 40px;
+      margin-bottom: 40px;
+      position: absolute;
+      top: 24%;
+      > h6 {
+        color: whitesmoke;
+        font-size: 36px;
+        padding-top: 20px;
+        /* text-align: center; */
+        margin-bottom: 28px;
+      }
+      > span {
+        display: block;
+        color: whitesmoke;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 28px;
+        /* padding-bottom: 50px; */
+      }
+    }
+  }
+  .pillars {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+  }
+  .textstrat {
+    padding-top: 140px;
+    padding-left: 140px;
+    width: 100%;
+    height: 10vh !important;
+    /* float: left; */
+    > h4 {
+      color: whitesmoke;
+      font-size: 48px;
+      /* text-align: center; */
+      /* margin-bottom: 20px; */
+    }
+  }
+  .market3 {
+    margin-top: 14px;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    color: whitesmoke;
+    > span {
+      /* margin-top: 100px; */
+      padding-left: 12px;
+    }
+    > img {
+      margin-bottom: 4px;
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .strategy {
+    width: 100%;
+    /* display: flex; */
+    height: auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  .strathelp {
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+  }
+
+  /* .title{
+      position: absolute;
+      transform: scale(0);
+      opacity: 0 ;
+      animation: fadettbp linear forwards;
+      animation-timeline: view();
+      animation-range: contain 0% contain 20%;
+        transition: 1s;
+      animation-duration: 1s;
+    }
+  
+    @keyframes fadettbp {
+      20% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      40% {
+        opacity: 0.2;
+        transform: scale(0.2);
+      }
+      60% {
+        opacity: 0.4;
+        transform: scale(0.4);
+      }
+      80% {
+        opacity: 0.8;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    } */
+  .pillar {
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 33%;
+    float: left;
+    position: relative;
+    > img {
+      width: 50%;
+      opacity: 0.48;
+      /* padding-left: 28px; */
+    }
+    > div {
+      padding-left: 40px;
+      margin-bottom: 40px;
+      position: absolute;
+      top: 24%;
+      > h6 {
+        color: whitesmoke;
+        font-size: 36px;
+        padding-top: 20px;
+        /* text-align: center; */
+        margin-bottom: 28px;
+      }
+      > span {
+        display: block;
+        color: whitesmoke;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 28px;
+        /* padding-bottom: 50px; */
+      }
+    }
+  }
+  .pillars {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+  }
+  .textstrat {
+    padding-top: 140px;
+    padding-left: 140px;
+    width: 100%;
+    height: 10vh !important;
+    /* float: left; */
+    > h4 {
+      color: whitesmoke;
+      font-size: 48px;
+      /* text-align: center; */
+      /* margin-bottom: 20px; */
+    }
+  }
+  .market3 {
+    margin-top: 14px;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    color: whitesmoke;
+    > span {
+      /* margin-top: 100px; */
+      padding-left: 12px;
+    }
+    > img {
+      margin-bottom: 4px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .strategy {
+    width: 100%;
+    /* display: flex; */
+    height: auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  .strathelp {
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+  }
+
+  /* .title{
+          position: absolute;
+          transform: scale(0);
+          opacity: 0 ;
+          animation: fadettbp linear forwards;
+          animation-timeline: view();
+          animation-range: contain 0% contain 20%;
+            transition: 1s;
+          animation-duration: 1s;
+        }
+      
+        @keyframes fadettbp {
+          20% {
+            opacity: 0;
+            transform: scale(0);
+          }
+          40% {
+            opacity: 0.2;
+            transform: scale(0.2);
+          }
+          60% {
+            opacity: 0.4;
+            transform: scale(0.4);
+          }
+          80% {
+            opacity: 0.8;
+            transform: scale(0.8);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        } */
+  .pillar {
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 33%;
+    float: left;
+    position: relative;
+    > img {
+      width: 50%;
+      opacity: 0.48;
+      /* padding-left: 28px; */
+    }
+    > div {
+      padding-left: 40px;
+      margin-bottom: 40px;
+      position: absolute;
+      top: 24%;
+      > h6 {
+        color: whitesmoke;
+        font-size: 36px;
+        padding-top: 20px;
+        /* text-align: center; */
+        margin-bottom: 28px;
+      }
+      > span {
+        display: block;
+        color: whitesmoke;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 28px;
+        /* padding-bottom: 50px; */
+      }
+    }
+  }
+  .pillars {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+  }
+  .textstrat {
+    padding-top: 140px;
+    padding-left: 140px;
+    width: 100%;
+    height: 10vh !important;
+    /* float: left; */
+    > h4 {
+      color: whitesmoke;
+      font-size: 48px;
+      /* text-align: center; */
+      /* margin-bottom: 20px; */
+    }
+  }
+  .market3 {
+    margin-top: 14px;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    color: whitesmoke;
+    > span {
+      /* margin-top: 100px; */
+      padding-left: 12px;
+    }
+    > img {
+      margin-bottom: 4px;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .strategy {
+    width: 100%;
+    /* display: flex; */
+    height: auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  .strathelp {
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+  }
+
+  /* .title{
+          position: absolute;
+          transform: scale(0);
+          opacity: 0 ;
+          animation: fadettbp linear forwards;
+          animation-timeline: view();
+          animation-range: contain 0% contain 20%;
+            transition: 1s;
+          animation-duration: 1s;
+        }
+      
+        @keyframes fadettbp {
+          20% {
+            opacity: 0;
+            transform: scale(0);
+          }
+          40% {
+            opacity: 0.2;
+            transform: scale(0.2);
+          }
+          60% {
+            opacity: 0.4;
+            transform: scale(0.4);
+          }
+          80% {
+            opacity: 0.8;
+            transform: scale(0.8);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        } */
+  .pillar {
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 33%;
+    float: left;
+    position: relative;
+    > img {
+      width: 50%;
+      opacity: 0.48;
+      /* padding-left: 28px; */
+    }
+    > div {
+      padding-left: 40px;
+      margin-bottom: 40px;
+      position: absolute;
+      top: 24%;
+      > h6 {
+        color: whitesmoke;
+        font-size: 36px;
+        padding-top: 20px;
+        /* text-align: center; */
+        margin-bottom: 28px;
+      }
+      > span {
+        display: block;
+        color: whitesmoke;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 28px;
+        /* padding-bottom: 50px; */
+      }
+    }
+  }
+  .pillars {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+  }
+  .textstrat {
+    padding-top: 140px;
+    padding-left: 140px;
+    width: 100%;
+    height: 10vh !important;
+    /* float: left; */
+    > h4 {
+      color: whitesmoke;
+      font-size: 48px;
+      /* text-align: center; */
+      /* margin-bottom: 20px; */
+    }
+  }
+  .market3 {
+    margin-top: 14px;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    color: whitesmoke;
+    > span {
+      /* margin-top: 100px; */
+      padding-left: 12px;
+    }
+    > img {
+      margin-bottom: 4px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .strategy {
+    width: 100%;
+    /* display: flex; */
+    height: auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  .strathelp {
+    background-color: transparent !important;
+    border: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+  }
+
+  /* .title{
+          position: absolute;
+          transform: scale(0);
+          opacity: 0 ;
+          animation: fadettbp linear forwards;
+          animation-timeline: view();
+          animation-range: contain 0% contain 20%;
+            transition: 1s;
+          animation-duration: 1s;
+        }
+      
+        @keyframes fadettbp {
+          20% {
+            opacity: 0;
+            transform: scale(0);
+          }
+          40% {
+            opacity: 0.2;
+            transform: scale(0.2);
+          }
+          60% {
+            opacity: 0.4;
+            transform: scale(0.4);
+          }
+          80% {
+            opacity: 0.8;
+            transform: scale(0.8);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        } */
+  .pillar {
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 33%;
+    float: left;
+    position: relative;
+    > img {
+      width: 50%;
+      opacity: 0.48;
+      /* padding-left: 28px; */
+    }
+    > div {
+      padding-left: 40px;
+      margin-bottom: 40px;
+      position: absolute;
+      top: 24%;
+      > h6 {
+        color: whitesmoke;
+        font-size: 36px;
+        padding-top: 20px;
+        /* text-align: center; */
+        margin-bottom: 28px;
+      }
+      > span {
+        display: block;
+        color: whitesmoke;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 28px;
+        /* padding-bottom: 50px; */
+      }
+    }
+  }
+  .pillars {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+  }
+  .textstrat {
+    padding-top: 140px;
+    padding-left: 140px;
+    width: 100%;
+    height: 10vh !important;
+    /* float: left; */
+    > h4 {
+      color: whitesmoke;
+      font-size: 48px;
+      /* text-align: center; */
+      /* margin-bottom: 20px; */
+    }
+  }
+  .market3 {
+    margin-top: 14px;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    color: whitesmoke;
+    > span {
+      /* margin-top: 100px; */
+      padding-left: 12px;
+    }
+    > img {
+      margin-bottom: 4px;
+    }
+  }
+}
