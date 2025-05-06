@@ -13,10 +13,10 @@
     background-color: transparent;
     /* overflow: hidden; */
     padding: 1%;
-    animation: scaleup linear forwards;
-    animation-timeline: view();
-    animation-range: cover 48% 1800px;
-    animation-duration: 2s;
+    /* animation: scaleup linear forwards; */
+    /* animation-timeline: view();
+    animation-range: cover 48% 1800px; */
+    /* animation-duration: 2s;
     transition: 1s;
     -moz-animation: scaleup linear forwards;
     -webkit-animation: scaleup linear forwards;
@@ -29,7 +29,7 @@
     -o-animation-duration: 2s;
     -ms-animation-duration: 2s;
     -o-transition: 1s;
-    -ms-transition: 1s;
+    -ms-transition: 1s; */
   }
   .galhelp {
     background-color: transparent !important;
@@ -39,9 +39,9 @@
     height: auto;
     overflow: clip;
     animation: movedown linear forwards;
-    animation-timeline: view();
-    animation-range: cover 50% 1800px;
-    animation-duration: 2s;
+    /* animation-timeline: view();
+    animation-range: cover 50% 1800px; */
+    /* animation-duration: 2s;
     transition: 1s;
     -moz-animation: 'movedown' linear forwards;
     -webkit-animation: movedown linear forwards;
@@ -54,7 +54,7 @@
     -o-animation-duration: 2s;
     -ms-animation-duration: 2s;
     -o-transition: 1s;
-    -ms-transition: 1s;
+    -ms-transition: 1s; */
 
   }
   .galbg {
@@ -124,20 +124,20 @@
     grid-row: 3/5;
     align-self: self-end;
   }
-  @keyframes scaleup {
+  /* @keyframes scaleup {
+    @keyframes movedown {
+      0% {
+        translate: 0 0 0;
+      }
+      100% {
+        translate: 0 72% 0;
+      }
+    }
     0% {
       transform: scale(1);
     }
     100% {
       transform: scale(3);
-    }
-  }
-  @keyframes movedown {
-    0% {
-      translate: 0 0 0;
-    }
-    100% {
-      translate: 0 72% 0;
     }
   }
   @-moz-keyframes scaleup {
@@ -203,7 +203,7 @@
     100% {
       -o-translate: 0 72% 0;
     }
-  }
+  } */
 
 }
 @media (min-width: 1400px) and (max-width: 1920px) {
@@ -365,7 +365,7 @@
       translate: 0 72% 0;
     }
   }
-  @-moz-keyframes scaleup {
+  /* @-moz-keyframes scaleup {
     0% {
       -moz-transform: scale(1);
     }
@@ -396,7 +396,7 @@
     100% {
       -webkit-translate: 0 72% 0;
     }
-  }
+  } */
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
   .gallery {

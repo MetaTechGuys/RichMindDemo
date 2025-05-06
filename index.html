@@ -1531,8 +1531,9 @@
 
       <section class="comphelp">
         <!-- <video src="./media/videos/Particle, Galaxy, Planets, Animated by M. Yasin Esin – Stock Footage.mp4" autoplay loop muted></video> -->
-            <div class="container-fluid companies">
+        <div class="container-fluid companies">
               <!-- <video src="./media/videos/0202.mp4" autoplay loop muted></video> -->
+
               <div class="textcompanies">
                 <h4>RichMind Group of Companies</h4>
                 <span
@@ -1592,7 +1593,10 @@
 
       <section class="strathelp">
             <div class="container-fluid strategy">
+              <!-- <canvas id="c" class="cloud"></canvas> -->
+              <!-- <div id="canvas-container" class="cloud"></div> -->
               <div class="textstrat">
+
                 <h4>The three pillars of RichMind strategy</h4>
               </div>
               <div class="pillars">
@@ -1877,6 +1881,9 @@
       </footer>
     </div>
     <script src="bootstrap/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="./js/cloud.js"></script>
     <Script>
       const cursor = document.querySelector("#cursor");
 const cursorBorder = document.querySelector("#cursor-border");
@@ -1919,6 +1926,9 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
 });
 
     </Script>
+
+<script src="js/animation.js"></script>
+
   </body>
 </html>
 
