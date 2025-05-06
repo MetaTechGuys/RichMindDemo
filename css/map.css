@@ -10,7 +10,7 @@
     /* overflow: hidden; */
     margin-top: 32%;
     /* background-color: #000 !important; */
-    /* background-color: #000 !important; */
+    /* background-color: gray !important; */
     
 }
 .world{
@@ -467,19 +467,21 @@
     rotate: 346deg;
   } */
   .accordion {
-    width: 18% !important;
+    width: 28% !important;
     position: absolute;
     top: 8%;
-    left: -14%;
+    left: -32%;
     border: none;
     /* border-bottom: 2px whitesmoke; */
-    background: #000;
+    background: transparent !important;
   }
   .accordion-item {
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
-    border-bottom: gray !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: transparent !important;
+    height: 40px;
   }
   .accordion-button {
     font-size: 14px !important;
@@ -489,11 +491,14 @@
   .accordion-body {
     /* width: 18px !important;
     height: 18px !important; */
-    background-color: #000 !important;
+    background-color: transparent !important;
   }
   
   .accordion-header {
     padding-left: 0 !important;
+  }
+  .accordion-button{
+    background-color: transparent !important;
   }
   .canva {
     /* background-color: #191970 !important; */
@@ -546,7 +551,7 @@
       border-bottom: 24px solid transparent;
       /* border-radius: 20px; */
       /* overflow: hidden; */
-      margin-top: 32%;
+      margin-top: 36%;
       /* background-color: #000 !important; */
       /* background-color: #000 !important; */
       
