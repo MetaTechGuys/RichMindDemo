@@ -125,7 +125,7 @@
       translate: 0 0 0;
     }
     100% {
-      translate: 0 68% 0;
+      translate: 0 72% 0;
     }
   }
   @-moz-keyframes scaleup {
@@ -141,7 +141,7 @@
       -moz-translate: 0 0 0;
     }
     100% {
-      -moz-translate: 0 68% 0;
+      -moz-translate: 0 72% 0;
     }
   }
   @-webkit-keyframes scaleup {
@@ -157,7 +157,7 @@
       -webkit-translate: 0 0 0;
     }
     100% {
-      -webkit-translate: 0 68% 0;
+      -webkit-translate: 0 72% 0;
     }
   }
 
