@@ -271,8 +271,8 @@
   }
   @keyframes scaleup {
     0% {
-      -moz-transform: scale(1);
-      -webkit-transform: scale(1);
+      /* -moz-transform: scale(1);
+      -webkit-transform: scale(1); */
       transform: scale(1);
       /* padding-top: 20%; */
     }
@@ -289,8 +289,8 @@
     transform: scale(2.75);
   } */
     100% {
-      -moz-transform: scale(3);
-      -webkit-transform: scale(3);
+      /* -moz-transform: scale(3);
+      -webkit-transform: scale(3); */
       transform: scale(3);
     }
   }
