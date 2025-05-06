@@ -14,8 +14,8 @@
   src: url(../Fonts/DMSerifDisplay-Regular.woff);
 }
 .wrapper {
-  width: 100vw;
-  overflow-x: clip;
+  /* width: 100vw; */
+  /* overflow-x: clip; */
   height: auto;
   position: relative;
     >video{
