@@ -18,6 +18,12 @@
     animation-range: cover 48% 1800px;
     animation-duration: 2s;
     transition: 1s;
+    -moz-animation: scaleup linear forwards;
+    -webkit-animation: scaleup linear forwards;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
   }
   .galhelp {
     background-color: transparent !important;
@@ -31,6 +37,13 @@
     animation-range: cover 50% 1800px;
     animation-duration: 2s;
     transition: 1s;
+    -moz-animation: movedown linear forwards;
+    -webkit-animation: movedown linear forwards;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+
   }
   .galbg {
     /* background-color: #000; */
@@ -166,6 +179,12 @@
     animation-range: cover 48% 1800px;
     animation-duration: 2s;
     transition: 1s;
+    -moz-animation: scaleup linear forwards;
+    -webkit-animation: scaleup linear forwards;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
   }
   .galhelp {
     background-color: transparent !important;
@@ -249,22 +268,26 @@
   }
   @keyframes scaleup {
     0% {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
       transform: scale(1);
       /* padding-top: 20%; */
     }
     /* 20% {
-      transform: scale(1.5);
-    }
-    40% {
-      transform: scale(2);
-    }
-    60% {
-      transform: scale(2.25);
-    }
-    80% {
-      transform: scale(2.75);
-    } */
+    transform: scale(1.5);
+  }
+  40% {
+    transform: scale(2);
+  }
+  60% {
+    transform: scale(2.25);
+  }
+  80% {
+    transform: scale(2.75);
+  } */
     100% {
+      -moz-transform: scale(3);
+      -webkit-transform: scale(3);
       transform: scale(3);
     }
   }
@@ -274,17 +297,17 @@
       /* padding-top: 20%; */
     }
     /* 20% {
-      transform: scale(1.5);
-    }
-    40% {
-      transform: scale(2);
-    }
-    60% {
-      transform: scale(2.25);
-    }
-    80% {
-      transform: scale(2.75);
-    } */
+    transform: scale(1.5);
+  }
+  40% {
+    transform: scale(2);
+  }
+  60% {
+    transform: scale(2.25);
+  }
+  80% {
+    transform: scale(2.75);
+  } */
     100% {
       translate: 0 72% 0;
     }
