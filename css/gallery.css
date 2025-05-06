@@ -18,12 +18,12 @@
     animation-range: cover 48% 1800px;
     animation-duration: 2s;
     transition: 1s;
-    -moz-animation: scaleup linear forwards;
+    /* -moz-animation: scaleup linear forwards;
     -webkit-animation: scaleup linear forwards;
     -moz-animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -moz-transition: 1s;
-    -webkit-transition: 1s;
+    -webkit-transition: 1s; */
   }
   .galhelp {
     background-color: transparent !important;
@@ -37,12 +37,12 @@
     animation-range: cover 50% 1800px;
     animation-duration: 2s;
     transition: 1s;
-    -moz-animation: movedown linear forwards;
+    /* -moz-animation: movedown linear forwards;
     -webkit-animation: movedown linear forwards;
     -moz-animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -moz-transition: 1s;
-    -webkit-transition: 1s;
+    -webkit-transition: 1s; */
 
   }
   .galbg {
@@ -125,7 +125,7 @@
       translate: 0 0 0;
     }
     100% {
-      translate: 0 72% 0;
+      translate: 0 82% 0;
     }
   }
   @-moz-keyframes scaleup {
@@ -141,7 +141,7 @@
       -moz-translate: 0 0 0;
     }
     100% {
-      -moz-translate: 0 72% 0;
+      -moz-translate: 0 82% 0;
     }
   }
   @-webkit-keyframes scaleup {
@@ -157,7 +157,7 @@
       -webkit-translate: 0 0 0;
     }
     100% {
-      -webkit-translate: 0 72% 0;
+      -webkit-translate: 0 82% 0;
     }
   }
 
@@ -182,12 +182,12 @@
     animation-range: cover 48% 1800px;
     animation-duration: 2s;
     transition: 1s;
-    -moz-animation: scaleup linear forwards;
+    /* -moz-animation: scaleup linear forwards;
     -webkit-animation: scaleup linear forwards;
     -moz-animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -moz-transition: 1s;
-    -webkit-transition: 1s;
+    -webkit-transition: 1s; */
   }
   .galhelp {
     background-color: transparent !important;
