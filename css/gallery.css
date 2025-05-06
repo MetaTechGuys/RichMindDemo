@@ -43,7 +43,7 @@
     animation-range: cover 50% 1800px;
     animation-duration: 2s;
     transition: 1s;
-    -moz-animation: movedown linear forwards;
+    -moz-animation: 'movedown' linear forwards;
     -webkit-animation: movedown linear forwards;
     -moz-animation-duration: 2s;
     -webkit-animation-duration: 2s;
@@ -172,7 +172,7 @@
       -webkit-translate: 0 72% 0;
     }
   }
-  @-webkit-keyframes scaleup {
+  @-o-keyframes scaleup {
     0% {
       -o-transform: scale(1);
     }
@@ -196,7 +196,7 @@
       -ms-transform: scale(3);
     }
   }
-  @-webkit-keyframes movedown {
+  @-o-keyframes movedown {
     0% {
       -o-translate: 0 0 0;
     }
