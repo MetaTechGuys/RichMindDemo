@@ -18,12 +18,18 @@
     animation-range: cover 48% 1800px;
     animation-duration: 2s;
     transition: 1s;
-    /* -moz-animation: scaleup linear forwards;
+    -moz-animation: scaleup linear forwards;
     -webkit-animation: scaleup linear forwards;
     -moz-animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -moz-transition: 1s;
-    -webkit-transition: 1s; */
+    -webkit-transition: 1s;
+    -o-animation: scaleup linear forwards;
+    -ms-animation: scaleup linear forwards;
+    -o-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
   }
   .galhelp {
     background-color: transparent !important;
@@ -37,12 +43,18 @@
     animation-range: cover 50% 1800px;
     animation-duration: 2s;
     transition: 1s;
-    /* -moz-animation: movedown linear forwards;
+    -moz-animation: movedown linear forwards;
     -webkit-animation: movedown linear forwards;
     -moz-animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -moz-transition: 1s;
-    -webkit-transition: 1s; */
+    -webkit-transition: 1s;
+    -o-animation: movedown linear forwards;
+    -ms-animation: movedown linear forwards;
+    -o-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
 
   }
   .galbg {
@@ -158,6 +170,38 @@
     }
     100% {
       -webkit-translate: 0 72% 0;
+    }
+  }
+  @-webkit-keyframes scaleup {
+    0% {
+      -o-transform: scale(1);
+    }
+    100% {
+      -o-transform: scale(3);
+    }
+  }
+  @-ms-keyframes movedown {
+    0% {
+      -ms-translate: 0 0 0;
+    }
+    100% {
+      -ms-translate: 0 72% 0;
+    }
+  }
+  @-ms-keyframes scaleup {
+    0% {
+      -ms-transform: scale(1);
+    }
+    100% {
+      -ms-transform: scale(3);
+    }
+  }
+  @-webkit-keyframes movedown {
+    0% {
+      -o-translate: 0 0 0;
+    }
+    100% {
+      -o-translate: 0 72% 0;
     }
   }
 
