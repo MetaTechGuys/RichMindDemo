@@ -221,7 +221,7 @@
     background-color: transparent;
     /* overflow: hidden; */
     padding: 1%;
-    animation: scaleup linear forwards;
+    /* animation: scaleup linear forwards;
     animation-timeline: view();
     animation-range: cover 48% 1800px;
     animation-duration: 2s;
@@ -231,7 +231,7 @@
     -moz-animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -moz-transition: 1s;
-    -webkit-transition: 1s;
+    -webkit-transition: 1s; */
   }
   .galhelp {
     background-color: transparent !important;
@@ -240,7 +240,7 @@
     border-top: 24px solid transparent !important;
     height: auto;
     overflow: clip;
-    animation: movedown linear forwards;
+    /* animation: movedown linear forwards;
     animation-timeline: view();
     animation-range: cover 50% 1800px;
     animation-duration: 2s;
@@ -250,7 +250,7 @@
     -moz-animation-duration: 2s;
     -webkit-animation-duration: 2s;
     -moz-transition: 1s;
-    -webkit-transition: 1s;
+    -webkit-transition: 1s; */
   }
   .galbg {
     /* background-color: #000; */
@@ -319,84 +319,7 @@
     grid-row: 3/5;
     align-self: self-end;
   }
-  @keyframes scaleup {
-    0% {
-      /* -moz-transform: scale(1);
-      -webkit-transform: scale(1); */
-      transform: scale(1);
-      /* padding-top: 20%; */
-    }
-    /* 20% {
-    transform: scale(1.5);
-  }
-  40% {
-    transform: scale(2);
-  }
-  60% {
-    transform: scale(2.25);
-  }
-  80% {
-    transform: scale(2.75);
-  } */
-    100% {
-      /* -moz-transform: scale(3);
-      -webkit-transform: scale(3); */
-      transform: scale(3);
-    }
-  }
-  @keyframes movedown {
-    0% {
-      translate: 0 0 0;
-      /* padding-top: 20%; */
-    }
-    /* 20% {
-    transform: scale(1.5);
-  }
-  40% {
-    transform: scale(2);
-  }
-  60% {
-    transform: scale(2.25);
-  }
-  80% {
-    transform: scale(2.75);
-  } */
-    100% {
-      translate: 0 72% 0;
-    }
-  }
-  /* @-moz-keyframes scaleup {
-    0% {
-      -moz-transform: scale(1);
-    }
-    100% {
-      -moz-transform: scale(3);
-    }
-  }
-  @-moz-keyframes movedown {
-    0% {
-      -moz-translate: 0 0 0;
-    }
-    100% {
-      -moz-translate: 0 72% 0;
-    }
-  }
-  @-webkit-keyframes scaleup {
-    0% {
-      -webkit-transform: scale(1);
-    }
-    100% {
-      -webkit-transform: scale(3);
-    }
-  }
-  @-webkit-keyframes movedown {
-    0% {
-      -webkit-translate: 0 0 0;
-    }
-    100% {
-      -webkit-translate: 0 72% 0;
-    }
-  } */
+  
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
   .gallery {
