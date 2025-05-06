@@ -101,6 +101,7 @@
 }
 @keyframes scaleup {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     /* padding-top: 20%; */
   }
@@ -117,6 +118,7 @@
     transform: scale(2.75);
   } */
   100% {
+    -webkit-transform: scale(1);
     transform: scale(3);
   }
 }
