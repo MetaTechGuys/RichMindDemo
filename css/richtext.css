@@ -1,8 +1,8 @@
-@media (min-width: 1920px) and (max-width: 2560px) {
+@media (min-width: 1921px) and (max-width: 2560px) {
   .rich {
     width: 100%;
     display: flex;
-    height: 60vh;
+    height: auto;
     border-radius: 20px !important;
     overflow: hidden !important;
     background-color: rgba(0, 0, 0, 0.88) !important;
@@ -25,27 +25,28 @@
   }
   .richtext {
     padding-top: 100px;
-    padding-left: 140px;
-    width: 60%;
+    padding-left: 80px;
+    width: 48%;
     z-index: 2;
 
     /* float: left; */
     > h4 {
       color: whitesmoke !important;
-      font-size: 48px;
+      font-size: 52px;
       /* text-align: center; */
-      margin-bottom: 20px;
+      margin-bottom: 80px;
+      margin-top: 80px;
     }
     > span {
       color: whitesmoke !important;
-      font-size: 20px;
+      font-size: 28px;
       margin-top: 140px;
     }
   }
   .market2 {
     margin-top: 28px;
     margin-bottom: 28px;
-    font-size: 20px;
+    font-size: 28px;
     /* color: whitesmoke; */
     > span {
       /* margin-top: 100px; */
@@ -54,15 +55,16 @@
     }
     > img {
       margin-bottom: 4px;
+      width: 40px;
     }
   }
 
   .richimg {
-    width: 60%;
+    width: 80%;
     float: right;
     overflow: hidden;
     > video {
-      height: 100%;
+      height: 80%;
       /* overflow: hidden; */
       /* margin-left: 2%; */
       /* filter: grayscale(88%); */
@@ -70,11 +72,11 @@
     }
   }
 }
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1401px) and (max-width: 1920px) {
   .rich {
     width: 100%;
     display: flex;
-    height: 64vh;
+    height: 640px;
     border-radius: 20px !important;
     overflow: hidden !important;
     background-color: rgba(0, 0, 0, 0.88) !important;
@@ -141,11 +143,11 @@
     }
   }
 }
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1400px) {
   .rich {
     width: 100%;
     display: flex;
-    height: 60vh;
+    height: 480px;
     border-radius: 20px !important;
     overflow: hidden !important;
     background-color: rgba(0, 0, 0, 0.88) !important;
@@ -175,20 +177,20 @@
     /* float: left; */
     > h4 {
       color: whitesmoke !important;
-      font-size: 48px;
+      font-size: 28px;
       /* text-align: center; */
       margin-bottom: 20px;
     }
     > span {
       color: whitesmoke !important;
-      font-size: 20px;
+      font-size: 12px;
       margin-top: 140px;
     }
   }
   .market2 {
     margin-top: 28px;
     margin-bottom: 28px;
-    font-size: 20px;
+    font-size: 14px;
     /* color: whitesmoke; */
     > span {
       /* margin-top: 100px; */
@@ -197,15 +199,17 @@
     }
     > img {
       margin-bottom: 4px;
+      width: 18px;
     }
   }
 
   .richimg {
-    width: 60%;
+    width: 40%;
     float: right;
     overflow: hidden;
+    margin-top: 8%;
     > video {
-      height: 100%;
+      height: 88%;
       /* overflow: hidden; */
       /* margin-left: 2%; */
       /* filter: grayscale(88%); */
@@ -213,11 +217,11 @@
     }
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1200px) {
   .rich {
     width: 100%;
     display: flex;
-    height: 60vh;
+    height: 480px;
     border-radius: 20px !important;
     overflow: hidden !important;
     background-color: rgba(0, 0, 0, 0.88) !important;
@@ -239,28 +243,28 @@
     border-top: 24px solid transparent;
   }
   .richtext {
-    padding-top: 100px;
-    padding-left: 140px;
+    padding-top: 80px;
+    padding-left: 48px;
     width: 60%;
     z-index: 2;
 
     /* float: left; */
     > h4 {
       color: whitesmoke !important;
-      font-size: 48px;
+      font-size: 20px;
       /* text-align: center; */
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
     > span {
       color: whitesmoke !important;
-      font-size: 20px;
+      font-size: 12px;
       margin-top: 140px;
     }
   }
   .market2 {
-    margin-top: 28px;
-    margin-bottom: 28px;
-    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
     /* color: whitesmoke; */
     > span {
       /* margin-top: 100px; */
@@ -273,11 +277,12 @@
   }
 
   .richimg {
-    width: 60%;
+    width: 40%;
     float: right;
     overflow: hidden;
+    margin-top: 8%;
     > video {
-      height: 100%;
+      height: 64%;
       /* overflow: hidden; */
       /* margin-left: 2%; */
       /* filter: grayscale(88%); */
@@ -285,11 +290,11 @@
     }
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .rich {
     width: 100%;
     display: flex;
-    height: 60vh;
+    height: 480px;
     border-radius: 20px !important;
     overflow: hidden !important;
     background-color: rgba(0, 0, 0, 0.88) !important;
@@ -311,28 +316,28 @@
     border-top: 24px solid transparent;
   }
   .richtext {
-    padding-top: 100px;
-    padding-left: 140px;
+    padding-top: 40px;
+    padding-left: 40px;
     width: 60%;
     z-index: 2;
 
     /* float: left; */
     > h4 {
       color: whitesmoke !important;
-      font-size: 48px;
+      font-size: 20px;
       /* text-align: center; */
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
     > span {
       color: whitesmoke !important;
-      font-size: 20px;
-      margin-top: 140px;
+      font-size: 12px;
+      margin-top: 14px;
     }
   }
   .market2 {
     margin-top: 28px;
     margin-bottom: 28px;
-    font-size: 20px;
+    font-size: 12px;
     /* color: whitesmoke; */
     > span {
       /* margin-top: 100px; */
@@ -341,6 +346,7 @@
     }
     > img {
       margin-bottom: 4px;
+      width: 14px;
     }
   }
 
@@ -348,8 +354,9 @@
     width: 60%;
     float: right;
     overflow: hidden;
+    margin-top: 8%;
     > video {
-      height: 100%;
+      height: 80%;
       /* overflow: hidden; */
       /* margin-left: 2%; */
       /* filter: grayscale(88%); */
@@ -357,11 +364,11 @@
     }
   }
 }
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .rich {
     width: 100%;
     display: flex;
-    height: 60vh;
+    height: 480px;
     border-radius: 20px !important;
     overflow: hidden !important;
     background-color: rgba(0, 0, 0, 0.88) !important;
@@ -383,28 +390,28 @@
     border-top: 24px solid transparent;
   }
   .richtext {
-    padding-top: 100px;
-    padding-left: 140px;
+    padding-top: 40px;
+    padding-left: 40px;
     width: 60%;
     z-index: 2;
 
     /* float: left; */
     > h4 {
       color: whitesmoke !important;
-      font-size: 48px;
+      font-size: 20px;
       /* text-align: center; */
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
     > span {
       color: whitesmoke !important;
-      font-size: 20px;
-      margin-top: 140px;
+      font-size: 12px;
+      margin-top: 14px;
     }
   }
   .market2 {
     margin-top: 28px;
     margin-bottom: 28px;
-    font-size: 20px;
+    font-size: 12px;
     /* color: whitesmoke; */
     > span {
       /* margin-top: 100px; */
@@ -413,15 +420,17 @@
     }
     > img {
       margin-bottom: 4px;
+      width: 14px;
     }
   }
 
   .richimg {
-    width: 60%;
+    width: 80%;
     float: right;
     overflow: hidden;
+    margin-top: 18%;
     > video {
-      height: 100%;
+      height: 60%;
       /* overflow: hidden; */
       /* margin-left: 2%; */
       /* filter: grayscale(88%); */
@@ -432,8 +441,8 @@
 @media (max-width: 576px) {
   .rich {
     width: 100%;
-    display: flex;
-    height: 60vh;
+    /* display: flex; */
+    height: auto;
     border-radius: 20px !important;
     overflow: hidden !important;
     background-color: rgba(0, 0, 0, 0.88) !important;
@@ -450,33 +459,33 @@
   }
   .richhelp {
     background-color: transparent !important;
-    border: 48px solid transparent;
-    border-bottom: 24px solid transparent;
-    border-top: 24px solid transparent;
+    border: 8px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
   }
   .richtext {
-    padding-top: 100px;
-    padding-left: 140px;
-    width: 60%;
-    z-index: 2;
-
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 100%;
+    z-index: 0;
+display: block;
     /* float: left; */
     > h4 {
       color: whitesmoke !important;
-      font-size: 48px;
+      font-size: 20px;
       /* text-align: center; */
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
     > span {
       color: whitesmoke !important;
-      font-size: 20px;
-      margin-top: 140px;
+      font-size: 12px;
+      margin-top: 14px;
     }
   }
   .market2 {
     margin-top: 28px;
     margin-bottom: 28px;
-    font-size: 20px;
+    font-size: 12px;
     /* color: whitesmoke; */
     > span {
       /* margin-top: 100px; */
@@ -485,15 +494,19 @@
     }
     > img {
       margin-bottom: 4px;
+      width: 14px;
     }
   }
 
   .richimg {
-    width: 60%;
-    float: right;
+    width: 100%;
+    /* float: right; */
     overflow: hidden;
+    /* margin-top: 18%; */
+    /* display: block; */
+    /* text-align: center; */
     > video {
-      height: 100%;
+      width: 100%;
       /* overflow: hidden; */
       /* margin-left: 2%; */
       /* filter: grayscale(88%); */

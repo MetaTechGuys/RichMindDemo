@@ -1,4 +1,4 @@
-@media (min-width: 1920px) and (max-width: 2560px) {
+@media (min-width: 1921px) and (max-width: 2560px) {
   .strategy {
     width: 100%;
     /* display: flex; */
@@ -66,8 +66,8 @@
   } */
   .pillar {
     /* padding-top: 100px; */
-    padding-left: 100px;
-    width: 33%;
+    padding-left: 80px;
+    width: 30%;
     float: left;
     position: relative;
     > img {
@@ -76,14 +76,14 @@
       /* padding-left: 28px; */
     }
     > div {
-      padding-left: 40px;
-      margin-bottom: 40px;
+      padding-left: 20px;
+      margin-bottom: 80px;
       position: absolute;
       top: 24%;
       > h6 {
         color: whitesmoke;
-        font-size: 36px;
-        padding-top: 20px;
+        font-size: 48px;
+        padding-top: 40px;
         /* text-align: center; */
         margin-bottom: 28px;
         /* padding-right: 14%; */
@@ -91,9 +91,9 @@
       > span {
         display: block;
         color: whitesmoke;
-        font-size: 20px;
-        padding-top: 20px;
-        margin-bottom: 28px;
+        font-size: 28px;
+        padding-top: 40px;
+        margin-bottom: 48px;
         /* padding-bottom: 50px; */
       }
     }
@@ -101,25 +101,25 @@
   .pillars {
     width: 100vw;
     display: flex;
-    height: 100vh;
+    height: 1200px;
   }
   .textstrat {
     padding-top: 140px;
-    padding-left: 140px;
+    padding-left: 120px;
     width: 100%;
-    height: 10vh !important;
+    height: 80px !important;
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 60px;
       /* text-align: center; */
       /* margin-bottom: 20px; */
     }
   }
   .market3 {
-    margin-top: 14px;
+    margin-top: 24px;
     /* margin-bottom: 20px; */
-    font-size: 20px;
+    font-size: 28px;
     color: whitesmoke;
     text-align: left;
     > span {
@@ -128,10 +128,11 @@
     }
     > img {
       margin-bottom: 4px;
+      width: 40px;
     }
   }
 }
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1401px) and (max-width: 1920px) {
   .strategy {
     width: 100%;
     /* display: flex; */
@@ -146,6 +147,18 @@
     border-bottom: 24px solid transparent;
     border-top: 24px solid transparent;
   }
+  .cloud{
+    /* margin: auto auto; */
+  position: absolute;
+  width: 100% !important;
+  /* height: 100% !important; */
+  left: -2%;
+  /* bottom: -40%; */
+  /* filter:grayscale(100%); */
+  z-index: -1;
+  /* color: #000; */
+  /* opacity: 0.48; */
+}
 
   /* .title{
     position: absolute;
@@ -216,7 +229,7 @@
   .pillars {
     width: 100%;
     display: flex;
-    height: 80vh;
+    height: 800px;
     position: relative;
   }
   
@@ -224,7 +237,7 @@
     padding-top: 140px;
     padding-left: 140px;
     width: 100%;
-    height: 10vh !important;
+    height: 100px !important;
     /* float: left; */
     > h4 {
       color: whitesmoke;
@@ -247,7 +260,7 @@
     }
   }
 }
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1400px) {
   .strategy {
     width: 100%;
     /* display: flex; */
@@ -298,8 +311,8 @@
           } */
   .pillar {
     padding-top: 100px;
-    padding-left: 100px;
-    width: 33%;
+    padding-left: 60px;
+    width: 31%;
     float: left;
     position: relative;
     > img {
@@ -314,17 +327,17 @@
       top: 24%;
       > h6 {
         color: whitesmoke;
-        font-size: 36px;
+        font-size: 20px;
         padding-top: 20px;
         /* text-align: center; */
-        margin-bottom: 28px;
+        margin-bottom: 20px;
       }
       > span {
         display: block;
         color: whitesmoke;
-        font-size: 20px;
+        font-size: 14px;
         padding-top: 20px;
-        margin-bottom: 28px;
+        margin-bottom: 20px;
         /* padding-bottom: 50px; */
       }
     }
@@ -332,17 +345,17 @@
   .pillars {
     width: 100%;
     display: flex;
-    height: 80vh;
+    height: 600px;
   }
   .textstrat {
-    padding-top: 140px;
-    padding-left: 140px;
+    padding-top: 100px;
+    padding-left: 100px;
     width: 100%;
-    height: 10vh !important;
+    height: 60px !important;
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 40px;
       /* text-align: center; */
       /* margin-bottom: 20px; */
     }
@@ -350,7 +363,7 @@
   .market3 {
     margin-top: 14px;
     /* margin-bottom: 20px; */
-    font-size: 20px;
+    font-size: 14px;
     color: whitesmoke;
     > span {
       /* margin-top: 100px; */
@@ -361,7 +374,7 @@
     }
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1200px) {
   .strategy {
     width: 100%;
     /* display: flex; */
@@ -412,7 +425,7 @@
     } */
   .pillar {
     padding-top: 100px;
-    padding-left: 100px;
+    padding-left: 40px;
     width: 33%;
     float: left;
     position: relative;
@@ -428,17 +441,17 @@
       top: 24%;
       > h6 {
         color: whitesmoke;
-        font-size: 36px;
+        font-size: 18px;
         padding-top: 20px;
         /* text-align: center; */
-        margin-bottom: 28px;
+        margin-bottom: 20px;
       }
       > span {
         display: block;
         color: whitesmoke;
-        font-size: 20px;
+        font-size: 12px;
         padding-top: 20px;
-        margin-bottom: 28px;
+        margin-bottom: 20px;
         /* padding-bottom: 50px; */
       }
     }
@@ -446,17 +459,17 @@
   .pillars {
     width: 100%;
     display: flex;
-    height: 80vh;
+    height: 640px;
   }
   .textstrat {
-    padding-top: 140px;
-    padding-left: 140px;
+    padding-top: 80px;
+    padding-left:80px;
     width: 100%;
-    height: 10vh !important;
+    height: 48px !important;
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 36px;
       /* text-align: center; */
       /* margin-bottom: 20px; */
     }
@@ -464,7 +477,7 @@
   .market3 {
     margin-top: 14px;
     /* margin-bottom: 20px; */
-    font-size: 20px;
+    font-size: 12px;
     color: whitesmoke;
     > span {
       /* margin-top: 100px; */
@@ -475,7 +488,7 @@
     }
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .strategy {
     width: 100%;
     /* display: flex; */
@@ -526,8 +539,8 @@
         } */
   .pillar {
     padding-top: 100px;
-    padding-left: 100px;
-    width: 33%;
+    padding-left: 20px;
+    width: 32%;
     float: left;
     position: relative;
     > img {
@@ -542,16 +555,16 @@
       top: 24%;
       > h6 {
         color: whitesmoke;
-        font-size: 36px;
-        padding-top: 20px;
+        font-size: 18px;
+        padding-top: 14px;
         /* text-align: center; */
         margin-bottom: 28px;
       }
       > span {
         display: block;
         color: whitesmoke;
-        font-size: 20px;
-        padding-top: 20px;
+        font-size: 12px;
+        padding-top: 14px;
         margin-bottom: 28px;
         /* padding-bottom: 50px; */
       }
@@ -560,17 +573,17 @@
   .pillars {
     width: 100%;
     display: flex;
-    height: 80vh;
+    height: 640px;
   }
   .textstrat {
-    padding-top: 140px;
-    padding-left: 140px;
+    padding-top: 60px;
+    padding-left: 60px;
     width: 100%;
-    height: 10vh !important;
+    height: 40px !important;
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 28px;
       /* text-align: center; */
       /* margin-bottom: 20px; */
     }
@@ -578,7 +591,7 @@
   .market3 {
     margin-top: 14px;
     /* margin-bottom: 20px; */
-    font-size: 20px;
+    font-size: 11px;
     color: whitesmoke;
     > span {
       /* margin-top: 100px; */
@@ -586,10 +599,11 @@
     }
     > img {
       margin-bottom: 4px;
+      width: 14px;
     }
   }
 }
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .strategy {
     width: 100%;
     /* display: flex; */
@@ -600,9 +614,9 @@
   }
   .strathelp {
     background-color: transparent !important;
-    border: 48px solid transparent;
-    border-bottom: 24px solid transparent;
-    border-top: 24px solid transparent;
+    border: 8px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
   }
 
   /* .title{
@@ -639,8 +653,8 @@
           }
         } */
   .pillar {
-    padding-top: 100px;
-    padding-left: 100px;
+    padding-top: 80px;
+    padding-left: 14px;
     width: 33%;
     float: left;
     position: relative;
@@ -650,22 +664,22 @@
       /* padding-left: 28px; */
     }
     > div {
-      padding-left: 40px;
+      padding-left: 20px;
       margin-bottom: 40px;
       position: absolute;
       top: 24%;
       > h6 {
         color: whitesmoke;
-        font-size: 36px;
-        padding-top: 20px;
+        font-size: 18px;
+        padding-top: 14px;
         /* text-align: center; */
         margin-bottom: 28px;
       }
       > span {
         display: block;
         color: whitesmoke;
-        font-size: 20px;
-        padding-top: 20px;
+        font-size: 10px;
+        padding-top: 14px;
         margin-bottom: 28px;
         /* padding-bottom: 50px; */
       }
@@ -674,17 +688,17 @@
   .pillars {
     width: 100%;
     display: flex;
-    height: 80vh;
+    height: 600px;
   }
   .textstrat {
-    padding-top: 140px;
-    padding-left: 140px;
+    padding-top: 40px;
+    padding-left: 40px;
     width: 100%;
-    height: 10vh !important;
+    height: 40px !important;
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 28px;
       /* text-align: center; */
       /* margin-bottom: 20px; */
     }
@@ -692,14 +706,15 @@
   .market3 {
     margin-top: 14px;
     /* margin-bottom: 20px; */
-    font-size: 20px;
+    font-size: 11px;
     color: whitesmoke;
     > span {
       /* margin-top: 100px; */
-      padding-left: 12px;
+      padding-left: 2px;
     }
     > img {
       margin-bottom: 4px;
+      width: 12px;
     }
   }
 }
@@ -714,9 +729,9 @@
   }
   .strathelp {
     background-color: transparent !important;
-    border: 48px solid transparent;
-    border-bottom: 24px solid transparent;
-    border-top: 24px solid transparent;
+    border: 8px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
   }
 
   /* .title{
@@ -753,67 +768,73 @@
           }
         } */
   .pillar {
-    padding-top: 100px;
-    padding-left: 100px;
-    width: 33%;
+    padding-top: 0px;
+    padding-left: 0px;
+    width: 100%;
     float: left;
     position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
     > img {
       width: 50%;
       opacity: 0.48;
       /* padding-left: 28px; */
     }
     > div {
-      padding-left: 40px;
+      padding-left: 20px;
       margin-bottom: 40px;
-      position: absolute;
+      /* position: absolute; */
       top: 24%;
+      
       > h6 {
         color: whitesmoke;
-        font-size: 36px;
-        padding-top: 20px;
+        font-size: 18px;
+        margin-top: 8px;
         /* text-align: center; */
-        margin-bottom: 28px;
+        margin-bottom: 8px;
       }
       > span {
-        display: block;
+        /* display: block; */
         color: whitesmoke;
-        font-size: 20px;
-        padding-top: 20px;
-        margin-bottom: 28px;
+        font-size: 10px;
+        padding-top: 14px;
+        margin-bottom: 8px;
         /* padding-bottom: 50px; */
       }
     }
   }
   .pillars {
     width: 100%;
-    display: flex;
-    height: 80vh;
+    /* display: flex; */
+    height: 800px;
   }
   .textstrat {
-    padding-top: 140px;
-    padding-left: 140px;
+    padding-top: 20px;
+    margin-bottom: 48px;
     width: 100%;
-    height: 10vh !important;
+    height: 20px !important;
     /* float: left; */
+    text-align: center;
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 22px;
       /* text-align: center; */
-      /* margin-bottom: 20px; */
+      margin-bottom:18px;
     }
   }
   .market3 {
     margin-top: 14px;
     /* margin-bottom: 20px; */
-    font-size: 20px;
+    font-size: 8px;
     color: whitesmoke;
     > span {
       /* margin-top: 100px; */
-      padding-left: 12px;
+      padding-left: 2px;
     }
     > img {
       margin-bottom: 4px;
+      width: 8px;
     }
   }
 }

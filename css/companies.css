@@ -1,4 +1,4 @@
-@media (min-width: 1920px) and (max-width: 2560px) {
+@media (min-width: 1921px) and (max-width: 2560px) {
   .companies {
     width: 100%;
     display: block;
@@ -41,13 +41,13 @@
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 60px;
       /* text-align: center; */
       margin-bottom: 20px;
     }
     > span {
       color: whitesmoke;
-      font-size: 20px;
+      font-size: 28px;
       margin-top: 140px;
     }
   }
@@ -59,7 +59,7 @@
     margin-bottom: 4%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 44px;
+    grid-gap: 64px;
     justify-items: center;
     > div {
       text-align: center;
@@ -77,8 +77,8 @@
     position: absolute;
     top: 84%;
     left: 25%;
-    width: 180px !important;
-    height: 40px;
+    width: 200px !important;
+    height: 48px;
     background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
     color: #000 !important;
     /* background-color: #000 !important; */
@@ -88,7 +88,7 @@
     /* font-weight: 500 !important; */
     /* transition-duration: 1.5s; */
     border-radius: 8px !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
     overflow: hidden;
     z-index: 1;
     cursor: pointer;
@@ -158,7 +158,7 @@
     top: 0;
   }
 }
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1401px) and (max-width: 1920px) {
   .companies {
     width: 100%;
     display: block;
@@ -213,8 +213,8 @@
   .imgcompanies {
     /* height: 80vh; */
     margin-top: 80px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 14%;
+    margin-right: 14%;
     margin-bottom: 4%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -304,7 +304,7 @@
     top: 0;
   }
 }
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1400px) {
   .companies {
     width: 100%;
     display: block;
@@ -359,12 +359,12 @@
   .imgcompanies {
     /* height: 80vh; */
     margin-top: 80px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 8%;
+    margin-right: 8%;
     margin-bottom: 4%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 44px;
+    grid-gap: 20px;
     justify-items: center;
     > div {
       text-align: center;
@@ -452,7 +452,7 @@
     top: 0;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1200px) {
   .companies {
     width: 100%;
     display: block;
@@ -494,25 +494,25 @@
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 40px;
       /* text-align: center; */
       margin-bottom: 20px;
     }
     > span {
       color: whitesmoke;
-      font-size: 20px;
+      font-size: 14px;
       margin-top: 140px;
     }
   }
   .imgcompanies {
     /* height: 80vh; */
     margin-top: 80px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 4%;
+    margin-right: 4%;
     margin-bottom: 4%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 44px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 14px;
     justify-items: center;
     > div {
       text-align: center;
@@ -600,7 +600,7 @@
     top: 0;
   }
 }
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .companies {
     width: 100%;
     display: block;
@@ -642,25 +642,25 @@
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 28px;
       /* text-align: center; */
       margin-bottom: 20px;
     }
     > span {
       color: whitesmoke;
-      font-size: 20px;
+      font-size: 12px;
       margin-top: 140px;
     }
   }
   .imgcompanies {
     /* height: 80vh; */
     margin-top: 80px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 4%;
+    margin-right: 4%;
     margin-bottom: 4%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 44px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 14px;
     justify-items: center;
     > div {
       text-align: center;
@@ -709,13 +709,161 @@
     }
   }
   /* .comp:hover{
-                      animation-fill-mode: both;
-                  
-                      background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e,#795b34) !important;
-                      color: #000 !important;
-                      border: 2px solid #000 !important;
-                      animation-timing-function: ease-in-out;
-                    } */
+                  animation-fill-mode: both;
+              
+                  background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e,#795b34) !important;
+                  color: #000 !important;
+                  border: 2px solid #000 !important;
+                  animation-timing-function: ease-in-out;
+                } */
+
+  .comp:hover {
+    /* animation-fill-mode: both; */
+    color: #000 !important;
+    /* background: linear-gradient(20deg, #886a38, #9b7c45, #c5a86e,#795b34) !important; */
+    border: none !important;
+    /* animation-timing-function: ease-in-out; */
+    transition-delay: 0.2s;
+  }
+
+  .comp:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      20deg,
+      #886a38,
+      #9b7c45,
+      #c5a86e,
+      #795b34
+    ) !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.4s ease-in-out;
+  }
+
+  .comp:hover:before {
+    top: 0;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .companies {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    /* background-color: #000 !important; */
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    > video {
+      position: absolute;
+      height: 100%;
+      /* filter: grayscale(100%); */
+      rotate: 0deg;
+      z-index: 0;
+      border-radius: 20px !important;
+      /* opacity: 0.8; */
+      /* filter: brightness(80%); */
+      visibility: hidden !important;
+    }
+  }
+  .comphelp {
+    /* background-color: #2b2b2b !important; */
+    /* background: url("../media/videos/Particle\,\ Galaxy\,\ Planets\,\ Animated\ by\ M.\ Yasin\ Esin\ –\ Stock\ Footage.mp4"); */
+    border: 48px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-top: 24px solid transparent;
+    /* border-radius: 20px !important; */
+  }
+  .textcompanies {
+    /* display: block; */
+    padding-top: 4%;
+    padding-left: 4%;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1 !important;
+
+    /* float: left; */
+    > h4 {
+      color: whitesmoke;
+      font-size: 28px;
+      /* text-align: center; */
+      margin-bottom: 20px;
+    }
+    > span {
+      color: whitesmoke;
+      font-size: 12px;
+      margin-top: 140px;
+    }
+  }
+  .imgcompanies {
+    /* height: 80vh; */
+    margin-top: 80px;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 14px;
+    justify-items: center;
+    > div {
+      text-align: center;
+      position: relative;
+      overflow: clip;
+      border: 4px solid #000;
+      transition-duration: 1s;
+      > img {
+        border-radius: 14px;
+        transition-duration: 0.8s;
+      }
+    }
+  }
+  .comp {
+    position: absolute;
+    top: 88%;
+    left: 25%;
+    width: 180px !important;
+    color: #9b7c45 !important;
+    background-color: #000 !important;
+    border-color: #9b7c45 !important;
+    /* border-radius: 10px !important; */
+    font-weight: 500 !important;
+    /* transition-duration: 1.5s; */
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+  }
+  .imgcompanies > div:hover {
+    animation-fill-mode: both;
+    transform: scale(1.04);
+    /* border:4px solid #9b7c45; */
+    border-radius: 18px;
+    animation-timing-function: ease-in-out;
+    animation: linear;
+    > img {
+      transform: scale(1.18);
+      /* transition-duration: 1s; */
+    }
+  }
+  /* .comp:hover{
+                  animation-fill-mode: both;
+              
+                  background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e,#795b34) !important;
+                  color: #000 !important;
+                  border: 2px solid #000 !important;
+                  animation-timing-function: ease-in-out;
+                } */
 
   .comp:hover {
     /* animation-fill-mode: both; */
@@ -773,9 +921,9 @@
   .comphelp {
     /* background-color: #2b2b2b !important; */
     /* background: url("../media/videos/Particle\,\ Galaxy\,\ Planets\,\ Animated\ by\ M.\ Yasin\ Esin\ –\ Stock\ Footage.mp4"); */
-    border: 48px solid transparent;
-    border-bottom: 24px solid transparent;
-    border-top: 24px solid transparent;
+    border: 8px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
     /* border-radius: 20px !important; */
   }
   .textcompanies {
@@ -790,25 +938,25 @@
     /* float: left; */
     > h4 {
       color: whitesmoke;
-      font-size: 48px;
+      font-size: 28px;
       /* text-align: center; */
       margin-bottom: 20px;
     }
     > span {
       color: whitesmoke;
-      font-size: 20px;
+      font-size: 12px;
       margin-top: 140px;
     }
   }
   .imgcompanies {
     /* height: 80vh; */
     margin-top: 80px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 4%;
+    margin-right: 4%;
     margin-bottom: 4%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 44px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 14px;
     justify-items: center;
     > div {
       text-align: center;
@@ -857,13 +1005,13 @@
     }
   }
   /* .comp:hover{
-                          animation-fill-mode: both;
-                      
-                          background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e,#795b34) !important;
-                          color: #000 !important;
-                          border: 2px solid #000 !important;
-                          animation-timing-function: ease-in-out;
-                        } */
+                  animation-fill-mode: both;
+              
+                  background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e,#795b34) !important;
+                  color: #000 !important;
+                  border: 2px solid #000 !important;
+                  animation-timing-function: ease-in-out;
+                } */
 
   .comp:hover {
     /* animation-fill-mode: both; */

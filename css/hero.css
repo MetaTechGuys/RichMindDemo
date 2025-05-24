@@ -1,4 +1,299 @@
-@media (min-width: 1920px) and (max-width: 2560px) {
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .lion {
+    object-fit: fill;
+    width: 100%;
+    height: auto;
+  }
+  .overlay {
+    position: relative;
+    text-align: left;
+    color: white;
+    width: 100% !important;
+    overflow: hidden;
+    /* border-radius: 20px; */
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    > video {
+      position: relative;
+      width: 100% !important;
+      z-index: 1 !important;
+      /* opacity: 0.8; */
+    }
+    /* >IMG{
+        position: absolute;
+z-index: 2 !important;
+opacity: 0;
+top: 0%;
+left: 0%;
+      } */
+  }
+
+  .hero {
+    width: 100% !important;
+    background-color: transparent;
+    /* border: 48px solid transparent; */
+    border-top: none;
+    border-bottom: 24px solid transparent;
+  }
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 0%;
+    /* left: 0%; */
+    width: 60%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.48) !important;
+    width: 100%;
+    height: 100%;
+    padding-left: 4%;
+    
+  }
+
+  .overlay:hover{
+    .bottom-left>h1{
+      animation: fadettb linear forwards;
+      transition: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    }
+    .bottom-left>h4{
+      animation: fadettb2 linear forwards;
+      transition: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    /* animation-delay: 0.8s; */
+    }
+    .markets{
+      animation: fadettb3 linear forwards;
+      transition: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    /* animation-delay: 1.6s; */
+    }
+    .buttons{
+      animation: fadebtt linear forwards;
+      transition: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    /* animation-delay: 2.4s; */
+    }
+  }
+
+  @keyframes fadettb {
+    from {
+      top: 0%;
+      opacity: 0;
+    }
+    to {
+      top: 6%;
+      opacity: 1;
+    }
+  }
+  @keyframes fadettb2 {
+    from {
+      top: 40%;
+      opacity: 0;
+    }
+    to {
+      top: 46%;
+      opacity: 1;
+    }
+  }
+  @keyframes fadettb3 {
+    from {
+      top: 58%;
+      opacity: 0;
+    }
+    to {
+      top: 64%;
+      opacity: 1;
+    }
+  }
+  @keyframes fadebtt {
+    from {
+      top: 60%;
+      opacity: 0;
+    }
+    to {
+      top: 54%;
+      opacity: 1;
+    }
+  }
+  .bottom-left > h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 88px;
+    margin-bottom: 2%;
+    padding-right: 200px;
+    margin-top: 10%;
+    position: absolute;
+    opacity: 0;
+  }
+  .bottom-left > h4 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    margin-bottom: 2%;
+    position: absolute;
+    top: 40%;
+    opacity: 0;
+
+  }
+  .info {
+    display: flex;
+    width: 100%;
+    
+  }
+  .markets {
+    width: 60%;
+    /* display: flex; */
+    position: absolute;
+    /* top: 60%; */
+    opacity: 0;
+  }
+  .market {
+    width: 30%;
+    margin-bottom: 2%;
+    
+
+  }
+  .market > img {
+    margin-bottom: 8px;
+    padding-top: 0px;
+    width: 8%;
+  }
+  .market > span {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+  }
+  .buttons {
+    float: right;
+    padding-top: 14%;
+    position: absolute;
+    /* top: 60%; */
+    left: 60%;
+    opacity: 0;
+    width: 80%;
+  }
+  .golden {
+    /* background-color: #886a38 !important; */
+    position: relative;
+    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34);
+    color: black !important;
+    width: 320px;
+    height: 64px;
+    border-radius: 8px !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    margin-left: 82px;
+    overflow: hidden;
+    border: none !important;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.08s ease-in;
+    -o-transition: 0.08s ease-in;
+    -ms-transition: 0.08s ease-in;
+    -moz-transition: 0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+  }
+  .white {
+    color: whitesmoke !important;
+    border-color: whitesmoke !important;
+    width: 320px;
+    height: 64px;
+    border-radius: 8px !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    margin-left: 28px;
+    border-width: 4px !important;
+    position: relative;
+
+    /* display:block;
+  height: 45px;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  background: none;  
+  color: #383736;*/
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.08s ease-in;
+    -o-transition: 0.08s ease-in;
+    -ms-transition: 0.08s ease-in;
+    -moz-transition: 0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+  }
+  /* .golden:hover{
+      animation-fill-mode: both;
+      background: none !important;
+      color: #9b7c45 !important;
+      background-color: #000 !important;
+      border: 2px solid #9b7c45 !important;
+      border: 2px solid #000 !important;
+      animation-timing-function: ease-in-out;
+    } */
+  /* .white:hover{
+      animation-fill-mode: both;
+    border-color: #000 !important;
+      background: #fff !important;
+      color: #000 !important;
+      border: 2px solid #000 !important;
+      animation-timing-function: ease-in-out;
+    } */
+
+  .golden:hover {
+    color: #9b7c45 !important;
+    background-color: #000 !important;
+    border: 2px solid #9b7c45 !important;
+  }
+
+  .golden:before {
+    content: "";
+    position: absolute;
+    background: #000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.09s ease-in;
+  }
+
+  .golden:hover:before {
+    top: 0;
+  }
+
+  .white:hover {
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    background: #fff !important;
+  }
+
+  .white:before {
+    content: "";
+    position: absolute;
+    background: whitesmoke;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.09s ease-in;
+  }
+
+  .white:hover:before {
+    top: 0;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1920px) {
   .lion {
     object-fit: fill;
     width: 100%;
@@ -292,7 +587,7 @@ left: 0%;
     top: 0;
   }
 }
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1201px) and (max-width: 1400px) {
   .lion {
     object-fit: fill;
     width: 100%;
@@ -415,7 +710,7 @@ left: 0%;
   }
   .bottom-left > h1 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 80px;
+    font-size:60px;
     margin-bottom: 2%;
     padding-right: 200px;
     margin-top: 10%;
@@ -424,7 +719,7 @@ left: 0%;
   }
   .bottom-left > h4 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 2%;
     position: absolute;
     top: 40%;
@@ -455,7 +750,7 @@ left: 0%;
   }
   .market > span {
     font-family: "Times New Roman", Times, serif;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 8px;
     margin-left: 8px;
   }
@@ -464,21 +759,21 @@ left: 0%;
     padding-top: 14%;
     position: absolute;
     /* top: 60%; */
-    left: 60%;
+    left: 54%;
     opacity: 0;
-    width: 80%;
+    width: 84%;
   }
   .golden {
     /* background-color: #886a38 !important; */
     position: relative;
     background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34);
     color: black !important;
-    width: 280px;
+    width: 248px;
     height: 48px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     font-weight: 500 !important;
-    margin-left: 82px;
+    margin-left: 80px;
     overflow: hidden;
     border: none !important;
     z-index: 1;
@@ -492,10 +787,10 @@ left: 0%;
   .white {
     color: whitesmoke !important;
     border-color: whitesmoke !important;
-    width: 280px;
+    width: 248px;
     height: 48px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     font-weight: 500 !important;
     margin-left: 28px;
     border-width: 4px !important;
@@ -586,7 +881,7 @@ left: 0%;
     top: 0;
   }
 }
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 993px) and (max-width: 1200px) {
   .lion {
     object-fit: fill;
     width: 100%;
@@ -709,7 +1004,7 @@ left: 0%;
   }
   .bottom-left > h1 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 80px;
+    font-size: 48px;
     margin-bottom: 2%;
     padding-right: 200px;
     margin-top: 10%;
@@ -718,7 +1013,7 @@ left: 0%;
   }
   .bottom-left > h4 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 2%;
     position: absolute;
     top: 40%;
@@ -749,7 +1044,7 @@ left: 0%;
   }
   .market > span {
     font-family: "Times New Roman", Times, serif;
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 8px;
     margin-left: 8px;
   }
@@ -758,19 +1053,19 @@ left: 0%;
     padding-top: 14%;
     position: absolute;
     /* top: 60%; */
-    left: 60%;
+    left: 50%;
     opacity: 0;
-    width: 80%;
+    width: 82%;
   }
   .golden {
     /* background-color: #886a38 !important; */
     position: relative;
     background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34);
     color: black !important;
-    width: 280px;
-    height: 48px;
+    width: 228px;
+    height: 40px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
     font-weight: 500 !important;
     margin-left: 82px;
     overflow: hidden;
@@ -786,10 +1081,10 @@ left: 0%;
   .white {
     color: whitesmoke !important;
     border-color: whitesmoke !important;
-    width: 280px;
-    height: 48px;
+    width: 228px;
+    height: 40px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
     font-weight: 500 !important;
     margin-left: 28px;
     border-width: 4px !important;
@@ -880,7 +1175,7 @@ left: 0%;
     top: 0;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .lion {
     object-fit: fill;
     width: 100%;
@@ -931,34 +1226,32 @@ left: 0%;
     
   }
 
-  .overlay:hover{
-    .bottom-left>h1{
-      animation: fadettb linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    }
-    .bottom-left>h4{
-      animation: fadettb2 linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 0.8s; */
-    }
-    .markets{
-      animation: fadettb3 linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 1.6s; */
-    }
-    .buttons{
-      animation: fadebtt linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 2.4s; */
-    }
+  .bottom-left>h1{
+    animation: fadettb linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  }
+  .bottom-left>h4{
+    animation: fadettb2 linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 0.8s; */
+  }
+  .markets{
+    animation: fadettb3 linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 1.6s; */
+  }
+  .buttons{
+    animation: fadebtt linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 2.4s; */
   }
 
   @keyframes fadettb {
@@ -1003,7 +1296,7 @@ left: 0%;
   }
   .bottom-left > h1 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 80px;
+    font-size: 40px;
     margin-bottom: 2%;
     padding-right: 200px;
     margin-top: 10%;
@@ -1012,7 +1305,7 @@ left: 0%;
   }
   .bottom-left > h4 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 28px;
+    font-size: 18px;
     margin-bottom: 2%;
     position: absolute;
     top: 40%;
@@ -1032,18 +1325,19 @@ left: 0%;
     opacity: 0;
   }
   .market {
-    width: 30%;
+    width: 33%;
     margin-bottom: 2%;
     
 
   }
   .market > img {
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     padding-top: 0px;
+    width: 16px;
   }
   .market > span {
     font-family: "Times New Roman", Times, serif;
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 8px;
     margin-left: 8px;
   }
@@ -1061,12 +1355,12 @@ left: 0%;
     position: relative;
     background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34);
     color: black !important;
-    width: 280px;
-    height: 48px;
+    width: 168px;
+    height: 40px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 14px !important;
     font-weight: 500 !important;
-    margin-left: 82px;
+    margin-left: 20px;
     overflow: hidden;
     border: none !important;
     z-index: 1;
@@ -1080,12 +1374,12 @@ left: 0%;
   .white {
     color: whitesmoke !important;
     border-color: whitesmoke !important;
-    width: 280px;
-    height: 48px;
+     width: 168px;
+    height: 40px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 14px !important;
     font-weight: 500 !important;
-    margin-left: 28px;
+    margin-left: 20px;
     border-width: 4px !important;
     position: relative;
 
@@ -1174,7 +1468,7 @@ left: 0%;
     top: 0;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .lion {
     object-fit: fill;
     width: 100%;
@@ -1225,34 +1519,32 @@ left: 0%;
     
   }
 
-  .overlay:hover{
-    .bottom-left>h1{
-      animation: fadettb linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    }
-    .bottom-left>h4{
-      animation: fadettb2 linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 0.8s; */
-    }
-    .markets{
-      animation: fadettb3 linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 1.6s; */
-    }
-    .buttons{
-      animation: fadebtt linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 2.4s; */
-    }
+  .bottom-left>h1{
+    animation: fadettb linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  }
+  .bottom-left>h4{
+    animation: fadettb2 linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 0.8s; */
+  }
+  .markets{
+    animation: fadettb3 linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 1.6s; */
+  }
+  .buttons{
+    animation: fadebtt linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 2.4s; */
   }
 
   @keyframes fadettb {
@@ -1297,7 +1589,7 @@ left: 0%;
   }
   .bottom-left > h1 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 80px;
+    font-size: 28px;
     margin-bottom: 2%;
     padding-right: 200px;
     margin-top: 10%;
@@ -1306,7 +1598,7 @@ left: 0%;
   }
   .bottom-left > h4 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 28px;
+    font-size: 16px;
     margin-bottom: 2%;
     position: absolute;
     top: 40%;
@@ -1326,7 +1618,7 @@ left: 0%;
     opacity: 0;
   }
   .market {
-    width: 30%;
+    width: 35%;
     margin-bottom: 2%;
     
 
@@ -1334,10 +1626,11 @@ left: 0%;
   .market > img {
     margin-bottom: 8px;
     padding-top: 0px;
+    width: 12px;
   }
   .market > span {
     font-family: "Times New Roman", Times, serif;
-    font-size: 24px;
+    font-size: 14px;
     margin-bottom: 8px;
     margin-left: 8px;
   }
@@ -1346,7 +1639,7 @@ left: 0%;
     padding-top: 14%;
     position: absolute;
     /* top: 60%; */
-    left: 60%;
+    left: 54%;
     opacity: 0;
     width: 80%;
   }
@@ -1355,12 +1648,12 @@ left: 0%;
     position: relative;
     background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34);
     color: black !important;
-    width: 280px;
-    height: 48px;
+    width: 148px;
+    height: 36px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 12px !important;
     font-weight: 500 !important;
-    margin-left: 82px;
+    margin-left: 8px;
     overflow: hidden;
     border: none !important;
     z-index: 1;
@@ -1374,306 +1667,12 @@ left: 0%;
   .white {
     color: whitesmoke !important;
     border-color: whitesmoke !important;
-    width: 280px;
-    height: 48px;
+    width: 148px;
+    height: 36px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 12px !important;
     font-weight: 500 !important;
-    margin-left: 28px;
-    border-width: 4px !important;
-    position: relative;
-
-    /* display:block;
-  height: 45px;
-  width: 150px;
-  margin: 10px 7px;
-  padding: 5px 5px;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  border: 2px #383736 solid;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  background: none;  
-  color: #383736;*/
-    overflow: hidden;
-    z-index: 1;
-    cursor: pointer;
-    transition: 0.08s ease-in;
-    -o-transition: 0.08s ease-in;
-    -ms-transition: 0.08s ease-in;
-    -moz-transition: 0.08s ease-in;
-    -webkit-transition: 0.08s ease-in;
-  }
-  /* .golden:hover{
-      animation-fill-mode: both;
-      background: none !important;
-      color: #9b7c45 !important;
-      background-color: #000 !important;
-      border: 2px solid #9b7c45 !important;
-      border: 2px solid #000 !important;
-      animation-timing-function: ease-in-out;
-    } */
-  /* .white:hover{
-      animation-fill-mode: both;
-    border-color: #000 !important;
-      background: #fff !important;
-      color: #000 !important;
-      border: 2px solid #000 !important;
-      animation-timing-function: ease-in-out;
-    } */
-
-  .golden:hover {
-    color: #9b7c45 !important;
-    background-color: #000 !important;
-    border: 2px solid #9b7c45 !important;
-  }
-
-  .golden:before {
-    content: "";
-    position: absolute;
-    background: #000;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 100%;
-    z-index: -1;
-    -webkit-transition: top 0.09s ease-in;
-  }
-
-  .golden:hover:before {
-    top: 0;
-  }
-
-  .white:hover {
-    color: #000 !important;
-    border: 2px solid #000 !important;
-    background: #fff !important;
-  }
-
-  .white:before {
-    content: "";
-    position: absolute;
-    background: whitesmoke;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 100%;
-    z-index: -1;
-    -webkit-transition: top 0.09s ease-in;
-  }
-
-  .white:hover:before {
-    top: 0;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  .lion {
-    object-fit: fill;
-    width: 100%;
-    height: auto;
-  }
-  .overlay {
-    position: relative;
-    text-align: left;
-    color: white;
-    width: 100% !important;
-    overflow: hidden;
-    /* border-radius: 20px; */
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    > video {
-      position: relative;
-      width: 100% !important;
-      z-index: 1 !important;
-      /* opacity: 0.8; */
-    }
-    /* >IMG{
-        position: absolute;
-z-index: 2 !important;
-opacity: 0;
-top: 0%;
-left: 0%;
-      } */
-  }
-
-  .hero {
-    width: 100% !important;
-    background-color: transparent;
-    /* border: 48px solid transparent; */
-    border-top: none;
-    border-bottom: 24px solid transparent;
-  }
-  /* Bottom left text */
-  .bottom-left {
-    position: absolute;
-    bottom: 0%;
-    /* left: 0%; */
-    width: 60%;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.48) !important;
-    width: 100%;
-    height: 100%;
-    padding-left: 4%;
-    
-  }
-
-  .overlay:hover{
-    .bottom-left>h1{
-      animation: fadettb linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    }
-    .bottom-left>h4{
-      animation: fadettb2 linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 0.8s; */
-    }
-    .markets{
-      animation: fadettb3 linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 1.6s; */
-    }
-    .buttons{
-      animation: fadebtt linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 2.4s; */
-    }
-  }
-
-  @keyframes fadettb {
-    from {
-      top: 0%;
-      opacity: 0;
-    }
-    to {
-      top: 6%;
-      opacity: 1;
-    }
-  }
-  @keyframes fadettb2 {
-    from {
-      top: 40%;
-      opacity: 0;
-    }
-    to {
-      top: 46%;
-      opacity: 1;
-    }
-  }
-  @keyframes fadettb3 {
-    from {
-      top: 58%;
-      opacity: 0;
-    }
-    to {
-      top: 64%;
-      opacity: 1;
-    }
-  }
-  @keyframes fadebtt {
-    from {
-      top: 60%;
-      opacity: 0;
-    }
-    to {
-      top: 54%;
-      opacity: 1;
-    }
-  }
-  .bottom-left > h1 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 80px;
-    margin-bottom: 2%;
-    padding-right: 200px;
-    margin-top: 10%;
-    position: absolute;
-    opacity: 0;
-  }
-  .bottom-left > h4 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 28px;
-    margin-bottom: 2%;
-    position: absolute;
-    top: 40%;
-    opacity: 0;
-
-  }
-  .info {
-    display: flex;
-    width: 100%;
-    
-  }
-  .markets {
-    width: 60%;
-    /* display: flex; */
-    position: absolute;
-    /* top: 60%; */
-    opacity: 0;
-  }
-  .market {
-    width: 30%;
-    margin-bottom: 2%;
-    
-
-  }
-  .market > img {
-    margin-bottom: 8px;
-    padding-top: 0px;
-  }
-  .market > span {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 24px;
-    margin-bottom: 8px;
     margin-left: 8px;
-  }
-  .buttons {
-    float: right;
-    padding-top: 14%;
-    position: absolute;
-    /* top: 60%; */
-    left: 60%;
-    opacity: 0;
-    width: 80%;
-  }
-  .golden {
-    /* background-color: #886a38 !important; */
-    position: relative;
-    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34);
-    color: black !important;
-    width: 280px;
-    height: 48px;
-    border-radius: 8px !important;
-    font-size: 20px !important;
-    font-weight: 500 !important;
-    margin-left: 82px;
-    overflow: hidden;
-    border: none !important;
-    z-index: 1;
-    cursor: pointer;
-    transition: 0.08s ease-in;
-    -o-transition: 0.08s ease-in;
-    -ms-transition: 0.08s ease-in;
-    -moz-transition: 0.08s ease-in;
-    -webkit-transition: 0.08s ease-in;
-  }
-  .white {
-    color: whitesmoke !important;
-    border-color: whitesmoke !important;
-    width: 280px;
-    height: 48px;
-    border-radius: 8px !important;
-    font-size: 20px !important;
-    font-weight: 500 !important;
-    margin-left: 28px;
     border-width: 4px !important;
     position: relative;
 
@@ -1813,35 +1812,34 @@ left: 0%;
     
   }
 
-  .overlay:hover{
-    .bottom-left>h1{
-      animation: fadettb linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    }
-    .bottom-left>h4{
-      animation: fadettb2 linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 0.8s; */
-    }
-    .markets{
-      animation: fadettb3 linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 1.6s; */
-    }
-    .buttons{
-      animation: fadebtt linear forwards;
-      transition: 1s;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    /* animation-delay: 2.4s; */
-    }
+  .bottom-left>h1{
+    animation: fadettb linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
   }
+  .bottom-left>h4{
+    animation: fadettb2 linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 0.8s; */
+  }
+  .markets{
+    animation: fadettb3 linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 1.6s; */
+  }
+  .buttons{
+    animation: fadebtt linear forwards;
+    transition: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* animation-delay: 2.4s; */
+  }
+
 
   @keyframes fadettb {
     from {
@@ -1885,8 +1883,8 @@ left: 0%;
   }
   .bottom-left > h1 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 80px;
-    margin-bottom: 2%;
+    font-size: 18px;
+    margin-bottom: 1%;
     padding-right: 200px;
     margin-top: 10%;
     position: absolute;
@@ -1894,8 +1892,8 @@ left: 0%;
   }
   .bottom-left > h4 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 28px;
-    margin-bottom: 2%;
+    font-size: 10px;
+    margin-bottom: 1%;
     position: absolute;
     top: 40%;
     opacity: 0;
@@ -1914,27 +1912,28 @@ left: 0%;
     opacity: 0;
   }
   .market {
-    width: 30%;
-    margin-bottom: 2%;
+    width: 48%;
+    margin-bottom: 0%;
     
 
   }
   .market > img {
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     padding-top: 0px;
+    width: 10px;
   }
   .market > span {
     font-family: "Times New Roman", Times, serif;
-    font-size: 24px;
-    margin-bottom: 8px;
-    margin-left: 8px;
+    font-size: 8px;
+    margin-bottom: 0px;
+    margin-left: 2px;
   }
   .buttons {
     float: right;
     padding-top: 14%;
     position: absolute;
     /* top: 60%; */
-    left: 60%;
+    left: 36%;
     opacity: 0;
     width: 80%;
   }
@@ -1943,12 +1942,12 @@ left: 0%;
     position: relative;
     background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34);
     color: black !important;
-    width: 280px;
-    height: 48px;
+    width: 108px;
+    height: 28px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 8px !important;
     font-weight: 500 !important;
-    margin-left: 82px;
+    margin-left: 8px;
     overflow: hidden;
     border: none !important;
     z-index: 1;
@@ -1962,13 +1961,13 @@ left: 0%;
   .white {
     color: whitesmoke !important;
     border-color: whitesmoke !important;
-    width: 280px;
-    height: 48px;
+    width: 108px;
+    height: 28px;
     border-radius: 8px !important;
-    font-size: 20px !important;
+    font-size: 8px !important;
     font-weight: 500 !important;
-    margin-left: 28px;
-    border-width: 4px !important;
+    margin-left: 8px;
+    border-width: 2px !important;
     position: relative;
 
     /* display:block;
