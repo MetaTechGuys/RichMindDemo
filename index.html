@@ -2069,6 +2069,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const mainVideo = document.querySelector('.mainvid video');
+  
+  // Function to handle video attributes based on screen width
+  function handleVideoAttributes() {
+    if (window.innerWidth < 993) {
+      // For mobile devices: remove autoplay, muted and loop, add controls
+      mainVideo.removeAttribute('autoplay');
+      mainVideo.removeAttribute('loop');
+      mainVideo.muted = false;
+      mainVideo.controls = true; // Add controls
+      // Ensure video is paused
+      mainVideo.pause();
+    } else {
+      // For desktop: ensure autoplay, muted and loop are set, remove controls
+      mainVideo.setAttribute('autoplay', '');
+      mainVideo.setAttribute('loop', '');
+      mainVideo.muted = true;
+      mainVideo.controls = false; // Remove controls
+      // Start playing if it should be playing
+      mainVideo.play().catch(e => {
+        console.log('Auto-play was prevented:', e);
+      });
+    }
+  }
+  
+  // Run on page load
+  handleVideoAttributes();
+  
+  // Run on window resize
+  window.addEventListener('resize', handleVideoAttributes);
+});
+
+
+</script>
   </body>
 </html>
 

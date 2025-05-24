@@ -2007,7 +2007,7 @@
       display: block;
       width: 100%;
       color: whitesmoke;
-      font-size: 16px;
+      font-size: 14px;
       /* text-align: center; */
       margin-bottom: 20px;
     }
@@ -2021,8 +2021,8 @@
     /* background-color: #886a38 !important; */
     background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34);
     color: black !important;
-    width: 120px;
-    height: 36px;
+    width: 108px;
+    height: 32px;
     border-radius: 8px !important;
     font-size: 12px !important;
     font-weight: 500 !important;
@@ -2041,8 +2041,8 @@
   .white2 {
     color: whitesmoke !important;
     border-color: whitesmoke !important;
-    width: 120px;
-    height: 36px;
+    width: 108px;
+    height: 32px;
     border-radius: 8px !important;
     font-size: 12px !important;
     font-weight: 500 !important;

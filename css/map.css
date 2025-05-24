@@ -2455,7 +2455,7 @@ letter-spacing: 1px;
 
     
     .worldimg > video {
-      /* filter: brightness(70%); */
+      filter: brightness(240%);
       /* filter:invert(88%); */
       /* filter: drop-shadow(180px 180px #000); */
       /* filter: grayscale(80%) drop-shadow(00%) brightness(0%); */
