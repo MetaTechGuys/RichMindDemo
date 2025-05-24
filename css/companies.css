@@ -125,7 +125,7 @@
   .comp:hover {
     /* animation-fill-mode: both; */
     color: #9b7c45 !important;
-    background: linear-gradient(20deg, #886a38, #9b7c45, #c5a86e,#795b34) !important;
+    background: #000 !important;
     /* border: none !important; */
     /* animation-timing-function: ease-in-out; */
     border: 2px solid #9b7c45 !important;
@@ -137,13 +137,7 @@
   .comp:before {
     content: "";
     position: absolute;
-    background: linear-gradient(
-      20deg,
-      #886a38,
-      #9b7c45,
-      #c5a86e,
-      #795b34
-    ) !important;
+    background: #000 !important;
     bottom: 0;
     left: 0;
     right: 0;
@@ -281,7 +275,7 @@
   .comp:hover {
     /* animation-fill-mode: both; */
     color: #9b7c45 !important;
-    /* background: linear-gradient(20deg, #886a38, #9b7c45, #c5a86e,#795b34) !important; */
+    background: #000 !important;
     border: 2px solid #9b7c45 !important;
     /* animation-timing-function: ease-in-out; */
     transition-delay: 0.1s;
@@ -423,9 +417,9 @@
 
   .comp:hover {
     /* animation-fill-mode: both; */
-    color: #000 !important;
-    /* background: linear-gradient(20deg, #886a38, #9b7c45, #c5a86e,#795b34) !important; */
-    border: none !important;
+    color: #9b7c45 !important;
+    background: #000 !important;
+    border: 2px solid #9b7c45 !important;
     /* animation-timing-function: ease-in-out; */
     transition-delay: 0.2s;
   }
@@ -433,13 +427,7 @@
   .comp:before {
     content: "";
     position: absolute;
-    background: linear-gradient(
-      20deg,
-      #886a38,
-      #9b7c45,
-      #c5a86e,
-      #795b34
-    ) !important;
+    background: #000 !important;
     bottom: 0;
     left: 0;
     right: 0;
@@ -571,9 +559,9 @@
 
   .comp:hover {
     /* animation-fill-mode: both; */
-    color: #000 !important;
-    /* background: linear-gradient(20deg, #886a38, #9b7c45, #c5a86e,#795b34) !important; */
-    border: none !important;
+    color: #9b7c45 !important;
+    background: #000 !important;
+    border: 2px solid #9b7c45 !important;
     /* animation-timing-function: ease-in-out; */
     transition-delay: 0.2s;
   }
@@ -581,13 +569,7 @@
   .comp:before {
     content: "";
     position: absolute;
-    background: linear-gradient(
-      20deg,
-      #886a38,
-      #9b7c45,
-      #c5a86e,
-      #795b34
-    ) !important;
+    background: #000 !important;
     bottom: 0;
     left: 0;
     right: 0;
@@ -719,9 +701,9 @@
 
   .comp:hover {
     /* animation-fill-mode: both; */
-    color: #000 !important;
-    /* background: linear-gradient(20deg, #886a38, #9b7c45, #c5a86e,#795b34) !important; */
-    border: none !important;
+    color: #9b7c45 !important;
+    background: #000 !important;
+    border: 2px solid #9b7c45 !important;
     /* animation-timing-function: ease-in-out; */
     transition-delay: 0.2s;
   }
@@ -729,13 +711,7 @@
   .comp:before {
     content: "";
     position: absolute;
-    background: linear-gradient(
-      20deg,
-      #886a38,
-      #9b7c45,
-      #c5a86e,
-      #795b34
-    ) !important;
+    background: #000 !important;
     bottom: 0;
     left: 0;
     right: 0;
@@ -867,9 +843,9 @@
 
   .comp:hover {
     /* animation-fill-mode: both; */
-    color: #000 !important;
-    /* background: linear-gradient(20deg, #886a38, #9b7c45, #c5a86e,#795b34) !important; */
-    border: none !important;
+    color: #9b7c45 !important;
+    background: #000 !important;
+    border: 2px solid #9b7c45 !important;
     /* animation-timing-function: ease-in-out; */
     transition-delay: 0.2s;
   }
@@ -877,13 +853,7 @@
   .comp:before {
     content: "";
     position: absolute;
-    background: linear-gradient(
-      20deg,
-      #886a38,
-      #9b7c45,
-      #c5a86e,
-      #795b34
-    ) !important;
+    background: #000 !important;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1016,9 +986,9 @@
 
   .comp:hover {
     /* animation-fill-mode: both; */
-    color: #000 !important;
-    /* background: linear-gradient(20deg, #886a38, #9b7c45, #c5a86e,#795b34) !important; */
-    border: none !important;
+    color: #9b7c45 !important;
+    background: #000 !important;
+    border: 2px solid #9b7c45 !important;
     /* animation-timing-function: ease-in-out; */
     transition-delay: 0.2s;
   }
@@ -1026,13 +996,7 @@
   .comp:before {
     content: "";
     position: absolute;
-    background: linear-gradient(
-      20deg,
-      #886a38,
-      #9b7c45,
-      #c5a86e,
-      #795b34
-    ) !important;
+    background: #000 !important;
     bottom: 0;
     left: 0;
     right: 0;
