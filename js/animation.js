@@ -1,75 +1,162 @@
-document.addEventListener("scroll", () => {
-  const gallery = document.querySelector(".gallery");
-  const mainvid = document.querySelector(".mainvid");
-  const galhelp = document.querySelector(".galhelp");
+document.addEventListener('DOMContentLoaded', () => {
+    const collapse = document.querySelector('.collapse');
+    const logo = document.querySelector('.logo');
+    const navhelp = document.querySelector('.navhelp');
+    const hambur = document.querySelector('.hambur');
+    const dropdown = document.querySelector('.dropdown-menu');
+    const nb = document.getElementById('nb');
 
-  if (!gallery || !mainvid || !galhelp) {
-    console.error(
-      "One or more elements (.gallery, .mainvid, .galhelp) are missing in the DOM."
-    );
+
+    // Get computed styles to store original values
+    const computedLogoStyle = window.getComputedStyle(logo);
+    const computedNbStyle = window.getComputedStyle(nb);
+    const computedCollapseStyle = window.getComputedStyle(collapse);
+    const computedNavhelpStyle = window.getComputedStyle(navhelp);
+    const computedHamburStyle = window.getComputedStyle(hambur);
+    const computedDropdownStyle = window.getComputedStyle(dropdown);
+
+
+
+    const computedNavhelpJustify = computedNavhelpStyle.justifyContent;
+    const originalLogoMarginRight = computedLogoStyle.marginRight;
+    const originalLogoWidth = computedLogoStyle.width;
+    const originalNbWidth = computedNbStyle.width;
+    const originalCollapseOpacity = computedCollapseStyle.opacity;
+    const originalCollapseVisibility = computedCollapseStyle.visibility;
+    const originalCollapseDisplay = computedCollapseStyle.display;
+    const originalHamburDisplay = computedHamburStyle.display;
+    const originalDropdownVisibility = computedDropdownStyle.visibility;
+
+    // Set transitions for smooth animation
+    collapse.style.transition = 'opacity 0.4s, visibility 0.8s, display 0.8s';
+    logo.style.transition = 'margin-right 0.8s, width 0.8s, margin-left 0.8s';
+    nb.style.transition = 'width 0.8s, opacity 0.2s';
+    navhelp.style.transition = 'justify-content 0.4s';
+    hambur.style.transition = 'display 0.4s';
+    dropdown.style.transition = 'visibility 0.01s';
+
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 50) {
+            // Scroll down: hide .collapse
+            collapse.style.opacity = '0';
+            collapse.style.visibility = 'hidden';
+            collapse.style.display = 'none !important';
+
+
+            navhelp.style.justifyContent = 'inherit';
+            // Keep logo size, decrease margin-right
+            logo.style.marginRight = '0px';
+            logo.style.marginLeft = '0%';
+            logo.style.width = '140px';
+
+
+
+            dropdown.style.visibility = 'hidden';
+
+            hambur.style.display = 'none';
+            // #nb width to 28%
+            nb.style.width = '260px'
+            // nb.style.paddingLeft = '4%';
+            nb.style.opacity = '0.8';
+        } else if (scrollTop < lastScrollTop) {
+            // Scroll up: revert to original styles
+            collapse.style.opacity = originalCollapseOpacity;
+            collapse.style.visibility = originalCollapseVisibility;
+            collapse.style.display = originalCollapseDisplay;
+
+            navhelp.style.justifyContent = computedNavhelpJustify;
+
+            hambur.style.display = originalHamburDisplay;
+            dropdown.style.visibility = originalDropdownVisibility;
+
+            logo.style.marginRight = originalLogoMarginRight;
+            logo.style.marginLeft = '40%';
+            logo.style.width = originalLogoWidth;
+
+            nb.style.width = '100%';
+            // nb.style.paddingLeft = '0';
+            nb.style.opacity = '1';
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Script loaded');
+  
+  // Get the navbar and hero elements
+  const navbar = document.querySelector('.navbar-expand-lg');
+  const hero = document.querySelector('.hero');
+  const hambur = document.querySelector('.hambur');
+
+  
+  if (!navbar) {
+    console.error('Navbar element not found');
     return;
   }
-
-  const viewportHeight = window.innerHeight;
-  const scrollY = window.scrollY;
-
-  const galleryRect = gallery.getBoundingClientRect();
-  const galleryTop = galleryRect.top + scrollY;
-
-  const mainvidRect = mainvid.getBoundingClientRect();
-  const mainvidCenter = mainvidRect.top + mainvidRect.height / 2;
-
-  const isMainvidInMiddle =
-    mainvidCenter >= viewportHeight / 2 - 50 &&
-    mainvidCenter <= viewportHeight / 2 + 50;
-
-    const galleryProgress = Math.min(
-    Math.max(
-      (scrollY + viewportHeight * 0.5 - galleryTop * 1.2) /
-        (viewportHeight * 1.0),
-      0
-    ),
-    1
-  );
-
-  // Set different multipliers based on screen width
-    let scaleMultiplier;
-  let translateMultiplier;
   
-  if (window.innerWidth <= 1120) {
-    // Small desktops
-     scaleMultiplier = 0;
-    translateMultiplier = 0;
-    console.log("992 multiplier:", scaleMultiplier);
-
-  } else if (window.innerWidth <= 1307) {
-    // Medium desktops
-    scaleMultiplier = 2.6;
-    translateMultiplier = 1120;
-    console.log("1200 multiplier:", scaleMultiplier);
-
-  } else if (window.innerWidth <= 1540) {  // Changed from < 1401 to <= 1400 for clarity
-    // Large desktops
-    scaleMultiplier = 1.4;
-    translateMultiplier = 1480;   // Reduced from 8280 to a more reasonable value
-  } else if (window.innerWidth <= 1920) {
-    // HD screens
-    scaleMultiplier = 2.0;
-    translateMultiplier = 1280; 
-
-  } else {
-    // 4K and larger screens
-    scaleMultiplier = 2.0;
-    translateMultiplier = 1280;
+  if (!hero) {
+    console.error('Hero element not found');
+    // If no hero, just set navbar to black
+    if (window.innerWidth > 993) {
+      navbar.setAttribute('style', 'background-color: black !important');
+    }
+    return;
   }
   
-  // Zoom gallery
-  const galleryScale = 1 + scaleMultiplier * galleryProgress;
-  gallery.style.transform = `scale(${galleryScale})`;
-
-  // Move .galhelp down based on screen size and galleryProgress
-  const moveDownPx = translateMultiplier * galleryProgress;
-  galhelp.style.transform = `translateY(${moveDownPx}px)`;
-
-
+  console.log('Elements found, setting up scroll listener');
+  
+  function updateNavbar() {
+    // Only apply this functionality for screens wider than 993px
+    if (window.innerWidth > 993) {
+      // Get the current scroll position
+      const scrollPosition = window.scrollY;
+      
+      // Get the height of the hero section
+      const heroHeight = hero.offsetHeight;
+      
+      console.log(`Scroll: ${scrollPosition}, Hero height: ${heroHeight}`);
+      
+      // Check if we've scrolled past the hero
+      if (scrollPosition > heroHeight - navbar.offsetHeight) {
+        // Past hero - set black background
+        navbar.setAttribute('style', 'background-color: #2a2b41 !important;');
+      } else {
+        // On hero - set transparent background
+        navbar.setAttribute('style', 'background-color: transparent !important;');
+      }
+    }
+    else {
+      const scrollPosition = window.scrollY;
+      
+      // Get the height of the hero section
+      const heroHeight = hero.offsetHeight;
+      
+      console.log(`Scroll: ${scrollPosition}, Hero height: ${heroHeight}`);
+      
+      // Check if we've scrolled past the hero
+      if (scrollPosition > heroHeight - navbar.offsetHeight) {
+        // Past hero - set black background
+        hambur.setAttribute('style', 'filter: invert(0) !important;');
+      } else {
+        // On hero - set transparent background
+        hambur.setAttribute('style', 'filter: invert(1) !important;');
+      }
+    }
+  }
+  
+  // Initial check
+  updateNavbar();
+  
+  // Add scroll event listener
+  window.addEventListener('scroll', updateNavbar);
+  
+  // Also update when window is resized
+  window.addEventListener('resize', updateNavbar);
 });
+
