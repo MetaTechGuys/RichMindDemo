@@ -82,10 +82,12 @@ function videoZoomAnimate() {
 }
 
 let isLoaded = false
-const heroVideo = document.getElementById("hero-video");
-const heroAudio = document.getElementById("hero-audio");
+let heroVideo
+let heroAudio
 const isVideoPlaying = video => !!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2);
 function initVideoAudio() {
+  heroVideo = document.getElementById("hero-video");
+  heroAudio = document.getElementById("hero-audio");
   heroVideo.onplay = function () { heroAudio.play(); isLoaded = true }
   heroVideo.onpause = function () { heroAudio.pause(); }
 }
@@ -97,11 +99,14 @@ function videoAudioControl() {
 
   heroVideo.volume = volume
   heroAudio.volume = volume
+
+  console.log({ volume, isLoaded });
+  
   if (isLoaded && volume > 0 && !isVideoPlaying(heroVideo)) {
-    console.log('play');
+    console.log('play 0');
     heroVideo.play()
   } else if (isLoaded && volume === 0 && isVideoPlaying(heroVideo)) {
-    console.log('pause');
+    console.log('pause 0');
     heroVideo.pause()
   }
 }
