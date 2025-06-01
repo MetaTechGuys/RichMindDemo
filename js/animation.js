@@ -1,4 +1,13 @@
 document.addEventListener("scroll", () => {
+  videoZoomAnimate()
+  videoAudioControl()
+}, { passive: true });
+
+document.addEventListener('DOMContentLoaded', function () {
+  initVideoAudio()
+})
+
+function videoZoomAnimate() {
   const gallery = document.querySelector(".gallery");
   const mainvid = document.querySelector(".mainvid");
   const galhelp = document.querySelector(".galhelp");
@@ -40,13 +49,13 @@ document.addEventListener("scroll", () => {
     // Small desktops
      scaleMultiplier = 0;
     translateMultiplier = 0;
-    console.log("992 multiplier:", scaleMultiplier);
+    // console.log("992 multiplier:", scaleMultiplier);
 
   } else if (window.innerWidth <= 1307) {
     // Medium desktops
     scaleMultiplier = 2.6;
     translateMultiplier = 1120;
-    console.log("1200 multiplier:", scaleMultiplier);
+    // console.log("1200 multiplier:", scaleMultiplier);
 
   } else if (window.innerWidth <= 1540) {  // Changed from < 1401 to <= 1400 for clarity
     // Large desktops
@@ -70,6 +79,27 @@ document.addEventListener("scroll", () => {
   // Move .galhelp down based on screen size and galleryProgress
   const moveDownPx = translateMultiplier * galleryProgress;
   galhelp.style.transform = `translateY(${moveDownPx}px)`;
+}
 
+let isLoaded = false
+const heroVideo = document.getElementById("hero-video");
+const heroAudio = document.getElementById("hero-audio");
+const isVideoPlaying = video => !!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2);
+function initVideoAudio() {
+  heroVideo.onplay = function () { heroAudio.play(); isLoaded = true }
+  heroVideo.onpause = function () { heroAudio.pause(); }
+}
+function videoAudioControl() {
+  const scrollY = window.scrollY;
+  const width = window.innerWidth;
+  const videScrollEnd = width / 1.77 // ( devide by aspectratio of 16:9 )
+  const volume = Math.min(videScrollEnd, Math.max(0, videScrollEnd - scrollY)) / videScrollEnd
 
-});
+  heroVideo.volume = volume
+  heroAudio.volume = volume
+  if (isLoaded && volume > 0 && !isVideoPlaying(heroVideo)) {
+    heroVideo.play()
+  } else if (isLoaded && volume === 0 && isVideoPlaying(heroVideo)) {
+    heroVideo.pause()
+  }
+}
