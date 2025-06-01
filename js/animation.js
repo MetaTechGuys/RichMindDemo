@@ -97,6 +97,9 @@ function videoAudioControl() {
 
   heroVideo.volume = volume
   heroAudio.volume = volume
+
+  console.log({ volume });
+  
   if (isLoaded && volume > 0 && !isVideoPlaying(heroVideo)) {
     console.log('play');
     heroVideo.play()
