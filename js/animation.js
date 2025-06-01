@@ -6,6 +6,10 @@ document.addEventListener("scroll", () => {
 document.addEventListener('DOMContentLoaded', function () {
   initVideoAudio()
 })
+let firstIntraction = false
+document.addEventListener('click', function () {
+  firstIntraction = true
+})
 
 function videoZoomAnimate() {
   const gallery = document.querySelector(".gallery");
@@ -100,13 +104,14 @@ function videoAudioControl() {
   heroVideo.volume = volume
   heroAudio.volume = volume
 
-  console.log({ volume, isLoaded });
-  
-  if (isLoaded && volume > 0 && !isVideoPlaying(heroVideo)) {
-    console.log('play 0');
-    heroVideo.play()
-  } else if (isLoaded && volume === 0 && isVideoPlaying(heroVideo)) {
-    console.log('pause 0');
-    heroVideo.pause()
+  console.log({ volume, isLoaded, firstIntraction });
+  if (isLoaded || firstIntraction) {
+    if (volume > 0 && !isVideoPlaying(heroVideo)) {
+      console.log('play 0');
+      heroVideo.play()
+    } else if (volume === 0 && isVideoPlaying(heroVideo)) {
+      console.log('pause 0');
+      heroVideo.pause()
+    }
   }
 }
