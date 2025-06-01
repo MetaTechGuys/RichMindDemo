@@ -98,8 +98,10 @@ function videoAudioControl() {
   heroVideo.volume = volume
   heroAudio.volume = volume
   if (isLoaded && volume > 0 && !isVideoPlaying(heroVideo)) {
+    console.log('play');
     heroVideo.play()
   } else if (isLoaded && volume === 0 && isVideoPlaying(heroVideo)) {
+    console.log('pause');
     heroVideo.pause()
   }
 }
