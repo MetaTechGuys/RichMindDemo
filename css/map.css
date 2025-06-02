@@ -23,6 +23,7 @@
       opacity: 1;
       margin-top: 14%;
       display: flex;
+      overflow: hidden;
   }
   .worldimg {
       position: relative;
@@ -424,6 +425,7 @@ letter-spacing: 1px;
       opacity: 1;
       margin-top: 14%;
       display: flex;
+      overflow: hidden;
   }
   .worldimg {
       position: relative;
@@ -587,8 +589,8 @@ letter-spacing: 1px;
     
     .uk {
       background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
-      width: 20px !important;
-      height: 20px !important;
+      width: 22px !important;
+      height: 22px !important;
       bottom: 648px;
       left:782px;
       animation-delay: 1s;
@@ -597,9 +599,12 @@ letter-spacing: 1px;
       /* opacity: 1; */
     }
     .uae {
-      bottom: 559px;
-      left: 930px;
+      bottom: 555px;
+      left: 928px;
       animation-delay: 1s;
+      background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+      width: 18px !important;
+      height: 18px !important;
     }
     .usa {
       bottom: 608px;
@@ -695,6 +700,7 @@ letter-spacing: 1px;
       top: -12%;
       left: -14%;
       border: none;
+      margin-top: 25%;
       /* border-bottom: 2px whitesmoke; */
       background: transparent !important;
       /* background: none  !important; */
@@ -1228,6 +1234,7 @@ letter-spacing: 1px;
       margin-top: 14%;
       /* margin-bottom: 14%; */
       display: flex;
+      overflow: hidden;
   }
   .worldimg {
       position: relative;
@@ -1633,6 +1640,7 @@ letter-spacing: 1px;
       /* margin-top: 14%; */
       /* margin-bottom: 14%; */
       display: flex;
+      overflow: hidden;
   }
   .worldimg {
       position: relative;
@@ -2038,6 +2046,7 @@ letter-spacing: 1px;
       /* margin-top: 14%; */
       /* margin-bottom: 14%; */
       display: flex;
+      overflow: hidden;
   }
   .worldimg {
       position: relative;
@@ -2443,6 +2452,7 @@ letter-spacing: 1px;
       /* margin-top: 14%; */
       /* margin-bottom: 14%; */
       display: flex;
+      overflow: hidden;
   }
   .worldimg {
       position: relative;
