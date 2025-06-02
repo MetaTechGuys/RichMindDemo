@@ -96,6 +96,40 @@
       </div>
     </nav>
   </header>
+  <div id="welcome-popup">
+    <div class="overlay"></div>
+    <button class="btn close" onclick="enterSite(false)">
+      <svg width="25" height="25" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="ic_fluent_dismiss_28_regular" fill="currentcolor" fill-rule="nonzero">
+            <path d="M3.52499419,3.71761187 L3.61611652,3.61611652 C4.0717282,3.16050485 4.79154862,3.13013074 5.28238813,3.52499419 L5.38388348,3.61611652 L14,12.233 L22.6161165,3.61611652 C23.1042719,3.12796116 23.8957281,3.12796116 24.3838835,3.61611652 C24.8720388,4.10427189 24.8720388,4.89572811 24.3838835,5.38388348 L15.767,14 L24.3838835,22.6161165 C24.8394952,23.0717282 24.8698693,23.7915486 24.4750058,24.2823881 L24.3838835,24.3838835 C23.9282718,24.8394952 23.2084514,24.8698693 22.7176119,24.4750058 L22.6161165,24.3838835 L14,15.767 L5.38388348,24.3838835 C4.89572811,24.8720388 4.10427189,24.8720388 3.61611652,24.3838835 C3.12796116,23.8957281 3.12796116,23.1042719 3.61611652,22.6161165 L12.233,14 L3.61611652,5.38388348 C3.16050485,4.9282718 3.13013074,4.20845138 3.52499419,3.71761187 L3.61611652,3.61611652 L3.52499419,3.71761187 Z" />
+          </g>
+        </g>
+      </svg>
+    </button>
+    <div class="live-bg content">
+      <video src="./media/videos/black.mp4" autoplay loop muted></video>
+      <div class="text">
+        <img class="welcome-logo" src="./media/img/RichMindlogo.png" width="200" alt="" />
+        <h2 class="lead">Welcome to Richmind</h2>
+        <div class="message">
+          Our mission is to use operational expertise and strategic
+          investments
+        </div>
+        <button type="button" class="btn btn-secondary golden" data-cursor="pointer2" onclick="enterSite(true)">
+          <span>Continue</span>
+          <svg width="12px" height="12px" viewBox="-3 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+              <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-419.000000, -571.000000)" fill="currentcolor">
+                <path d="M440.415,583.554 L421.418,571.311 C420.291,570.704 419,570.767 419,572.946 L419,597.054 C419,599.046 420.385,599.36 421.418,598.689 L440.415,586.446 C441.197,585.647 441.197,584.353 440.415,583.554" id="play" sketch:type="MSShapeGroup" />
+              </g>
+            </g>
+          </svg>
+        </button>
+        <small class="notif">Wear headphons for better experience</small>
+      </div>
+    </div>
+  </div>
   <div class="wrapper">
     <video src="./media/videos/0505.mp4" autoplay loop muted></video>
     <section class="hero m-0 p-0">

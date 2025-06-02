@@ -5,10 +5,6 @@ document.addEventListener("scroll", () => {
 document.addEventListener('DOMContentLoaded', function () {
   initVideoAudio()
 })
-let firstIntraction = false
-document.addEventListener('click', function () {
-  firstIntraction = true
-})
 function videoZoomAnimate() {
   const gallery = document.querySelector(".gallery");
   const mainvid = document.querySelector(".mainvid");
@@ -92,22 +88,30 @@ function initVideoAudio() {
   heroVideo.onplay = function () { heroAudio.play(); isLoaded = true }
   heroVideo.onpause = function () { heroAudio.pause(); }
 }
+
 function videoAudioControl() {
   const scrollY = window.scrollY;
   const width = window.innerWidth;
   const videScrollEnd = width / 1.77 // ( devide by aspectratio of 16:9 )
   const volume = Math.min(videScrollEnd, Math.max(0, videScrollEnd - scrollY)) / videScrollEnd
-
   heroVideo.volume = volume
   heroAudio.volume = volume
+  if (isLoaded || firstIntraction) {
+    if (volume > 0 && !isVideoPlaying(heroVideo)) {
+      console.log('play');
+      heroVideo.play()
+    } else if (volume === 0 && isVideoPlaying(heroVideo)) {
+      console.log('pause');
+      heroVideo.pause()
+    }
+  }
+}
 
-  // if (isLoaded || firstIntraction) {
-  //   if (volume > 0 && !isVideoPlaying(heroVideo)) {
-  //     console.log('play');
-  //     heroVideo.play()
-  //   } else if (volume === 0 && isVideoPlaying(heroVideo)) {
-  //     console.log('pause');
-  //     heroVideo.pause()
-  //   }
-  // }
+function enterSite(play) {
+  const popup = document.getElementById('welcome-popup')
+  if (popup) { popup.remove() }
+  if (!play) { 
+    heroAudio.volume = 0
+  }  
+  heroVideo.play()
 }
