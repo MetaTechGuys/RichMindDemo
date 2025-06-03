@@ -4,6 +4,10 @@ document.addEventListener("scroll", () => {
 }, { passive: true });
 document.addEventListener('DOMContentLoaded', function () {
   initVideoAudio()
+  const popup = document.getElementById('welcome-popup')
+  const skip = localStorage.getItem('intro-skipped')
+  if (skip) popup.remove()
+  else popup.classList.add('show')
 })
 function videoZoomAnimate() {
   const gallery = document.querySelector(".gallery");
@@ -30,7 +34,7 @@ function videoZoomAnimate() {
     mainvidCenter >= viewportHeight / 2 - 50 &&
     mainvidCenter <= viewportHeight / 2 + 50;
 
-    const galleryProgress = Math.min(
+  const galleryProgress = Math.min(
     Math.max(
       (scrollY + viewportHeight * 0.5 - galleryTop * 1.2) /
         (viewportHeight * 1.0),
@@ -77,6 +81,7 @@ function videoZoomAnimate() {
   // Move .galhelp down based on screen size and galleryProgress
   const moveDownPx = translateMultiplier * galleryProgress;
   galhelp.style.transform = `translateY(${moveDownPx}px)`;
+  
 }
 let isLoaded = false
 let heroVideo
@@ -96,7 +101,7 @@ function videoAudioControl() {
   const volume = Math.min(videScrollEnd, Math.max(0, videScrollEnd - scrollY)) / videScrollEnd
   heroVideo.volume = volume
   heroAudio.volume = volume
-  if (isLoaded || firstIntraction) {
+  if (isLoaded) {
     if (volume > 0 && !isVideoPlaying(heroVideo)) {
       console.log('play');
       heroVideo.play()
@@ -109,7 +114,14 @@ function videoAudioControl() {
 
 function enterSite(play) {
   const popup = document.getElementById('welcome-popup')
-  if (popup) { popup.remove() }
+  if (popup) {
+    window.scrollTo(0, 0)
+    popup.classList.add('exit')
+    setTimeout(() => {
+      popup.remove()
+    }, 999);
+    // localStorage.setItem('intro-skipped', true)
+  }
   if (!play) { 
     heroAudio.volume = 0
   }  

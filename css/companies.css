@@ -20,14 +20,14 @@
       visibility: hidden !important;
     }
   }
-  
+
   .comphelp {
     /* background-color: #2b2b2b !important; */
     /* background: url("../media/videos/Particle\,\ Galaxy\,\ Planets\,\ Animated\ by\ M.\ Yasin\ Esin\ –\ Stock\ Footage.mp4"); */
     border: 48px solid transparent;
     border-bottom: 24px solid transparent;
     border-top: 24px solid transparent;
-    /* border-radius: 20px !important; */;
+    /* border-radius: 20px !important; */
   }
   .textcompanies {
     /* display: block; */
@@ -79,7 +79,13 @@
     left: 25%;
     width: 200px !important;
     height: 48px;
-    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+    background: linear-gradient(
+      320deg,
+      #886a38,
+      #9b7c45,
+      #c5a86e,
+      #795b34
+    ) !important;
     color: #000 !important;
     /* background-color: #000 !important; */
     border-color: #9b7c45 !important;
@@ -131,7 +137,6 @@
     border: 2px solid #9b7c45 !important;
     transition-delay: 0.1s;
     /* font-weight: 500 !important; */
-
   }
 
   .comp:before {
@@ -145,7 +150,6 @@
     z-index: -1;
     -webkit-transition: top 0.2s ease-in-out;
     font-weight: 500 !important;
-
   }
 
   .comp:hover:before {
@@ -227,7 +231,6 @@
         border-radius: 14px;
         transition-duration: 0.8s;
         width: 100%;
-        aspect-ratio: 3/4;
         object-fit: cover;
         margin: -2px;
       }
@@ -240,7 +243,13 @@
     width: 180px !important;
     height: 40px;
     color: #000 !important;
-    background: linear-gradient(320deg, #886a38, #9b7c45, #c5a86e, #795b34) !important;
+    background: linear-gradient(
+      320deg,
+      #886a38,
+      #9b7c45,
+      #c5a86e,
+      #795b34
+    ) !important;
 
     border-color: #9b7c45 !important;
     /* border-radius: 10px !important; */
@@ -982,7 +991,7 @@
     > img {
       transform: scale(1.18);
       /* transition-duration: 1s; */
-        width: 100%;
+      width: 100%;
     }
   }
   /* .comp:hover{

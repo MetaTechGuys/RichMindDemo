@@ -725,10 +725,14 @@
 
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 9;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:not(.show) {
+    display: none;
+  }
 
   .overlay {
     position: absolute;
@@ -804,6 +808,20 @@
     color: white;
     cursor: pointer;
   }
+  &.exit {
+    .content {
+      animation: slidedown cubic-bezier(0.47, 1.64, 0.41, 0.8) forwards;
+      transition: 1s;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+    }
+    .overlay {
+      animation: fadeout;
+      transition: 1s;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+    }
+  }
 }
 html:has(#welcome-popup) {
   overflow: hidden;
@@ -820,4 +838,22 @@ html:has(#welcome-popup) {
 @media (min-width: 1401px) {
 }
 @media (min-width: 1921px) {
+}
+
+@keyframes slidedown {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

@@ -1,12 +1,11 @@
-
 * {
   /* margin: 0;
     padding: 0; */
   /* overflow-x: hidden; */
   font-family: "DMSerifDisplay-Regular";
   font-weight: 500 !important;
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="%23000000" stroke="%23FFFFFF" stroke-width="0.4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), default;
-  
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="%23000000" stroke="%23FFFFFF" stroke-width="0.4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+    default;
 }
 
 @font-face {
@@ -18,15 +17,15 @@
   /* overflow-x: clip; */
   height: auto;
   position: relative;
-    >video{
-      position: fixed;
-      width: 100%;
-      object-fit: cover;
-      /* filter: grayscale(100%); */
-      /* rotate: 0deg; */
-      z-index: -1;
-      pointer-events: none;
-    }
+  > video {
+    position: fixed;
+    width: 100%;
+    object-fit: cover;
+    /* filter: grayscale(100%); */
+    /* rotate: 0deg; */
+    z-index: -1;
+    pointer-events: none;
+  }
 }
 .rm {
   background-color: #000;
@@ -37,12 +36,12 @@
 /* button{
 cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%239B7C45" stroke="%23424242" stroke-width="1.75" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), pointer !important;
  } */
- /* * {
+/* * {
     margin: 0;
     cursor: none;
   } */
-  
-  /* body {
+
+/* body {
     background-color: black;
     display: flex;
     justify-content: center;
@@ -50,39 +49,124 @@ cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4
     height: 100vh;
     overflow: hidden;
   } */
-  
-  #cursor {
-    position: fixed;
-    /* top: -5px;
+
+#cursor {
+  opacity: 0;
+  position: fixed;
+  /* top: -5px;
     left: -5px;
     width: 10px;
     height: 10px; */
-    background-color: white;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 999;
-    
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#cursor-border {
+  --size: 14px;
+  opacity: 0;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px white;
+  pointer-events: none;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+    height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 999;
+}
+button {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="%23000000" stroke="%23FFFFFF" stroke-width="0.4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+    default !important;
+}
+
+video {
+  pointer-events: none !important;
+}
+
+html {
+  font-size: 16px;
+}
+
+.size-screen {
+  width: 100vw;
+  height: 100vh;
+}
+.w-screen {
+  width: 100vw;
+}
+.h-screen {
+  height: 100vh;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.object-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "xs";
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+@media (min-width: 577px) {
+  body::after {
+    content: "sm";
   }
-  
-  #cursor-border {
-    --size: 14px;
-    position: fixed;
-    top: calc(var(--size) / -2);
-    left: calc(var(--size) / -2);
-    width: var(--size);
-    height: var(--size);
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px white;
-    pointer-events: none;
-    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
-      height 0.15s ease-out, background-color 0.15s ease-out;
-    z-index: 999;
-    
+}
+@media (min-width: 769px) {
+  body::after {
+    content: "md";
   }
-  button{
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="%23000000" stroke="%23FFFFFF" stroke-width="0.4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), default !important;
+}
+@media (min-width: 993px) {
+  body::after {
+    content: "lg";
   }
-  
-video{
-    pointer-events: none !important;
+}
+@media (min-width: 1201px) {
+  body::after {
+    content: "xl";
+  }
+}
+@media (min-width: 1401px) {
+  body::after {
+    content: "2x";
+  }
+}
+@media (min-width: 1921px) {
+  body::after {
+    content: "3x";
+  }
+}
+
+@media screen {
+  #cursor-border,
+  #cursor {
+    opacity: 1;
+  }
 }
