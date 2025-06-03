@@ -67,16 +67,21 @@
       overflow: clip;
       border: 4px solid #000;
       transition-duration: 1s;
+      border-radius: 15px;
       > img {
         border-radius: 14px;
         transition-duration: 0.8s;
+        width: 101%;
+        margin: -1px;
       }
     }
   }
   .comp {
     position: absolute;
-    top: 84%;
-    left: 25%;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 200px !important;
     height: 48px;
     background: linear-gradient(
@@ -104,6 +109,41 @@
     -moz-transition: 0.1s ease-in;
     -webkit-transition: 0.1s ease-in;
     letter-spacing: 1.4px;
+
+    &.comp-reverse {
+      background: #000 !important;
+      > span {
+        background-image: linear-gradient(
+          320deg,
+          #886a38,
+          #9b7c45,
+          #c5a86e,
+          #795b34
+        ) !important;
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &::before {
+        background: linear-gradient(
+          320deg,
+          #886a38,
+          #9b7c45,
+          #c5a86e,
+          #795b34
+        ) !important;
+      }
+      &:hover {
+        /* border: none !important; */
+        /* animation-timing-function: ease-in-out; */
+        border: 2px solid #000 !important;
+        > span {
+          background-image: linear-gradient(0, black, black) !important;
+          color: #000 !important;
+        }
+      }
+    }
   }
   .imgcompanies > div:hover {
     animation-fill-mode: both;
@@ -230,16 +270,18 @@
       > img {
         border-radius: 14px;
         transition-duration: 0.8s;
-        width: 100%;
+        width: 101%;
+        margin: -1px;
         object-fit: cover;
-        margin: -2px;
       }
     }
   }
   .comp {
     position: absolute;
-    top: 84%;
-    left: 25%;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 180px !important;
     height: 40px;
     color: #000 !important;
@@ -275,6 +317,8 @@
     animation-timing-function: ease-in-out;
     animation: linear;
     > img {
+      width: 101%;
+      margin: -1px;
       transform: scale(1.08);
       /* transition-duration: 1s; */
     }
@@ -382,7 +426,10 @@
       overflow: clip;
       border: 4px solid #000;
       transition-duration: 1s;
+      border-radius: 15px;
       > img {
+        width: 101%;
+        margin: -1px;
         border-radius: 14px;
         transition-duration: 0.8s;
       }
@@ -390,8 +437,10 @@
   }
   .comp {
     position: absolute;
-    top: 88%;
-    left: 25%;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 180px !important;
     color: #9b7c45 !important;
     background-color: #000 !important;
@@ -524,7 +573,10 @@
       overflow: clip;
       border: 4px solid #000;
       transition-duration: 1s;
+      border-radius: 15px;
       > img {
+        width: 101%;
+        margin: -1px;
         border-radius: 14px;
         transition-duration: 0.8s;
       }
@@ -532,8 +584,10 @@
   }
   .comp {
     position: absolute;
-    top: 88%;
-    left: 25%;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 180px !important;
     color: #9b7c45 !important;
     background-color: #000 !important;
@@ -666,7 +720,10 @@
       overflow: clip;
       border: 4px solid #000;
       transition-duration: 1s;
+      border-radius: 15px;
       > img {
+        width: 101%;
+        margin: -1px;
         border-radius: 14px;
         transition-duration: 0.8s;
       }
@@ -674,8 +731,10 @@
   }
   .comp {
     position: absolute;
-    top: 88%;
-    left: 25%;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 180px !important;
     color: #9b7c45 !important;
     background-color: #000 !important;
@@ -808,17 +867,21 @@
       overflow: clip;
       border: 4px solid #000;
       transition-duration: 1s;
+      border-radius: 15px;
       > img {
         border-radius: 14px;
         transition-duration: 0.8s;
-        width: 100%;
+        width: 101%;
+        margin: -1px;
       }
     }
   }
   .comp {
     position: absolute;
-    top: 88%;
-    left: 25%;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 180px !important;
     color: #9b7c45 !important;
     background-color: #000 !important;
@@ -952,17 +1015,21 @@
       overflow: clip;
       border: 4px solid #000;
       transition-duration: 1s;
+      border-radius: 15px;
       > img {
         border-radius: 14px;
         transition-duration: 0.8s;
-        width: 100%;
+        width: 101%;
+        margin: -1px;
       }
     }
   }
   .comp {
     position: absolute;
-    top: 88%;
-    left: 25%;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 180px !important;
     color: #9b7c45 !important;
     background-color: #000 !important;
@@ -991,7 +1058,6 @@
     > img {
       transform: scale(1.18);
       /* transition-duration: 1s; */
-      width: 100%;
     }
   }
   /* .comp:hover{
