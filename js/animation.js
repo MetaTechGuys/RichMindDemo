@@ -1,88 +1,49 @@
 document.addEventListener("scroll", () => {
-  videoZoomAnimate()
   videoAudioControl()
 }, { passive: true });
+
 document.addEventListener('DOMContentLoaded', function () {
+  window.scrollTo(0, 0)
   initVideoAudio()
+  setupZoomAnimate()
   const popup = document.getElementById('welcome-popup')
   const skip = localStorage.getItem('intro-skipped')
   if (skip) popup.remove()
   else popup.classList.add('show')
 })
-function videoZoomAnimate() {
-  const gallery = document.querySelector(".gallery");
-  const mainvid = document.querySelector(".mainvid");
-  const galhelp = document.querySelector(".galhelp");
+function setupZoomAnimate() {
+  if (window.innerWidth <= 992) return
+  const { scroll, transform } = Motion
 
-  if (!gallery || !mainvid || !galhelp) {
-    console.error(
-      "One or more elements (.gallery, .mainvid, .galhelp) are missing in the DOM."
-    );
-    return;
-  }
-
-  const viewportHeight = window.innerHeight;
-  const scrollY = window.scrollY;
-
-  const galleryRect = gallery.getBoundingClientRect();
-  const galleryTop = galleryRect.top + scrollY;
-
-  const mainvidRect = mainvid.getBoundingClientRect();
-  const mainvidCenter = mainvidRect.top + mainvidRect.height / 2;
-
-  const isMainvidInMiddle =
-    mainvidCenter >= viewportHeight / 2 - 50 &&
-    mainvidCenter <= viewportHeight / 2 + 50;
-
-  const galleryProgress = Math.min(
-    Math.max(
-      (scrollY + viewportHeight * 0.5 - galleryTop * 1.2) /
-        (viewportHeight * 1.0),
-      0
-    ),
-    1
-  );
-
-  // Set different multipliers based on screen width
-    let scaleMultiplier;
-  let translateMultiplier;
+  const galhelp = document.getElementById('galhelp')
+  const gallery = document.getElementById('gallery')
+  const viewHeight = window.innerHeight
+  const top = gallery.offsetTop
+  const height = gallery.clientHeight
+  const offset = (viewHeight - height) / 2
   
-  if (window.innerWidth <= 1120) {
-    // Small desktops
-     scaleMultiplier = 0;
-    translateMultiplier = 0;
-    // console.log("992 multiplier:", scaleMultiplier);
+  galhelp.style.paddingBottom = (viewHeight + 70) + 'px'
 
-  } else if (window.innerWidth <= 1307) {
-    // Medium desktops
-    scaleMultiplier = 2.6;
-    translateMultiplier = 1120;
-    // console.log("1200 multiplier:", scaleMultiplier);
-
-  } else if (window.innerWidth <= 1540) {  // Changed from < 1401 to <= 1400 for clarity
-    // Large desktops
-    scaleMultiplier = 1.4;
-    translateMultiplier = 1480;   // Reduced from 8280 to a more reasonable value
-  } else if (window.innerWidth <= 1920) {
-    // HD screens
-    scaleMultiplier = 2.0;
-    translateMultiplier = 1280; 
-
-  } else {
-    // 4K and larger screens
-    scaleMultiplier = 2.0;
-    translateMultiplier = 1280;
-  }
+  const scrollToYOffset = transform(
+    [top - offset, top + viewHeight - offset], // Input
+    [0, viewHeight], // Output,
+    { clamp: true }
+  )
   
-  // Zoom gallery
-  const galleryScale = 1 + scaleMultiplier * galleryProgress;
-  gallery.style.transform = `scale(${galleryScale})`;
+  const scrollToScale = transform(
+    [top - offset, top + viewHeight - offset], // Input
+    [1, 2.8], // Output,
+  )
 
-  // Move .galhelp down based on screen size and galleryProgress
-  const moveDownPx = translateMultiplier * galleryProgress;
-  galhelp.style.transform = `translateY(${moveDownPx}px)`;
-  
+  scroll((p, info) => {
+    const scrollY = info.y.current
+    const offset = scrollToYOffset(scrollY)
+    const scale = scrollToScale(scrollY)
+    // console.log(animationScale);
+    gallery.style.transform = `translateY(${offset}px) scale(${scale})`
+  }, { axis: 'y'})
 }
+
 let isLoaded = false
 let heroVideo
 let heroAudio
@@ -124,4 +85,5 @@ function enterSite(play) {
     heroAudio.volume = 0
   }  
   heroVideo.play()
+  document.getElementById('hero-content')?.classList.add('animate')
 }

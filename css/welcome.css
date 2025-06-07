@@ -47,7 +47,7 @@
     opacity: 0.8;
     margin-bottom: -5px;
     min-height: 120px;
-    max-height: 220px;
+    max-height: 300px;
     object-fit: cover;
   }
 }
