@@ -204,4 +204,7 @@ class Cloud {
 	}
 }
 
-new Cloud();
+
+document.addEventListener('load', function () {
+	new Cloud();
+})

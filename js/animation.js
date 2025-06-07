@@ -1,16 +1,18 @@
-document.addEventListener("scroll", () => {
-  videoAudioControl()
-}, { passive: true });
 
-document.addEventListener('DOMContentLoaded', function () {
-  window.scrollTo(0, 0)
+window.addEventListener('load', function () {
   initVideoAudio()
   setupZoomAnimate()
   const popup = document.getElementById('welcome-popup')
   const skip = localStorage.getItem('intro-skipped')
-  if (skip) popup.remove()
-  else popup.classList.add('show')
+  if (skip) { popup.remove() }
+  else { popup.classList.add('show') }
+    
+  document.addEventListener("scroll", () => {
+    videoAudioControl()
+  }, { passive: true });
+  window.scroll({ top: 0, behavior: 'instant' })
 })
+
 function setupZoomAnimate() {
   if (window.innerWidth <= 992) return
   const { scroll, transform } = Motion
@@ -74,7 +76,7 @@ function videoAudioControl() {
 function enterSite(play) {
   const popup = document.getElementById('welcome-popup')
   if (popup) {
-    window.scrollTo(0, 0)
+  window.scroll({ top: 0, behavior: 'instant' })
     popup.classList.add('exit')
     setTimeout(() => {
       popup.remove()
