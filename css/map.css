@@ -3,17 +3,13 @@
     height: auto;
     /* margin-bottom: 20px; */
     background-color: transparent !important;
-    border: 48px solid transparent;
-    border-top: 48px solid transparent;
-    border-bottom: 24px solid transparent;
+    margin: 48px;
     /* border-radius: 20px; */
     /* overflow: hidden; */
-    margin-top: 50%;
     /* background-color: #000 !important; */
     /* background-color: #000 !important; */
   }
   .world {
-    padding-top: 2%;
     /* background-color: #000 !important; */
     border-radius: 20px;
     padding-bottom: 2%;
@@ -27,7 +23,6 @@
   .worldimg {
     position: relative;
     text-align: center;
-    margin-top: 4%;
     height: 836px;
   }
 
@@ -407,16 +402,13 @@
     /* height: auto; */
     /* margin-bottom: 20px; */
     background-color: transparent !important;
-    border: 48px solid transparent;
-    border-top: 48px solid transparent;
-    border-bottom: 24px solid transparent;
+    margin: 48px;
     /* border-radius: 20px; */
     /* overflow: hidden; */
     /* background-color: #000 !important; */
     /* background-color: #000 !important; */
   }
   .world {
-    padding-top: 2%;
     /* background-color: #000 !important; */
     border-radius: 20px;
     padding-bottom: 2%;
@@ -430,7 +422,6 @@
   .worldimg {
     position: relative;
     text-align: center;
-    margin-top: 4%;
     height: 717px;
     /* margin-left: 20%; */
     /* height: 750px; */
@@ -820,16 +811,13 @@
     height: auto;
     /* margin-bottom: 20px; */
     background-color: transparent !important;
-    border: 48px solid transparent;
-    border-top: 48px solid transparent;
-    border-bottom: 24px solid transparent;
+    margin: 48px;
     /* border-radius: 20px; */
     /* overflow: hidden; */
     /* background-color: #000 !important; */
     /* background-color: #000 !important; */
   }
   .world {
-    padding-top: 2%;
     /* background-color: #000 !important; */
     border-radius: 20px;
     padding-bottom: 2%;
@@ -843,7 +831,6 @@
   .worldimg {
     position: relative;
     text-align: center;
-    margin-top: 4%;
     height: 597px;
     /* margin-left: 20%; */
     /* height: 750px; */
@@ -1224,16 +1211,13 @@
     height: auto;
     /* margin-bottom: 20px; */
     background-color: transparent !important;
-    border: 48px solid transparent;
-    border-top: 48px solid transparent;
-    border-bottom: 24px solid transparent;
+    margin: 48px;
     /* border-radius: 20px; */
     /* overflow: hidden; */
     /* background-color: #000 !important; */
     /* background-color: #000 !important; */
   }
   .world {
-    padding-top: 0%;
     /* background-color: #000 !important; */
     border-radius: 20px;
     padding-bottom: 0%;
@@ -1248,8 +1232,6 @@
   .worldimg {
     position: relative;
     text-align: center;
-    margin-top: 8%;
-    margin-bottom: 8%;
     /* margin-left: 20%; */
     /* height: 750px; */
     height: 418px;
@@ -1632,16 +1614,13 @@
     height: auto;
     /* margin-bottom: 20px; */
     background-color: transparent !important;
-    border: 8px solid transparent;
-    border-top: 8px solid transparent;
-    border-bottom: 4px solid transparent;
+    margin: 8px;
     /* border-radius: 20px; */
     /* overflow: hidden; */
     /* background-color: #000 !important; */
     /* background-color: #000 !important; */
   }
   .world {
-    padding-top: 0%;
     /* background-color: #000 !important; */
     border-radius: 20px;
     padding-bottom: 0%;
@@ -2042,16 +2021,13 @@
     height: auto;
     /* margin-bottom: 20px; */
     background-color: transparent !important;
-    border: 8px solid transparent;
-    border-top: 8px solid transparent;
-    border-bottom: 4px solid transparent;
+    margin: 8px;
     /* border-radius: 20px; */
     /* overflow: hidden; */
     /* background-color: #000 !important; */
     /* background-color: #000 !important; */
   }
   .world {
-    padding-top: 0%;
     /* background-color: #000 !important; */
     border-radius: 20px;
     padding-bottom: 0%;
@@ -2450,16 +2426,13 @@
     height: auto;
     /* margin-bottom: 20px; */
     background-color: transparent !important;
-    border: 8px solid transparent;
-    border-top: 8px solid transparent;
-    border-bottom: 4px solid transparent;
+    margin: 8px;
     /* border-radius: 20px; */
     /* overflow: hidden; */
     /* background-color: #000 !important; */
     /* background-color: #000 !important; */
   }
   .world {
-    padding-top: 0%;
     /* background-color: #000 !important; */
     border-radius: 20px;
     padding-bottom: 0%;
