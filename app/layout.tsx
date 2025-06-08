@@ -1,6 +1,8 @@
 import { cn } from '@/utils/jsx-tools';
 import type { Metadata } from 'next';
 import { DM_Serif_Display } from 'next/font/google';
+import './core.css';
+import './animates.css';
 import './globals.css';
 
 // const sans = DM_Sans({
