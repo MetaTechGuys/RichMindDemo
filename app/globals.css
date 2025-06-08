@@ -9,17 +9,19 @@
   --color-gold-darker: oklab(0.49 0.02 0.06);
 
   --font-display: var(--google-font-display);
+  --font-body: "Times New Roman", Times, serif;
 }
 
 :root {
   --golded-gradient: 320deg, oklab(0.54 0.02 0.08), oklab(0.6 0.01 0.08), oklab(0.74 0.01 0.08), oklab(0.49 0.02 0.06)
 }
 html {
-  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
   font-size: 16px;
-  font-family: var(--font-iranian-sans), var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
 }
 body {
+  --font-display: var(--google-font-display);
   font-family: "Times New Roman", Times, serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -31,9 +33,20 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-direction: column;
 }
-.custom-marker-position li {
+.custom-checklist li {
   background: url(/svg/circle-check-big.svg) no-repeat 0 0.6rem;
   list-style: none;
   padding-left: 40px;
   top: 18px
+}
+
+@media screen and (min-width: 376px) {
+  html {
+    overflow-x: initial;
+    scroll-snap-type: y mandatory;
+  }
+}
+
+:root:has(#play-video-consent) html {
+  overflow: hidden;
 }

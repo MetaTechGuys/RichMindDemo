@@ -13,13 +13,13 @@ export default function WebsiteLayout({ children }: PropsWithChildren) {
       {children}
       <footer className="snap-end">
         <Footer />
-        {/* <video
-        src="/video/0505.webm"
-        className="fixed inset-0 -z-[1] h-screen w-screen object-cover"
-        autoPlay
-        loop
-        muted
-      ></video> */}
+        <video
+          src="/video/0505.webm"
+          className="fixed inset-0 -z-[1] h-screen w-screen object-cover"
+          autoPlay
+          loop
+          muted
+        ></video>
         <Copyright />
       </footer>
     </>
@@ -28,7 +28,7 @@ export default function WebsiteLayout({ children }: PropsWithChildren) {
 
 function ResponsiveHelper() {
   return process.env.NODE_ENV === 'development' ? (
-    <div className="bg-accent fixed end-0 top-0 z-50 size-8 rounded-bl-xl text-center text-sm text-white">
+    <div className="fixed end-0 top-0 z-50 size-8 rounded-bl-xl bg-rose-400 text-center text-sm text-white">
       <span className="p-1 sm:hidden">xs</span>
       <span className="hidden p-1 sm:block md:hidden">sm</span>
       <span className="hidden p-1 md:block lg:hidden">md</span>

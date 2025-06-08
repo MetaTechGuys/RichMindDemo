@@ -1,0 +1,84 @@
+.btn {
+  font-family: var(--font-display);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  text-transform: capitalize;
+  white-space: nowrap;
+
+  > .btn-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    border-width: 3px;
+    border-color: transparent;
+    padding-right: calc(var(--spacing) * 5);
+    padding-left: calc(var(--spacing) * 5);
+    padding-top: calc(var(--spacing) * 1.5);
+    padding-bottom: calc(var(--spacing) * 1.5);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    transition: top 100ms ease-in-out;
+    position: absolute;
+    inset: 0;
+    width: calc(100% + 0px);
+    height: calc(100% + 0px);
+    top: calc(100% + 0px);
+    z-index: -1;
+    margin: -0px;
+    border-radius: 0;
+  }
+  &:hover::before {
+    top: 0px
+  }
+  &.btn-primary {
+    background-image: linear-gradient(var(--golded-gradient));
+    > .btn-inner {
+      color: black;
+    }
+    &::before {
+      background-color: black;
+    }
+    &:hover {
+      color: var(--color-gold);
+      > .btn-inner {
+        color: var(--color-gold);
+        border-color: var(--color-gold);
+      }
+    }
+  }
+  &.btn-secondary {
+    color: var(--color-gold);
+    background-color: black;
+    >.btn-inner {
+      border-color: var(--color-gold);
+    }
+    &::before {
+      background-image: linear-gradient(var(--golded-gradient))
+    }
+    &:hover {
+      color: black;
+      >.btn-inner {
+        border-color: transparent
+      }
+    }
+  }
+  &.btn-outline {
+    border-color: white;
+    color: white;
+    > .btn-inner {
+      border-color: white;
+    }
+    &::before {
+      background-color: white
+    }
+    &:hover {
+      color: black;
+    }
+  }
+}

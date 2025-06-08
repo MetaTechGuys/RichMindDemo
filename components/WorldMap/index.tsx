@@ -8,12 +8,12 @@ export default function WorldMapSection() {
   const [step, setStep] = useState(0);
   return (
     <div className="size-full py-4">
-      <div className="flex size-full justify-end rounded-2xl bg-black p-8">
-        <div className="flex w-1/3 flex-col py-48">
+      <div className="flex size-full flex-col-reverse justify-end rounded-2xl bg-black p-8 md:flex-row">
+        <div className="w-full pb-48 md:w-1/3 md:pt-48">
           <AccordionItem title="UK" />
           <AccordionItem title="UAE" />
         </div>
-        <div className="relative h-full w-2/3">
+        <div className="relative h-full w-full md:w-2/3">
           <video
             autoPlay
             muted
@@ -77,14 +77,18 @@ const Point = ({ cx, cy, className, iso3, main }: PointProps) => {
         data-title={iso3}
         cx={cx}
         cy={cy}
-        className={cn('animate-pulse', className, main ? 'fill-gold-light/70' : 'fill-white/70')}
+        className={cn(
+          'animate-pulse cursor-pointer',
+          className,
+          main ? 'fill-gold-light/70' : 'fill-white/70',
+        )}
         r={main ? 15 : 8}
       />
       <circle
         data-title={iso3}
         cx={cx}
         cy={cy}
-        className={cn(className, main ? '' : 'fill-white')}
+        className={cn('cursor-pointer', className, main ? '' : 'fill-white')}
         stroke="#886a38"
         fill="url(#gold-gradient)"
         r={main ? 8 : 4}
