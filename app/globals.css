@@ -28,11 +28,16 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 40px;
   top: 18px
 }
+.text-stroke {
+  color: black;
+  background-color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
 
 @media screen and (min-width: 376px) {
   html {
     overflow-x: initial;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
   }
 }
 

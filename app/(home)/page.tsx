@@ -18,7 +18,7 @@ export default function Home() {
         <WelcomeNotice />
       </section>
       <section className="grid min-h-screen snap-start overflow-hidden">
-        <GallerySection start={1250} length={1350} scalefactor={2} />
+        <GallerySection />
       </section>
       <section className="grid min-h-screen snap-center">
         <WorldMapSection />

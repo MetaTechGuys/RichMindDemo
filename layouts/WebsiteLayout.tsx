@@ -4,24 +4,30 @@ import Navbar from './components/Navbar';
 import Copyright from './components/Copyright';
 import Cursor from '@/atoms/Cursor';
 
-export default function WebsiteLayout({ children }: PropsWithChildren) {
+interface LayoutProps {
+  secondary?: true;
+}
+
+export default function WebsiteLayout({ children, secondary }: PropsWithChildren<LayoutProps>) {
   return (
     <>
       <Cursor />
       <header className="contents">
         <ResponsiveHelper />
-        <Navbar />
+        <Navbar hideLogo={secondary} />
       </header>
       {children}
       <footer className="snap-end">
-        <Footer />
-        <video
-          src="/video/0505.webm"
-          className="fixed inset-0 -z-[1] h-screen w-screen object-cover"
-          autoPlay
-          loop
-          muted
-        ></video>
+        <Footer secondary={secondary} />
+        {secondary ? null : (
+          <video
+            src="/video/0505.webm"
+            className="fixed inset-0 -z-[1] h-screen w-screen object-cover"
+            autoPlay
+            loop
+            muted
+          ></video>
+        )}
         <Copyright />
       </footer>
     </>
