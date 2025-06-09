@@ -5,7 +5,8 @@ export function NoticeSection({
   children,
   className,
   neon,
-}: Readonly<PropsWithChildren<ComponentProps<'div'> & { neon?: boolean }>>) {
+  eager,
+}: Readonly<PropsWithChildren<ComponentProps<'div'> & { neon?: boolean; eager?: boolean }>>) {
   return (
     <div className={cn('size-full p-8 sm:p-12 md:p-16 lg:p-20', className)}>
       <div className={cn('relative overflow-hidden rounded-2xl', { 'neon-box': neon })}>
@@ -16,6 +17,7 @@ export function NoticeSection({
           muted
           autoPlay
           loop
+          preload={eager ? 'auto' : 'none'}
         ></video>
       </div>
     </div>

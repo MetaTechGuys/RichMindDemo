@@ -10,13 +10,13 @@ export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const { scrollY } = useScroll();
   // const x = useTransform(scrollY, [0, 300], [0, -200]);
-  const w = useTransform(scrollY, [0, 300], [300, 150]);
+  const w = useTransform(scrollY, [0, 300], [300, 200]);
   const ref = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = () => {
     setOpen(false);
   };
-
+  /** @ts-expect-error: ref is null at ssr load time */
   useOnClickOutside(ref, handleClickOutside);
 
   return (
@@ -24,7 +24,7 @@ export default function Navbar() {
       <nav className="fixed top-0 z-10 grid w-full grid-cols-[min-content_1fr_min-content] items-center">
         <div></div>
         <motion.div className="flex justify-center" style={{ width: w }}>
-          <Image src={logo} alt="" className="w-full scale-75 sm:scale-100" />
+          <Image src={logo} alt="" className="w-full scale-75 sm:scale-100" loading="eager" />
         </motion.div>
         <Button
           className="me-12 size-20 p-4"

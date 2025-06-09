@@ -2,10 +2,12 @@ import { PropsWithChildren } from 'react';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Copyright from './components/Copyright';
+import Cursor from '@/atoms/Cursor';
 
 export default function WebsiteLayout({ children }: PropsWithChildren) {
   return (
     <>
+      <Cursor />
       <header className="contents">
         <ResponsiveHelper />
         <Navbar />

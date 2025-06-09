@@ -18,6 +18,8 @@ const display = DM_Serif_Display({
   variable: '--google-font-display',
   weight: '400',
   subsets: ['latin'],
+  preload: true,
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
