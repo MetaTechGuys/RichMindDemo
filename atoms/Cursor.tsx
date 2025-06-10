@@ -1,6 +1,6 @@
 'use client';
 
-import { frame, motion, useSpring } from 'motion/react';
+import { frame, motion, SpringOptions, useSpring } from 'motion/react';
 import { RefObject, useEffect, useRef } from 'react';
 
 export default function Cursor() {
@@ -19,7 +19,7 @@ export default function Cursor() {
   );
 }
 
-const spring = { damping: 10, stiffness: 100, restDelta: 0.001 };
+const spring: SpringOptions = { damping: 10, stiffness: 100, mass: 0.5, restDelta: 0.001 };
 
 export function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {
   const x = useSpring(0, spring);
