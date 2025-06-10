@@ -90,7 +90,7 @@ export default function HeroSection() {
           onPlay={handlePlay}
           onPause={handlePause}
         >
-          <source src="/video/site-banner.webm" type="video/mp4" />
+          <source src={MEDIA.siteBanner} type="video/mp4" />
           <audio loop id="hero-audio" ref={audioRef}>
             <source src={MEDIA.heroAudio} type="audio/mpeg" />
           </audio>
@@ -101,7 +101,7 @@ export default function HeroSection() {
           loop
           className="inset-0 z-0 size-full scale-110 object-cover blur-sm sm:hidden"
         >
-          <source src="/video/site-banner.webm" type="video/mp4" />
+          <source src={MEDIA.siteBanner} type="video/mp4" />
         </video>
         {hasConset ? (
           <div className="absolute inset-0 z-[2] flex size-full flex-col justify-center gap-4 bg-black/40 px-8 sm:gap-6 md:gap-12 lg:gap-16">

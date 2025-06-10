@@ -23,8 +23,8 @@ const display = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Highend | Online food',
-  description: 'Awesoem food in Awesome Resturant',
+  title: 'Richmind Holding',
+  description: '',
 };
 
 export default function RootLayout({

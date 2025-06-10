@@ -1,3 +1,4 @@
+import { MEDIA } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
 import { ComponentProps, PropsWithChildren } from 'react';
 
@@ -13,7 +14,7 @@ export function NoticeSection({
         <div className="relative z-10">{children}</div>
         <video
           className="absolute inset-0 z-0 size-full object-cover"
-          src="/video/black.webm"
+          src={MEDIA.black}
           muted
           autoPlay
           loop

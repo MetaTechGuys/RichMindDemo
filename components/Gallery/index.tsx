@@ -80,9 +80,9 @@ export default function GallerySection() {
         style={hasZoomAnimate ? { scale: isLock ? scalefactor : scale } : undefined}
         className="sticky top-0 grid size-full h-screen! grid-cols-[15fr_35fr_15fr] grid-rows-4 gap-4 p-4 text-black md:gap-6 xl:container xl:mx-auto"
       >
-        <GalleryVideo src="/video/05.webm" className="can-hidden-sm row-span-2" />
-        <GalleryVideo src="/video/gallery-top.webm" />
-        <GalleryVideo src="/video/04.webm" className="can-hidden-sm row-span-2" />
+        <GalleryVideo src={MEDIA.gallery05} className="can-hidden-sm row-span-2" />
+        <GalleryVideo src={MEDIA.galleryTop} />
+        <GalleryVideo src={MEDIA.gallery04} className="can-hidden-sm row-span-2" />
         <div className="relative row-span-2 size-full overflow-clip rounded-2xl">
           <GalleryVideo
             src={MEDIA.galleryMain}
@@ -111,10 +111,10 @@ export default function GallerySection() {
             </Button>
           ) : null}
         </div>
-        <GalleryVideo src="/video/02.webm" className="can-hidden-sm row-span-2" />
-        <GalleryVideo src="/video/011.webm" className="can-hidden-sm" />
-        <GalleryVideo src="/video/031.webm" className="can-hidden-sm" />
-        <GalleryVideo src="/video/021.webm" />
+        <GalleryVideo src={MEDIA.gallery02} className="can-hidden-sm row-span-2" />
+        <GalleryVideo src={MEDIA.gallery011} className="can-hidden-sm" />
+        <GalleryVideo src={MEDIA.gallery031} className="can-hidden-sm" />
+        <GalleryVideo src={MEDIA.gallery021} />
       </motion.div>
       {hasZoomAnimate && !isLock ? (
         <div className="min-h-screen" style={{ height: tailLength }} />
