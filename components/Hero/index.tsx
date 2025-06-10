@@ -3,7 +3,7 @@
 import logo from '@/assets/img/RichMindlogo-white.png';
 import { Button, Icon } from '@/atoms';
 import { NoticeSection } from '@/atoms/NoticeSection';
-import { MEDIA } from '@/utils/constants';
+import { MEDIA, POSTERS } from '@/utils/constants';
 import { AnimatePresence, cubicBezier, easeIn, motion } from 'motion/react';
 import Image from 'next/image';
 import { CSSProperties, useCallback, useEffect, useRef, useState } from 'react';
@@ -86,6 +86,7 @@ export default function HeroSection() {
         <video
           loop
           ref={videoRef}
+          poster={POSTERS.blackDot}
           className="absolute inset-0 z-[1] m-auto h-full object-none sm:object-cover xl:w-full"
           onPlay={handlePlay}
           onPause={handlePause}
@@ -99,6 +100,7 @@ export default function HeroSection() {
           ref={coverVidRef}
           muted
           loop
+          poster={POSTERS.blackDot}
           className="inset-0 z-0 size-full scale-110 object-cover blur-sm sm:hidden"
         >
           <source src={MEDIA.siteBanner} type="video/mp4" />

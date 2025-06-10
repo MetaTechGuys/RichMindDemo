@@ -1,4 +1,4 @@
-import { MEDIA } from '@/utils/constants';
+import { MEDIA, POSTERS } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
 import { ComponentProps, PropsWithChildren } from 'react';
 
@@ -15,6 +15,7 @@ export function NoticeSection({
         <video
           className="absolute inset-0 z-0 size-full object-cover"
           src={MEDIA.black}
+          poster={POSTERS.blackDot}
           muted
           autoPlay
           loop
