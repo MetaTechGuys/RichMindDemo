@@ -1,6 +1,7 @@
 'use client';
 
 import { Button, Icon } from '@/atoms';
+import { MEDIA } from '@/utils/constants';
 import { AnimatePresence, motion } from 'motion/react';
 import { useCallback, useRef } from 'react';
 import { useBoolean } from 'usehooks-ts';
@@ -15,7 +16,7 @@ export default function FooterVideoSection() {
   return (
     <div className="relative size-full overflow-clip">
       <video
-        src="/video/Richmind Corporate Video.webm"
+        src={MEDIA.aboutUsFooter}
         className="max-h-screen w-full object-cover"
         controls
         ref={vidRef}

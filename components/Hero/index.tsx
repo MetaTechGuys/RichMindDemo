@@ -1,11 +1,12 @@
 'use client';
 
+import logo from '@/assets/img/RichMindlogo-white.png';
 import { Button, Icon } from '@/atoms';
 import { NoticeSection } from '@/atoms/NoticeSection';
-import { CSSProperties, useCallback, useEffect, useRef, useState } from 'react';
-import logo from '@/assets/img/RichMindlogo-white.png';
-import Image from 'next/image';
+import { MEDIA } from '@/utils/constants';
 import { AnimatePresence, cubicBezier, easeIn, motion } from 'motion/react';
+import Image from 'next/image';
+import { CSSProperties, useCallback, useEffect, useRef, useState } from 'react';
 
 export default function HeroSection() {
   const [loading, setLoading] = useState(true);
@@ -91,7 +92,7 @@ export default function HeroSection() {
         >
           <source src="/video/site-banner.webm" type="video/mp4" />
           <audio loop id="hero-audio" ref={audioRef}>
-            <source src="/audio/richmind-corporate-video-3-lq.mp3" type="audio/mpeg" />
+            <source src={MEDIA.heroAudio} type="audio/mpeg" />
           </audio>
         </video>
         <video
