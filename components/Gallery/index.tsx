@@ -1,74 +1,134 @@
 'use client';
 
+import { Button, Icon } from '@/atoms';
 import { cn } from '@/utils/jsx-tools';
-import { motion, useInView, useScroll, useTransform } from 'motion/react';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
+import { ComponentProps, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useBoolean, useCountdown } from 'usehooks-ts';
+
+const tailLength = 3000;
+const forceViewTime = process.env.NODE_ENV === 'production' ? 10 : 3;
 
 export default function GallerySection() {
+  const ref = useRef<HTMLDivElement>(null);
+  const vidRef = useRef<HTMLVideoElement>(null);
+  const { value: isForced, setFalse: skipVideo, setTrue: forceWatch } = useBoolean(false);
+  const { value: isLock, setFalse: lockAnimation } = useBoolean(false);
+  const { value: isFullScreen, toggle: toggleIsFullscreen } = useBoolean(false);
+  const [count, { startCountdown }] = useCountdown({
+    countStart: forceViewTime,
+  });
+
   const [top, setTop] = useState(1000);
-  const [length, setLength] = useState(800);
   const [scalefactor, setScalefactor] = useState(2);
+  const [hasZoomAnimate, enableZoomAnimation] = useState(true);
 
   useLayoutEffect(() => {
-    const rec = ref.current?.getBoundingClientRect();
-    setTop(rec?.top ?? 0);
-    setLength(rec?.height ?? 800);
-    setScalefactor(2);
+    setTop(ref.current?.offsetTop ?? 0);
+    const wWidth = window.innerWidth;
+    const wHeight = window.innerHeight;
+    const vRect = vidRef.current!.getBoundingClientRect();
+
+    const scale = Math.max(1, wHeight / vRect.height, wWidth / vRect.width);
+
+    enableZoomAnimation(wWidth > 641);
+    setScalefactor(scale);
   }, []);
 
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref);
-
   const { scrollY } = useScroll();
-  const scale = useTransform(scrollY, [top, top + length * 0.8], [1, scalefactor], {
+  const scale = useTransform(scrollY, [top, top + tailLength / 2], [1, scalefactor], {
     clamp: true,
   });
-  const y = useTransform(scrollY, [top, top + length], [0, length], { clamp: true });
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const lockScrollToForceWatch = useCallback(() => {
+    startCountdown();
+    forceWatch();
+    const viewportHeight = window.innerHeight;
+    window.scrollTo({
+      top: top + tailLength + vidRef.current!.clientHeight - viewportHeight / 2,
+      behavior: 'smooth',
+    });
+  }, [forceWatch, startCountdown, top]);
+
+  useMotionValueEvent(scale, 'change', (v) => {
+    if (v >= scalefactor && count > 0) {
+      // vidRef.current!.requestFullscreen();
+      lockAnimation();
+    }
+  });
+
+  useEffect(() => {
+    function onFullscreen() {
+      toggleIsFullscreen();
+    }
+    vidRef.current!.addEventListener('fullscreenchange', onFullscreen);
+    vidRef.current!.addEventListener('webkitfullscreenchange', onFullscreen);
+    vidRef.current!.addEventListener('mozfullscreenchange', onFullscreen);
+    return () => {
+      vidRef.current?.removeEventListener('fullscreenchange', onFullscreen);
+      vidRef.current?.removeEventListener('webkitfullscreenchange', onFullscreen);
+      vidRef.current?.removeEventListener('mozfullscreenchange', onFullscreen);
+    };
+  }, []);
 
   return (
     <>
+      <div ref={ref}></div>
       <motion.div
-        ref={ref}
-        transition={{ ease: 'linear' }}
-        style={{ scale, y }}
-        className="relative grid size-full h-screen! grid-flow-col grid-cols-1 grid-rows-4 gap-4 p-4 text-black sm:grid-cols-[15fr_35fr_15fr] md:gap-6 lg:grid-cols-[31fr_35fr_31fr] xl:container xl:mx-auto"
+        style={hasZoomAnimate ? { scale: isLock ? scalefactor : scale } : undefined}
+        className="sticky top-0 grid size-full h-screen! grid-cols-[15fr_35fr_15fr] grid-rows-4 gap-4 p-4 text-black md:gap-6 xl:container xl:mx-auto"
       >
-        {inView
-          ? items.map((item, index) => (
-              <motion.video
-                key={index}
-                src={item.src}
-                muted
-                autoPlay
-                loop
-                initial={{ scale: 0.95 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.4 * Math.random() }}
-                className={cn('size-full rounded-2xl object-cover', item.className, {
-                  'row-span-2': item.double,
-                })}
-              />
-            ))
-          : null}
+        <GalleryVideo src="/video/05.webm" className="can-hidden-sm row-span-2" />
+        <GalleryVideo src="/video/gallery-top.webm" />
+        <GalleryVideo src="/video/04.webm" className="can-hidden-sm row-span-2" />
+        <div className="relative row-span-2 size-full overflow-clip rounded-2xl">
+          <GalleryVideo
+            src="/video/richmind-corporate-video-3-lq.webm"
+            ref={vidRef}
+            className={cn(
+              'size-full',
+              isFullScreen ? 'object-contain md:object-cover' : 'object-cover',
+            )}
+            controls={!hasZoomAnimate}
+          />
+          {isForced ? (
+            <Button
+              id="force-prevent-scroll"
+              className="bg-gold absolute! end-0 bottom-4 rounded-r-none! text-sm"
+              innerClassName="rounded-r-none! inline-flex items-center gap-1 px-3! py-1.5!"
+              disabled={count > 0}
+              onClick={() => {
+                skipVideo();
+                setTimeout(() => {
+                  window.scrollBy({ top: 100, behavior: 'smooth' });
+                }, 500);
+              }}
+            >
+              Skip{count ? <span> in {count}</span> : <Icon name="play" className="-me-3 size-4" />}
+            </Button>
+          ) : null}
+        </div>
+        <GalleryVideo src="/video/02.webm" className="can-hidden-sm row-span-2" />
+        <GalleryVideo src="/video/011.webm" className="can-hidden-sm" />
+        <GalleryVideo src="/video/031.webm" className="can-hidden-sm" />
+        <GalleryVideo src="/video/021.webm" />
       </motion.div>
-      <div className="w-full" style={{ height: length }}></div>
+      {hasZoomAnimate && !isLock ? (
+        <div className="min-h-screen" style={{ height: tailLength }} />
+      ) : null}
     </>
   );
 }
 
-interface GalleryItem {
-  src: string;
-  className?: string;
-  double?: true;
-}
-
-const items: GalleryItem[] = [
-  { src: '/video/05.webm', double: true, className: 'hidden sm:block' },
-  { src: '/video/011.webm', className: 'hidden sm:block' },
-  { src: '/video/031.webm', className: 'hidden sm:block' },
-  { src: '/video/gallery-top.webm' },
-  { src: '/video/richmind-corporate-video-3-lq.webm', double: true },
-  { src: '/video/021.webm' },
-  { src: '/video/04.webm', double: true, className: 'hidden sm:block' },
-  { src: '/video/02.webm', double: true, className: 'hidden sm:block' },
-];
+const GalleryVideo = ({ className, ...props }: ComponentProps<'video'>) => {
+  return (
+    <video
+      muted
+      autoPlay
+      loop
+      className={cn('size-full rounded-2xl object-cover', className)}
+      {...props}
+    />
+  );
+};

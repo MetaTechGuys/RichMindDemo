@@ -6,12 +6,12 @@ import { useCallback, useRef } from 'react';
 import { useBoolean } from 'usehooks-ts';
 
 export default function FooterVideoSection() {
-  const videoState = useBoolean(false);
+  const { setTrue, value: canPlay } = useBoolean(false);
   const vidRef = useRef<HTMLVideoElement>(null);
   const playVideo = useCallback(() => {
-    videoState.setTrue();
+    setTrue();
     vidRef.current?.play();
-  }, []);
+  }, [setTrue]);
   return (
     <div className="relative size-full overflow-clip">
       <video
@@ -21,8 +21,9 @@ export default function FooterVideoSection() {
         ref={vidRef}
       />
       <AnimatePresence>
-        {!videoState.value ? (
+        {!canPlay ? (
           <motion.video
+            key="video"
             transition={{ duration: 2 }}
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -33,14 +34,15 @@ export default function FooterVideoSection() {
             className="absolute inset-0 z-[1] m-auto w-full object-cover"
           />
         ) : null}
-        {!videoState.value ? (
+        {!canPlay ? (
           <motion.div
+            key="video-controls"
             exit={{ height: 0 }}
             transition={{ delay: 0.5 }}
             className="flex-center absolute inset-0 top-auto z-[2] h-full w-full bg-gradient-to-t from-black to-transparent"
           >
             <AnimatePresence propagate>
-              {!videoState.value ? (
+              {!canPlay ? (
                 <motion.div
                   initial={{ x: 0, opacity: 0, scale: 5 }}
                   exit={{ x: 50, opacity: 0 }}

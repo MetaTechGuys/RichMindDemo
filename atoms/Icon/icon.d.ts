@@ -1,4 +1,5 @@
 export type IconNames = 
+  | "back-outlined"
   | "twitter-x"
   | "align-justify-1"
   | "align-justify"
@@ -16,4 +17,7 @@ export type IconNames =
   | "logo-whatsapp"
   | "email"
   | "play"
+  | "skip-forward"
+  | "arrow-back"
+  | "home"
 
