@@ -68,20 +68,19 @@ export default function WorldMapSection() {
             </defs>
             <Point label="UK" x={596} y={245} isMain onClick={() => setShowMore('london')} />
             <Point label="UAE" x={800} y={384} isMain onClick={() => setShowMore('dubai')} />
-            {/* @ts-expect-error */}
             <Point label="zaf" x={686} y={599} onClick={() => setShowMore('dubai')} />
-            <Point label="can" x={215} y={229} onClick={() => setShowMore('dubai')} />
-            <Point label="aus" x={1088} y={600} onClick={() => setShowMore('dubai')} />
-            <Point label="usa" x={246} y={311} onClick={() => setShowMore('dubai')} />
-            <Point label="jpn" x={1060} y={329} onClick={() => setShowMore('dubai')} />
-            <Point label="ind" x={877} y={424} onClick={() => setShowMore('dubai')} />
-            <Point label="sau" x={767} y={399} onClick={() => setShowMore('dubai')} />
-            <Point label="chn" x={974} y={346} onClick={() => setShowMore('dubai')} />
-            <Point label="try" x={718} y={311} onClick={() => setShowMore('dubai')} />
-            <Point label="ita" x={647} y={295} onClick={() => setShowMore('dubai')} />
-            <Point label="spa" x={586} y={307} onClick={() => setShowMore('dubai')} />
-            <Point label="deu" x={638} y={253} onClick={() => setShowMore('dubai')} />
-            <Point label="fra" x={613} y={273} onClick={() => setShowMore('dubai')} />
+            <Point label="can" x={215} y={229} onClick={() => setShowMore('canada')} />
+            <Point label="aus" x={1088} y={600} onClick={() => setShowMore('aus')} />
+            <Point label="usa" x={246} y={311} onClick={() => setShowMore('usa')} />
+            <Point label="jpn" x={1060} y={329} onClick={() => setShowMore('jpn')} />
+            <Point label="ind" x={877} y={424} onClick={() => setShowMore('india')} />
+            <Point label="sau" x={767} y={399} onClick={() => setShowMore('saudi')} />
+            <Point label="chn" x={974} y={346} onClick={() => setShowMore('china')} />
+            <Point label="try" x={718} y={311} onClick={() => setShowMore('try')} />
+            <Point label="ita" x={647} y={295} onClick={() => setShowMore('italy')} />
+            <Point label="spa" x={586} y={307} onClick={() => setShowMore('spain')} />
+            <Point label="deu" x={638} y={253} onClick={() => setShowMore('germany')} />
+            <Point label="fra" x={613} y={273} onClick={() => setShowMore('frence')} />
           </svg>
         </div>
       </div>
