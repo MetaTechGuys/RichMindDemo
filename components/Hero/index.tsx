@@ -65,9 +65,9 @@ export default function HeroSection() {
           <motion.div
             className="fixed z-30 h-screen w-screen"
             id="play-video-consent"
-            initial={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 10, opacity: 0 }}
-            transition={{ ease: cubicBezier(1, 0, 1, 1) }}
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ ease: cubicBezier(1, 0, 1, 1), duration: 0.7 }}
           >
             <div className="bg-opacity-10 absolute size-full bg-black/30 bg-clip-padding backdrop-blur-sm backdrop-filter" />
             {loading ? null : (
@@ -126,12 +126,12 @@ export default function HeroSection() {
           <source src={MEDIA.siteBanner} type="video/mp4" />
         </video>
         {hasConset ? (
-          <div className="absolute inset-0 z-[2] flex size-full flex-col justify-between gap-4 bg-black/40 px-4 sm:justify-center sm:gap-6 sm:px-8 md:gap-12 lg:gap-16">
+          <div className="--lg:px-68 absolute inset-0 z-[2] flex size-full flex-col justify-between gap-4 bg-black/40 px-4 sm:justify-center sm:gap-6 sm:px-8 md:gap-4 lg:gap-8">
             <motion.h1
               transition={{ delay: 0.5, ease: easeIn }}
               initial={{ scale: 10, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="font-body! xs:text-4xl xs:leading-12 mt-48 truncate text-3xl leading-10 sm:mt-32 sm:text-5xl sm:leading-14 md:text-6xl md:leading-18 lg:text-7xl lg:leading-21 xl:text-8xl xl:leading-24"
+              className="font-body! xs:leading-12 mt-48 truncate text-lg text-[48px]! italic sm:mt-32 sm:text-2xl md:text-3xl"
             >
               Inspire People <br />
               Design the Future
