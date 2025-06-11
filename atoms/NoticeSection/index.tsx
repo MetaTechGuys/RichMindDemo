@@ -9,7 +9,7 @@ export function NoticeSection({
   eager,
 }: Readonly<PropsWithChildren<ComponentProps<'div'> & { neon?: boolean; eager?: boolean }>>) {
   return (
-    <div className={cn('size-full p-8 sm:p-12 md:p-16 lg:p-20', className)}>
+    <div className={cn('size-full py-8 sm:py-12 md:py-16 lg:py-20', className)}>
       <div className={cn('relative overflow-hidden rounded-2xl', { 'neon-box': neon })}>
         <div className="relative z-10">{children}</div>
         <video

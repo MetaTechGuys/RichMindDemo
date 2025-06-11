@@ -6,7 +6,7 @@ export default function GlobalStandardsSection() {
   return (
     <div className="size-full py-4">
       <div className="relative flex size-full items-center overflow-hidden rounded-2xl bg-black px-8 py-8 md:px-16 lg:px-24 xl:px-32">
-        <div className="font-display z-10 flex max-w-2xl flex-1 flex-col gap-5 text-xl text-white">
+        <div className="font-display z-10 flex max-w-2xl flex-1 flex-col gap-5 text-lg text-white">
           <h4 className="text-4xl">High Standards in Global Investments</h4>
           <p>
             RichMind Holding aims to stay at the top of the global market through executing

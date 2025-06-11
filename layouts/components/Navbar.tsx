@@ -1,6 +1,7 @@
 'use client';
 import logo from '@/assets/img/RichMindlogo-white.png';
 import { Button, Icon } from '@/atoms';
+import { cn } from '@/utils/jsx-tools';
 import { useScroll, useTransform, motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +16,8 @@ export default function Navbar({ hideLogo }: NavbarProps) {
   const [isOpen, setOpen] = useState(false);
   const { scrollY } = useScroll();
   // const x = useTransform(scrollY, [0, 300], [0, -200]);
-  const w = useTransform(scrollY, [0, 300], [300, 200]);
+  const scale = useTransform(scrollY, [0, 100], [1, 0.75], { clamp: true });
+  const y = useTransform(scrollY, [0, 200], [0, -200], { clamp: true });
   const ref = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = () => {
@@ -26,27 +28,34 @@ export default function Navbar({ hideLogo }: NavbarProps) {
 
   return (
     <>
-      <nav className="fixed top-0 z-10 flex w-full items-center justify-between">
+      <nav className="fixed top-0 z-10 flex w-full items-center justify-end">
         {!hideLogo ? (
-          <motion.div className="flex justify-center" style={{ width: w }}>
+          <motion.div
+            className="fixed start-0 top-10 flex h-32 justify-center sm:h-40 md:top-0 md:h-48"
+            style={{ y, scale }}
+          >
             <Image
               src={logo}
-              alt=""
-              className="w-full scale-75 sm:scale-100"
+              alt="Richmind Holding"
+              className="w-full origin-left"
               loading="eager"
               priority
             />
           </motion.div>
         ) : (
           <>
-            <div className="me-auto h-28"></div>
-            <Button href="/" className="size-20" innerClassName="flex-center">
+            <div className="me-auto h-22"></div>
+            <Button
+              href="/"
+              className={cn('size-18', hideLogo ? '' : 'mt-8')}
+              innerClassName="flex-center"
+            >
               <Icon name="back-outlined" className="size-full" />
             </Button>
           </>
         )}
         <Button
-          className="me-12 size-20 p-4"
+          className={cn('me-8 size-18 p-4', hideLogo ? '' : 'mt-8')}
           onClick={() => {
             setOpen((o) => !o);
           }}

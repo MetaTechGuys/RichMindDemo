@@ -1,8 +1,8 @@
 'use client';
-import image2 from '@/assets/img/about-us/about-us-2.png';
-import image3 from '@/assets/img/about-us/about-us-3.png';
-import image4l from '@/assets/img/about-us/about-us-4l.png';
-import image4r from '@/assets/img/about-us/about-us-4r.png';
+import image2 from '@/assets/img/about-us/about-us-2.jpg';
+import image3 from '@/assets/img/about-us/about-us-3.jpg';
+import image4l from '@/assets/img/about-us/about-us-4l.jpg';
+import image4r from '@/assets/img/about-us/about-us-4r.jpg';
 import { Parallax } from '@/atoms';
 import FooterVideoSection from '@/components/FooterVideo';
 import { MEDIA } from '@/utils/constants';
@@ -31,7 +31,7 @@ export default function AboutUsPage() {
     <main className="flex flex-col bg-black">
       <h1 className="sr-only">Richmind</h1>
       <div className="contents text-5xl sm:text-7xl lg:text-9xl">
-        <div className="font-display relative ms-16 mt-8 grid w-min snap-end grid-cols-1 grid-rows-1 text-center text-nowrap capitalize">
+        <div className="font-display relative ms-16 mt-16 grid w-min snap-end grid-cols-1 grid-rows-1 text-center text-nowrap capitalize">
           <h2 className="text-stroke opacity-75">About Us</h2>
           <div className="absolute bottom-0 left-0 origin-bottom-right -translate-x-2 scale-90">
             About Us
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
       </section>
       <section className="prose mpt-4 max-w-full! snap-center bg-black md:mt-12">
         {/* section 1 */}
-        <div className="container mx-auto items-center gap-12 px-12 lg:flex">
+        <div className="container mx-auto items-stretch gap-12 p-12 lg:flex">
           <motion.div
             className="flex-1"
             initial={{ x: -200, opacity: 0 }}
@@ -76,7 +76,7 @@ export default function AboutUsPage() {
               autoPlay
               muted
               loop
-              className="size-full rounded-xl object-cover lg:my-16"
+              className="my-0! size-full rounded-xl object-cover lg:my-16"
             />
           </motion.div>
           <motion.div
@@ -86,13 +86,13 @@ export default function AboutUsPage() {
             viewport={viewport}
             transition={transition}
           >
-            <p>
+            <p className="leading-6">
               Globally active in numerous industries, RichMind Holding promotes innovation and
               success in several fields.With operations in more than thirty countries,the company
               shines in spotting and seizing investment opportunities supporting environmentally
               friendly development.
             </p>
-            <p>
+            <p className="leading-6">
               RichMind Holding’s vision goes beyond conventional financial success to include an
               effort to influence the markets and communities it serves positively. The company’s
               method promises it stays ahead of world trends and market needs by combining a
@@ -170,16 +170,16 @@ export default function AboutUsPage() {
       </section>
       <section className="prose max-w-full! snap-center bg-[#EFEDEB] py-12">
         {/* section 4 */}
-        <div className="container mx-auto items-center justify-center gap-12 md:flex">
+        <div className="container mx-auto items-center justify-center gap-12 lg:flex">
           <motion.div
-            className="mx-12 mb-12 overflow-hidden rounded-xl bg-black text-white md:m-0 md:w-1/2 lg:w-1/3"
+            className="mx-12 mb-12 overflow-clip rounded-2xl text-white lg:m-0 lg:w-1/2 xl:w-1/3"
             initial={{ y: 70, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={transition}
           >
             <Image src={image4l} alt="about-us-1" className="m-0! w-full" />
-            <p className="px-4 text-center">
+            <p className="my-0! bg-black p-4 text-center">
               Corporate governance at RichMind Holding follows top standards of integrity and
               accountability. The system of governance assures that all businesspractices alignwith
               legal requirements and ethical standards, maintaining stakeholders’ interests while
@@ -193,14 +193,14 @@ export default function AboutUsPage() {
             </p>
           </motion.div>
           <motion.div
-            className="mx-12 overflow-hidden rounded-2xl bg-black text-white md:m-0 md:w-1/2 lg:w-1/3"
+            className="mx-12 overflow-clip rounded-2xl text-white lg:m-0 lg:w-1/2 xl:w-1/3"
             initial={{ y: 70, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={{ ...transition, delay: 0.1 }}
           >
             <Image src={image4r} alt="about-us-1" className="m-0! w-full" />
-            <p className="px-4 text-center">
+            <p className="my-0! bg-black p-4 text-center">
               RichMind Holding’s leadership team comprises determined innovators and expert
               visionaries. Every member drives the business toward its strategic goals by bringing a
               great variety of knowledge and a different viewpoint. RichMind Holding has positioned
