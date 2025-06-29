@@ -46,7 +46,7 @@ export default function Footer({ secondary }: FooterProps) {
           </div>
           <div className="flex items-center gap-1 text-xs">
             <Icon name="globe" className="size-5" />
-            <span className="truncate">London@RichMindholding.com</span>
+            <span className="truncate">Info@RichMindholding.com</span>
           </div>
           <div className="flex items-center gap-1 text-xs">
             <Icon name="phone" className="size-5" />
@@ -67,7 +67,7 @@ export default function Footer({ secondary }: FooterProps) {
               className="rounded-full!"
               innerClassName="rounded-full! flex-center! size-11! px-0! -mx-px border-2!"
             >
-              <Icon name="twitter-x" className="size-5" />
+              <Icon name="instagram" className="size-5" />
             </Button>
             <Button
               variant="outline"

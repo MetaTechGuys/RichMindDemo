@@ -71,26 +71,28 @@ export default function Navbar({ hideLogo }: NavbarProps) {
             initial={{ height: 0 }}
             animate={{ height: 400 }}
             exit={{ height: 0 }}
-            className="bg-opacity-10 font-display fixed top-0 z-30 grid h-100 w-screen grid-cols-2 overflow-hidden bg-black/50 bg-clip-padding p-8 capitalize shadow backdrop-blur-sm backdrop-filter md:grid-cols-4"
+            className="bg-opacity-10 font-display fixed top-0 z-30 h-100 w-screen overflow-hidden bg-black/50 bg-clip-padding p-16 capitalize shadow backdrop-blur-sm backdrop-filter md:px-48"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-8 text-5xl md:col-start-2">
               <Link href="/">Home</Link>
               <Link href="/about-us">About Us</Link>
-              <a href="#">Our Work</a>
-              <a href="#">Our Agency</a>
-              <a href="#">Services</a>
-              <a href="#">Insights</a>
-              <a href="#">SEO Checker</a>
-              <a href="#">Contact</a>
+              {/* <a href="#">Our Work</a> */}
+              {/* <a href="#">Our Agency</a> */}
+              {/* <a href="#">Services</a> */}
+              {/* <a href="#">Insights</a> */}
+              {/* <a href="#">SEO Checker</a> */}
+              <a href="#" onClick={() => window.scrollTo({ top: 99999 })}>
+                Contact
+              </a>
             </div>
-            <div className="flex flex-col gap-4">
+            {/* <div className="flex flex-col gap-4">
               <a href="#">phone</a>
               <a href="#">02078705794</a>
               <a href="#">Email</a>
               <a href="#">test@test.com</a>
               <a href="#">follow</a>
               <a href="#">Start a Project</a>
-            </div>
+            </div> */}
           </motion.div>
         ) : null}
       </AnimatePresence>

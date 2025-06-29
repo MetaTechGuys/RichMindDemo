@@ -131,7 +131,7 @@ export default function HeroSection() {
               transition={{ delay: 0.5, ease: easeIn }}
               initial={{ scale: 10, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="font-body! xs:leading-12 mt-48 truncate text-lg text-[48px]! italic sm:mt-32 sm:text-2xl md:text-3xl"
+              className="font-body! xs:leading-12 mt-48 truncate pb-1 text-lg text-[48px]! italic sm:mt-32 sm:text-2xl md:text-3xl"
             >
               Inspire People <br />
               Design the Future
