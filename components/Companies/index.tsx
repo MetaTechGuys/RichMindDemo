@@ -4,7 +4,7 @@ import virtualAssets from '@/assets/img/companies/box2-virtual assets.jpg';
 import media from '@/assets/img/companies/box3-media.jpg';
 import properties from '@/assets/img/companies/box4-properties-2.jpg';
 import projectManager from '@/assets/img/companies/box5-project-manager.jpg';
-import development from '@/assets/img/companies/box6-development.jpg';
+import development from '@/assets/img/companies/box6-development-2.jpg';
 import holiday from '@/assets/img/companies/box7-holiday.jpg';
 import cosmomed from '@/assets/img/companies/box8-cosmomed.jpg';
 import vipClub from '@/assets/img/companies/box9-vip-club.jpg';
