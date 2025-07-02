@@ -9,11 +9,12 @@ import holiday from '@/assets/img/companies/box7-holiday.jpg';
 import cosmomed from '@/assets/img/companies/box8-cosmomed.jpg';
 import vipClub from '@/assets/img/companies/box9-vip-club.jpg';
 import sport from '@/assets/img/companies/box10-sport-3.jpg';
-import academy from '@/assets/img/companies/box11-academy.jpg';
+import academy from '@/assets/img/companies/box11-academy-2.jpg';
 import trading from '@/assets/img/companies/box12-trading.png';
 
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@/atoms';
+import { cn } from '@/utils/jsx-tools';
 
 export default function CompaniesSection() {
   return (
@@ -43,6 +44,7 @@ export default function CompaniesSection() {
 interface CompanyData {
   title: string;
   image: StaticImageData;
+  imgClassName?: string;
 }
 
 interface CompanyItemProps {
@@ -55,7 +57,7 @@ function CompanyItem({ value }: CompanyItemProps) {
       <Image
         src={value.image}
         alt={value.title}
-        className="-m-px size-full object-cover transition duration-1000"
+        className={cn('-m-px size-full object-cover transition duration-1000', value.imgClassName)}
       />
       <Button className="absolute! right-0 bottom-3 left-0 z-10 mx-auto w-1/2" variant="primary">
         {value.title}
@@ -78,6 +80,6 @@ const companies: CompanyData[] = [
   { image: cosmomed, title: 'cosmomed' },
   { image: vipClub, title: 'vip Club' },
   { image: sport, title: 'sport' },
-  { image: academy, title: 'academy' },
+  { image: academy, title: 'academy', imgClassName: 'object-left' },
   { image: trading, title: 'trading' },
 ];
