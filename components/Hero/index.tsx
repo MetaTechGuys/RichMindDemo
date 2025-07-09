@@ -2,7 +2,7 @@
 
 import { Button, Icon } from '@/atoms';
 import { NoticeSection } from '@/atoms/NoticeSection';
-import { useCallback, useRef, useState } from 'react';
+import { CSSProperties, useCallback, useRef, useState } from 'react';
 import logo from '@/assets/img/RichMindlogo-white.png';
 import Image from 'next/image';
 import { AnimatePresence, cubicBezier, easeIn, motion } from 'motion/react';
@@ -33,7 +33,7 @@ export default function HeroSection() {
       <AnimatePresence>
         {!hasConset ? (
           <motion.div
-            className="fixed z-50 h-screen w-screen"
+            className="fixed z-30 h-screen w-screen"
             id="play-video-consent"
             initial={{ scale: 1, opacity: 1 }}
             exit={{ scale: 10, opacity: 0 }}
@@ -44,18 +44,24 @@ export default function HeroSection() {
               className="size-full"
               initial={{ y: 500, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.1 }}
             >
-              <NoticeSection className="flex-center" neon>
-                <div className="font-display flex flex-col items-center gap-4 px-10 py-20 text-center text-xl text-white">
-                  <Image src={logo} alt="" className="w-1/2" />
-                  <h4 className="text-4xl">Welcome to Richmind</h4>
-                  <p>Our mission is to use operational expertise and strategic investments</p>
-                  <Button variant="primary" className="text-sm" onClick={getConset}>
-                    Continue
-                    <Icon name="play" className="size-4" />
+              <NoticeSection className="flex-center" neon eager>
+                <div
+                  className="font-display flex min-w-[50vw] flex-col items-center gap-4 p-10 py-15 text-center text-xl text-white"
+                  style={fontPreloadStyle}
+                >
+                  <Image src={logo} alt="" className="-my-6 max-w-xs" loading="eager" />
+                  <h4 className="text-4xl opacity-80">Welcome to Richmind</h4>
+                  <p className="max-w-md">Learn about our projects and companies</p>
+                  <Button variant="primary" className="text-base" onClick={getConset}>
+                    Start the Experience
+                    <Icon
+                      name="sound-on"
+                      className="absolute inset-0 m-auto size-12 -translate-x-20 opacity-10"
+                    />
                   </Button>
-                  <small>Wear headphons for better experience</small>
+                  <small className="text-sm opacity-50">Wear headphons for better experience</small>
                 </div>
               </NoticeSection>
             </motion.div>
@@ -103,7 +109,7 @@ export default function HeroSection() {
               Rich Mind Holding is Multinational Corporation With an Extensive <br />
               Portofolio of Resources in Rapidly expanding industries
             </motion.h4>
-            <div className="flex w-full flex-wrap items-end justify-between sm:gap-8">
+            <div className="flex w-full flex-wrap items-end justify-between sm:block sm:gap-8">
               <ul className="custom-checklist w-xs shrink-0 text-xl leading-10 md:text-2xl">
                 <motion.li
                   transition={{ delay: 0.8 }}
@@ -131,7 +137,7 @@ export default function HeroSection() {
                 transition={{ delay: 0.5 }}
                 initial={{ y: 60, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className="flex w-min flex-1 flex-wrap justify-end gap-2 md:gap-4 md:text-xl"
+                className="mt-2 flex w-min flex-1 flex-wrap justify-end gap-2 sm:mt-8 sm:w-full md:gap-4 md:text-xl"
               >
                 <Button
                   variant="primary"
@@ -155,3 +161,7 @@ export default function HeroSection() {
     </>
   );
 }
+
+const fontPreloadStyle: CSSProperties = {
+  fontFamily: 'var(--google-font-display)',
+};

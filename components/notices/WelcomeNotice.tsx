@@ -7,8 +7,6 @@ export default function WelcomeNotice() {
   const ref = useRef<HTMLDivElement>(null);
   const inview = useInView(ref, { once: process.env.NODE_ENV === 'production' });
 
-  console.log(inview);
-
   return (
     <NoticeSection>
       <div
