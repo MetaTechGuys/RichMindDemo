@@ -2,17 +2,25 @@
 
 import { Button, Icon } from '@/atoms';
 import { NoticeSection } from '@/atoms/NoticeSection';
-import { CSSProperties, useCallback, useRef, useState } from 'react';
+import { CSSProperties, useCallback, useEffect, useRef, useState } from 'react';
 import logo from '@/assets/img/RichMindlogo-white.png';
 import Image from 'next/image';
 import { AnimatePresence, cubicBezier, easeIn, motion } from 'motion/react';
 
 export default function HeroSection() {
+  const [loading, setLoading] = useState(true);
   const [hasConset, setConset] = useState(false);
 
   const coverVidRef = useRef<HTMLVideoElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    const hasConset = sessionStorage.getItem('conset-accepted');
+
+    setConset(!!hasConset);
+    setLoading(false);
+  }, []);
 
   const handlePlay = useCallback(() => {
     coverVidRef.current?.play();
@@ -25,6 +33,7 @@ export default function HeroSection() {
   }, []);
 
   const getConset = useCallback(() => {
+    sessionStorage.setItem('conset-accepted', 'yes');
     setConset(true);
     videoRef.current?.play();
   }, []);
@@ -40,31 +49,35 @@ export default function HeroSection() {
             transition={{ ease: cubicBezier(1, 0, 1, 1) }}
           >
             <div className="bg-opacity-10 absolute size-full bg-black/30 bg-clip-padding backdrop-blur-sm backdrop-filter" />
-            <motion.div
-              className="size-full"
-              initial={{ y: 500, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.1 }}
-            >
-              <NoticeSection className="flex-center" neon eager>
-                <div
-                  className="font-display flex min-w-[50vw] flex-col items-center gap-4 p-10 py-15 text-center text-xl text-white"
-                  style={fontPreloadStyle}
-                >
-                  <Image src={logo} alt="" className="-my-6 max-w-xs" loading="eager" />
-                  <h4 className="text-4xl opacity-80">Welcome to Richmind</h4>
-                  <p className="max-w-md">Learn about our projects and companies</p>
-                  <Button variant="primary" className="text-base" onClick={getConset}>
-                    Start the Experience
-                    <Icon
-                      name="sound-on"
-                      className="absolute inset-0 m-auto size-12 -translate-x-20 opacity-10"
-                    />
-                  </Button>
-                  <small className="text-sm opacity-50">Wear headphons for better experience</small>
-                </div>
-              </NoticeSection>
-            </motion.div>
+            {loading ? null : (
+              <motion.div
+                className="size-full"
+                initial={{ y: 500, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.1 }}
+              >
+                <NoticeSection className="flex-center" neon eager>
+                  <div
+                    className="font-display flex min-w-[50vw] flex-col items-center gap-4 p-10 py-15 text-center text-xl text-white"
+                    style={fontPreloadStyle}
+                  >
+                    <Image src={logo} alt="" className="-my-6 max-w-xs" loading="eager" />
+                    <h4 className="text-4xl opacity-80">Welcome to Richmind</h4>
+                    <p className="max-w-md">Learn about our projects and companies</p>
+                    <Button variant="primary" className="text-base" onClick={getConset}>
+                      Start the Experience
+                      <Icon
+                        name="sound-on"
+                        className="absolute inset-0 m-auto size-12 -translate-x-20 opacity-10"
+                      />
+                    </Button>
+                    <small className="text-sm opacity-50">
+                      Wear headphons for better experience
+                    </small>
+                  </div>
+                </NoticeSection>
+              </motion.div>
+            )}
           </motion.div>
         ) : null}
       </AnimatePresence>

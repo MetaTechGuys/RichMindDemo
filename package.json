@@ -17,6 +17,7 @@
     "react-icomoon": "^2.6.1",
     "swiper": "^11.2.8",
     "tailwind-merge": "^3.3.0",
+    "use-viewport": "^0.2.0",
     "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {

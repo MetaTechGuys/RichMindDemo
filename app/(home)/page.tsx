@@ -1,4 +1,4 @@
-import { Button } from '@/atoms';
+import { Button, ScrollTop } from '@/atoms';
 import { NoticeSection } from '@/atoms/NoticeSection';
 import CompaniesSection from '@/components/Companies';
 import GallerySection from '@/components/Gallery';
@@ -11,13 +11,14 @@ import WorldMapSection from '@/components/WorldMap';
 export default function Home() {
   return (
     <main className="flex flex-col">
+      <ScrollTop auto />
       <section className="grid min-h-screen snap-center">
         <HeroSection />
       </section>
       <section className="grid snap-center">
         <WelcomeNotice />
       </section>
-      <section className="grid min-h-screen snap-start overflow-hidden">
+      <section className="grid min-h-screen overflow-clip">
         <GallerySection />
       </section>
       <section className="grid min-h-screen snap-center">

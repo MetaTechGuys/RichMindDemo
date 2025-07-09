@@ -41,8 +41,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-:root:has(#play-video-consent) html {
+:root:has(#play-video-consent) body {
   overflow: hidden;
+}
+:root:has(#force-prevent-scroll) body {
+  overflow: hidden !important;
 }
 
 body:has(.cursor-pointer:hover) #cursor-tail > span,

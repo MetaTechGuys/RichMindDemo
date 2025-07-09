@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 export default function WelcomeNotice() {
   const ref = useRef<HTMLDivElement>(null);
-  const inview = useInView(ref, { once: process.env.NODE_ENV === 'production' });
+  const inview = useInView(ref, { once: true });
 
   return (
     <NoticeSection>
