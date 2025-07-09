@@ -1,7 +1,8 @@
 'use client';
-import { Icon, Text } from '@/atoms';
-import contacts from '@/mock-data/contacts';
-import { motion } from 'motion/react';
+import footerBanner from '@/assets/img/banner-photo-font-02.png';
+import { Button } from '@/atoms';
+
+import { CSSProperties } from 'react';
 
 export default function Footer() {
   // const [ref, springs] = useInView(() => ({
@@ -9,58 +10,70 @@ export default function Footer() {
   //   to: { zoom: 1, opacity: 1 },
   // }));
   return (
-    <footer className="dark text-foreground bg-background w-full">
-      <div className="container mx-auto grid-cols-7 py-12 text-center sm:grid sm:text-start">
-        <div className="col-span-3 flex h-32 flex-col items-center">
-          <motion.div animate={{ scale: 1, opacity: 1 }} initial={{ scale: 2, opacity: 0 }}>
-            <Text as="h1" className="mb-4 text-3xl" uppercase nowrap>
-              high end
-            </Text>
-          </motion.div>
-          <div className="flex gap-8">
-            <a href="#" className="size-8 rounded bg-[#25d366] p-1">
-              <Icon name="whatsapp" className="size-full" />
-            </a>
-            <a
-              href="#"
-              className="size-8 rounded bg-gradient-to-bl from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-1"
-            >
-              <Icon name="instagram" className="size-full" />
-            </a>
+    <div className="bg-black pt-24 pb-48" style={footerStyle}>
+      <div className="mx-auto grid grid-cols-3 gap-12 md:px-48">
+        <div className="font-display flex flex-col gap-3">
+          <h4 className="mb-10 text-3xl">Our Headquarters</h4>
+          <div className="flex gap-4">
+            <Button className="text-sm font-normal">Corporate</Button>
+            <Button className="text-sm font-normal">Mena Regional</Button>
+          </div>
+          <div className="flex gap-4 text-xs">
+            <span>207 Regent Street.London W1B 3HH, United Kingdom (Main)</span>
+          </div>
+          <div className="flex gap-4 text-xs">
+            <span>Office 301, 3rd Floor Vision Tower, Business Bay Dubai, UAE</span>
+          </div>
+          <div className="flex gap-4 text-xs">
+            <span>London@RichMindholding.com</span>
+          </div>
+          <div className="flex gap-4 text-xs">
+            <span>+44 20 76 92 56 76</span>
+          </div>
+          <div className="flex gap-4">
+            <div className="size-11 rounded-full border-2 border-white"></div>
+            <div className="size-11 rounded-full border-2 border-white"></div>
+            <div className="size-11 rounded-full border-2 border-white"></div>
+            <div className="size-11 rounded-full border-2 border-white"></div>
           </div>
         </div>
-        <div className="col-span-2 h-32">
-          <Text as="h2" className="underline" cap>
-            locations
-          </Text>
-          {contacts.phone ? (
-            <div className="mt-5">
-              <a href={`tel:${contacts.phone}`} className="font-title block">
-                <Text cap className="inline-flex items-center gap-2 text-sm">
-                  {contacts.phone}
-                </Text>
-              </a>
-            </div>
-          ) : null}
+        <div className="font-display flex flex-col gap-3">
+          <h4 className="mb-10 text-3xl">Useful Links</h4>
+          <div className="grid grid-cols-2 gap-4 underline underline-offset-4">
+            <a href="#">Home</a>
+            <a href="#">Overview</a>
+            <a href="#">Career</a>
+            <a href="#">Contact</a>
+            <a href="#">Innovation and R&D</a>
+            <a href="#">Sustainability</a>
+            <a href="#">Investor Relation</a>
+          </div>
         </div>
-        <div className="col-span-2 h-32">
-          <Text as="h2" className="underline" cap>
-            contact us
-          </Text>
-          <div className="mt-5">
-            <a href="#" className="font-title block">
-              <Text cap className="inline-flex items-center gap-2 text-sm">
-                media fact sheet
-              </Text>
-            </a>
-            <a href="#" className="font-title block">
-              <Text cap className="inline-flex items-center gap-2 text-sm">
-                sign up
-              </Text>
-            </a>
+        <div className="font-display flex flex-col gap-3">
+          <h4 className="mb-10 text-3xl">Newsletter</h4>
+          <p className="w-xs">
+            Stay updated with the latest news and developments from Rich Mind Holding.
+          </p>
+          <div>
+            <label htmlFor="footer-newslater">Your Email</label>
+            <div className="flex gap-2">
+              <input
+                id="footer-newslater"
+                type="text"
+                className="border-0 border-b-2 border-white"
+              />
+            </div>
+            <Button className="text-sm font-normal">Submit</Button>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }
+
+const footerStyle: CSSProperties = {
+  backgroundColor: 'black',
+  background: `black url(${footerBanner.src}) no-repeat center bottom`,
+};
+
+// const
