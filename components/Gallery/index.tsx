@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Icon } from '@/atoms';
-import { MEDIA } from '@/utils/constants';
+import { MEDIA, POSTERS } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
 import { motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
 import { ComponentProps, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
@@ -80,9 +80,17 @@ export default function GallerySection() {
         style={hasZoomAnimate ? { scale: isLock ? scalefactor : scale } : undefined}
         className="sticky top-0 grid size-full h-screen! grid-cols-[15fr_35fr_15fr] grid-rows-4 gap-4 p-4 text-black md:gap-6 xl:container xl:mx-auto"
       >
-        <GalleryVideo src={MEDIA.gallery05} className="can-hidden-sm row-span-2" />
-        <GalleryVideo src={MEDIA.galleryTop} />
-        <GalleryVideo src={MEDIA.gallery04} className="can-hidden-sm row-span-2" />
+        <GalleryVideo
+          src={MEDIA.gallery05}
+          poster={POSTERS.gallery05}
+          className="can-hidden-sm row-span-2"
+        />
+        <GalleryVideo src={MEDIA.galleryTop} poster={POSTERS.galleryTop} />
+        <GalleryVideo
+          src={MEDIA.gallery04}
+          poster={POSTERS.gallery04}
+          className="can-hidden-sm row-span-2"
+        />
         <div className="relative row-span-2 size-full overflow-clip rounded-2xl">
           <GalleryVideo
             src={MEDIA.galleryMain}
@@ -91,7 +99,7 @@ export default function GallerySection() {
               'size-full',
               isFullScreen ? 'object-contain md:object-cover' : 'object-cover',
             )}
-            preload="auto"
+            poster={POSTERS.galleryMain}
             controls={!hasZoomAnimate}
           />
           {isForced ? (
@@ -111,10 +119,22 @@ export default function GallerySection() {
             </Button>
           ) : null}
         </div>
-        <GalleryVideo src={MEDIA.gallery02} className="can-hidden-sm row-span-2" />
-        <GalleryVideo src={MEDIA.gallery011} className="can-hidden-sm" />
-        <GalleryVideo src={MEDIA.gallery031} className="can-hidden-sm" />
-        <GalleryVideo src={MEDIA.gallery021} />
+        <GalleryVideo
+          src={MEDIA.gallery02}
+          poster={POSTERS.gallery02}
+          className="can-hidden-sm row-span-2"
+        />
+        <GalleryVideo
+          src={MEDIA.gallery011}
+          poster={POSTERS.gallery011}
+          className="can-hidden-sm"
+        />
+        <GalleryVideo
+          src={MEDIA.gallery031}
+          poster={POSTERS.gallery031}
+          className="can-hidden-sm"
+        />
+        <GalleryVideo src={MEDIA.gallery021} poster={POSTERS.gallery021} />
       </motion.div>
       {hasZoomAnimate && !isLock ? (
         <div className="min-h-screen" style={{ height: tailLength }} />

@@ -3,7 +3,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Copyright from './components/Copyright';
 import Cursor from '@/atoms/Cursor';
-import { MEDIA } from '@/utils/constants';
+import { MEDIA, POSTERS } from '@/utils/constants';
 
 interface LayoutProps {
   secondary?: true;
@@ -24,6 +24,7 @@ export default function WebsiteLayout({ children, secondary }: PropsWithChildren
           <video
             src={MEDIA.blackBackground}
             className="fixed inset-0 -z-[1] h-screen w-screen object-cover"
+            poster={POSTERS.darkPurpleDot}
             autoPlay
             loop
             muted

@@ -1,6 +1,6 @@
 'use client';
 
-import { MEDIA } from '@/utils/constants';
+import { MEDIA, POSTERS } from '@/utils/constants';
 
 export default function GlobalStandardsSection() {
   return (
@@ -30,6 +30,7 @@ export default function GlobalStandardsSection() {
             muted
             className="size-full object-cover object-left"
             src={MEDIA.globe}
+            poster={POSTERS.purpleglobe}
           />
         </div>
       </div>

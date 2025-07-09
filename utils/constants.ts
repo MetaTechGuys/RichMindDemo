@@ -37,3 +37,18 @@ export const MEDIA = {
   galleryTop: CDN_BASE + '/video/gallery-top-mC3OpVa0RPdwq397CM9R4THavwpEnn.webm',
   siteBanner: CDN_BASE + '/video/site-banner-E1f9spIv8V4bNxVduGu9gQqlX1Qbd2.webm',
 } as const;
+
+export const POSTERS = {
+  galleryMain: '/posters/gallery-main.webp',
+  gallery011: '/posters/011.webp',
+  gallery02: '/posters/02.webp',
+  gallery021: '/posters/021.webp',
+  gallery031: '/posters/031.webp',
+  gallery04: '/posters/04.webp',
+  gallery05: '/posters/05.webp',
+  galleryTop: '/posters/top.webp',
+  purpleglobe: '/posters/purple-globe.webp',
+  blackDot: 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=',
+  darkPurpleDot:
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4AWJiZ5X5DwAAAP//BfvfEAAAAAZJREFUAwABcQEqmU32+wAAAABJRU5ErkJggg==',
+} as const;
