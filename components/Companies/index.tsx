@@ -8,7 +8,7 @@ import development from '@/assets/img/companies/box6-development.jpg';
 import holiday from '@/assets/img/companies/box7-holiday.jpg';
 import cosmomed from '@/assets/img/companies/box8-cosmomed.jpg';
 import vipClub from '@/assets/img/companies/box9-vip-club.jpg';
-import sport from '@/assets/img/companies/box10-sport-2.jpg';
+import sport from '@/assets/img/companies/box10-sport-3.jpg';
 import academy from '@/assets/img/companies/box11-academy.jpg';
 import trading from '@/assets/img/companies/box12-trading.png';
 
