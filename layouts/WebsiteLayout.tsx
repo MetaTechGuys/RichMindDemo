@@ -39,7 +39,9 @@ export default function WebsiteLayout({ children, secondary }: PropsWithChildren
 function ResponsiveHelper() {
   return process.env.NODE_ENV === 'development' ? (
     <div className="fixed end-0 top-0 z-50 size-8 rounded-bl-xl bg-rose-400 text-center text-sm text-white">
-      <span className="p-1 sm:hidden">xs</span>
+      <span className="2xs:hidden p-1">base</span>
+      <span className="2xs:block xs:hidden hidden p-1">xxs</span>
+      <span className="xs:block hidden p-1 sm:hidden">xs</span>
       <span className="hidden p-1 sm:block md:hidden">sm</span>
       <span className="hidden p-1 md:block lg:hidden">md</span>
       <span className="hidden p-1 lg:block xl:hidden">lg</span>

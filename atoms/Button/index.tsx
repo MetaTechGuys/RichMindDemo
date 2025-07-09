@@ -22,7 +22,7 @@ export function Button({
   ...props
 }: PropsWithChildren<ButtonProps | LinkBtnProps>) {
   const cls = cn(
-    'btn',
+    'btn text-center',
     {
       'btn-primary': variant === 'primary',
       'btn-secondary': variant === 'secondary',
@@ -35,7 +35,8 @@ export function Button({
     <button className={cls} {...props}>
       <div className={cn('btn-inner', innerClassName)}>{children}</div>
     </button>
-  ) : typeof props.href === 'string' && props.href.startsWith('http') ? (
+  ) : typeof props.href === 'string' &&
+    (props.href.startsWith('http') || props.href.startsWith('#')) ? (
     <a className={cls} {...props} href={props.href}>
       <div className={cn('btn-inner', innerClassName)}>{children}</div>
     </a>

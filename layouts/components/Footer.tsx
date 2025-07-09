@@ -23,8 +23,8 @@ export default function Footer({ secondary }: FooterProps) {
     >
       <div className="mx-auto grid grid-cols-1 gap-12 px-12 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:px-48">
         <div className="font-display flex flex-col gap-3">
-          <h4 className="mb-10 text-3xl">Our Headquarters</h4>
-          <div className="flex max-w-md flex-wrap gap-2">
+          <h4 className="mb-4 text-3xl md:mb-10">Our Headquarters</h4>
+          <div className="2xs:flex-row flex max-w-md flex-col flex-wrap gap-2">
             <Button variant="primary" className="flex-1 text-sm">
               Corporate
             </Button>
@@ -52,19 +52,39 @@ export default function Footer({ secondary }: FooterProps) {
             <Icon name="phone" className="size-5" />
             <span>+44 20 76 92 56 76</span>
           </div>
-          <div className="flex flex-wrap gap-4">
-            <motion.a href="#" className="flex-center size-11 rounded-full border-2 border-white">
+          <div className="xs:justify-start flex flex-wrap justify-center gap-4">
+            <Button
+              variant="outline"
+              href="#"
+              className="rounded-full!"
+              innerClassName="rounded-full! flex-center! size-11! px-0! -mx-px border-2!"
+            >
               <Icon name="facebook" className="size-5" />
-            </motion.a>
-            <a href="#" className="flex-center size-11 rounded-full border-2 border-white">
+            </Button>
+            <Button
+              variant="outline"
+              href="#"
+              className="rounded-full!"
+              innerClassName="rounded-full! flex-center! size-11! px-0! -mx-px border-2!"
+            >
               <Icon name="twitter-x" className="size-5" />
-            </a>
-            <a href="#" className="flex-center size-11 rounded-full border-2 border-white">
+            </Button>
+            <Button
+              variant="outline"
+              href="#"
+              className="rounded-full!"
+              innerClassName="rounded-full! flex-center! size-11! px-0! -mx-px border-2!"
+            >
               <Icon name="linkedin" className="size-5" />
-            </a>
-            <a href="#" className="flex-center size-11 rounded-full border-2 border-white">
+            </Button>
+            <Button
+              variant="outline"
+              href="#"
+              className="rounded-full!"
+              innerClassName="rounded-full! flex-center! size-11! px-0! -mx-px border-2!"
+            >
               <Icon name="logo-whatsapp" className="size-5" />
-            </a>
+            </Button>
           </div>
         </div>
         <div className="font-display hidden flex-col gap-3 lg:flex">

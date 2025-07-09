@@ -22,8 +22,8 @@ export default function Cursor() {
 const spring: SpringOptions = { damping: 10, stiffness: 100, mass: 0.5, restDelta: 0.001 };
 
 export function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {
-  const x = useSpring(0, spring);
-  const y = useSpring(0, spring);
+  const x = useSpring(-50, spring);
+  const y = useSpring(-50, spring);
 
   useEffect(() => {
     if (!ref.current) return;

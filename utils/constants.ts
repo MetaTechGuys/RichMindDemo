@@ -18,7 +18,7 @@ export const MEDIA = {
   frence: CDN_BASE + '/video/France-R1XGbczwITK8P8CMB8sg34l09necdS.webm',
   germany: CDN_BASE + '/video/Germany-fOoZi1JrmK5zbHGYAtFUE56HCUY90q.webm',
   india: CDN_BASE + '/video/India-6GTA4JVFF4bL08BzpJjHPRvttnc6DT.webm',
-  itly: CDN_BASE + '/video/Italy-3LdmeFfPPiTDU9fRoyTwRvcilNulJY.webm',
+  italy: CDN_BASE + '/video/Italy-3LdmeFfPPiTDU9fRoyTwRvcilNulJY.webm',
   london: CDN_BASE + '/video/London-i82EHL3ETZtIgXdxrHGyNHAr9oaKXX.webm',
   mapPart1: CDN_BASE + '/video/Part1-NU0TQVJ7ckMAu68m0lhkDi2SXYfhO4.webm',
   mapPart2: CDN_BASE + '/video/Part2-gEIspx4mCXYHrDVrv0q83w6pcumTvu.webm',
@@ -35,7 +35,8 @@ export const MEDIA = {
   aboutUs: CDN_BASE + '/video/about-us-NgOtUE8LQMrSe1kdAdg12KpV9ITExF.webm',
   black: CDN_BASE + '/video/black-lRbsZVOPdJxTr352xTwUzMwBhxD0B3.webm',
   galleryTop: CDN_BASE + '/video/gallery-top-mC3OpVa0RPdwq397CM9R4THavwpEnn.webm',
-  siteBanner: CDN_BASE + '/video/site-banner-E1f9spIv8V4bNxVduGu9gQqlX1Qbd2.webm',
+  siteBanner_old: CDN_BASE + '/video/site-banner-E1f9spIv8V4bNxVduGu9gQqlX1Qbd2.webm',
+  siteBanner: CDN_BASE + '/video/Baner%20Site-2-hxr43kuBuziw7eha8xVU4sLbpJ2IuH.webm',
 } as const;
 
 export const POSTERS = {
