@@ -57,7 +57,7 @@ function CompanyItem({ value }: CompanyItemProps) {
         alt={value.title}
         className="-m-px size-full object-cover transition duration-1000"
       />
-      <Button className="absolute! right-0 bottom-3 left-0 z-10 mx-auto w-1/2" variant="secondary">
+      <Button className="absolute! right-0 bottom-3 left-0 z-10 mx-auto w-1/2" variant="primary">
         {value.title}
       </Button>
     </div>

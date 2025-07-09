@@ -20,4 +20,5 @@ export type IconNames =
   | "skip-forward"
   | "arrow-back"
   | "home"
+  | "instagram"
 
