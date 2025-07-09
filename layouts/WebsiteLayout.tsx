@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Copyright from './components/Copyright';
 import Cursor from '@/atoms/Cursor';
+import { MEDIA } from '@/utils/constants';
 
 interface LayoutProps {
   secondary?: true;
@@ -21,7 +22,7 @@ export default function WebsiteLayout({ children, secondary }: PropsWithChildren
         <Footer secondary={secondary} />
         {secondary ? null : (
           <video
-            src="/video/0505.webm"
+            src={MEDIA.blackBackground}
             className="fixed inset-0 -z-[1] h-screen w-screen object-cover"
             autoPlay
             loop

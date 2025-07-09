@@ -1,5 +1,6 @@
 'use client';
 
+import { MEDIA } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
 import { motion, useInView } from 'motion/react';
 import { ComponentProps, useId, useRef, useState } from 'react';
@@ -21,7 +22,7 @@ export default function WorldMapSection() {
             autoPlay
             muted
             className="size-full object-contain object-right"
-            src="/video/Part1.webm"
+            src={MEDIA.mapPart1}
             onEnded={() => {
               setStep(1);
               videoRef.current?.play();
@@ -35,7 +36,7 @@ export default function WorldMapSection() {
             className={cn('absolute inset-0 size-full object-contain object-right', {
               'opacity-0': step === 0,
             })}
-            src="/video/Part2.webm"
+            src={MEDIA.mapPart2}
           />
           <svg className="absolute inset-0 size-full object-cover" viewBox="0 0 1280 765">
             <defs>

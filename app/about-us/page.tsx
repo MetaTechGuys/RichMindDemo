@@ -5,6 +5,7 @@ import image4l from '@/assets/img/about-us/about-us-4l.png';
 import image4r from '@/assets/img/about-us/about-us-4r.png';
 import { Parallax } from '@/atoms';
 import FooterVideoSection from '@/components/FooterVideo';
+import { MEDIA } from '@/utils/constants';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import { CSSProperties, useRef } from 'react';
@@ -70,7 +71,7 @@ export default function AboutUsPage() {
             transition={transition}
           >
             <video
-              src="/video/about-us.webm"
+              src={MEDIA.aboutUs}
               style={videoMask}
               autoPlay
               muted

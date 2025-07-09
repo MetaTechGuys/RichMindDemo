@@ -28,7 +28,7 @@ export default function FooterVideoSection() {
             transition={{ duration: 2 }}
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            src="/video/Richmind Corporate Video-demo.webm"
+            src={MEDIA.aboutUsFooterDemo}
             autoPlay
             muted
             loop

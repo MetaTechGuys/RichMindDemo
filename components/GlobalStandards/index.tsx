@@ -1,4 +1,7 @@
 'use client';
+
+import { MEDIA } from '@/utils/constants';
+
 export default function GlobalStandardsSection() {
   return (
     <div className="size-full py-4">
@@ -26,7 +29,7 @@ export default function GlobalStandardsSection() {
             loop
             muted
             className="size-full object-cover object-left"
-            src="/video/0101.webm"
+            src={MEDIA.globe}
           />
         </div>
       </div>
