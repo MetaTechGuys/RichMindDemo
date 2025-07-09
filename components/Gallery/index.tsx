@@ -1,6 +1,7 @@
 'use client';
 
 import { Button, Icon } from '@/atoms';
+import { MEDIA } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
 import { motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
 import { ComponentProps, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
@@ -84,7 +85,7 @@ export default function GallerySection() {
         <GalleryVideo src="/video/04.webm" className="can-hidden-sm row-span-2" />
         <div className="relative row-span-2 size-full overflow-clip rounded-2xl">
           <GalleryVideo
-            src="/video/richmind-corporate-video-3-lq.webm"
+            src={MEDIA.galleryMain}
             ref={vidRef}
             className={cn(
               'size-full',
