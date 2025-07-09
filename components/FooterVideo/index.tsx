@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Icon } from '@/atoms';
-import { MEDIA } from '@/utils/constants';
+import { MEDIA, POSTERS } from '@/utils/constants';
 import { AnimatePresence, motion } from 'motion/react';
 import { useCallback, useRef } from 'react';
 import { useBoolean } from 'usehooks-ts';
@@ -17,6 +17,7 @@ export default function FooterVideoSection() {
     <div className="relative size-full overflow-clip">
       <video
         src={MEDIA.aboutUsFooter}
+        poster={POSTERS.richmindCorporate}
         className="max-h-screen w-full object-cover"
         controls
         ref={vidRef}

@@ -106,7 +106,7 @@ export default function HeroSection() {
         <video
           loop
           ref={videoRef}
-          poster={POSTERS.blackDot}
+          poster={POSTERS.siteBanner}
           className="absolute inset-0 z-[1] m-auto h-full object-none sm:object-cover xl:w-full"
           onPlay={handlePlay}
           onPause={handlePause}
