@@ -38,9 +38,12 @@ export default function Navbar({ hideLogo }: NavbarProps) {
             />
           </motion.div>
         ) : (
-          <Button href="/" className="size-20" innerClassName="flex-center">
-            <Icon name="back-outlined" className="size-full" />
-          </Button>
+          <>
+            <div className="me-auto h-28"></div>
+            <Button href="/" className="size-20" innerClassName="flex-center">
+              <Icon name="back-outlined" className="size-full" />
+            </Button>
+          </>
         )}
         <Button
           className="me-12 size-20 p-4"

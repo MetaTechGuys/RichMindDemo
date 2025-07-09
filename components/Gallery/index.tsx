@@ -90,6 +90,7 @@ export default function GallerySection() {
               'size-full',
               isFullScreen ? 'object-contain md:object-cover' : 'object-cover',
             )}
+            preload="auto"
             controls={!hasZoomAnimate}
           />
           {isForced ? (
@@ -127,6 +128,7 @@ const GalleryVideo = ({ className, ...props }: ComponentProps<'video'>) => {
       muted
       autoPlay
       loop
+      preload="none"
       className={cn('size-full rounded-2xl object-cover', className)}
       {...props}
     />

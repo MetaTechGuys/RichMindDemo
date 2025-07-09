@@ -38,7 +38,7 @@ export default function FooterVideoSection() {
           <motion.div
             key="video-controls"
             exit={{ height: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 1, duration: 1 }}
             className="flex-center absolute inset-0 top-auto z-[2] h-full w-full bg-gradient-to-t from-black to-transparent"
           >
             <AnimatePresence propagate>
