@@ -37,6 +37,11 @@ export const MEDIA = {
   galleryTop: CDN_BASE + '/video/gallery-top-mC3OpVa0RPdwq397CM9R4THavwpEnn.webm',
   siteBanner_old: CDN_BASE + '/video/site-banner-E1f9spIv8V4bNxVduGu9gQqlX1Qbd2.webm',
   siteBanner: CDN_BASE + '/video/Baner%20Site-2-hxr43kuBuziw7eha8xVU4sLbpJ2IuH.webm',
+  siteBannerMp4: CDN_BASE + '/video/baner%20site-2-DYdgw8zyN7FK5IoCLd1UrfNKPdG7Z0.mp4',
+  // needs video
+  aus: CDN_BASE + '/video/Saudi-LVjBFSuvoOCcw90BT7C3PlQzkgpiEp.webm',
+  jpn: CDN_BASE + '/video/Saudi-LVjBFSuvoOCcw90BT7C3PlQzkgpiEp.webm',
+  try: CDN_BASE + '/video/Saudi-LVjBFSuvoOCcw90BT7C3PlQzkgpiEp.webm',
 } as const;
 
 export const POSTERS = {

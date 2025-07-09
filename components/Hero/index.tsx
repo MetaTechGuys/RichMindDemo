@@ -24,7 +24,7 @@ export default function HeroSection() {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const { scrollY } = useScroll();
-  const vol = useTransform(scrollY, [0, window.innerHeight], [1, 0], { clamp: true });
+  const vol = useTransform(scrollY, [0, 1000], [1, 0], { clamp: true });
   useMotionValueEvent(vol, 'change', (v) => {
     if (!audioRef.current) return;
     if (!videoRef.current) return;
