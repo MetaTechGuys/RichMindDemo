@@ -2,7 +2,7 @@
 export default function GlobalStandardsSection() {
   return (
     <div className="size-full py-4">
-      <div className="relative flex size-full items-center overflow-hidden rounded-2xl bg-black px-32 py-8">
+      <div className="relative flex size-full items-center overflow-hidden rounded-2xl bg-black px-8 py-8 md:px-16 lg:px-24 xl:px-32">
         <div className="font-display z-10 flex max-w-2xl flex-1 flex-col gap-5 text-xl text-white">
           <h4 className="text-4xl">High Standards in Global Investments</h4>
           <p>
@@ -11,7 +11,7 @@ export default function GlobalStandardsSection() {
             methodically identify and allocate resources to industries that have significant
             expansion potential.
           </p>
-          <ul className="custom-marker-position leading-12">
+          <ul className="custom-checklist leading-12">
             <li className="">Strategic Investments in Key Sectors</li>
             <li>Sustainability and Innovation Engagement</li>
           </ul>
@@ -20,7 +20,7 @@ export default function GlobalStandardsSection() {
             substantial returns on our investments while impacting regional economies.
           </p>
         </div>
-        <div className="absolute right-0 h-full w-2/3">
+        <div className="absolute right-0 h-full lg:w-2/3">
           <video
             autoPlay
             loop

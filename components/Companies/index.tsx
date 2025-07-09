@@ -13,11 +13,12 @@ import academy from '@/assets/img/box11-academy.jpg';
 import trading from '@/assets/img/box12-trading.png';
 
 import Image, { StaticImageData } from 'next/image';
+import { Button } from '@/atoms';
 
 export default function CompaniesSection() {
   return (
     <div className="size-full py-4">
-      <div className="size-full overflow-hidden rounded-2xl bg-black px-32 py-8">
+      <div className="size-full overflow-hidden rounded-2xl bg-black px-8 py-8 md:px-16 lg:px-24 xl:px-32">
         <div className="font-display z-10 flex flex-1 flex-col gap-5 text-xl text-white">
           <h4 className="text-6xl">Rich Mind Holding&apos;s Companies</h4>
           <p>
@@ -50,12 +51,15 @@ interface CompanyItemProps {
 
 function CompanyItem({ value }: CompanyItemProps) {
   return (
-    <div className="overflow-hidden rounded-3xl border-3 border-black transition duration-700 hover:scale-105 hover:[&>img]:scale-110">
+    <div className="relative overflow-hidden rounded-3xl border-3 border-black transition duration-700 hover:scale-105 hover:[&>img]:scale-110">
       <Image
         src={value.image}
         alt={value.title}
         className="-m-px size-full object-cover transition duration-1000"
       />
+      <Button className="absolute! right-0 bottom-3 left-0 z-10 mx-auto w-1/2" variant="secondary">
+        {value.title}
+      </Button>
     </div>
   );
 }

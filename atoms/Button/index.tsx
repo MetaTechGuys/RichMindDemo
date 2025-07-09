@@ -1,19 +1,32 @@
 import { cn } from '@/utils/jsx-tools';
 import { ComponentProps, PropsWithChildren } from 'react';
+import './button.style.css';
 
 interface ButtonProps extends ComponentProps<'button'> {
-  outline?: true;
+  variant?: 'primary' | 'outline' | 'secondary';
+  innerClassName?: string;
 }
-export function Button({ children, outline, className }: PropsWithChildren<ButtonProps>) {
+export function Button({
+  children,
+  variant,
+  className,
+  innerClassName,
+  ...props
+}: PropsWithChildren<ButtonProps>) {
   return (
     <button
       className={cn(
-        'px-3 py-1 font-sans font-bold capitalize',
-        outline ? 'border-primary text-primary border bg-white' : 'bg-primary text-white',
+        'btn',
+        {
+          'btn-primary': variant === 'primary',
+          'btn-secondary': variant === 'secondary',
+          'btn-outline': variant === 'outline',
+        },
         className,
       )}
+      {...props}
     >
-      {children}
+      <div className={cn('btn-inner', innerClassName)}>{children}</div>
     </button>
   );
 }

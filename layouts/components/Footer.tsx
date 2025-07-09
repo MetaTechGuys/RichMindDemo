@@ -1,6 +1,7 @@
 'use client';
 import footerBanner from '@/assets/img/banner-photo-font-02.png';
-import { Button } from '@/atoms';
+import { Button, Icon } from '@/atoms';
+import { motion } from 'motion/react';
 
 import { CSSProperties } from 'react';
 
@@ -10,34 +11,54 @@ export default function Footer() {
   //   to: { zoom: 1, opacity: 1 },
   // }));
   return (
-    <div className="bg-black pt-24 pb-48" style={footerStyle}>
-      <div className="mx-auto grid grid-cols-3 gap-12 md:px-48">
+    <div className="overflow-x-hidden bg-black pt-24" style={footerStyle}>
+      <div className="mx-auto grid grid-cols-1 gap-12 px-12 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:px-48">
         <div className="font-display flex flex-col gap-3">
           <h4 className="mb-10 text-3xl">Our Headquarters</h4>
-          <div className="flex gap-4">
-            <Button className="text-sm font-normal">Corporate</Button>
-            <Button className="text-sm font-normal">Mena Regional</Button>
+          <div className="flex max-w-md flex-wrap gap-2">
+            <Button variant="primary" className="flex-1 text-sm">
+              Corporate
+            </Button>
+            <Button variant="outline" className="flex-1 text-sm">
+              Mena Regional
+            </Button>
           </div>
-          <div className="flex gap-4 text-xs">
-            <span>207 Regent Street.London W1B 3HH, United Kingdom (Main)</span>
+          <div className="flex items-center gap-1 text-xs">
+            <Icon name="map-pin" className="size-5" />
+            <span className="truncate">
+              207 Regent Street.London W1B 3HH, United Kingdom (Main)
+            </span>
           </div>
-          <div className="flex gap-4 text-xs">
-            <span>Office 301, 3rd Floor Vision Tower, Business Bay Dubai, UAE</span>
+          <div className="flex items-center gap-1 text-xs">
+            <Icon name="map-pin" className="size-5" />
+            <span className="truncate">
+              Office 301, 3rd Floor Vision Tower, Business Bay Dubai, UAE
+            </span>
           </div>
-          <div className="flex gap-4 text-xs">
-            <span>London@RichMindholding.com</span>
+          <div className="flex items-center gap-1 text-xs">
+            <Icon name="globe" className="size-5" />
+            <span className="truncate">London@RichMindholding.com</span>
           </div>
-          <div className="flex gap-4 text-xs">
+          <div className="flex items-center gap-1 text-xs">
+            <Icon name="phone" className="size-5" />
             <span>+44 20 76 92 56 76</span>
           </div>
-          <div className="flex gap-4">
-            <div className="size-11 rounded-full border-2 border-white"></div>
-            <div className="size-11 rounded-full border-2 border-white"></div>
-            <div className="size-11 rounded-full border-2 border-white"></div>
-            <div className="size-11 rounded-full border-2 border-white"></div>
+          <div className="flex flex-wrap gap-4">
+            <motion.a href="#" className="flex-center size-11 rounded-full border-2 border-white">
+              <Icon name="facebook" className="size-5" />
+            </motion.a>
+            <a href="#" className="flex-center size-11 rounded-full border-2 border-white">
+              <Icon name="twitter-x" className="size-5" />
+            </a>
+            <a href="#" className="flex-center size-11 rounded-full border-2 border-white">
+              <Icon name="linkedin" className="size-5" />
+            </a>
+            <a href="#" className="flex-center size-11 rounded-full border-2 border-white">
+              <Icon name="logo-whatsapp" className="size-5" />
+            </a>
           </div>
         </div>
-        <div className="font-display flex flex-col gap-3">
+        <div className="font-display hidden flex-col gap-3 lg:flex">
           <h4 className="mb-10 text-3xl">Useful Links</h4>
           <div className="grid grid-cols-2 gap-4 underline underline-offset-4">
             <a href="#">Home</a>
@@ -49,24 +70,28 @@ export default function Footer() {
             <a href="#">Investor Relation</a>
           </div>
         </div>
-        <div className="font-display flex flex-col gap-3">
+        <div className="font-display hidden flex-col gap-3 md:flex">
           <h4 className="mb-10 text-3xl">Newsletter</h4>
           <p className="w-xs">
             Stay updated with the latest news and developments from Rich Mind Holding.
           </p>
-          <div>
+          <div className="mt-auto flex flex-col items-start gap-4">
             <label htmlFor="footer-newslater">Your Email</label>
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2">
+              <Icon name="email" className="size-7" />
               <input
                 id="footer-newslater"
                 type="text"
                 className="border-0 border-b-2 border-white"
               />
             </div>
-            <Button className="text-sm font-normal">Submit</Button>
+            <Button variant="primary" className="text-sm">
+              Submit
+            </Button>
           </div>
         </div>
       </div>
+      <div className="aspect-[8] h-auto w-full"></div>
     </div>
   );
 }
@@ -74,6 +99,7 @@ export default function Footer() {
 const footerStyle: CSSProperties = {
   backgroundColor: 'black',
   background: `black url(${footerBanner.src}) no-repeat center bottom`,
+  backgroundSize: '90%',
 };
 
 // const
