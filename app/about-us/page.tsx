@@ -9,7 +9,7 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 import { CSSProperties, useRef } from 'react';
 
-const normal = { x: 0, y: 0, opacity: 1, rotate: 0 } as const;
+const normal = { x: 0, y: 0, opacity: 1, rotate: 0, rotateY: 0 } as const;
 const viewport = { amount: 0.5, once: true } as const;
 const transition = { duration: 0.7 } as const;
 
@@ -29,16 +29,18 @@ export default function AboutUsPage() {
   return (
     <main className="flex flex-col bg-black">
       <h1 className="sr-only">Richmind</h1>
-      <div className="font-display relative ms-16 mt-8 grid w-min snap-end grid-cols-1 grid-rows-1 text-center text-9xl text-nowrap capitalize">
-        <h2 className="text-stroke opacity-75">About Us</h2>
-        <div className="absolute bottom-0 left-0 origin-bottom-right -translate-x-2 scale-90">
-          About Us
+      <div className="contents text-5xl sm:text-7xl lg:text-9xl">
+        <div className="font-display relative ms-16 mt-8 grid w-min snap-end grid-cols-1 grid-rows-1 text-center text-nowrap capitalize">
+          <h2 className="text-stroke opacity-75">About Us</h2>
+          <div className="absolute bottom-0 left-0 origin-bottom-right -translate-x-2 scale-90">
+            About Us
+          </div>
         </div>
       </div>
-      <section className="snap-center bg-black pt-12">
+      <section className="snap-center bg-black pt-4 md:pt-12">
         <Parallax
           baseVelocity={-0.8}
-          className="font-display h-14 text-3xl text-white"
+          className="font-display h-10 text-xl text-white md:h-14 md:text-3xl"
           flexClassName="gap-12"
         >
           <span>Technology </span>
@@ -48,7 +50,7 @@ export default function AboutUsPage() {
         </Parallax>
         <Parallax
           baseVelocity={0.8}
-          className="font-display h-14 text-3xl text-white"
+          className="font-display h-10 text-xl text-white md:h-14 md:text-3xl"
           flexClassName="gap-12"
         >
           <span>Strategic Oversight</span>
@@ -57,10 +59,16 @@ export default function AboutUsPage() {
           <span>Integrity and Compliance</span>
         </Parallax>
       </section>
-      <section className="prose mt-12 max-w-full! snap-center bg-black">
+      <section className="prose mpt-4 max-w-full! snap-center bg-black md:mt-12">
         {/* section 1 */}
-        <div className="container mx-auto flex items-center gap-12 px-12">
-          <div className="flex-1">
+        <div className="container mx-auto items-center gap-12 px-12 lg:flex">
+          <motion.div
+            className="flex-1"
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={normal}
+            viewport={viewport}
+            transition={transition}
+          >
             <video
               src="/video/about-us.webm"
               style={videoMask}
@@ -69,8 +77,14 @@ export default function AboutUsPage() {
               loop
               className="size-full rounded-xl object-cover lg:my-16"
             />
-          </div>
-          <div className="flex-1 text-white">
+          </motion.div>
+          <motion.div
+            className="flex-1 text-white"
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={normal}
+            viewport={viewport}
+            transition={transition}
+          >
             <p>
               Globally active in numerous industries, RichMind Holding promotes innovation and
               success in several fields.With operations in more than thirty countries,the company
@@ -83,7 +97,7 @@ export default function AboutUsPage() {
               method promises it stays ahead of world trends and market needs by combining a
               proactive investment strategy with excellent industry knowledge.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section
@@ -91,7 +105,7 @@ export default function AboutUsPage() {
         className="prose max-w-full! snap-center bg-[#EFEDEB] text-black transition-all duration-1000"
       >
         {/* section 2 */}
-        <div className="container mx-auto flex flex-row-reverse gap-12 px-12">
+        <div className="container mx-auto flex-row-reverse gap-12 px-12 lg:flex">
           <motion.div
             className="flex-1"
             initial={{ x: 200, opacity: 0 }}
@@ -119,7 +133,7 @@ export default function AboutUsPage() {
       </section>
       <section className="prose max-w-full! snap-center bg-white text-black">
         {/* section 3 */}
-        <div className="container mx-auto flex gap-12 px-12">
+        <div className="container mx-auto gap-12 px-12 lg:flex">
           <motion.div
             className="flex-1"
             initial={{ x: -200, opacity: 0 }}
@@ -155,10 +169,10 @@ export default function AboutUsPage() {
       </section>
       <section className="prose max-w-full! snap-center bg-[#EFEDEB] py-12">
         {/* section 4 */}
-        <div className="container mx-auto flex items-center justify-center gap-12">
+        <div className="container mx-auto items-center justify-center gap-12 md:flex">
           <motion.div
-            className="w-1/3 overflow-hidden rounded-xl bg-black text-white"
-            initial={{ y: 200, opacity: 0, rotate: 30 }}
+            className="mx-12 mb-12 overflow-hidden rounded-xl bg-black text-white md:m-0 md:w-1/2 lg:w-1/3"
+            initial={{ y: 70, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={transition}
@@ -178,8 +192,8 @@ export default function AboutUsPage() {
             </p>
           </motion.div>
           <motion.div
-            className="w-1/3 overflow-hidden rounded-2xl bg-black text-white"
-            initial={{ y: 200, opacity: 0, rotate: -30 }}
+            className="mx-12 overflow-hidden rounded-2xl bg-black text-white md:m-0 md:w-1/2 lg:w-1/3"
+            initial={{ y: 70, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={{ ...transition, delay: 0.1 }}
