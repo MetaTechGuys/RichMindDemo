@@ -4,6 +4,7 @@ import CompaniesSection from '@/components/Companies';
 import GallerySection from '@/components/Gallery';
 import GlobalStandardsSection from '@/components/GlobalStandards';
 import HeroSection from '@/components/Hero';
+import WelcomeNotice from '@/components/notices/WelcomeNotice';
 import RichMindStrategySection from '@/components/RichMindStrategy';
 import WorldMapSection from '@/components/WorldMap';
 
@@ -14,19 +15,10 @@ export default function Home() {
         <HeroSection />
       </section>
       <section className="grid snap-center">
-        <NoticeSection>
-          <div className="font-display flex flex-col gap-10 px-10 py-20 text-center text-xl text-white">
-            <h4 className="text-4xl">Global reach, local expertise</h4>
-            <p>
-              Our mission is to use operational expertise and strategic investments to promote
-              innovation, sustainability, and brilliance, reaffirming our ongoing mission to do
-              worldwide community service.
-            </p>
-          </div>
-        </NoticeSection>
+        <WelcomeNotice />
       </section>
       <section className="grid min-h-screen snap-start overflow-hidden">
-        <GallerySection start={1350} length={1350} scalefactor={2} />
+        <GallerySection start={1250} length={1350} scalefactor={2} />
       </section>
       <section className="grid min-h-screen snap-center">
         <WorldMapSection />

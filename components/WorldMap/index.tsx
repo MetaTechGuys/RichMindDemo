@@ -1,17 +1,20 @@
 'use client';
 
 import { cn } from '@/utils/jsx-tools';
+import { motion, useInView } from 'motion/react';
 import { ComponentProps, useId, useRef, useState } from 'react';
 
 export default function WorldMapSection() {
+  const ref = useRef<HTMLDivElement>(null);
+  const inview = useInView(ref, { once: process.env.NODE_ENV === 'production' });
   const videoRef = useRef<HTMLVideoElement>(null);
   const [step, setStep] = useState(0);
   return (
-    <div className="size-full py-4">
+    <div className="size-full py-4" ref={ref}>
       <div className="flex size-full flex-col-reverse justify-end rounded-2xl bg-black p-8 md:flex-row">
         <div className="w-full pb-48 md:w-1/3 md:pt-48">
-          <AccordionItem title="UK" />
-          <AccordionItem title="UAE" />
+          {inview ? <AccordionItem title="UK" delay={1.3} /> : null}
+          {inview ? <AccordionItem title="UAE" delay={1.5} /> : null}
         </div>
         <div className="relative h-full w-full md:w-2/3">
           <video
@@ -100,12 +103,17 @@ const Point = ({ cx, cy, className, iso3, main }: PointProps) => {
 interface AccordionItemProps {
   title: string;
   src?: string;
+  delay?: number;
 }
 
-const AccordionItem = ({ title }: AccordionItemProps) => {
+const AccordionItem = ({ title, delay }: AccordionItemProps) => {
   const id = useId();
   return (
-    <div>
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ delay }}
+    >
       <label
         htmlFor={id}
         className="text-gold-light border-gold-dark/30 flex items-center justify-between border-b p-3 uppercase"
@@ -120,6 +128,6 @@ const AccordionItem = ({ title }: AccordionItemProps) => {
         />
         <div className="border-gold-dark/60 h-px w-4 border-b transition duration-300" />
       </label>
-    </div>
+    </motion.div>
   );
 };

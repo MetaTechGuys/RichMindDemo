@@ -40,18 +40,25 @@ export default function HeroSection() {
             transition={{ ease: cubicBezier(1, 0, 1, 1) }}
           >
             <div className="bg-opacity-10 absolute size-full bg-black/30 bg-clip-padding backdrop-blur-sm backdrop-filter" />
-            <NoticeSection className="flex-center">
-              <div className="font-display flex flex-col items-center gap-4 px-10 py-20 text-center text-xl text-white">
-                <Image src={logo} alt="" className="w-1/2" />
-                <h4 className="text-4xl">Welcome</h4>
-                <p>Our mission is to use operational expertise and strategic investments</p>
-                <Button variant="primary" className="text-sm" onClick={getConset}>
-                  Continue
-                  <Icon name="play" className="size-4" />
-                </Button>
-                <small>Wear headphons for better experience</small>
-              </div>
-            </NoticeSection>
+            <motion.div
+              className="size-full"
+              initial={{ y: 500, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <NoticeSection className="flex-center" neon>
+                <div className="font-display flex flex-col items-center gap-4 px-10 py-20 text-center text-xl text-white">
+                  <Image src={logo} alt="" className="w-1/2" />
+                  <h4 className="text-4xl">Welcome to Richmind</h4>
+                  <p>Our mission is to use operational expertise and strategic investments</p>
+                  <Button variant="primary" className="text-sm" onClick={getConset}>
+                    Continue
+                    <Icon name="play" className="size-4" />
+                  </Button>
+                  <small>Wear headphons for better experience</small>
+                </div>
+              </NoticeSection>
+            </motion.div>
           </motion.div>
         ) : null}
       </AnimatePresence>

@@ -1,0 +1,29 @@
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px var(--color-1), 0 0 10px var(--color-1), 0 0 20px var(--color-1), 0 0 40px var(--color-1), 0 0 80px var(--color-1);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--color-2), 0 0 20px var(--color-2), 0 0 40px var(--color-2), 0 0 80px var(--color-2), 0 0 160px var(--color-2);
+  }
+}
+
+@keyframes glow-box {
+  0% {
+    box-shadow: 0 0 5px var(--color-1), 0 0 10px var(--color-1), 0 0 20px var(--color-1), 0 0 40px var(--color-1), 0 0 80px var(--color-1);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--color-2), 0 0 20px var(--color-2), 0 0 40px var(--color-2), 0 0 80px var(--color-2), 0 0 160px var(--color-2);
+  }
+}
+
+.neon-text {
+  --color-1: var(--color-gold-darker);
+  --color-2: var(--color-gold);
+  animation: glow 2s infinite alternate;
+}
+.neon-box {
+  --color-1: color-mix(in oklab, var(--color-gold-dark), transparent 40%);
+  --color-2: color-mix(in oklab, var(--color-gold-dark), transparent 80%);
+  animation: glow-box 2s infinite alternate;
+}
