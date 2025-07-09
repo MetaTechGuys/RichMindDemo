@@ -6,7 +6,11 @@ import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
-export default function Navbar() {
+interface NavbarProps {
+  hideLogo?: boolean;
+}
+
+export default function Navbar({ hideLogo }: NavbarProps) {
   const [isOpen, setOpen] = useState(false);
   const { scrollY } = useScroll();
   // const x = useTransform(scrollY, [0, 300], [0, -200]);
@@ -21,11 +25,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 z-10 grid w-full grid-cols-[min-content_1fr_min-content] items-center">
-        <div></div>
-        <motion.div className="flex justify-center" style={{ width: w }}>
-          <Image src={logo} alt="" className="w-full scale-75 sm:scale-100" loading="eager" />
-        </motion.div>
+      <nav className="fixed top-0 z-10 flex w-full items-center justify-between">
+        {!hideLogo ? (
+          <motion.div className="flex justify-center" style={{ width: w }}>
+            <Image src={logo} alt="" className="w-full scale-75 sm:scale-100" loading="eager" />
+          </motion.div>
+        ) : (
+          <div className="h-28" />
+        )}
         <Button
           className="me-12 size-20 p-4"
           onClick={() => {

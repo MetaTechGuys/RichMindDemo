@@ -66,7 +66,7 @@ const items: GalleryItem[] = [
   { src: '/video/05.webm', double: true, className: 'hidden sm:block' },
   { src: '/video/011.webm', className: 'hidden sm:block' },
   { src: '/video/031.webm', className: 'hidden sm:block' },
-  { src: '/video/467-162-Flog.webm' },
+  { src: '/video/gallery-top.webm' },
   { src: '/video/richmind-corporate-video-3-lq.webm', double: true },
   { src: '/video/021.webm' },
   { src: '/video/04.webm', double: true, className: 'hidden sm:block' },

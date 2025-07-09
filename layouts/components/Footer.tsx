@@ -1,17 +1,26 @@
 'use client';
+import whiteFooterBanner from '@/assets/img/banner-photo-font-01.png';
 import footerBanner from '@/assets/img/banner-photo-font-02.png';
 import { Button, Icon } from '@/atoms';
+import { cn } from '@/utils/jsx-tools';
 import { motion } from 'motion/react';
 
 import { CSSProperties } from 'react';
 
-export default function Footer() {
+interface FooterProps {
+  secondary?: boolean;
+}
+
+export default function Footer({ secondary }: FooterProps) {
   // const [ref, springs] = useInView(() => ({
   //   from: { zoom: 2, opacity: 0 },
   //   to: { zoom: 1, opacity: 1 },
   // }));
   return (
-    <div className="overflow-x-hidden bg-black pt-24" style={footerStyle}>
+    <div
+      className={cn('overflow-x-hidden bg-black', secondary ? 'pt-12' : 'pt-24')}
+      style={secondary ? secFooterStyle : footerStyle}
+    >
       <div className="mx-auto grid grid-cols-1 gap-12 px-12 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:px-48">
         <div className="font-display flex flex-col gap-3">
           <h4 className="mb-10 text-3xl">Our Headquarters</h4>
@@ -102,4 +111,8 @@ const footerStyle: CSSProperties = {
   backgroundSize: '90%',
 };
 
-// const
+const secFooterStyle: CSSProperties = {
+  backgroundColor: 'black',
+  background: `black url(${whiteFooterBanner.src}) no-repeat center bottom`,
+  backgroundSize: '90%',
+};

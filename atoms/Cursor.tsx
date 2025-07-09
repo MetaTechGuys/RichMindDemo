@@ -8,7 +8,12 @@ export default function Cursor() {
   const pos = useFollowPointer(ref);
 
   return (
-    <motion.div ref={ref} style={pos} id="cursor-tail" className="pointer-events-none fixed z-50">
+    <motion.div
+      ref={ref}
+      style={pos}
+      id="cursor-tail"
+      className="pointer-events-none fixed z-50 hidden lg:block"
+    >
       <span className="pointer-events-none block size-5 rounded-full border border-white/30 transition-all"></span>
     </motion.div>
   );
