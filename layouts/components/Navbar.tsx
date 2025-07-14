@@ -28,7 +28,7 @@ export default function Navbar({ hideLogo }: NavbarProps) {
 
   return (
     <>
-      <nav className="fixed top-0 z-10 flex w-full items-center justify-end">
+      <nav className="fixed top-0 z-50 flex w-full items-center justify-end">
         {!hideLogo ? (
           <motion.div
             className="fixed start-0 top-10 flex h-32 justify-center sm:h-40 md:top-0 md:h-48"

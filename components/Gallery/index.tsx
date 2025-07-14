@@ -93,8 +93,10 @@ export default function GallerySection() {
         />
         <div className="relative row-span-2 size-full overflow-clip rounded-2xl">
           <GalleryVideo
+            id="main-gallery-video"
             src={MEDIA.galleryMain}
             ref={vidRef}
+            muted={false}
             className={cn(
               'size-full',
               isFullScreen ? 'object-contain md:object-cover' : 'object-cover',

@@ -36,6 +36,21 @@ export default function HeroSection() {
     audioRef.current.volume = v;
   });
 
+  const vol2 = useTransform(scrollY, [900, 1300, 4500, 5500], [0, 1, 1, 0], { clamp: true });
+  useMotionValueEvent(scrollY, 'change', console.log);
+  useMotionValueEvent(vol2, 'change', (v) => {
+    const galleryMainVideo = document.getElementById('main-gallery-video') as
+      | HTMLVideoElement
+      | undefined;
+    if (!galleryMainVideo) return;
+    if (v === 0) {
+      galleryMainVideo.pause();
+    } else {
+      galleryMainVideo.play();
+    }
+    galleryMainVideo.volume = v;
+  });
+
   useEffect(() => {
     const hasConset = sessionStorage.getItem('skip-conset');
 
@@ -46,6 +61,17 @@ export default function HeroSection() {
   const handlePlay = useCallback(() => {
     coverVidRef.current?.play();
     audioRef.current?.play();
+    const galleryMainVideo = document.getElementById('main-gallery-video') as
+      | HTMLVideoElement
+      | undefined;
+    if (galleryMainVideo && !galleryMainVideo.hasAttribute('data-touch')) {
+      galleryMainVideo.setAttribute('data-touch', 'done');
+      galleryMainVideo.volume = 0;
+      galleryMainVideo.play();
+      setTimeout(() => {
+        galleryMainVideo.pause();
+      }, 100);
+    }
   }, []);
 
   const handlePause = useCallback(() => {
@@ -54,7 +80,6 @@ export default function HeroSection() {
   }, []);
 
   const getConset = useCallback(() => {
-    // sessionStorage.setItem('skip-conset', 'yes');
     setConset(true);
     videoRef.current?.play();
   }, []);

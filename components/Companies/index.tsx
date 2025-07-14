@@ -1,16 +1,16 @@
 'use client';
-import investment from '@/assets/img/companies/box1-investment.jpg';
-import virtualAssets from '@/assets/img/companies/box2-virtual assets.jpg';
+import investment from '@/assets/img/companies/box1-investment.webp';
+import virtualAssets from '@/assets/img/companies/box2-virtual-assets-2.webp';
 import media from '@/assets/img/companies/box3-media-2.webp';
-import properties from '@/assets/img/companies/box4-properties-2.jpg';
-import projectManager from '@/assets/img/companies/box5-project-manager.jpg';
-import development from '@/assets/img/companies/box6-development-2.jpg';
-import holiday from '@/assets/img/companies/box7-holiday.jpg';
-import cosmomed from '@/assets/img/companies/box8-cosmomed.jpg';
-import vipClub from '@/assets/img/companies/box9-vip-club.jpg';
-import sport from '@/assets/img/companies/box10-sport-3.jpg';
-import academy from '@/assets/img/companies/box11-academy-2.jpg';
-import trading from '@/assets/img/companies/box12-trading.png';
+import properties from '@/assets/img/companies/box4-properties-3.webp';
+import projectManager from '@/assets/img/companies/box5-project-manager-2.webp';
+import development from '@/assets/img/companies/box6-development-2.webp';
+import holiday from '@/assets/img/companies/box7-holiday.webp';
+import cosmomed from '@/assets/img/companies/box8-cosmomed.webp';
+import vipClub from '@/assets/img/companies/box9-vip-club.webp';
+import sport from '@/assets/img/companies/box10-sport-3.webp';
+import academy from '@/assets/img/companies/box11-academy-2.webp';
+import trading from '@/assets/img/companies/box12-trading.webp';
 
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@/atoms';
