@@ -8,11 +8,23 @@ import { useBoolean } from 'usehooks-ts';
 
 export default function FooterVideoSection() {
   const { setTrue, value: canPlay } = useBoolean(false);
-  const vidRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const playVideo = useCallback(() => {
     setTrue();
-    vidRef.current?.play();
+    videoRef.current?.play();
   }, [setTrue]);
+
+  const handlePlay = useCallback(() => {
+    if (videoRef.current && audioRef.current) {
+      audioRef.current.currentTime = videoRef.current.currentTime;
+      audioRef.current?.play();
+    }
+  }, []);
+
+  const handlePause = useCallback(() => {
+    audioRef.current?.pause();
+  }, []);
   return (
     <div className="relative size-full overflow-clip">
       <video
@@ -20,8 +32,15 @@ export default function FooterVideoSection() {
         poster={POSTERS.richmindCorporate}
         className="max-h-screen w-full object-cover"
         controls
-        ref={vidRef}
-      />
+        ref={videoRef}
+        onPlay={handlePlay}
+        onPause={handlePause}
+      >
+        <source src={MEDIA.aboutUsFooter} type="video/mp4" />
+        <audio loop id="hero-audio" ref={audioRef}>
+          <source src={MEDIA.heroAudio} type="audio/mpeg" />
+        </audio>
+      </video>
       <AnimatePresence>
         {!canPlay ? (
           <motion.video
