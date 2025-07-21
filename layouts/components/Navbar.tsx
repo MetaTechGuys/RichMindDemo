@@ -28,10 +28,10 @@ export default function Navbar({ hideLogo }: NavbarProps) {
 
   return (
     <>
-      <nav className="fixed top-0 z-50 flex w-full items-center justify-end">
+      <nav className="fixed top-0 z-29 flex w-full items-center justify-end">
         {!hideLogo ? (
           <motion.div
-            className="fixed start-0 top-10 flex h-32 justify-center sm:h-40 md:top-0 md:h-48"
+            className="fixed start-4 top-10 flex h-32 justify-center sm:h-40 md:top-0 md:h-48"
             style={{ y, scale }}
           >
             <Image
@@ -55,7 +55,7 @@ export default function Navbar({ hideLogo }: NavbarProps) {
           </>
         )}
         <Button
-          className={cn('me-8 size-18 p-4', hideLogo ? '' : 'mt-8')}
+          className={cn('xs:me-8 me-4 size-18 p-4 sm:me-12', hideLogo ? '' : 'mt-10')}
           onClick={() => {
             setOpen((o) => !o);
           }}
@@ -71,7 +71,7 @@ export default function Navbar({ hideLogo }: NavbarProps) {
             initial={{ height: 0 }}
             animate={{ height: 400 }}
             exit={{ height: 0 }}
-            className="bg-opacity-10 font-display fixed top-0 z-30 h-100 w-screen overflow-hidden bg-black/50 bg-clip-padding p-16 capitalize shadow backdrop-blur-sm backdrop-filter md:px-48 md:py-24"
+            className="bg-opacity-10 font-display fixed top-0 z-30 h-100 w-screen overflow-hidden bg-black/50 bg-clip-padding p-16 capitalize shadow backdrop-blur-sm backdrop-filter md:p-24"
           >
             <div className="flex flex-col gap-4 text-xl md:col-start-2">
               <Link href="/">Home</Link>

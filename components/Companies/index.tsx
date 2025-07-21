@@ -18,10 +18,10 @@ import { cn } from '@/utils/jsx-tools';
 
 export default function CompaniesSection() {
   return (
-    <div className="size-full py-4">
-      <div className="size-full overflow-hidden rounded-2xl bg-black px-8 py-8 md:px-16 lg:px-24 xl:px-32">
+    <div className="size-full max-w-full py-4">
+      <div className="size-full overflow-hidden rounded-2xl bg-black px-8 py-8 max-sm:w-full md:px-16 lg:px-24 xl:px-32">
         <div className="font-display z-10 flex flex-1 flex-col gap-5 text-lg text-white">
-          <h4 className="text-6xl">Rich Mind Holding&apos;s Companies</h4>
+          <h4 className="text-4xl sm:text-6xl">Rich Mind Holding&apos;s Companies</h4>
           <p>
             The portfolio of RichMind Holding is diverse, incorporating an extensive spectrumof
             industries, and it is indicative of our drive to sustainability, innovation, and growth.

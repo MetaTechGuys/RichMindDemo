@@ -3,7 +3,6 @@ import whiteFooterBanner from '@/assets/img/banner-photo-font-01.png';
 import footerBanner from '@/assets/img/banner-photo-font-02.png';
 import { Button, Icon } from '@/atoms';
 import { cn } from '@/utils/jsx-tools';
-import { motion } from 'motion/react';
 
 import { CSSProperties } from 'react';
 
@@ -21,7 +20,7 @@ export default function Footer({ secondary }: FooterProps) {
       className={cn('overflow-x-hidden bg-black', secondary ? 'pt-12' : 'pt-24')}
       style={secondary ? secFooterStyle : footerStyle}
     >
-      <div className="mx-auto grid grid-cols-1 gap-12 px-12 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:px-48">
+      <div className="mx-auto grid grid-cols-1 gap-4 px-4 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:px-48">
         <div className="font-display flex flex-col gap-3">
           <h4 className="mb-4 text-3xl md:mb-10">Our Headquarters</h4>
           <div className="2xs:flex-row flex max-w-md flex-col flex-wrap gap-2">

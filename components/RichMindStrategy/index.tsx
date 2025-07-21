@@ -3,7 +3,7 @@
 export default function RichMindStrategySection() {
   return (
     <div className="size-full py-4">
-      <div className="flex size-full flex-col justify-center overflow-hidden rounded-2xl bg-black p-24">
+      <div className="2xs:px-8 py-20xs:px-12 flex size-full flex-col justify-center overflow-hidden bg-black p-4 py-20 sm:rounded-2xl md:px-24">
         <div className="font-display z-10 flex flex-col gap-5 text-xl text-white">
           <h4 className="text-4xl">The Three Pillars of RichMind Strategy</h4>
         </div>

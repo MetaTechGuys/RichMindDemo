@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@theme {
-}
 @theme inline {
   --font-sans: var(--font-sans);
   --color-gold-light: oklab(0.74 0.01 0.08);

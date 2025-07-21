@@ -1,5 +1,9 @@
-// export const CDN_BASE = 'https://dxsqole8a0eh2pol.public.blob.vercel-storage.com';
-export const CDN_BASE = 'https://ik.imagekit.io/richmind/cdn';
+// const vercelCDN = 'https://dxsqole8a0eh2pol.public.blob.vercel-storage.com';
+// const imagekitCDN = 'https://ik.imagekit.io/richmind/cdn';
+const jsDeliverCDN = 'https://cdn.jsdelivr.net/gh/MetaTechGuys/RichMindDemo/public';
+const localCDN = '';
+
+export const CDN_BASE = process.env.NODE_ENV === 'production' ? jsDeliverCDN : localCDN;
 
 export const MEDIA = {
   heroAudio: CDN_BASE + '/audio/richmind-corporate-video-3-lq.mp3',

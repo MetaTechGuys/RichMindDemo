@@ -18,7 +18,7 @@ export default function AboutUsPage() {
   const step1Ref = useRef<HTMLElement>(null);
   // const [bounds, setBounds] = useState<Record<stepsName, DOMRect>>({});
   // const { scrollY } = useScroll();
-  // const step1x = useTransform(scrollY, [bounds.step1.top, bounds.step1.bottom], [200, 0], {
+  // const step1x = useTransform(scrollY, [bounds.step1.top, bounds.step1.bottom], [150, 0], {
   //   clamp: true,
   // });
   // useLayoutEffect(() => {
@@ -60,12 +60,12 @@ export default function AboutUsPage() {
           <span>Integrity and Compliance</span>
         </Parallax>
       </section>
-      <section className="prose mpt-4 max-w-full! snap-center bg-black md:mt-12">
+      <section className="prose max-w-full! snap-center bg-black md:mt-12">
         {/* section 1 */}
-        <div className="container mx-auto items-stretch gap-12 p-12 lg:flex">
+        <div className="xs:p-8 container mx-auto items-stretch gap-12 p-4 sm:p-12 lg:flex">
           <motion.div
             className="flex-1"
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: -150, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={transition}
@@ -81,7 +81,7 @@ export default function AboutUsPage() {
           </motion.div>
           <motion.div
             className="flex-1 text-white"
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: 150, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={transition}
@@ -106,10 +106,10 @@ export default function AboutUsPage() {
         className="prose max-w-full! snap-center bg-[#EFEDEB] text-black transition-all duration-1000"
       >
         {/* section 2 */}
-        <div className="container mx-auto flex-row-reverse gap-12 px-12 lg:flex">
+        <div className="xs:p-8 container mx-auto flex-row-reverse gap-12 p-4 sm:p-12 lg:flex">
           <motion.div
             className="flex-1"
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: 150, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={transition}
@@ -118,7 +118,7 @@ export default function AboutUsPage() {
           </motion.div>
           <motion.div
             className="flex flex-1 flex-col justify-center"
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: -150, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={transition}
@@ -134,10 +134,10 @@ export default function AboutUsPage() {
       </section>
       <section className="prose max-w-full! snap-center bg-white text-black">
         {/* section 3 */}
-        <div className="container mx-auto gap-12 px-12 lg:flex">
+        <div className="xs:p-8 container mx-auto gap-12 p-4 sm:p-12 lg:flex">
           <motion.div
             className="flex-1"
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: -150, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={transition}
@@ -146,7 +146,7 @@ export default function AboutUsPage() {
           </motion.div>
           <motion.div
             className="flex flex-1 flex-col justify-center"
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: 150, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
             transition={transition}
@@ -172,7 +172,7 @@ export default function AboutUsPage() {
         {/* section 4 */}
         <div className="container mx-auto items-center justify-center gap-12 lg:flex">
           <motion.div
-            className="mx-12 mb-12 overflow-clip rounded-2xl text-white lg:m-0 lg:w-1/2 xl:w-1/3"
+            className="mx-4 mb-12 overflow-clip rounded-2xl text-white sm:mx-12 lg:m-0 lg:w-1/2 xl:w-1/3"
             initial={{ y: 70, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}
@@ -193,7 +193,7 @@ export default function AboutUsPage() {
             </p>
           </motion.div>
           <motion.div
-            className="mx-12 overflow-clip rounded-2xl text-white lg:m-0 lg:w-1/2 xl:w-1/3"
+            className="mx-4 overflow-clip rounded-2xl text-white sm:mx-12 lg:m-0 lg:w-1/2 xl:w-1/3"
             initial={{ y: 70, opacity: 0 }}
             whileInView={normal}
             viewport={viewport}

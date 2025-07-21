@@ -103,11 +103,12 @@ export default function WorldMapSection() {
               exit={{ opacity: 0, x: -500 }}
               transition={{ duration: 0.7 }}
               key="box"
-              className="fixed bottom-0 left-0 z-20 m-auto p-8"
+              className="ms:p-8 xs:p-4 fixed bottom-0 left-0 z-20 m-auto p-2 max-sm:w-full"
             >
+              <div className="scroll-lock" />
               <h1 className="text-lg">{showMore}</h1>
               <video
-                className="h-auto min-w-lg rounded-2xl"
+                className="h-auto w-lg max-w-full rounded-2xl"
                 muted
                 controls
                 autoPlay

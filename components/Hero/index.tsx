@@ -94,7 +94,8 @@ export default function HeroSection() {
             exit={{ opacity: 0 }}
             transition={{ ease: cubicBezier(1, 0, 1, 1), duration: 0.7 }}
           >
-            <div className="bg-opacity-10 absolute size-full bg-black/30 bg-clip-padding backdrop-blur-sm backdrop-filter" />
+            <div className="scroll-lock" />
+            <div className="absolute size-full bg-black bg-clip-padding backdrop-blur-sm backdrop-filter sm:bg-black/30" />
             {loading ? null : (
               <motion.div
                 className="size-full"
@@ -102,7 +103,7 @@ export default function HeroSection() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
               >
-                <NoticeSection className="flex-center" neon eager>
+                <NoticeSection className="flex-center [&>div]:max-xs:shadow-none! p-0!" neon eager>
                   <div
                     className="font-display flex min-w-[50vw] flex-col items-center gap-4 p-10 py-15 text-center text-xl text-white"
                     style={fontPreloadStyle}

@@ -56,3 +56,12 @@ body:has(button:hover) #cursor-tail > span {
   transform: scale(2.1);
   backdrop-filter: grayscale() invert() brightness(80%);
 }
+
+.scroll-lock {
+  opacity: 0;
+  position: fixed;
+  display: inline;
+}
+:root:has(div.scroll-lock) {
+  overflow-y: hidden !important;
+}
