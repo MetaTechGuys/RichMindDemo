@@ -53,7 +53,7 @@ interface CompanyItemProps {
 
 function CompanyItem({ value }: CompanyItemProps) {
   return (
-    <div className="relative overflow-hidden rounded-3xl border-3 border-black transition-transform duration-700 will-change-transform hover:scale-105 hover:[&>img]:scale-110">
+    <div className="relative overflow-hidden rounded-3xl border-3 border-black transition-transform duration-700 will-change-transform perspective-dramatic hover:scale-105 hover:[&>img]:translate-z-2">
       <Image
         src={value.image}
         alt={value.title}
