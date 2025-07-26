@@ -57,7 +57,10 @@ function CompanyItem({ value }: CompanyItemProps) {
       <Image
         src={value.image}
         alt={value.title}
-        className={cn('-m-px size-full object-cover transition duration-1000', value.imgClassName)}
+        className={cn(
+          '-m-px size-full object-cover transition duration-1000 will-change-transform',
+          value.imgClassName,
+        )}
       />
       <Button className="absolute! right-0 bottom-3 left-0 z-10 mx-auto w-1/2" variant="primary">
         {value.title}

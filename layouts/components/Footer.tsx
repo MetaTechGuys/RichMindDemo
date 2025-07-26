@@ -119,7 +119,7 @@ export default function Footer({ secondary }: FooterProps) {
           </div>
         </div>
       </div>
-      <div className="aspect-[8] h-auto w-full"></div>
+      <div className="aspect-6/1 h-auto w-full"></div>
     </div>
   );
 }

@@ -1,14 +1,15 @@
 // const vercelCDN = 'https://dxsqole8a0eh2pol.public.blob.vercel-storage.com';
 // const imagekitCDN = 'https://ik.imagekit.io/richmind/cdn';
 const jsDeliverCDN = 'https://cdn.jsdelivr.net/gh/MetaTechGuys/RichMindDemo/public';
-const localCDN = '';
+const nextjsFolder = '';
 
-export const CDN_BASE = process.env.NODE_ENV === 'production' ? jsDeliverCDN : localCDN;
+export const CDN_BASE = process.env.NODE_ENV === 'production' ? jsDeliverCDN : nextjsFolder;
 
 export const MEDIA = {
   heroAudio: CDN_BASE + '/audio/richmind-corporate-video-3-lq.mp3',
   globe: CDN_BASE + '/video/0101.webm',
   galleryMain: CDN_BASE + '/video/richmind-corporate-video-3-lq.webm',
+  galleryMainFallback1: '/video/richmind-corporate-video-3-lq.webm',
   gallery011: CDN_BASE + '/video/011.webm',
   gallery02: CDN_BASE + '/video/02.webm',
   gallery021: CDN_BASE + '/video/021.webm',
@@ -27,8 +28,9 @@ export const MEDIA = {
   mapPart1: CDN_BASE + '/video/Part1.webm',
   mapPart2: CDN_BASE + '/video/Part2.webm',
   portughal: CDN_BASE + '/video/Portughal.webm',
-  aboutUsFooterDemo: CDN_BASE + '/video/Richmind Corporate Video-demo.webm',
-  aboutUsFooter: CDN_BASE + '/video/Richmind%20Corporate%20Video.webm',
+  aboutUsFooterDemo: CDN_BASE + '/video/richmind-corporate-video-demo.webm',
+  aboutUsFooter: CDN_BASE + '/video/richmind-corporate-video.webm',
+  aboutUsFooterFallback1: '/video/richmind-corporate-video.webm',
   saudi: CDN_BASE + '/video/Saudi.webm',
   southAfrica: CDN_BASE + '/video/South-africa.webm',
   spain: CDN_BASE + '/video/Spain.webm',
@@ -38,8 +40,9 @@ export const MEDIA = {
   black: CDN_BASE + '/video/black.webm',
   galleryTop: CDN_BASE + '/video/gallery-top.webm',
   siteBanner_old: CDN_BASE + '/video/site-banner.webm',
-  siteBanner: CDN_BASE + '/video/baner-site-2.webm',
-  siteBannerMp4: CDN_BASE + '/video/baner-site-2.mp4',
+  siteBanner: jsDeliverCDN + '/video/baner-site-2.webm',
+  siteBannerFallback1: '/video/baner-site-2.webm',
+  siteBannerFallback2: '/video/baner-site-2.mp4',
   // needs video
   aus: CDN_BASE + '/video/Saudi.webm',
   jpn: CDN_BASE + '/video/Saudi.webm',

@@ -94,7 +94,6 @@ export default function GallerySection() {
         <div className="relative row-span-2 size-full overflow-clip rounded-2xl">
           <GalleryVideo
             id="main-gallery-video"
-            src={MEDIA.galleryMain}
             ref={vidRef}
             muted={false}
             className={cn(
@@ -103,7 +102,10 @@ export default function GallerySection() {
             )}
             poster={POSTERS.galleryMain}
             controls={!hasZoomAnimate}
-          />
+          >
+            <source src={MEDIA.galleryMain} type="video/webm" />
+            <source src={MEDIA.galleryMainFallback1} type="video/webm" />
+          </GalleryVideo>
           {isForced ? (
             <Button
               id="force-prevent-scroll"
@@ -145,7 +147,7 @@ export default function GallerySection() {
   );
 }
 
-const GalleryVideo = ({ className, ...props }: ComponentProps<'video'>) => {
+const GalleryVideo = ({ className, children, ...props }: ComponentProps<'video'>) => {
   return (
     <video
       muted
@@ -154,6 +156,8 @@ const GalleryVideo = ({ className, ...props }: ComponentProps<'video'>) => {
       preload="none"
       className={cn('size-full rounded-2xl object-cover', className)}
       {...props}
-    />
+    >
+      {children}
+    </video>
   );
 };

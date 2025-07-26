@@ -137,7 +137,9 @@ export default function HeroSection() {
           onPlay={handlePlay}
           onPause={handlePause}
         >
-          <source src={MEDIA.siteBanner} type="video/mp4" />
+          <source src={MEDIA.siteBanner} type="video/webm" />
+          <source src={MEDIA.siteBannerFallback1} type="video/webm" />
+          <source src={MEDIA.siteBannerFallback2} type="video/mp4" />
           <audio loop id="hero-audio" ref={audioRef}>
             <source src={MEDIA.heroAudio} type="audio/mpeg" />
           </audio>

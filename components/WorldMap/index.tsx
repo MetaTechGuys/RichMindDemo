@@ -106,7 +106,7 @@ export default function WorldMapSection() {
               className="ms:p-8 xs:p-4 fixed bottom-0 left-0 z-20 m-auto p-2 max-sm:w-full"
             >
               <div className="scroll-lock" />
-              <h1 className="text-lg">{showMore}</h1>
+              <h1 className="text-lg uppercase">{showMore}</h1>
               <video
                 className="h-auto w-lg max-w-full rounded-2xl"
                 muted

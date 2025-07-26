@@ -12,6 +12,7 @@ export default function FooterVideoSection() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const playVideo = useCallback(() => {
     setTrue();
+    videoRef.current?.requestFullscreen();
     videoRef.current?.play();
   }, [setTrue]);
 
@@ -36,7 +37,8 @@ export default function FooterVideoSection() {
         onPlay={handlePlay}
         onPause={handlePause}
       >
-        <source src={MEDIA.aboutUsFooter} type="video/mp4" />
+        <source src={MEDIA.aboutUsFooter} type="video/webm" />
+        <source src={MEDIA.aboutUsFooterFallback1} type="video/webm" />
         <audio loop id="hero-audio" ref={audioRef}>
           <source src={MEDIA.heroAudio} type="audio/mpeg" />
         </audio>
@@ -81,7 +83,7 @@ export default function FooterVideoSection() {
           </motion.div>
         ) : null}
       </AnimatePresence>
-      <div className="flex-center absolute inset-0 top-auto z-[1] h-12 w-full bg-gradient-to-t from-black to-transparent"></div>
+      <div className="flex-center pointer-events-none absolute inset-0 top-auto z-[1] h-12 w-full bg-gradient-to-t from-black to-transparent"></div>
     </div>
   );
 }
