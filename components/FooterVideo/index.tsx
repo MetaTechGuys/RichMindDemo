@@ -27,7 +27,7 @@ export default function FooterVideoSection() {
     audioRef.current?.pause();
   }, []);
   return (
-    <div className="relative size-full overflow-clip">
+    <div className="group relative size-full overflow-clip">
       <video
         src={MEDIA.aboutUsFooter}
         poster={POSTERS.richmindCorporate}
@@ -83,7 +83,7 @@ export default function FooterVideoSection() {
           </motion.div>
         ) : null}
       </AnimatePresence>
-      <div className="flex-center pointer-events-none absolute inset-0 top-auto z-[1] h-12 w-full bg-gradient-to-t from-black to-transparent"></div>
+      <div className="flex-center pointer-events-none absolute inset-0 top-auto z-[1] h-4 w-full bg-gradient-to-t from-black to-transparent group-hover:hidden"></div>
     </div>
   );
 }
