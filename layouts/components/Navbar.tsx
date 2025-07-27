@@ -31,7 +31,7 @@ export default function Navbar({ hideLogo }: NavbarProps) {
       <nav className="fixed top-0 z-29 flex w-full items-center justify-end">
         {!hideLogo ? (
           <motion.div
-            className="fixed start-4 top-10 flex h-32 justify-center sm:h-40 md:top-0 md:h-48"
+            className="max-xs:-translate-6! fixed start-4 top-10 flex h-32 justify-center sm:h-36 md:top-0 md:h-40"
             style={{ y, scale }}
           >
             <Image

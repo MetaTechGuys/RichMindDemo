@@ -154,26 +154,26 @@ export default function HeroSection() {
           <source src={MEDIA.siteBanner} type="video/mp4" />
         </video>
         {hasConset ? (
-          <div className="--lg:px-68 absolute inset-0 z-[2] flex size-full flex-col justify-between gap-4 bg-black/40 px-4 sm:justify-center sm:gap-6 sm:px-8 md:gap-4 lg:gap-8">
+          <div className="absolute inset-0 z-[2] flex size-full flex-col justify-evenly gap-4 bg-black/40 px-4 sm:justify-center sm:gap-6 sm:px-8 md:gap-4">
             <motion.h1
               transition={{ delay: 0.5, ease: easeIn }}
               initial={{ scale: 10, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="font-body! xs:leading-12 mt-48 truncate pb-1 text-lg text-[48px]! italic sm:mt-32 sm:text-2xl md:text-3xl"
+              className="font-body! mt-36 truncate pb-1 text-4xl italic sm:mt-32 md:mt-36 md:text-5xl"
             >
-              Inspire People <br />
-              Design the Future
+              <span className="block text-nowrap">Inspire People </span>
+              <span className="text-nowrap">Design the Future</span>
             </motion.h1>
             <motion.h4
               transition={{ delay: 0.7, ease: easeIn }}
               initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="font-body! mb-auto sm:mb-0 sm:text-xl md:text-2xl"
+              className="font-body! sm:text-xl md:text-2xl"
             >
               Rich Mind Holding is Multinational Corporation With an Extensive <br />
               Portofolio of Resources in Rapidly expanding industries
             </motion.h4>
-            <div className="mb-16 flex w-full flex-wrap items-end justify-between sm:block sm:gap-8 lg:mt-6 lg:flex">
+            <div className="mb-8 flex w-full flex-wrap items-end justify-between sm:block sm:gap-8 md:mb-12 lg:mt-6 lg:flex xl:mb-16">
               <ul className="custom-checklist w-xs shrink-0 translate-y-2 leading-10 sm:text-xl md:text-2xl">
                 <motion.li
                   transition={{ delay: 0.8 }}
