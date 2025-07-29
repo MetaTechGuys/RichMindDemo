@@ -78,20 +78,20 @@ export default function GallerySection() {
       <div ref={ref}></div>
       <motion.div
         style={hasZoomAnimate ? { scale: isLock ? scalefactor : scale } : undefined}
-        className="sticky top-0 grid size-full h-screen! grid-cols-[15fr_35fr_15fr] grid-rows-4 gap-4 p-4 text-black md:gap-6 xl:container xl:mx-auto"
+        className="sticky top-0 grid size-full h-screen! grid-cols-[1fr_1fr_1fr] grid-rows-[min-content_1fr_min-content_min-content] gap-4 p-4 text-black md:grid-cols-[15fr_35fr_15fr] md:grid-rows-4 md:gap-6 xl:container xl:mx-auto"
       >
         <GalleryVideo
           src={MEDIA.gallery05}
           poster={POSTERS.gallery05}
-          className="can-hidden-sm row-span-2"
+          className="can-hidden-sm md:row-span-2"
         />
         <GalleryVideo src={MEDIA.galleryTop} poster={POSTERS.galleryTop} />
         <GalleryVideo
           src={MEDIA.gallery04}
           poster={POSTERS.gallery04}
-          className="can-hidden-sm row-span-2"
+          className="can-hidden-sm md:row-span-2"
         />
-        <div className="relative row-span-2 size-full overflow-clip rounded-2xl">
+        <div className="relative row-span-4 size-full overflow-clip rounded-2xl max-md:col-span-3 md:row-span-2">
           <GalleryVideo
             id="main-gallery-video"
             ref={vidRef}
@@ -127,7 +127,7 @@ export default function GallerySection() {
         <GalleryVideo
           src={MEDIA.gallery02}
           poster={POSTERS.gallery02}
-          className="can-hidden-sm row-span-2"
+          className="can-hidden-sm md:row-span-2"
         />
         <GalleryVideo
           src={MEDIA.gallery011}
@@ -139,7 +139,11 @@ export default function GallerySection() {
           poster={POSTERS.gallery031}
           className="can-hidden-sm"
         />
-        <GalleryVideo src={MEDIA.gallery021} poster={POSTERS.gallery021} />
+        <GalleryVideo
+          src={MEDIA.gallery021}
+          poster={POSTERS.gallery021}
+          className="max-md:hidden"
+        />
       </motion.div>
       {hasZoomAnimate && !isLock ? (
         <div className="min-h-screen" style={{ height: tailLength }} />
@@ -148,11 +152,16 @@ export default function GallerySection() {
   );
 }
 
-const GalleryVideo = ({ className, children, ...props }: ComponentProps<'video'>) => {
+const GalleryVideo = ({
+  className,
+  children,
+  autoPlay = true,
+  ...props
+}: ComponentProps<'video'>) => {
   return (
     <video
       muted
-      autoPlay
+      autoPlay={autoPlay}
       loop
       preload="none"
       className={cn('size-full rounded-2xl object-cover', className)}

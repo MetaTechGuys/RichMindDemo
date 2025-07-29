@@ -37,7 +37,7 @@ export default function HeroSection() {
   });
 
   const vol2 = useTransform(scrollY, [900, 1300, 4500, 5500], [0, 1, 1, 0], { clamp: true });
-  useMotionValueEvent(scrollY, 'change', console.log);
+  // useMotionValueEvent(scrollY, 'change', console.log);
   useMotionValueEvent(vol2, 'change', (v) => {
     const galleryMainVideo = document.getElementById('main-gallery-video') as
       | HTMLVideoElement
@@ -128,12 +128,12 @@ export default function HeroSection() {
           </motion.div>
         ) : null}
       </AnimatePresence>
-      <div className="relative size-full overflow-hidden">
+      <div className="relative min-h-full w-full">
         <video
           loop
           ref={videoRef}
           poster={POSTERS.siteBanner}
-          className="absolute inset-0 z-[1] m-auto h-full object-none sm:object-cover xl:w-full"
+          className="absolute inset-0 z-0 m-auto min-h-full object-none brightness-75 sm:object-cover xl:w-full"
           onPlay={handlePlay}
           onPause={handlePause}
           playsInline
@@ -155,12 +155,12 @@ export default function HeroSection() {
           <source src={MEDIA.siteBanner} type="video/webm" />
         </video> */}
         {hasConset ? (
-          <div className="absolute inset-0 z-[2] flex size-full flex-col justify-start gap-4 bg-black/40 px-4 sm:justify-center sm:gap-6 sm:px-8 md:gap-4">
-            <div className="xs:mb-auto my-12 flex">
+          <div className="inset-0 z-2 flex h-fit min-h-full w-full flex-col justify-start gap-4 bg-black/40 px-4 sm:justify-center-safe sm:gap-6 sm:px-8 md:gap-4 2xl:px-24">
+            <div className="xs:mb-auto z-1 my-12 flex">
               <Image
                 src={logo}
                 alt="Richmind Holding"
-                className="max-xs:-translate-x-6 2xs:h-30 h-24 w-auto sm:h-36 md:h-40"
+                className="max-xs:-translate-x-6 2xs:h-30 h-24 w-auto sm:h-36 md:h-40 lg:h-48 xl:h-54 2xl:h-64"
                 loading="eager"
                 priority
               />
@@ -169,7 +169,7 @@ export default function HeroSection() {
               transition={{ delay: 0.5, ease: easeIn }}
               initial={{ scale: 10, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="font-body! truncate pb-1 text-4xl italic md:text-5xl"
+              className="font-body! z-1 my-auto truncate pb-1 text-4xl italic sm:mt-0 md:text-5xl xl:mb-24 xl:text-7xl 2xl:text-[80px]"
             >
               <span className="block text-nowrap">Inspire People </span>
               <span className="text-nowrap">Design the Future</span>
@@ -178,19 +178,19 @@ export default function HeroSection() {
               transition={{ delay: 0.7, ease: easeIn }}
               initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="font-body! text-2xl"
+              className="font-body! z-1 text-xl md:text-2xl xl:mb-24 xl:text-4xl 2xl:text-5xl"
             >
               Rich Mind Holding is Multinational Corporation With an Extensive{' '}
               <br className="max-md:hidden" />
               Portofolio of Resources in Rapidly expanding industries
             </motion.h4>
-            <div className="mb-8 flex w-full flex-wrap items-end justify-between sm:block sm:gap-8 md:mb-12 lg:mt-6 lg:flex xl:mb-16">
-              <ul className="custom-checklist w-xs shrink-0 translate-y-2 leading-10 sm:text-xl md:text-2xl">
+            <div className="mb-8 flex w-full flex-wrap items-end justify-between sm:block sm:gap-8 md:mb-12 lg:mt-6 lg:flex xl:mb-16 2xl:mb-32">
+              <ul className="custom-checklist shrink-0 translate-y-2 leading-10 max-lg:w-xs sm:text-xl md:text-2xl 2xl:text-4xl">
                 <motion.li
                   transition={{ delay: 0.8 }}
                   initial={{ x: -60, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
-                  className="-my-2 md:m-0"
+                  className="-my-2 md:m-0 xl:my-2"
                 >
                   Rich Mind Investment
                 </motion.li>
@@ -198,7 +198,7 @@ export default function HeroSection() {
                   transition={{ delay: 0.9 }}
                   initial={{ x: -60, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
-                  className="-my-2 md:m-0"
+                  className="-my-2 md:m-0 xl:my-2"
                 >
                   Rich Developement
                 </motion.li>
@@ -206,7 +206,7 @@ export default function HeroSection() {
                   transition={{ delay: 1 }}
                   initial={{ x: -60, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
-                  className="-my-2 md:m-0"
+                  className="-my-2 md:m-0 xl:my-2"
                 >
                   Rich Mind Virtual Asset
                 </motion.li>
@@ -220,7 +220,7 @@ export default function HeroSection() {
                 <Button
                   variant="primary"
                   className="xs:w-[200px] w-full sm:w-auto"
-                  innerClassName="sm:px-10!"
+                  innerClassName="sm:px-10! xl:px-8! xl:py-4! xl:text-3xl!"
                 >
                   Rich Mind Holding
                 </Button>
@@ -228,7 +228,7 @@ export default function HeroSection() {
                   href="#companies"
                   variant="outline"
                   className="xs:w-[200px] w-full sm:w-auto"
-                  innerClassName="sm:px-10!"
+                  innerClassName="sm:px-10! xl:px-8! xl:py-4! xl:text-3xl!"
                 >
                   Holding&apos;s Companies
                 </Button>

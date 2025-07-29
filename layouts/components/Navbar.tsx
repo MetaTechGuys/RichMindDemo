@@ -67,21 +67,33 @@ export default function Navbar({ hideLogo }: NavbarProps) {
       <AnimatePresence>
         {isOpen ? (
           <motion.div
+            onClick={() => {
+              setOpen(false);
+            }}
             ref={ref}
             initial={{ height: 0 }}
             animate={{ height: 400 }}
             exit={{ height: 0 }}
             className="bg-opacity-10 font-display fixed top-0 z-30 h-100 w-screen overflow-hidden bg-black/50 bg-clip-padding p-16 capitalize shadow backdrop-blur-sm backdrop-filter md:p-24"
           >
+            <div className="scroll-lock"></div>
             <div className="flex flex-col gap-4 text-xl md:col-start-2">
-              <Link href="/">Home</Link>
-              <Link href="/about-us">About Us</Link>
+              <Link className="lg:text-2xl 2xl:text-4xl" href="/">
+                Home
+              </Link>
+              <Link className="lg:text-2xl 2xl:text-4xl" href="/about-us">
+                About Us
+              </Link>
               {/* <a href="#">Our Work</a> */}
               {/* <a href="#">Our Agency</a> */}
               {/* <a href="#">Services</a> */}
               {/* <a href="#">Insights</a> */}
               {/* <a href="#">SEO Checker</a> */}
-              <a href="#" onClick={() => window.scrollTo({ top: 99999 })}>
+              <a
+                className="lg:text-2xl 2xl:text-4xl"
+                href="#"
+                onClick={() => window.scrollTo({ top: 99999 })}
+              >
                 Contact
               </a>
             </div>

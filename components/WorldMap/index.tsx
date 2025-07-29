@@ -36,7 +36,7 @@ export default function WorldMapSection() {
           onChange={setActive}
           onClickMore={setShowMore}
         />
-        <div className="relative h-full w-full brightness-125 md:w-2/3 md:brightness-100">
+        <div className="relative h-full w-full brightness-125 md:w-2/3 md:brightness-100 2xl:brightness-125">
           <video
             autoPlay
             muted
