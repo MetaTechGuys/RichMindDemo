@@ -136,6 +136,7 @@ export default function HeroSection() {
           className="absolute inset-0 z-[1] m-auto h-full object-none sm:object-cover xl:w-full"
           onPlay={handlePlay}
           onPause={handlePause}
+          playsInline
         >
           <source src={MEDIA.siteBanner} type="video/webm" />
           <source src={MEDIA.siteBannerFallback1} type="video/webm" />
@@ -144,22 +145,31 @@ export default function HeroSection() {
             <source src={MEDIA.heroAudio} type="audio/mpeg" />
           </audio>
         </video>
-        <video
+        {/* <video
           ref={coverVidRef}
           muted
           loop
           poster={POSTERS.blackDot}
           className="inset-0 z-0 size-full scale-110 object-cover blur-sm sm:hidden"
         >
-          <source src={MEDIA.siteBanner} type="video/mp4" />
-        </video>
+          <source src={MEDIA.siteBanner} type="video/webm" />
+        </video> */}
         {hasConset ? (
-          <div className="absolute inset-0 z-[2] flex size-full flex-col justify-evenly gap-4 bg-black/40 px-4 sm:justify-center sm:gap-6 sm:px-8 md:gap-4">
+          <div className="absolute inset-0 z-[2] flex size-full flex-col justify-start gap-4 bg-black/40 px-4 sm:justify-center sm:gap-6 sm:px-8 md:gap-4">
+            <div className="xs:mb-auto my-12 flex">
+              <Image
+                src={logo}
+                alt="Richmind Holding"
+                className="max-xs:-translate-x-6 2xs:h-30 h-24 w-auto sm:h-36 md:h-40"
+                loading="eager"
+                priority
+              />
+            </div>
             <motion.h1
               transition={{ delay: 0.5, ease: easeIn }}
               initial={{ scale: 10, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="font-body! mt-36 truncate pb-1 text-4xl italic sm:mt-32 md:mt-36 md:text-5xl"
+              className="font-body! truncate pb-1 text-4xl italic md:text-5xl"
             >
               <span className="block text-nowrap">Inspire People </span>
               <span className="text-nowrap">Design the Future</span>
@@ -168,9 +178,10 @@ export default function HeroSection() {
               transition={{ delay: 0.7, ease: easeIn }}
               initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="font-body! sm:text-xl md:text-2xl"
+              className="font-body! text-2xl"
             >
-              Rich Mind Holding is Multinational Corporation With an Extensive <br />
+              Rich Mind Holding is Multinational Corporation With an Extensive{' '}
+              <br className="max-md:hidden" />
               Portofolio of Resources in Rapidly expanding industries
             </motion.h4>
             <div className="mb-8 flex w-full flex-wrap items-end justify-between sm:block sm:gap-8 md:mb-12 lg:mt-6 lg:flex xl:mb-16">
@@ -223,6 +234,7 @@ export default function HeroSection() {
                 </Button>
               </motion.div>
             </div>
+            <div className="mb-auto"></div>
           </div>
         ) : null}
       </div>

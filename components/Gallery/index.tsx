@@ -102,6 +102,7 @@ export default function GallerySection() {
             )}
             poster={POSTERS.galleryMain}
             controls={!hasZoomAnimate}
+            playsInline
           >
             <source src={MEDIA.galleryMain} type="video/webm" />
             <source src={MEDIA.galleryMainFallback1} type="video/webm" />
