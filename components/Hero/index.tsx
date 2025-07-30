@@ -156,7 +156,7 @@ export default function HeroSection() {
         </video> */}
         {hasConset ? (
           <div className="inset-0 z-2 flex h-fit min-h-full w-full flex-col justify-start gap-4 bg-black/40 px-4 sm:justify-center-safe sm:gap-6 sm:px-8 md:gap-4 2xl:px-24">
-            <div className="xs:mb-auto z-1 my-12 flex">
+            <div className="z-1 mt-12 mb-auto flex">
               <Image
                 src={logo}
                 alt="Richmind Holding"
@@ -169,7 +169,7 @@ export default function HeroSection() {
               transition={{ delay: 0.5, ease: easeIn }}
               initial={{ scale: 10, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="font-body! z-1 my-auto truncate pb-1 text-4xl italic sm:mt-0 md:text-5xl xl:mb-24 xl:text-7xl 2xl:text-[80px]"
+              className="font-body! z-1 my-auto truncate pb-1 text-4xl italic sm:mt-0 md:text-5xl xl:mb-6 xl:text-6xl 2xl:text-7xl"
             >
               <span className="block text-nowrap">Inspire People </span>
               <span className="text-nowrap">Design the Future</span>
@@ -178,14 +178,14 @@ export default function HeroSection() {
               transition={{ delay: 0.7, ease: easeIn }}
               initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="font-body! z-1 text-xl md:text-2xl xl:mb-24 xl:text-4xl 2xl:text-5xl"
+              className="font-body! z-1 text-xl md:text-2xl xl:mb-6 xl:text-3xl 2xl:text-4xl"
             >
               Rich Mind Holding is Multinational Corporation With an Extensive{' '}
               <br className="max-md:hidden" />
               Portofolio of Resources in Rapidly expanding industries
             </motion.h4>
             <div className="mb-8 flex w-full flex-wrap items-end justify-between sm:block sm:gap-8 md:mb-12 lg:mt-6 lg:flex xl:mb-16 2xl:mb-32">
-              <ul className="custom-checklist shrink-0 translate-y-2 leading-10 max-lg:w-xs sm:text-xl md:text-2xl 2xl:text-4xl">
+              <ul className="custom-checklist shrink-0 translate-y-2 leading-10 max-lg:w-xs sm:text-xl md:text-2xl 2xl:text-3xl">
                 <motion.li
                   transition={{ delay: 0.8 }}
                   initial={{ x: -60, opacity: 0 }}
