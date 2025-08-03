@@ -104,12 +104,11 @@ export default function HeroSection() {
                 transition={{ delay: 0.1 }}
               >
                 <NoticeSection className="flex-center [&>div]:max-xs:shadow-none! p-0!" neon eager>
-                  <div
-                    className="font-display flex min-w-[50vw] flex-col items-center gap-4 p-10 py-15 text-center text-xl text-white"
-                    style={fontPreloadStyle}
-                  >
+                  <div className="flex min-w-[50vw] flex-col items-center gap-4 p-10 py-15 text-center text-xl text-white">
                     <Image src={logo} alt="" className="-my-6 max-w-xs" loading="eager" />
-                    <h4 className="text-4xl opacity-80">Welcome to Richmind</h4>
+                    <h4 className="font-display text-4xl opacity-80" style={fontPreloadStyle}>
+                      Welcome to Richmind
+                    </h4>
                     <p className="max-w-md">Learn about our projects and companies</p>
                     <Button variant="primary" className="text-base" onClick={getConset}>
                       Start the Experience
@@ -159,7 +158,7 @@ export default function HeroSection() {
             <div className="z-1 mt-12 mb-auto flex">
               <Image
                 src={logo}
-                alt="Richmind Holding"
+                alt="RICHMIND Holding"
                 className="max-xs:-translate-x-6 2xs:h-30 h-24 w-auto sm:h-36 md:h-40 lg:h-48 xl:h-54 2xl:h-64"
                 loading="eager"
                 priority
@@ -169,21 +168,21 @@ export default function HeroSection() {
               transition={{ delay: 0.5, ease: easeIn }}
               initial={{ scale: 10, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="font-body! z-1 my-auto truncate pb-1 text-4xl italic sm:mt-0 md:text-5xl xl:mb-6 xl:text-6xl 2xl:text-7xl"
+              className="z-1 my-auto truncate pb-1 text-4xl sm:mt-0 md:text-5xl xl:mb-6 xl:text-6xl 2xl:text-7xl"
             >
               <span className="block text-nowrap">Inspire People </span>
               <span className="text-nowrap">Design the Future</span>
             </motion.h1>
-            <motion.h4
+            <motion.h2
               transition={{ delay: 0.7, ease: easeIn }}
               initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="font-body! z-1 text-xl md:text-2xl xl:mb-6 xl:text-3xl 2xl:text-4xl"
+              className="z-1 text-xl md:text-2xl xl:mb-6 xl:text-3xl 2xl:text-4xl"
             >
-              Rich Mind Holding is Multinational Corporation With an Extensive{' '}
+              RICHMIND Holding is Multinational Corporation With an Extensive{' '}
               <br className="max-md:hidden" />
               Portofolio of Resources in Rapidly expanding industries
-            </motion.h4>
+            </motion.h2>
             <div className="mb-8 flex w-full flex-wrap items-end justify-between sm:block sm:gap-8 md:mb-12 lg:mt-6 lg:flex xl:mb-16 2xl:mb-32">
               <ul className="custom-checklist shrink-0 translate-y-2 leading-10 max-lg:w-xs sm:text-xl md:text-2xl 2xl:text-3xl">
                 <motion.li
@@ -222,7 +221,7 @@ export default function HeroSection() {
                   className="xs:w-[200px] w-full sm:w-auto"
                   innerClassName="sm:px-10! xl:px-8! xl:py-4! xl:text-3xl!"
                 >
-                  Rich Mind Holding
+                  RICHMIND Holding
                 </Button>
                 <Button
                   href="#companies"
@@ -243,5 +242,5 @@ export default function HeroSection() {
 }
 
 const fontPreloadStyle: CSSProperties = {
-  fontFamily: 'var(--google-font-display)',
+  fontFamily: 'var(--google-font-serif)',
 };

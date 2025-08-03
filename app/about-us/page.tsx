@@ -87,13 +87,13 @@ export default function AboutUsPage() {
             transition={transition}
           >
             <p className="leading-6">
-              Globally active in numerous industries, RichMind Holding promotes innovation and
+              Globally active in numerous industries, RICHMIND Holding promotes innovation and
               success in several fields.With operations in more than thirty countries,the company
               shines in spotting and seizing investment opportunities supporting environmentally
               friendly development.
             </p>
             <p className="leading-6">
-              RichMind Holding’s vision goes beyond conventional financial success to include an
+              RICHMIND Holding’s vision goes beyond conventional financial success to include an
               effort to influence the markets and communities it serves positively. The company’s
               method promises it stays ahead of world trends and market needs by combining a
               proactive investment strategy with excellent industry knowledge.
@@ -124,9 +124,9 @@ export default function AboutUsPage() {
             transition={transition}
           >
             <p>
-              RichMind Holding’s approach to expansion is motivated by creativity. The company
+              RICHMIND Holding’s approach to expansion is motivated by creativity. The company
               invests much in research and development to lead technological and service
-              innovations. RichMind Holding helps its staff members investigatefresh ideas and
+              innovations. RICHMIND Holding helps its staff members investigatefresh ideas and
               challenge the limits of feasible by fostering an innovative culture.
             </p>
           </motion.div>
@@ -152,16 +152,16 @@ export default function AboutUsPage() {
             transition={transition}
           >
             <p>
-              The strategic goals of RichMind Holding seek to advance the company into a future of
+              The strategic goals of RICHMIND Holding seek to advance the company into a future of
               widened influence and bettered profitability. The targets focus on reaffirming core
               business areas while exploring new opportunities for motion.diversification and
-              communication. RichMind Holding aims to double its market presence in strategic
+              communication. RICHMIND Holding aims to double its market presence in strategic
               regions over the next five years, focusing on efficiency and environmental
               responsibility.
             </p>
             <p>
               Another primary objective is improving shareholder value through organized financial
-              management and strategic acquisitions. By conforming to these goals, RichMind Holding
+              management and strategic acquisitions. By conforming to these goals, RICHMIND Holding
               aims to strengthen its market position and contribute generously to global economic
               stability and development.
             </p>
@@ -180,10 +180,10 @@ export default function AboutUsPage() {
           >
             <Image src={image4l} alt="about-us-1" className="m-0! w-full" />
             <p className="my-0! bg-black p-4 text-center">
-              Corporate governance at RichMind Holding follows top standards of integrity and
+              Corporate governance at RICHMIND Holding follows top standards of integrity and
               accountability. The system of governance assures that all businesspractices alignwith
               legal requirements and ethical standards, maintaining stakeholders’ interests while
-              raising shareholder value. RichMind Holdingemploys an organized approach to governance
+              raising shareholder value. RICHMIND Holdingemploys an organized approach to governance
               involving precise oversight, reporting transparency, and clear lines of
               accountability. The Board of Directors,formed by experienced professionals from
               different industries, is integral in guiding and implementing the company’s strategy.
@@ -201,13 +201,13 @@ export default function AboutUsPage() {
           >
             <Image src={image4r} alt="about-us-1" className="m-0! w-full" />
             <p className="my-0! bg-black p-4 text-center">
-              RichMind Holding’s leadership team comprises determined innovators and expert
+              RICHMIND Holding’s leadership team comprises determined innovators and expert
               visionaries. Every member drives the business toward its strategic goals by bringing a
-              great variety of knowledge and a different viewpoint. RichMind Holding has positioned
+              great variety of knowledge and a different viewpoint. RICHMIND Holding has positioned
               itself as a leader in multiple industriesthanks to its international finance and
               business strategy background and its president and CEO leading the team. Executives
               focused on operations, marketing, finance, and human resources support the CEO.
-              RichMind Holding’s diversified leadership guarantees that it will negotiate the
+              RICHMIND Holding’s diversified leadership guarantees that it will negotiate the
               complexity of the worldwide market with agility and accuracy, preserving its
               competitive advantage and reputation as
               <span className="text-nowrap"> a market leader.</span>

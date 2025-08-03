@@ -1,5 +1,6 @@
 :root {
-  --golded-gradient: 320deg, oklab(0.54 0.02 0.08), oklab(0.6 0.01 0.08), oklab(0.74 0.01 0.08), oklab(0.49 0.02 0.06)
+  --golded-gradient: 320deg, oklab(0.54 0.02 0.08), oklab(0.6 0.01 0.08), oklab(0.74 0.01 0.08), oklab(0.49 0.02 0.06);
+  --golded-gradient-2: 355deg, oklab(0.54 0.02 0.08), oklab(0.6 0.01 0.08), oklab(0.74 0.01 0.08), oklab(0.49 0.02 0.06), oklab(0.54 0.02 0.08), oklab(0.6 0.01 0.08), oklab(0.74 0.01 0.08), oklab(0.49 0.02 0.06)
 }
 html {
   overflow-x: hidden;
@@ -10,12 +11,20 @@ html {
 * {
   cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="6 3 24 24"><path fill="black" stroke="white" stroke-width="0.4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), default;
 }
-body {
-  --font-display: var(--google-font-display);
-  font-family: "Times New Roman", Times, serif;
+body, button {
+  font-family: var(--google-font-sans);
+  word-spacing: 4px;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--google-font-display);
+button {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h2, h3, h4, h5, h6 {
+  font-family: var(--google-font-serif);
+}
+h1, .as-h1 {
+  font-family: var(--google-font-serif);
+  font-weight: 700;
 }
 .flex-center {
   display: flex;

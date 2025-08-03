@@ -36,7 +36,7 @@ export default function Navbar({ hideLogo }: NavbarProps) {
           >
             <Image
               src={logo}
-              alt="Richmind Holding"
+              alt="RICHMIND Holding"
               className="hidden w-full origin-left"
               loading="eager"
               priority

@@ -57,9 +57,7 @@ export function Parallax({ children, baseVelocity, className, flexClassName }: P
     baseX.set(baseX.get() + moveBy);
   });
   return (
-    <div
-      className={cn(className, 'm-0 flex flex-nowrap overflow-hidden -tracking-[2px] text-nowrap')}
-    >
+    <div className={cn(className, 'm-0 flex flex-nowrap overflow-hidden text-nowrap')}>
       <motion.div className={cn('flex gap-4', flexClassName)} style={{ x }}>
         {children}
         {children}

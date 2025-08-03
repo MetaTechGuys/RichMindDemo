@@ -10,6 +10,6 @@
   
   --breakpoint-2xs: 25rem;
   --breakpoint-xs: 32rem;
-  --font-display: var(--google-font-display);
-  --font-body: "Times New Roman", Times, serif;
+  --font-display: var(--google-font-serif);
+  --font-body: var(--google-font-sans);
 }

@@ -1,29 +1,30 @@
 import { cn } from '@/utils/jsx-tools';
 import type { Metadata } from 'next';
-import { DM_Serif_Display } from 'next/font/google';
+import { Playfair_Display, Manrope } from 'next/font/google';
 import './core.css';
 import './animates.css';
 import './globals.css';
 
-// const sans = DM_Sans({
-//   variable: '--google-font-sans',
-//   subsets: ['latin'],
-// });
-// const serif = DM_Serif_Text({
-//   variable: '--google-font-serif',
-//   weight: '400',
-//   subsets: ['latin'],
-// });
-const display = DM_Serif_Display({
-  variable: '--google-font-display',
-  weight: '400',
+const serif = Playfair_Display({
+  variable: '--google-font-serif',
+  weight: ['400', '700'],
   subsets: ['latin'],
   preload: true,
   display: 'swap',
+  fallback: ['Times New Roman', 'Times', 'serif'],
+});
+
+const sans = Manrope({
+  variable: '--google-font-sans',
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  preload: true,
+  display: 'swap',
+  fallback: ['Arial', 'Helvetica', 'Tahoma', 'Roboto'],
 });
 
 export const metadata: Metadata = {
-  title: 'Richmind Holding',
+  title: 'RICHMIND Holding',
   description: '',
 };
 
@@ -42,7 +43,11 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/icon.png" />
       </head>
       <body
-        className={cn(display.variable, `min-h-screen max-w-screen overflow-x-hidden text-white`)}
+        className={cn(
+          serif.variable,
+          sans.variable,
+          `min-h-screen max-w-screen overflow-x-hidden text-white`,
+        )}
       >
         {children}
       </body>

@@ -21,11 +21,11 @@ export default function CompaniesSection() {
     <div className="size-full max-w-full py-4">
       <div className="size-full overflow-hidden rounded-2xl bg-black px-8 py-8 max-sm:w-full md:px-16 lg:px-24 xl:px-32">
         <div className="font-display z-10 flex flex-1 flex-col gap-5 text-lg text-white">
-          <h4 className="xs:text-4xl text-2xl sm:text-6xl">Rich Mind Holding&apos;s Companies</h4>
+          <h4 className="xs:text-4xl text-2xl sm:text-6xl">RICHMIND Holding&apos;s Companies</h4>
           <p className="md:text-xl xl:text-2xl 2xl:text-3xl">
-            The portfolio of RichMind Holding is diverse, incorporating an extensive spectrumof
+            The portfolio of RICHMIND Holding is diverse, incorporating an extensive spectrumof
             industries, and it is indicative of our drive to sustainability, innovation, and growth.
-            The broader mission of RichMind Holding is to drive global influence and create lasting
+            The broader mission of RICHMIND Holding is to drive global influence and create lasting
             value,and each company within the group operates with a distinctive focus.The synergy of
             these entities is the basis of our strength, as each plays a vital part in establishing
             an upward trajectory for our stakeholders and the communities we support.

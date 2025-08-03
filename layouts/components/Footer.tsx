@@ -18,11 +18,11 @@ export default function Footer({ secondary }: FooterProps) {
   return (
     <div
       className={cn('overflow-x-hidden bg-black', secondary ? 'pt-12' : 'pt-24')}
-      style={secondary ? secFooterStyle : footerStyle}
+      // style={secondary ? secFooterStyle : footerStyle}
     >
       <div className="mx-auto grid grid-cols-1 gap-4 px-4 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:px-48">
-        <div className="font-display flex flex-col gap-3">
-          <h4 className="mb-4 text-3xl md:mb-10">Our Headquarters</h4>
+        <div className="flex flex-col gap-3">
+          <h4 className="font-display mb-4 text-3xl md:mb-10">Our Headquarters</h4>
           <div className="2xs:flex-row flex max-w-md flex-col flex-wrap gap-2">
             <Button variant="primary" className="flex-1 text-sm">
               Corporate
@@ -86,8 +86,8 @@ export default function Footer({ secondary }: FooterProps) {
             </Button>
           </div>
         </div>
-        <div className="font-display hidden flex-col gap-3 lg:flex">
-          <h4 className="mb-10 text-3xl">Useful Links</h4>
+        <div className="hidden flex-col gap-3 ps-4 lg:flex">
+          <h4 className="font-display mb-10 text-3xl">Useful Links</h4>
           <div className="grid grid-cols-2 gap-4 underline underline-offset-4">
             <a href="#">Home</a>
             <a href="#">Overview</a>
@@ -98,10 +98,10 @@ export default function Footer({ secondary }: FooterProps) {
             <a href="#">Investor Relation</a>
           </div>
         </div>
-        <div className="font-display hidden flex-col gap-3 md:flex">
-          <h4 className="mb-10 text-3xl">Newsletter</h4>
+        <div className="hidden flex-col gap-3 md:flex">
+          <h4 className="font-display mb-10 text-3xl">Newsletter</h4>
           <p className="w-xs">
-            Stay updated with the latest news and developments from Rich Mind Holding.
+            Stay updated with the latest news and developments from RICHMIND Holding.
           </p>
           <div className="mt-auto flex flex-col items-start gap-4">
             <label htmlFor="footer-newslater">Your Email</label>
@@ -120,18 +120,22 @@ export default function Footer({ secondary }: FooterProps) {
         </div>
       </div>
       <div className="aspect-6/1 h-auto w-full"></div>
+      <div
+        style={footerStyle}
+        className={cn(
+          'absolute bottom-0 z-0 h-[12vw] w-full -translate-y-8 overflow-clip sm:-translate-y-10',
+          'font-display text-center text-[17vw] leading-[12vw]',
+          'brightness-75',
+          secondary ? 'text-white' : 'text-transparent',
+        )}
+      >
+        RICHMIND
+      </div>
     </div>
   );
 }
 
 const footerStyle: CSSProperties = {
-  backgroundColor: 'black',
-  background: `black url(${footerBanner.src}) no-repeat center bottom`,
-  backgroundSize: '90%',
-};
-
-const secFooterStyle: CSSProperties = {
-  backgroundColor: 'black',
-  background: `black url(${whiteFooterBanner.src}) no-repeat center bottom`,
-  backgroundSize: '90%',
+  backgroundImage: 'linear-gradient(var(--golded-gradient-2))',
+  backgroundClip: 'text',
 };

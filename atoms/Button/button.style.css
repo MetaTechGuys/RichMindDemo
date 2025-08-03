@@ -1,5 +1,4 @@
 .btn {
-  font-family: var(--font-display);
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -7,7 +6,8 @@
   border-radius: var(--radius-lg);
   text-transform: capitalize;
   white-space: nowrap;
-
+  font-weight: 700;
+  
   > .btn-inner {
     width: 100%;
     height: 100%;

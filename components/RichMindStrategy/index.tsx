@@ -10,8 +10,8 @@ export default function RichMindStrategySection() {
           </h4>
         </div>
         <div className="mt-15 flex w-full flex-col gap-20 lg:mt-15 xl:flex-row xl:gap-8 2xl:gap-30 [&>div]:w-full">
-          <div className="font-display flex flex-col gap-5 text-white">
-            <h5 className="xs:text-3xl text-2xl sm:text-4xl">Innovation</h5>
+          <div className="flex flex-col gap-5 text-white">
+            <h5 className="font-display xs:text-3xl text-2xl sm:text-4xl">Innovation</h5>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
               LEADING THE CHARGE IN DEVELOPING NEW TECHNOLOGIES AND METHODOLOGIES
             </p>
@@ -26,8 +26,8 @@ export default function RichMindStrategySection() {
               <li>Crafting a creative legacy.</li>
             </ul>
           </div>
-          <div className="font-display flex flex-col gap-5 text-white">
-            <h5 className="xs:text-3xl text-2xl sm:text-4xl">Collaboration</h5>
+          <div className="flex flex-col gap-5 text-white">
+            <h5 className="font-display xs:text-3xl text-2xl sm:text-4xl">Collaboration</h5>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
               REAL COLLABORATION RESULTS IN A STRONGER, MORE COHESIVE ORGANIZATION
             </p>
@@ -42,8 +42,8 @@ export default function RichMindStrategySection() {
               <li>Empowering team excellence</li>
             </ul>
           </div>
-          <div className="font-display flex flex-col gap-5 text-white">
-            <h5 className="xs:text-3xl text-2xl sm:text-4xl">Sustainability</h5>
+          <div className="flex flex-col gap-5 text-white">
+            <h5 className="font-display xs:text-3xl text-2xl sm:text-4xl">Sustainability</h5>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
               WE BELIVE THAT LONG-TERMSUCCESS IS ROOTED IN SUSTAINABLE PRACTICES
             </p>

@@ -35,8 +35,8 @@ export default function Home() {
       </section>
       <section className="grid snap-center">
         <NoticeSection>
-          <div className="font-display flex flex-col items-center gap-10 px-10 py-40 text-center text-xl text-white">
-            <h4 className="text-3xl xl:text-5xl 2xl:text-6xl">See Our Latest Work</h4>
+          <div className="flex flex-col items-center gap-10 px-10 py-40 text-center text-xl text-white">
+            <h4 className="font-display text-3xl xl:text-5xl 2xl:text-6xl">See Our Latest Work</h4>
             <p className="md:text-xl lg:mx-auto lg:max-w-2/3 2xl:text-3xl">
               Explore how we’ve transformed ideas into impactful designs.
             </p>

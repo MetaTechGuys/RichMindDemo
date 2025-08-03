@@ -18,7 +18,7 @@ export default function WebsiteLayout({ children, secondary }: PropsWithChildren
         <Navbar hideLogo={secondary} />
       </header>
       {children}
-      <footer className="snap-end">
+      <footer className="relative snap-end">
         <Footer secondary={secondary} />
         {secondary ? null : (
           <video
