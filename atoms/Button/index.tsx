@@ -4,12 +4,12 @@ import './button.style.css';
 import Link, { LinkProps } from 'next/link';
 
 interface ButtonProps extends ComponentProps<'button'> {
-  variant?: 'primary' | 'outline' | 'secondary';
+  variant?: 'primary' | 'outline' | 'secondary' | 'glass';
   innerClassName?: string;
 }
 
 interface LinkBtnProps extends LinkProps {
-  variant?: 'primary' | 'outline' | 'secondary';
+  variant?: 'primary' | 'outline' | 'secondary' | 'glass';
   className?: string;
   innerClassName?: string;
 }
@@ -27,6 +27,7 @@ export function Button({
       'btn-primary': variant === 'primary',
       'btn-secondary': variant === 'secondary',
       'btn-outline': variant === 'outline',
+      'glass btn-glass': variant === 'glass',
     },
     className,
   );
@@ -45,10 +46,4 @@ export function Button({
       <div className={cn('btn-inner', innerClassName)}>{children}</div>
     </Link>
   );
-}
-
-interface LinkBtnProps extends LinkProps {
-  variant?: 'primary' | 'outline' | 'secondary';
-  className?: string;
-  innerClassName?: string;
 }

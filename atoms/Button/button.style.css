@@ -81,4 +81,14 @@
       color: black;
     }
   }
+  &.btn-glass {
+    color: black;
+    background-color: #ffffff80;
+    backdrop-filter: blur(3px);
+
+    &:hover {
+      color: white;
+      background-color: #00000080;
+    }
+  }
 }

@@ -7,7 +7,7 @@ export default function GlobalStandardsSection() {
     <div className="size-full py-4">
       <div className="relative flex size-full items-center overflow-hidden rounded-2xl bg-black px-8 py-8 md:px-16 lg:px-24 xl:px-32">
         <div className="z-10 flex max-w-2xl flex-1 flex-col gap-5 text-lg text-white">
-          <h4 className="font-display xs:text-4xl text-2xl sm:text-6xl">
+          <h4 className="font-display xs:text-4xl mb-5 text-2xl sm:text-6xl">
             High Standards in Global Investments
           </h4>
           <p className="md:text-xl 2xl:text-2xl">

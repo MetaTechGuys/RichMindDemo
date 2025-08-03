@@ -13,7 +13,7 @@ export default function RichMindStrategySection() {
           <div className="flex flex-col gap-5 text-white">
             <h5 className="font-display xs:text-3xl text-2xl sm:text-4xl">Innovation</h5>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
-              LEADING THE CHARGE IN DEVELOPING NEW TECHNOLOGIES AND METHODOLOGIES
+              Leading the charge in developing new technologies and methodologies
             </p>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
               We empower our teams to deliver high quality results with the most advanced resources
@@ -29,7 +29,7 @@ export default function RichMindStrategySection() {
           <div className="flex flex-col gap-5 text-white">
             <h5 className="font-display xs:text-3xl text-2xl sm:text-4xl">Collaboration</h5>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
-              REAL COLLABORATION RESULTS IN A STRONGER, MORE COHESIVE ORGANIZATION
+              Real collaboration results in a stronger, more cohesive organization
             </p>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
               Collaboration is vital for achieving long lasting achievements. We value individual
@@ -45,10 +45,10 @@ export default function RichMindStrategySection() {
           <div className="flex flex-col gap-5 text-white">
             <h5 className="font-display xs:text-3xl text-2xl sm:text-4xl">Sustainability</h5>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
-              WE BELIVE THAT LONG-TERMSUCCESS IS ROOTED IN SUSTAINABLE PRACTICES
+              We belive that long-termsuccess is rooted in sustainable practices
             </p>
             <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
-              Every project at RichMind is approached with a focus on eco-friendly practices and
+              Every project at RICHMIND is approached with a focus on eco-friendly practices and
               sustainability.
             </p>
             <ul className="custom-checklist leading-10 xl:text-xl 2xl:text-2xl">
