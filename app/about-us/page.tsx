@@ -60,7 +60,7 @@ export default function AboutUsPage() {
           <span>Integrity and Compliance</span>
         </Parallax>
       </section>
-      <section className="prose max-w-full! snap-center bg-black md:mt-12">
+      <section className="prose xl:prose-lg 2xl:prose-xl max-w-full! snap-center bg-black md:mt-12">
         {/* section 1 */}
         <div className="xs:p-8 container mx-auto items-stretch gap-12 p-4 sm:p-12 lg:flex">
           <motion.div
@@ -103,7 +103,7 @@ export default function AboutUsPage() {
       </section>
       <section
         ref={step1Ref}
-        className="prose max-w-full! snap-center bg-[#EFEDEB] text-black transition-all duration-1000"
+        className="prose xl:prose-lg 2xl:prose-xl max-w-full! snap-center bg-[#EFEDEB] text-black transition-all duration-1000"
       >
         {/* section 2 */}
         <div className="xs:p-8 container mx-auto flex-row-reverse gap-12 p-4 sm:p-12 lg:flex">
@@ -132,7 +132,7 @@ export default function AboutUsPage() {
           </motion.div>
         </div>
       </section>
-      <section className="prose max-w-full! snap-center bg-white text-black">
+      <section className="prose xl:prose-lg 2xl:prose-xl max-w-full! snap-center bg-white text-black">
         {/* section 3 */}
         <div className="xs:p-8 container mx-auto gap-12 p-4 sm:p-12 lg:flex">
           <motion.div
@@ -168,7 +168,7 @@ export default function AboutUsPage() {
           </motion.div>
         </div>
       </section>
-      <section className="prose max-w-full! snap-center bg-[#EFEDEB] py-12">
+      <section className="prose xl:prose-lg 2xl:prose-xl max-w-full! snap-center bg-[#EFEDEB] py-12">
         {/* section 4 */}
         <div className="container mx-auto items-center justify-center gap-12 lg:flex">
           <motion.div

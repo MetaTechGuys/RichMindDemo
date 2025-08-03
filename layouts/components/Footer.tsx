@@ -20,7 +20,7 @@ export default function Footer({ secondary }: FooterProps) {
       className={cn('overflow-x-hidden bg-black', secondary ? 'pt-12' : 'pt-24')}
       // style={secondary ? secFooterStyle : footerStyle}
     >
-      <div className="mx-auto grid grid-cols-1 gap-4 px-4 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:px-48">
+      <div className="mx-auto grid grid-cols-1 gap-4 px-4 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:ps-48">
         <div className="flex flex-col gap-3">
           <h4 className="font-display mb-4 text-3xl md:mb-10">Our Headquarters</h4>
           <div className="2xs:flex-row flex max-w-md flex-col flex-wrap gap-2">
@@ -123,8 +123,8 @@ export default function Footer({ secondary }: FooterProps) {
       <div
         style={footerStyle}
         className={cn(
-          'absolute bottom-0 z-0 h-[12vw] w-full -translate-y-8 overflow-clip sm:-translate-y-10',
-          'font-display text-center text-[17vw] leading-[12vw]',
+          'absolute bottom-0 z-0 h-[10vw] w-full -translate-y-8 overflow-clip tracking-wider sm:-translate-y-10',
+          'font-display text-center text-[15vw] leading-[10vw] font-bold',
           'brightness-75',
           secondary ? 'text-white' : 'text-transparent',
         )}
@@ -136,6 +136,6 @@ export default function Footer({ secondary }: FooterProps) {
 }
 
 const footerStyle: CSSProperties = {
-  backgroundImage: 'linear-gradient(var(--golded-gradient-2))',
+  backgroundImage: 'linear-gradient(var(--golded-gradient))',
   backgroundClip: 'text',
 };

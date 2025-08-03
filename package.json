@@ -1,7 +1,7 @@
 {
   "name": "richmind",
-  "version": "0.8.8",
-  "version.stamp": 1754211270269,
+  "version": "0.8.9",
+  "version.stamp": 1754212851032,
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

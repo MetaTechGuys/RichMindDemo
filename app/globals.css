@@ -13,18 +13,23 @@ html {
 }
 body, button {
   font-family: var(--google-font-sans);
-  word-spacing: 4px;
+  word-spacing: 0.1em;
 }
 button {
   text-transform: uppercase;
   font-weight: 700;
+  word-spacing: 0.1em;
 }
 h2, h3, h4, h5, h6 {
   font-family: var(--google-font-serif);
+  line-height: 1.125em;
+  word-spacing: 0.1em;
 }
 h1, .as-h1 {
   font-family: var(--google-font-serif);
   font-weight: 700;
+  line-height: 1.125em;
+  word-spacing: 0.1em;
 }
 .flex-center {
   display: flex;

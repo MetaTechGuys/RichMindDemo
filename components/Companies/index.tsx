@@ -20,9 +20,11 @@ export default function CompaniesSection() {
   return (
     <div className="size-full max-w-full py-4">
       <div className="size-full overflow-hidden rounded-2xl bg-black px-8 py-8 max-sm:w-full md:px-16 lg:px-24 xl:px-32">
-        <div className="font-display z-10 flex flex-1 flex-col gap-5 text-lg text-white">
-          <h4 className="xs:text-4xl text-2xl sm:text-6xl">RICHMIND Holding&apos;s Companies</h4>
-          <p className="md:text-xl xl:text-2xl 2xl:text-3xl">
+        <div className="z-10 flex flex-1 flex-col gap-5 text-lg text-white">
+          <h4 className="font-display xs:text-4xl text-2xl sm:text-6xl">
+            RICHMIND Holding&apos;s Companies
+          </h4>
+          <p className="md:text-xl 2xl:text-2xl">
             The portfolio of RICHMIND Holding is diverse, incorporating an extensive spectrumof
             industries, and it is indicative of our drive to sustainability, innovation, and growth.
             The broader mission of RICHMIND Holding is to drive global influence and create lasting

@@ -10,17 +10,17 @@ export default function GlobalStandardsSection() {
           <h4 className="font-display xs:text-4xl text-2xl sm:text-6xl">
             High Standards in Global Investments
           </h4>
-          <p className="md:text-xl xl:text-2xl 2xl:text-3xl">
+          <p className="md:text-xl 2xl:text-2xl">
             RICHMIND Holding aims to stay at the top of the global market through executing
             inventive investment approaches and delivering long-term, sustainable growth. We
             methodically identify and allocate resources to industries that have significant
             expansion potential.
           </p>
-          <ul className="custom-checklist leading-12 md:text-xl xl:text-2xl 2xl:text-3xl">
+          <ul className="custom-checklist leading-12 md:text-xl 2xl:text-2xl">
             <li className="">Strategic Investments in Key Sectors</li>
             <li>Sustainability and Innovation Engagement</li>
           </ul>
-          <p className="md:text-xl xl:text-2xl 2xl:text-3xl">
+          <p className="md:text-xl 2xl:text-2xl">
             We have a wide-reaching global presence in major markets, allowing us to generate
             substantial returns on our investments while impacting regional economies.
           </p>
