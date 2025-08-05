@@ -2,7 +2,6 @@ import { PropsWithChildren } from 'react';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Copyright from './components/Copyright';
-import Cursor from '@/atoms/Cursor';
 import { MEDIA, POSTERS } from '@/utils/constants';
 
 interface LayoutProps {
@@ -12,7 +11,6 @@ interface LayoutProps {
 export default function WebsiteLayout({ children, secondary }: PropsWithChildren<LayoutProps>) {
   return (
     <>
-      <Cursor />
       <header className="contents">
         <ResponsiveHelper />
         <Navbar hideLogo={secondary} />

@@ -8,9 +8,9 @@ html {
   font-family: var(--font-body);
   scroll-behavior: smooth;
 }
-* {
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="6 3 24 24"><path fill="black" stroke="white" stroke-width="0.4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), default;
-}
+/* * {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="6 3 24 24"><path fill="black" stroke="white" stroke-width="0.8" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), default;
+} */
 body, button {
   font-family: var(--google-font-sans);
   word-spacing: 0.1em;
@@ -52,30 +52,30 @@ h1, .as-h1 {
 @media screen and (min-width: 376px) {
   html {
     overflow-x: initial;
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
   }
 }
 
-:root:has(#play-video-consent) body {
+/* :root:has(#play-video-consent) body {
   overflow: hidden;
 }
 :root:has(#force-prevent-scroll) body {
   overflow: hidden !important;
-}
+} */
 
-body:has(.cursor-pointer:hover) #cursor-tail > span,
+/* body:has(.cursor-pointer:hover) #cursor-tail > span,
 body:has(a:hover) #cursor-tail > span,
 body:has(button:hover) #cursor-tail > span {
   border: none;
   transform: scale(2.1);
   backdrop-filter: grayscale() invert() brightness(80%);
-}
+} */
 
 .scroll-lock {
   opacity: 0;
   position: fixed;
   display: inline;
 }
-:root:has(div.scroll-lock) {
+/* :root:has(div.scroll-lock) {
   overflow-y: hidden !important;
-}
+} */
