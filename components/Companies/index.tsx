@@ -64,7 +64,11 @@ function CompanyItem({ value }: CompanyItemProps) {
           value.imgClassName,
         )}
       />
-      <Button className="absolute! right-0 bottom-3 left-0 z-10 mx-auto w-1/2" variant="glass">
+      <Button
+        className="absolute! right-0 bottom-3 left-0 z-10 mx-auto max-w-min min-w-1/2"
+        variant="glass"
+        innerClassName="text-center!"
+      >
         {value.title}
       </Button>
     </div>
