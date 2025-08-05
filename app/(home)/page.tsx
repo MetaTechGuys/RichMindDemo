@@ -1,27 +1,12 @@
 import { Button, ScrollTop } from '@/atoms';
 import { NoticeSection } from '@/atoms/NoticeSection';
+import CompaniesSection from '@/components/Companies';
+import GallerySection from '@/components/Gallery';
+import GlobalStandardsSection from '@/components/GlobalStandards';
 import HeroSection from '@/components/Hero';
 import WelcomeNotice from '@/components/notices/WelcomeNotice';
-import dynamic from 'next/dynamic';
-
-const CompaniesSection = dynamic(() => import('@/components/Companies'), {
-  loading: () => <p>Loading...</p>,
-});
-
-const GlobalStandardsSection = dynamic(() => import('@/components/GlobalStandards'), {
-  loading: () => <p>Loading...</p>,
-});
-
-const RichMindStrategySection = dynamic(() => import('@/components/RichMindStrategy'), {
-  loading: () => <p>Loading...</p>,
-});
-
-const GallerySection = dynamic(() => import('@/components/Gallery'), {
-  loading: () => <p>Loading...</p>,
-});
-const WorldMapSection = dynamic(() => import('@/components/WorldMap'), {
-  loading: () => <p>Loading...</p>,
-});
+import RichMindStrategySection from '@/components/RichMindStrategy';
+import WorldMapSection from '@/components/WorldMap';
 
 export default function Home() {
   return (
