@@ -61,6 +61,7 @@ export const POSTERS = {
   gallery05: '/posters/05.webp',
   galleryTop: '/posters/top.webp',
   purpleglobe: '/posters/purple-globe.webp',
+  black: '/posters/black.webp',
   blackDot: 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=',
   darkPurpleDot:
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4AWJiZ5X5DwAAAP//BfvfEAAAAAZJREFUAwABcQEqmU32+wAAAABJRU5ErkJggg==',

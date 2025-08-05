@@ -3,7 +3,7 @@
 import { Button, Icon } from '@/atoms';
 import { MEDIA, POSTERS } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
-import { motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
+import { motion, useInView, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
 import { ComponentProps, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useBoolean, useCountdown } from 'usehooks-ts';
 
@@ -156,17 +156,22 @@ const GalleryVideo = ({
   className,
   children,
   autoPlay = true,
+  src,
   ...props
-}: ComponentProps<'video'>) => {
+}: ComponentProps<'video'> & Pick<ComponentProps<'source'>, 'src'>) => {
+  const ref = useRef<HTMLVideoElement>(null);
+  const inView = useInView(ref);
   return (
     <video
+      ref={ref}
       muted
-      autoPlay={autoPlay}
+      autoPlay={autoPlay && inView}
       loop
       preload="none"
       className={cn('size-full rounded-2xl object-cover', className)}
       {...props}
     >
+      {src && inView ? <source src={src} /> : null}
       {children}
     </video>
   );
