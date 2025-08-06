@@ -1,5 +1,5 @@
 import { cn } from '@/utils/jsx-tools';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, Manrope } from 'next/font/google';
 import './core.css';
 import './animates.css';
@@ -86,6 +86,16 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  minimumScale: 1,
+  userScalable: false,
+  colorScheme: 'dark',
+  themeColor: '#8f6f39',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -94,10 +104,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-        />
         <link rel="icon" type="image/png" href="/icon.png" />
       </head>
       <body
