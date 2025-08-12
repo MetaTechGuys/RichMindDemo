@@ -1,9 +1,8 @@
 'use client';
 
-import { Button, Icon } from '@/atoms';
 import { MEDIA, POSTERS } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
-import { motion, useInView, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
+import { motion, useInView, useScroll, useTransform } from 'motion/react';
 import {
   ComponentProps,
   RefObject,
@@ -13,21 +12,15 @@ import {
   useRef,
   useState,
 } from 'react';
-import { useBoolean, useCountdown } from 'usehooks-ts';
+import { useBoolean } from 'usehooks-ts';
 
 const tailLength = 3000;
-const forceViewTime = process.env.NODE_ENV === 'production' ? 10 : 3;
 
 export default function GallerySection() {
   const ref = useRef<HTMLDivElement>(null);
   const vidRef = useRef<HTMLVideoElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
-  const { value: isForced, setFalse: skipVideo, setTrue: forceWatch } = useBoolean(false);
-  const { value: isLock, setFalse: lockAnimation } = useBoolean(false);
   const { value: isFullScreen, toggle: toggleIsFullscreen } = useBoolean(false);
-  const [count, { startCountdown }] = useCountdown({
-    countStart: forceViewTime,
-  });
 
   const handlePlay = useCallback(() => {
     if (vidRef.current && audioRef.current) {
@@ -40,12 +33,10 @@ export default function GallerySection() {
     audioRef.current?.pause();
   }, []);
 
-  const [top, setTop] = useState(1000);
   const [scalefactor, setScalefactor] = useState(2);
   const [hasZoomAnimate, enableZoomAnimation] = useState(true);
 
   useLayoutEffect(() => {
-    setTop(ref.current?.offsetTop ?? 0);
     const wWidth = window.innerWidth;
     const wHeight = window.innerHeight;
     const vRect = vidRef.current!.getBoundingClientRect();
@@ -56,28 +47,12 @@ export default function GallerySection() {
     setScalefactor(scale);
   }, []);
 
-  const { scrollY } = useScroll();
-  const scale = useTransform(scrollY, [top, top + tailLength / 2], [1, scalefactor], {
-    clamp: true,
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start center', 'end end'],
   });
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const lockScrollToForceWatch = useCallback(() => {
-    startCountdown();
-    forceWatch();
-    const viewportHeight = window.innerHeight;
-    window.scrollTo({
-      top: top + tailLength + vidRef.current!.clientHeight - viewportHeight / 2,
-      behavior: 'smooth',
-    });
-  }, [forceWatch, startCountdown, top]);
-
-  useMotionValueEvent(scale, 'change', (v) => {
-    if (v >= scalefactor && count > 0) {
-      // vidRef.current!.requestFullscreen();
-      lockAnimation();
-    }
-  });
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, scalefactor]);
+  const borderRadius = useTransform(scrollYProgress, [0.3, 0.45], [16, 0]);
 
   useEffect(() => {
     function onFullscreen() {
@@ -94,10 +69,9 @@ export default function GallerySection() {
   }, []);
 
   return (
-    <>
-      <div ref={ref}></div>
+    <div ref={ref}>
       <motion.div
-        style={hasZoomAnimate ? { scale: isLock ? scalefactor : scale } : undefined}
+        style={hasZoomAnimate ? { scale } : undefined}
         className="sticky top-0 grid size-full h-screen! grid-cols-[1fr_1fr_1fr] grid-rows-[min-content_1fr_min-content_min-content] gap-4 p-4 text-black md:grid-cols-[15fr_35fr_15fr] md:grid-rows-4 md:gap-6 xl:container xl:mx-auto"
       >
         <GalleryVideo
@@ -111,12 +85,15 @@ export default function GallerySection() {
           poster={POSTERS.gallery04}
           className="can-hidden-sm md:row-span-2"
         />
-        <div className="relative row-span-4 size-full overflow-clip rounded-2xl max-md:col-span-3 md:row-span-2">
+        <motion.div
+          style={{ borderRadius }}
+          className="relative row-span-4 size-full overflow-clip rounded-2xl max-md:col-span-3 md:row-span-2"
+        >
           <GalleryVideo
             id="main-gallery-video"
             ref={vidRef}
             className={cn(
-              'size-full',
+              'size-full rounded-none!',
               isFullScreen ? 'object-contain md:object-cover' : 'object-cover',
             )}
             poster={POSTERS.richmindCorporate}
@@ -132,23 +109,7 @@ export default function GallerySection() {
               <source src={MEDIA.heroAudio} type="audio/mpeg" />
             </audio>
           </GalleryVideo>
-          {isForced ? (
-            <Button
-              id="force-prevent-scroll"
-              className="bg-gold absolute! end-0 bottom-4 rounded-r-none! text-sm"
-              innerClassName="rounded-r-none! inline-flex items-center gap-1 px-3! py-1.5!"
-              disabled={count > 0}
-              onClick={() => {
-                skipVideo();
-                setTimeout(() => {
-                  window.scrollBy({ top: 100, behavior: 'smooth' });
-                }, 500);
-              }}
-            >
-              Skip{count ? <span> in {count}</span> : <Icon name="play" className="-me-3 size-4" />}
-            </Button>
-          ) : null}
-        </div>
+        </motion.div>
         <GalleryVideo
           src={MEDIA.gallery02}
           poster={POSTERS.gallery02}
@@ -170,10 +131,8 @@ export default function GallerySection() {
           className="max-md:hidden"
         />
       </motion.div>
-      {hasZoomAnimate && !isLock ? (
-        <div className="min-h-screen" style={{ height: tailLength }} />
-      ) : null}
-    </>
+      {hasZoomAnimate ? <div className="min-h-screen" style={{ height: tailLength }} /> : null}
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 'use client';
+import { links } from '@/data';
 import {
   AnimatePresence,
   motion,
@@ -7,32 +8,9 @@ import {
   useTransform,
 } from 'motion/react';
 import Link from 'next/link';
-import { ComponentProps, useState } from 'react';
+import { useState } from 'react';
 
-interface LinkData {
-  title: string;
-  href: string;
-}
-
-const links: LinkData[] = [
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Companies',
-    href: '#companies',
-  },
-  {
-    title: 'About Us',
-    href: '/about-us',
-  },
-];
-
-export default function Navbar({
-  className,
-  secondary,
-}: ComponentProps<'nav'> & { secondary?: boolean }) {
+export default function Navbar() {
   const [showFixedNav, setFixedNav] = useState(false);
   const { scrollY } = useScroll({ axis: 'y' });
   const showFixedNavMotion = useTransform(
@@ -42,7 +20,7 @@ export default function Navbar({
 
   return (
     <AnimatePresence>
-      {showFixedNav || secondary ? (
+      {showFixedNav ? (
         <motion.nav
           key="fixed"
           initial={{ y: -50 }}
@@ -50,7 +28,7 @@ export default function Navbar({
           transition={{ ease: 'easeInOut' }}
           className="bg-b glass fixed inset-0 bottom-auto z-50 mx-auto flex w-full justify-center gap-4 bg-black/30 px-4 shadow-2xl sm:w-fit sm:rounded-b-2xl sm:px-8 sm:pt-2 sm:pb-4 md:px-16"
         >
-          <div className={className}>
+          <div className="font-display text-gold-light z-2 grid grid-cols-3 font-bold sm:gap-4 sm:text-xl md:gap-8">
             {links.map((link, i) => (
               <Link key={i} className="contents" href={link.href}>
                 <div className="p-2 text-center">
@@ -61,21 +39,6 @@ export default function Navbar({
               </Link>
             ))}
           </div>
-        </motion.nav>
-      ) : null}
-      {!secondary ? (
-        <motion.nav key="static" className={className}>
-          {links.map((link, i) => (
-            <Link key={i} className="contents" href={link.href}>
-              <motion.div
-                className="p-2 text-center"
-                initial={{ opacity: 0, y: 150 }}
-                animate={{ opacity: 1, y: 0, transition: { delay: 2.0 + i * 0.2 } }}
-              >
-                <motion.div whileHover={{ y: -5 }}>{link.title}</motion.div>
-              </motion.div>
-            </Link>
-          ))}
         </motion.nav>
       ) : null}
     </AnimatePresence>

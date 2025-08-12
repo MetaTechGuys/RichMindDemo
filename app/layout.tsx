@@ -5,6 +5,7 @@ import './core.css';
 import './animates.css';
 import './globals.css';
 import metaImg from '@/public/meta-image.webp';
+import Navbar from '@/layouts/components/Navbar';
 
 const serif = Playfair_Display({
   variable: '--google-font-serif',
@@ -113,6 +114,7 @@ export default function RootLayout({
           `min-h-screen max-w-screen overflow-x-hidden bg-white text-black`,
         )}
       >
+        <Navbar />
         {children}
       </body>
     </html>
