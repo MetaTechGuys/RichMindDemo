@@ -2,6 +2,7 @@
 import { Button, Icon } from '@/atoms';
 import { cn } from '@/utils/jsx-tools';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 import { CSSProperties, useState } from 'react';
 
@@ -41,7 +42,7 @@ export default function Footer({ secondary }: FooterProps) {
           </div>
           <div className="flex items-center gap-1 text-xs">
             <Icon name="globe" className="size-5" />
-            <span className="truncate">Info@RichMindholding.com</span>
+            <span className="truncate">Info@RichMindHolding.com</span>
           </div>
           <div className="flex items-center gap-1 text-xs">
             <Icon name="phone" className="size-5" />
@@ -85,13 +86,23 @@ export default function Footer({ secondary }: FooterProps) {
         <div className="hidden flex-col gap-3 ps-4 lg:flex">
           <h4 className="font-display mb-10 text-3xl">Useful Links</h4>
           <div className="grid grid-cols-2 gap-4 underline underline-offset-4">
-            <a href="#">Home</a>
-            <a href="#">Overview</a>
-            <a href="#">Career</a>
-            <a href="#">Contact</a>
-            <a href="#">Innovation and R&D</a>
-            <a href="#">Sustainability</a>
-            <a href="#">Investor Relation</a>
+            <Link href="/">Home</Link>
+            <Link href="/about-us">About Us</Link>
+            <a href="#" className="pointer-events-none opacity-80">
+              Career
+            </a>
+            <a href="#" className="pointer-events-none opacity-80">
+              Contact
+            </a>
+            <a href="#" className="pointer-events-none opacity-80">
+              Innovation and R&D
+            </a>
+            <a href="#" className="pointer-events-none opacity-80">
+              Sustainability
+            </a>
+            <a href="#" className="pointer-events-none opacity-80">
+              Investor Relation
+            </a>
           </div>
         </div>
         <div className="hidden flex-col gap-3 md:flex">

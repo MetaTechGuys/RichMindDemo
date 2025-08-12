@@ -1,7 +1,6 @@
 'use client';
 import { Button, ScrollTop } from '@/atoms';
 import { NoticeSection } from '@/atoms/NoticeSection';
-import { RoyalSection } from '@/atoms/RoyalSection';
 import { RoyalSection2 } from '@/atoms/RoyalSection2';
 import ScrollInviter from '@/atoms/ScrollInviter';
 import CompaniesSection from '@/components/Companies';
@@ -25,9 +24,9 @@ export default function Home() {
       >
         <div className="flex size-full flex-col items-center justify-end gap-12 py-12 sm:py-16 md:py-20 lg:py-24">
           <NavLinks />
-          <LogomotionVideo className="pointer-events-none absolute inset-0 size-full object-contain mix-blend-multiply" />
+          <LogomotionVideo className="pointer-events-none absolute inset-0 size-full object-contain mix-blend-multiply max-sm:-translate-y-10 max-sm:scale-75 max-sm:object-cover" />
           <div className="z-2 h-10">
-            <ScrollInviter className="mt-10 [animation-duration:3000ms]" />
+            <ScrollInviter className="mt-0 [animation-duration:3000ms] sm:mt-10" />
           </div>
         </div>
       </RoyalSection2>
@@ -51,10 +50,7 @@ export default function Home() {
       </section>
       <section className="grid snap-center">
         <NoticeSection innerClassName="p-8">
-          <RoyalSection
-            full
-            className="flex flex-col items-center gap-10 px-10 py-40 text-center text-xl"
-          >
+          <div className="flex flex-col items-center gap-10 px-10 py-40 text-center text-xl">
             <h4 className="font-display z-4 text-3xl xl:text-5xl 2xl:text-6xl">
               See Our Latest Work
             </h4>
@@ -64,7 +60,7 @@ export default function Home() {
             <Button className="z-4" variant="primary">
               View Portofolio
             </Button>
-          </RoyalSection>
+          </div>
         </NoticeSection>
       </section>
     </main>

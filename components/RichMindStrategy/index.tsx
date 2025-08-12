@@ -79,7 +79,7 @@ function Card({ title, children, className, icon }: PropsWithChildren<Props>) {
   return (
     <div
       className={cn(
-        'flex flex-col gap-5 border-s-2 border-t-2 border-blue-700 bg-white p-8 shadow-2xl',
+        'flex flex-col gap-5 border-s-3 border-t-3 border-[#1949a7] bg-white p-8 shadow-2xl',
         className,
       )}
     >

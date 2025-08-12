@@ -86,6 +86,9 @@
     background-color: #00000080;
     backdrop-filter: blur(3px);
 
+    &::before {
+      background-color: #ffffff80
+    }
     &:hover {
       color: black;
       background-color: #ffffff80;

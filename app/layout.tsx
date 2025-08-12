@@ -1,11 +1,10 @@
+import metaImg from '@/public/meta-image.webp';
 import { cn } from '@/utils/jsx-tools';
 import type { Metadata, Viewport } from 'next';
-import { Playfair_Display, Manrope } from 'next/font/google';
-import './core.css';
+import { Manrope, Playfair_Display } from 'next/font/google';
 import './animates.css';
+import './core.css';
 import './globals.css';
-import metaImg from '@/public/meta-image.webp';
-import Navbar from '@/layouts/components/Navbar';
 
 const serif = Playfair_Display({
   variable: '--google-font-serif',
@@ -114,7 +113,6 @@ export default function RootLayout({
           `min-h-screen max-w-screen overflow-x-hidden bg-white text-black`,
         )}
       >
-        <Navbar />
         {children}
       </body>
     </html>
