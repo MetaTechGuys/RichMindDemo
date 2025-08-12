@@ -38,7 +38,7 @@ export default function Home() {
       <section id="gallery" className="grid min-h-screen overflow-clip">
         <GallerySection />
       </section>
-      <section id="worldmap" className="-my-px grid min-h-screen snap-center">
+      <section id="worldmap" className="grid min-h-screen snap-center">
         <WorldMapSection />
       </section>
       <section id="standards" className="grid min-h-screen snap-center">

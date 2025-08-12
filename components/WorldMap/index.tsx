@@ -270,7 +270,7 @@ const Accordion = <T extends readonly [string, string]>({
           checked={value === item}
           onChange={() => onChange?.(value !== item ? item : undefined)}
         >
-          <Button variant="primary" className="m-2" onClick={() => onClickMore?.(more)}>
+          <Button variant="glass" className="m-2" onClick={() => onClickMore?.(more)}>
             View More
           </Button>
         </AccordionItem>
