@@ -1,6 +1,4 @@
 'use client';
-import whiteFooterBanner from '@/assets/img/banner-photo-font-01.png';
-import footerBanner from '@/assets/img/banner-photo-font-02.png';
 import { Button, Icon } from '@/atoms';
 import { cn } from '@/utils/jsx-tools';
 
@@ -110,7 +108,7 @@ export default function Footer({ secondary }: FooterProps) {
               <input
                 id="footer-newslater"
                 type="text"
-                className="border-0 border-b-2 border-white"
+                className="border-0 border-b-2 border-black"
               />
             </div>
             <Button variant="primary" className="text-sm">

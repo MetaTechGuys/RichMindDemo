@@ -11,10 +11,10 @@ export default async function CompanyPage({ params }: PagePropsWithParams<'slug'
 
   return (
     <main className="flex min-h-screen items-center gap-10 p-20 max-md:flex-col">
-      <section className="prose prose-invert">
+      <section className="prose">
         <Image src={company.image} alt={company.title} className="max-w-sm" />
       </section>
-      <section className="prose prose-invert">{company.content}</section>
+      <section className="prose">{company.content}</section>
     </main>
   );
 }

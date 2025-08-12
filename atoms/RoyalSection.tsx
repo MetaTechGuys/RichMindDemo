@@ -1,3 +1,4 @@
+'use client';
 import { cn } from '@/utils/jsx-tools';
 import { ComponentProps } from 'react';
 
@@ -7,14 +8,20 @@ export function RoyalSection({
   innerClassName,
   size = 150,
   double,
+  full,
   ...props
-}: ComponentProps<'section'> & { size?: number; innerClassName?: string; double?: boolean }) {
+}: ComponentProps<'section'> & {
+  size?: number;
+  innerClassName?: string;
+  double?: boolean;
+  full?: boolean;
+}) {
   return (
     <section className={cn('relative', className)} {...props}>
-      {children}
+      {full ? children : null}
       <div
         className={cn(
-          'text-gold-dark absolute inset-0 -z-1 grid size-full grid-cols-[min-content_1fr_min-content] grid-rows-[min-content_1fr_min-content]',
+          'text-gold-dark absolute inset-0 z-1 grid size-full grid-cols-[min-content_1fr_min-content] grid-rows-[min-content_1fr_min-content]',
           innerClassName,
         )}
       >
@@ -22,7 +29,7 @@ export function RoyalSection({
         <BorderNS className="w-full" height={size} double={double} />
         <Corner className="rotate-90" width={size} height={size} double={double} />
         <BorderEW className="h-full" width={size} double={double} />
-        <span></span>
+        {full ? <span></span> : (children ?? <span></span>)}
         <BorderEW className="h-full rotate-180 justify-self-end" width={size} double={double} />
         <Corner className="rotate-270" width={size} height={size} double={double} />
         <BorderNS className="w-full rotate-180 self-end" height={size} double={double} />

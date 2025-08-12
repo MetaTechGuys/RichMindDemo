@@ -9,7 +9,7 @@ export default function WelcomeNotice() {
 
   return (
     <NoticeSection>
-      <div ref={ref} className="flex flex-col gap-10 px-10 py-40 text-center text-lg text-white">
+      <div ref={ref} className="flex flex-col gap-10 px-10 py-40 text-center text-lg">
         {inview ? (
           <motion.h4
             initial={{ x: -100, opacity: 0 }}

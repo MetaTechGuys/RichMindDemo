@@ -1,109 +1,76 @@
 'use client';
-import logo from '@/assets/img/RichMindlogo-white.png';
-import { Button, Icon } from '@/atoms';
-import { cn } from '@/utils/jsx-tools';
-import { useScroll, useTransform, motion, AnimatePresence } from 'motion/react';
-import Image from 'next/image';
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from 'motion/react';
 import Link from 'next/link';
-import { useRef, useState } from 'react';
-import { useOnClickOutside } from 'usehooks-ts';
+import { ComponentProps, useState } from 'react';
 
-interface NavbarProps {
-  hideLogo?: boolean;
+interface LinkData {
+  title: string;
+  href: string;
 }
 
-export default function Navbar({ hideLogo }: NavbarProps) {
-  const [isOpen, setOpen] = useState(false);
-  const { scrollY } = useScroll();
-  // const x = useTransform(scrollY, [0, 300], [0, -200]);
-  const scale = useTransform(scrollY, [0, 100], [1, 0.75], { clamp: true });
-  const y = useTransform(scrollY, [0, 200], [0, -200], { clamp: true });
-  const ref = useRef<HTMLDivElement>(null);
+const links: LinkData[] = [
+  {
+    title: 'Home',
+    href: '/',
+  },
+  {
+    title: 'Companies',
+    href: '#companies',
+  },
+  {
+    title: 'About Us',
+    href: '/about-us',
+  },
+];
 
-  const handleClickOutside = () => {
-    setOpen(false);
-  };
-  /** @ts-expect-error: ref is null at ssr load time */
-  useOnClickOutside(ref, handleClickOutside);
+export default function Navbar({ className }: ComponentProps<'nav'>) {
+  const [showFixedNav, setFixedNav] = useState(false);
+  const { scrollY } = useScroll({ axis: 'y' });
+  const showFixedNavMotion = useTransform(() => scrollY.get() >= window.innerHeight * 0.9);
+  useMotionValueEvent(showFixedNavMotion, 'change', setFixedNav);
 
   return (
-    <>
-      <nav className="fixed top-0 z-29 flex w-full items-center justify-end">
-        {!hideLogo ? (
-          <motion.div
-            className="max-xs:-translate-6! fixed start-4 top-10 flex h-32 justify-center sm:h-36 md:top-0 md:h-40"
-            style={{ y, scale }}
-          >
-            <Image
-              src={logo}
-              alt="RICHMIND Holding"
-              className="hidden w-full origin-left"
-              loading="eager"
-              priority
-            />
-          </motion.div>
-        ) : (
-          <>
-            <div className="me-auto h-22"></div>
-            <Button
-              href="/"
-              className={cn('size-18', hideLogo ? '' : 'mt-8')}
-              innerClassName="flex-center"
-            >
-              <Icon name="back-outlined" className="size-full" />
-            </Button>
-          </>
-        )}
-        <Button
-          className={cn('xs:me-8 me-4 size-18 p-4 sm:me-12', hideLogo ? '' : 'mt-10')}
-          onClick={() => {
-            setOpen((o) => !o);
-          }}
-          innerClassName="p-0!"
+    <AnimatePresence>
+      {showFixedNav ? (
+        <motion.nav
+          key="fixed"
+          initial={{ y: -50 }}
+          animate={{ y: 0 }}
+          transition={{ ease: 'easeInOut' }}
+          className="bg-b glass fixed inset-0 bottom-auto z-50 mx-auto flex w-full justify-center gap-4 bg-black/30 px-4 shadow-2xl sm:w-fit sm:rounded-b-2xl sm:px-8 sm:pt-2 sm:pb-4 md:px-16"
         >
-          <Icon name="align-right" className="text-gold size-full" />
-        </Button>
-      </nav>
-      <AnimatePresence>
-        {isOpen ? (
-          <motion.div
-            onClick={() => {
-              setOpen(false);
-            }}
-            ref={ref}
-            initial={{ y: -400 }}
-            animate={{ y: 0 }}
-            exit={{ y: -400 }}
-            transition={{ ease: 'easeInOut' }}
-            className="glass font-display bg-gold-light/30 fixed top-0 z-30 h-100 w-screen overflow-hidden p-16 capitalize shadow-2xl md:p-24"
-          >
-            <div className="scroll-lock"></div>
-            <div className="flex flex-col gap-4 text-xl md:col-start-2">
-              <Link className="lg:text-2xl 2xl:text-4xl" href="/">
-                Home
+          <div className={className}>
+            {links.map((link, i) => (
+              <Link key={i} className="contents" href={link.href}>
+                <div className="p-2 text-center">
+                  <motion.div whileHover={{ y: -2 }} className="text-white">
+                    {link.title}
+                  </motion.div>
+                </div>
               </Link>
-              <Link className="lg:text-2xl 2xl:text-4xl" href="/about-us">
-                About Us
-              </Link>
-              <a
-                className="lg:text-2xl 2xl:text-4xl"
-                href="#"
-                onClick={() => window.scrollTo({ top: 99999 })}
-              >
-                Contact
-              </a>
-            </div>
-            {/* <div className="flex flex-col gap-4">
-              <a href="#">phone</a>
-              <a href="#">02078705794</a>
-              <a href="#">Email</a>
-              <a href="#">test@test.com</a>
-              <a href="#">follow</a>
-              <a href="#">Start a Project</a>
-            </div> */}
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-    </>
+            ))}
+          </div>
+        </motion.nav>
+      ) : null}
+      <motion.nav key="static" className={className}>
+        {links.map((link, i) => (
+          <Link key={i} className="contents" href={link.href}>
+            <motion.div
+              className="p-2 text-center"
+              initial={{ opacity: 0, y: 150 }}
+              animate={{ opacity: 1, y: 0, transition: { delay: 2.0 + i * 0.2 } }}
+            >
+              <motion.div whileHover={{ y: -5 }}>{link.title}</motion.div>
+            </motion.div>
+          </Link>
+        ))}
+      </motion.nav>
+    </AnimatePresence>
   );
 }

@@ -7,56 +7,34 @@ import CompaniesSection from '@/components/Companies';
 import GallerySection from '@/components/Gallery';
 import GlobalStandardsSection from '@/components/GlobalStandards';
 // import HeroSection from '@/components/Hero';
-import LogomotionSection from '@/components/Logomotion';
 // import WelcomeNotice from '@/components/notices/WelcomeNotice';
+import LogomotionVideo from '@/components/Logomotion';
+import WelcomeNotice from '@/components/notices/WelcomeNotice';
 import RichMindStrategySection from '@/components/RichMindStrategy';
 import WorldMapSection from '@/components/WorldMap';
-import Link from 'next/link';
-import { motion } from 'motion/react';
+import Navbar from '@/layouts/components/Navbar';
 
 export default function Home() {
   return (
     <main className="flex flex-col">
       <ScrollTop auto />
-      <RoyalSection size={120} id="top" className="flex h-screen items-center justify-center">
-        <LogomotionSection className="mix-blend-multiply" />
-        <motion.div className="font-display text-gold-light absolute grid translate-y-50 grid-cols-3 gap-8 text-2xl font-bold">
-          <Link className="contents" href="#top">
-            <motion.div
-              className="p-2 text-center"
-              initial={{ opacity: 0, y: 150 }}
-              animate={{ opacity: 1, y: 0, transition: { delay: 2.0 } }}
-            >
-              <motion.div whileHover={{ y: -5 }}>Home</motion.div>
-            </motion.div>
-          </Link>
-          <Link className="contents" href="#gallery">
-            <motion.div
-              className="p-2 text-center"
-              initial={{ opacity: 0, y: 150 }}
-              animate={{ opacity: 1, y: 0, transition: { delay: 2.2 } }}
-            >
-              <motion.div whileHover={{ y: -5 }}>Gallery</motion.div>
-            </motion.div>
-          </Link>
-          <Link className="contents" href="#worldmap">
-            <motion.div
-              className="p-2 text-center"
-              initial={{ opacity: 0, y: 150 }}
-              animate={{ opacity: 1, y: 0, transition: { delay: 2.4 } }}
-            >
-              <motion.div whileHover={{ y: -5 }}>Branches</motion.div>
-            </motion.div>
-          </Link>
-        </motion.div>
-        <ScrollInviter />
+      <RoyalSection
+        full
+        size={140}
+        id="top"
+        className="flex h-screen items-center justify-center bg-[url(/white-flag-matterial.jpg)] bg-cover bg-blend-hard-light"
+      >
+        <div className="flex size-full flex-col items-center justify-end gap-12 py-12 sm:py-16 md:py-20 lg:py-24">
+          <Navbar className="font-display text-gold-light z-2 grid grid-cols-3 gap-2 font-bold sm:gap-4 sm:text-2xl md:gap-8" />
+          <LogomotionVideo className="pointer-events-none absolute inset-0 size-full object-contain mix-blend-multiply" />
+          <div className="z-2 h-10">
+            <ScrollInviter className="bottom-10 [animation-duration:3000ms]" />
+          </div>
+        </div>
       </RoyalSection>
-      {/* <section id="top" className="grid min-h-screen snap-center">
-        <HeroSection />
-      </section> */}
-      {/* <section className="grid snap-center">
+      <section className="grid snap-center">
         <WelcomeNotice />
-      </section> */}
+      </section>
       <section id="gallery" className="grid min-h-screen overflow-clip">
         <GallerySection />
       </section>
@@ -74,7 +52,10 @@ export default function Home() {
       </section>
       <section className="grid snap-center">
         <NoticeSection innerClassName="p-8">
-          <RoyalSection className="flex flex-col items-center gap-10 px-10 py-40 text-center text-xl">
+          <RoyalSection
+            full
+            className="flex flex-col items-center gap-10 px-10 py-40 text-center text-xl"
+          >
             <h4 className="font-display text-3xl xl:text-5xl 2xl:text-6xl">See Our Latest Work</h4>
             <p className="md:text-xl lg:mx-auto lg:max-w-2/3 2xl:text-3xl">
               Explore how we’ve transformed ideas into impactful designs.

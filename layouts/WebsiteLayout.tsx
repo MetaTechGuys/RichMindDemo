@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react';
 import Copyright from './components/Copyright';
 import Footer from './components/Footer';
+import { MEDIA } from '@/utils/constants';
 
 interface LayoutProps {
   secondary?: true;
@@ -16,6 +17,13 @@ export default function WebsiteLayout({ children, secondary }: PropsWithChildren
       {children}
       <footer className="relative snap-end">
         <Footer secondary={secondary} />
+        <video
+          src={MEDIA.blackBackground}
+          muted
+          autoPlay
+          loop
+          className="fixed inset-0 -z-[1] h-screen w-screen object-cover mix-blend-difference hue-rotate-165"
+        ></video>
         <Copyright />
       </footer>
     </>

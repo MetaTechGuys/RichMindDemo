@@ -26,7 +26,7 @@ export const MEDIA = {
   india: CDN_BASE + '/video/India.webm',
   italy: CDN_BASE + '/video/Italy.webm',
   london: CDN_BASE + '/video/London.webm',
-  mapWhite: CDN_BASE + '/video/map-white.webm',
+  mapWhite: CDN_BASE + '/video/worldmap-white.webm',
   mapPart1: CDN_BASE + '/video/Part1.webm',
   mapPart2: CDN_BASE + '/video/Part2.webm',
   portughal: CDN_BASE + '/video/Portughal.webm',
