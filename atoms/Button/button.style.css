@@ -39,10 +39,10 @@
   &.btn-primary {
     background-image: linear-gradient(var(--golded-gradient));
     > .btn-inner {
-      color: black;
+      color: white;
     }
     &::before {
-      background-color: black;
+      background-color: white;
     }
     &:hover {
       color: var(--color-gold);
@@ -54,7 +54,7 @@
   }
   &.btn-secondary {
     color: var(--color-gold);
-    background-color: black;
+    background-color: white;
     >.btn-inner {
       border-color: var(--color-gold);
     }
@@ -62,33 +62,33 @@
       background-image: linear-gradient(var(--golded-gradient))
     }
     &:hover {
-      color: black;
+      color: white;
       >.btn-inner {
         border-color: transparent
       }
     }
   }
   &.btn-outline {
-    border-color: white;
-    color: white;
+    border-color: black;
+    color: black;
     > .btn-inner {
-      border-color: white;
+      border-color: black;
     }
     &::before {
-      background-color: white
+      background-color: black
     }
     &:hover {
-      color: black;
+      color: white;
     }
   }
   &.btn-glass {
-    color: black;
-    background-color: #ffffff80;
+    color: white;
+    background-color: #00000080;
     backdrop-filter: blur(3px);
 
     &:hover {
-      color: white;
-      background-color: #00000080;
+      color: black;
+      background-color: #ffffff80;
     }
   }
 }

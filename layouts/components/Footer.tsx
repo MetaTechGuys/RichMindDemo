@@ -25,7 +25,7 @@ export default function Footer({ secondary }: FooterProps) {
             <Button variant="primary" className="flex-1 text-sm">
               Corporate
             </Button>
-            <Button variant="outline" className="flex-1 text-sm">
+            <Button variant="secondary" className="flex-1 text-sm">
               Mena Regional
             </Button>
           </div>
