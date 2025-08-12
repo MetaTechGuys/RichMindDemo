@@ -17,6 +17,7 @@ import {
   useRef,
   useState,
 } from 'react';
+import { useBoolean } from 'usehooks-ts';
 
 interface IPoint {
   label: string;
@@ -25,23 +26,22 @@ interface IPoint {
   isMain?: boolean;
   slug: keyof typeof MEDIA;
 }
-
 const points: IPoint[] = [
-  { label: 'UK', x: 596, y: 245, isMain: true, slug: 'london' },
-  { label: 'UAE', x: 800, y: 384, isMain: true, slug: 'dubai' },
-  { label: 'zaf', x: 686, y: 599, slug: 'zaf' },
-  { label: 'can', x: 215, y: 229, slug: 'canada' },
-  { label: 'aus', x: 1088, y: 600, slug: 'aus' },
-  { label: 'usa', x: 246, y: 311, slug: 'usa' },
-  { label: 'jpn', x: 1060, y: 329, slug: 'jpn' },
-  { label: 'ind', x: 877, y: 424, slug: 'india' },
-  { label: 'sau', x: 767, y: 399, slug: 'saudi' },
-  { label: 'chn', x: 974, y: 346, slug: 'china' },
-  { label: 'try', x: 718, y: 311, slug: 'try' },
-  { label: 'ita', x: 647, y: 295, slug: 'italy' },
-  { label: 'spa', x: 586, y: 307, slug: 'spain' },
-  { label: 'deu', x: 638, y: 253, slug: 'germany' },
-  { label: 'fra', x: 613, y: 273, slug: 'frence' },
+  { label: 'UK', x: 1051, y: 462, isMain: true, slug: 'london' },
+  { label: 'UAE', x: 1409, y: 707, isMain: true, slug: 'dubai' },
+  { label: 'zaf', x: 1207, y: 1090, slug: 'zaf' },
+  { label: 'can', x: 372, y: 431, slug: 'canada' },
+  { label: 'aus', x: 1919, y: 1094, slug: 'aus' },
+  { label: 'usa', x: 427, y: 578, slug: 'usa' },
+  { label: 'jpn', x: 1871, y: 608, slug: 'jpn' },
+  { label: 'ind', x: 1542, y: 779, slug: 'india' },
+  { label: 'sau', x: 1352, y: 735, slug: 'saudi' },
+  { label: 'chn', x: 1717, y: 641, slug: 'china' },
+  { label: 'try', x: 1262, y: 580, slug: 'try' },
+  { label: 'ita', x: 1140, y: 549, slug: 'italy' },
+  { label: 'spa', x: 1029, y: 571, slug: 'spain' },
+  { label: 'deu', x: 1120, y: 476, slug: 'germany' },
+  { label: 'fra', x: 1077, y: 511, slug: 'frence' },
 ];
 
 const mainBranches = [
@@ -51,6 +51,7 @@ const mainBranches = [
 
 export default function WorldMapSection() {
   const ref = useRef<HTMLDivElement>(null);
+  const showClickMap = useBoolean();
   const inview = useInView(ref, { once: process.env.NODE_ENV === 'production' });
   const videoRef = useRef<HTMLVideoElement>(null);
   const [active, setActive] = useState<(typeof mainBranches)[number][0] | undefined>();
@@ -83,23 +84,28 @@ export default function WorldMapSection() {
           <Lottie
             animationData={animationData}
             className="absolute inset-0 size-full object-contain"
+            onPlay={showClickMap.setTrue}
             loop
           />
           <svg
-            className="absolute inset-0 size-full object-contain opacity-5"
-            viewBox="-294 5 1880 765"
+            className={cn('absolute inset-0 size-full object-contain', {
+              'opacity-0': !showClickMap.value,
+            })}
+            viewBox="0 0 2307 1457"
           >
-            {points.map((p) => (
-              <Point
-                className="z-100"
-                key={p.slug}
-                label={p.label}
-                x={p.x}
-                y={p.y}
-                isMain={p.isMain}
-                onClick={() => setShowMore(p.slug)}
-              />
-            ))}
+            <g transform="matrix(1,0,0,1,12,12)">
+              {points.map((p) => (
+                <Point
+                  className="z-100"
+                  key={p.slug}
+                  label={p.label}
+                  x={p.x}
+                  y={p.y}
+                  isMain={p.isMain}
+                  onClick={() => setShowMore(p.slug)}
+                />
+              ))}
+            </g>
           </svg>
         </div>
       </div>
@@ -174,17 +180,21 @@ const Point = ({ x, y, className, label, onClick, isMain }: PointProps) => {
         cx={x}
         cy={y}
         className={cn(
-          'animate-pulse cursor-pointer',
+          'cursor-pointer opacity-0',
           className,
-          isMain ? 'fill-blue-500/70' : 'fill-blue-300/70',
+          isMain ? 'fill-gold-dark' : 'fill-blue-300/70 opacity-0',
         )}
-        r={isMain ? 15 : 10}
+        r={isMain ? 20 : 10}
       />
       <circle
         data-title={label}
         cx={x}
         cy={y}
-        className={cn('cursor-pointer', className, isMain ? '' : 'fill-blue-300')}
+        className={cn(
+          'cursor-pointer opacity-0',
+          className,
+          isMain ? '' : 'fill-blue-300 opacity-0',
+        )}
         stroke="#290cfc"
         fill="url(#blue-gradient)"
         r={isMain ? 10 : 6}
@@ -211,12 +221,13 @@ const AccordionItem = ({
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ delay }}
+      className="bg-black/10"
     >
       <label
         htmlFor={id}
-        className="flex cursor-pointer items-center justify-between border-b border-white/30 p-3 text-white uppercase"
+        className="text-gold-light border-gold-light/30 flex cursor-pointer items-center justify-between border-b p-3 uppercase"
       >
-        <h4>{title}</h4>
+        <h3 className="text-xl">{title}</h3>
         <input
           name="accardion"
           id={id}
@@ -225,8 +236,8 @@ const AccordionItem = ({
           {...props}
         />
         <div className="relative size-4 transition duration-300">
-          <div className="absolute inset-0 m-auto h-px w-4 bg-white/60" />
-          <div className="icon-target absolute inset-0 m-auto h-4 w-px bg-white/60" />
+          <div className="bg-gold-light/60 absolute inset-0 m-auto h-px w-4" />
+          <div className="icon-target bg-gold-light/60 absolute inset-0 m-auto h-4 w-px" />
         </div>
       </label>
       <AnimatePresence propagate>
@@ -235,7 +246,7 @@ const AccordionItem = ({
             initial={{ height: 0 }}
             animate={{ height: 'auto' }}
             exit={{ height: 0 }}
-            className="content-target h-0 overflow-hidden"
+            className="content-target h-0 overflow-hidden border-b border-white/30"
           >
             {children}
           </motion.div>
@@ -261,7 +272,7 @@ const Accordion = <T extends readonly [string, string]>({
   onClickMore,
 }: AccordionProps<T>) => {
   return inView ? (
-    <div className="w-full pb-48 md:w-1/3 md:pt-48">
+    <div className="min-h-60 w-full md:w-1/3 md:pt-48">
       {items.map(([item, more]) => (
         <AccordionItem
           key={item}

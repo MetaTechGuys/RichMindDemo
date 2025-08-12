@@ -15,7 +15,7 @@ export default function WelcomeNotice() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="font-display as-h1 text-3xl xl:text-5xl 2xl:text-6xl"
+            className="font-display as-h1 bg-linear-(--golded-gradient-2) bg-clip-text text-3xl text-transparent xl:text-5xl 2xl:text-6xl"
           >
             Global reach, local expertise
           </motion.h4>

@@ -20,7 +20,7 @@ export default function Footer({ secondary }: FooterProps) {
       <div className="mx-auto grid grid-cols-1 gap-4 px-4 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:ps-48">
         <div className="flex flex-col gap-3">
           <h4 className="font-display mb-4 text-3xl md:mb-10">Our Headquarters</h4>
-          <div className="2xs:flex-row flex max-w-md flex-col flex-wrap gap-2">
+          <div className="2xs:flex-row flex max-w-[370px] flex-col flex-wrap gap-4">
             <Button variant="primary" className="flex-1 text-sm">
               Corporate
             </Button>

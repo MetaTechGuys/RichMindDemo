@@ -22,11 +22,11 @@ export default function Home() {
         id="top"
         className="flex h-screen items-center justify-center bg-[url(/white-flag-matterial.jpg)] bg-cover bg-blend-hard-light"
       >
-        <div className="flex size-full flex-col items-center justify-end gap-12 py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="flex size-full flex-col items-center justify-end py-8 sm:gap-[calc(20vh_-_60px)]">
           <NavLinks />
           <LogomotionVideo className="pointer-events-none absolute inset-0 size-full object-contain mix-blend-multiply max-sm:-translate-y-10 max-sm:scale-75 max-sm:object-cover" />
           <div className="z-2 h-10">
-            <ScrollInviter className="mt-0 [animation-duration:3000ms] sm:mt-10" />
+            <ScrollInviter className="sm:mt-10x mt-0 [animation-duration:3000ms]" />
           </div>
         </div>
       </RoyalSection2>
@@ -36,7 +36,7 @@ export default function Home() {
       <section id="gallery" className="grid min-h-screen overflow-clip">
         <GallerySection />
       </section>
-      <section id="worldmap" className="grid min-h-screen snap-center">
+      <section id="worldmap" className="grid min-h-screen snap-center border-t-8 border-white">
         <WorldMapSection />
       </section>
       <section id="standards" className="grid min-h-screen snap-center">
@@ -51,7 +51,7 @@ export default function Home() {
       <section className="grid snap-center">
         <NoticeSection innerClassName="p-8">
           <div className="flex flex-col items-center gap-10 px-10 py-40 text-center text-xl">
-            <h4 className="font-display z-4 text-3xl xl:text-5xl 2xl:text-6xl">
+            <h4 className="font-display z-4 bg-linear-(--golded-gradient-2) bg-clip-text text-3xl font-bold text-transparent xl:text-5xl 2xl:text-6xl">
               See Our Latest Work
             </h4>
             <p className="z-4 md:text-xl lg:mx-auto lg:max-w-2/3 2xl:text-3xl">

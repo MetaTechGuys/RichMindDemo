@@ -86,7 +86,7 @@ export default function GallerySection() {
           className="can-hidden-sm md:row-span-2"
         />
         <motion.div
-          style={{ borderRadius }}
+          style={{ borderRadius: hasZoomAnimate ? borderRadius : undefined }}
           className="relative row-span-4 size-full overflow-clip rounded-2xl max-md:col-span-3 md:row-span-2"
         >
           <GalleryVideo

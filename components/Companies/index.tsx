@@ -9,8 +9,8 @@ export default function CompaniesSection() {
   return (
     <div className="size-full max-w-full py-4">
       <div className="size-full overflow-hidden rounded-2xl px-8 py-8 max-sm:w-full md:px-16 lg:px-24 xl:px-32">
-        <div className="z-10 flex flex-1 flex-col gap-5 text-lg">
-          <h4 className="font-display xs:text-4xl mb-5 text-2xl sm:text-6xl">
+        <div className="z-10 flex flex-1 flex-col gap-5 text-sm sm:text-base">
+          <h4 className="font-display xs:text-2xl max-xs:text-center mb-5 bg-linear-(--golded-gradient-2) bg-clip-text text-xl font-bold text-transparent sm:text-4xl">
             RICHMIND Holding&apos;s Companies
           </h4>
           <p className="md:text-xl 2xl:text-2xl">
@@ -41,7 +41,9 @@ interface CompanyItemProps {
 function CompanyItem({ value }: CompanyItemProps) {
   const content = (
     <>
-      <div className="font-display text-center text-4xl font-bold text-white">{value.title}</div>
+      <div className="font-display bg-linear-(--golded-gradient) bg-clip-text text-center text-4xl font-bold text-transparent">
+        {value.title}
+      </div>
     </>
   );
   return (

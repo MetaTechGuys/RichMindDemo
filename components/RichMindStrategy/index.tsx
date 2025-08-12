@@ -13,20 +13,20 @@ export default function RichMindStrategySection() {
     <div className="size-full py-4">
       <div className="2xs:px-8 py-20xs:px-12 flex size-full flex-col justify-center overflow-hidden p-4 py-20 sm:rounded-2xl md:px-16">
         <div className="font-display z-10 flex flex-col gap-5 text-xl">
-          <h4 className="xs:text-5xl sm:text-6x text-3xl">
+          <h4 className="xs:text-5xl sm:text-6x max-xs:text-center bg-linear-(--golded-gradient-2) bg-clip-text text-3xl font-bold text-transparent">
             The Three Pillars of RichMind Strategy
           </h4>
         </div>
         <div className="mt-15 flex w-full flex-col gap-20 lg:mt-15 xl:flex-row xl:gap-8 2xl:justify-around [&>div]:w-full">
           <Card icon={innovation} title="Innovation">
-            <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
+            <p className="xl:min-h-16">
               Leading the charge in developing new technologies and methodologies
             </p>
-            <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
+            <p className="xl:min-h-16">
               We empower our teams to deliver high quality results with the most advanced resources
               available.
             </p>
-            <ul className="custom-checklist leading-10 xl:text-xl 2xl:text-2xl">
+            <ul className="custom-checklist leading-10">
               <li>Advancing with future tech.</li>
               <li>Utilizing cutting-edge tools.</li>
               <li>Progress through constant improvement.</li>
@@ -34,14 +34,14 @@ export default function RichMindStrategySection() {
             </ul>
           </Card>
           <Card icon={collaboration} title="Collaboration">
-            <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
+            <p className="xl:min-h-16">
               Real collaboration results in a stronger, more cohesive organization
             </p>
-            <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
+            <p className="xl:min-h-16">
               Collaboration is vital for achieving long lasting achievements. We value individual
               contributions.
             </p>
-            <ul className="custom-checklist leading-10 xl:text-xl 2xl:text-2xl">
+            <ul className="custom-checklist leading-10">
               <li>Succeeding together.</li>
               <li>Building strong partnerships.</li>
               <li>Joint efforts yield results.</li>
@@ -49,14 +49,14 @@ export default function RichMindStrategySection() {
             </ul>
           </Card>
           <Card icon={sustainability} title="Sustainability">
-            <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
+            <p className="xl:min-h-16">
               We belive that long-termsuccess is rooted in sustainable practices
             </p>
-            <p className="xl:min-h-16 xl:text-xl 2xl:text-2xl">
+            <p className="xl:min-h-16">
               Every project at RICHMIND is approached with a focus on eco-friendly practices and
               sustainability.
             </p>
-            <ul className="custom-checklist leading-10 xl:text-xl 2xl:text-2xl">
+            <ul className="custom-checklist leading-10">
               <li>Devoted to the environment.</li>
               <li>Building strong partnerships.</li>
               <li>Investing in a green future.</li>
@@ -86,7 +86,9 @@ function Card({ title, children, className, icon }: PropsWithChildren<Props>) {
       <div className="flex justify-center">
         <Image src={icon ?? innovation} alt={title} />
       </div>
-      <h5 className="font-display xs:text-3xl text-center text-2xl sm:text-4xl">{title}</h5>
+      <h5 className="font-display xs:text-3xl mb-8 text-center text-2xl font-bold sm:text-4xl">
+        {title}
+      </h5>
       {children}
       <div className="mt-auto flex cursor-pointer justify-center">
         <Image src={enter} alt={title} />

@@ -9,7 +9,7 @@ export default function NavLinks() {
   return (
     <nav
       key="static"
-      className="font-display text-gold-light z-2 grid gap-2 font-bold max-sm:text-2xl sm:grid-cols-4 sm:gap-4 md:gap-8 md:text-2xl"
+      className="font-display text-gold-light xs:gap-2 z-2 grid font-bold max-sm:hidden max-sm:text-2xl sm:grid-cols-4 sm:gap-4 md:gap-8 md:text-2xl"
     >
       {anchors.map((link, i) => (
         <Link key={i} className="contents" href={link.href + (link.hash ?? '')}>
