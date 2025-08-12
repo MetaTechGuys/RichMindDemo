@@ -194,8 +194,6 @@ const GalleryVideo = ({
       ref={ref}
       muted
       autoPlay={autoPlay}
-      data-inView={inView}
-      data-autoplay={autoPlay}
       loop
       preload="none"
       className={cn('size-full rounded-2xl object-cover', className)}

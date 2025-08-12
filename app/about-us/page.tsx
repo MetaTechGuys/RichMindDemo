@@ -32,7 +32,7 @@ export default function AboutUsPage() {
       <div className="contents text-5xl sm:text-7xl lg:text-9xl">
         <div className="font-display relative ms-16 mt-16 grid w-min snap-end grid-cols-1 grid-rows-1 text-center text-nowrap capitalize">
           <h2 className="text-stroke opacity-75">About Us</h2>
-          <div className="absolute bottom-0 left-0 origin-bottom-right -translate-x-2 scale-90">
+          <div className="absolute bottom-0 left-0 origin-bottom-right -translate-x-2 scale-90 text-white">
             About Us
           </div>
         </div>

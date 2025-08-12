@@ -12,7 +12,6 @@ export default function WebsiteLayout({ children, secondary }: PropsWithChildren
     <>
       <header className="contents">
         <ResponsiveHelper />
-        {/* <Navbar hideLogo={secondary} /> */}
       </header>
       {children}
       <footer className="relative snap-end">

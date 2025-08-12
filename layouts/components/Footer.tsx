@@ -1,18 +1,16 @@
 'use client';
 import { Button, Icon } from '@/atoms';
 import { cn } from '@/utils/jsx-tools';
+import { motion } from 'motion/react';
 
-import { CSSProperties } from 'react';
+import { CSSProperties, useState } from 'react';
 
 interface FooterProps {
   secondary?: boolean;
 }
 
 export default function Footer({ secondary }: FooterProps) {
-  // const [ref, springs] = useInView(() => ({
-  //   from: { zoom: 2, opacity: 0 },
-  //   to: { zoom: 1, opacity: 1 },
-  // }));
+  const [showSubmit, setShowSubmit] = useState(false);
   return (
     <div
       className={cn('overflow-x-hidden bg-white', secondary ? 'pt-12' : 'pt-24')}
@@ -101,7 +99,7 @@ export default function Footer({ secondary }: FooterProps) {
           <p className="w-xs">
             Stay updated with the latest news and developments from RICHMIND Holding.
           </p>
-          <div className="mt-auto flex flex-col items-start gap-4">
+          <div className="relative mt-auto flex flex-col items-start gap-4 overflow-clip">
             <label htmlFor="footer-newslater">Your Email</label>
             <div className="flex items-center gap-2">
               <Icon name="email" className="size-7" />
@@ -111,9 +109,33 @@ export default function Footer({ secondary }: FooterProps) {
                 className="border-0 border-b-2 border-black"
               />
             </div>
-            <Button variant="primary" className="text-sm">
+            <Button
+              variant="primary"
+              className="text-sm"
+              onClick={() => {
+                setShowSubmit(true);
+              }}
+            >
               Submit
             </Button>
+            {showSubmit ? (
+              <motion.div
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                transition={{ ease: 'anticipate' }}
+                className="absolute z-10 flex size-full items-center justify-start bg-white"
+              >
+                <div className="text-gold-darker">
+                  <div className="font-display text-xl font-bold">Thank you</div>
+                  <p>for subscribing to our newsletter!</p>
+                  <p>
+                    <small>
+                      We’re thrilled to have you on board and look forward to keeping you updated.
+                    </small>
+                  </p>
+                </div>
+              </motion.div>
+            ) : null}
           </div>
         </div>
       </div>

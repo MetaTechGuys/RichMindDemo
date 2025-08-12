@@ -29,7 +29,7 @@ interface IPoint {
 const points: IPoint[] = [
   { label: 'UK', x: 596, y: 245, isMain: true, slug: 'london' },
   { label: 'UAE', x: 800, y: 384, isMain: true, slug: 'dubai' },
-  { label: 'zaf', x: 686, y: 599, slug: 'dubai' },
+  { label: 'zaf', x: 686, y: 599, slug: 'zaf' },
   { label: 'can', x: 215, y: 229, slug: 'canada' },
   { label: 'aus', x: 1088, y: 600, slug: 'aus' },
   { label: 'usa', x: 246, y: 311, slug: 'usa' },

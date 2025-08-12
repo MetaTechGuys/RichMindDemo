@@ -56,11 +56,15 @@ export default function Home() {
             full
             className="flex flex-col items-center gap-10 px-10 py-40 text-center text-xl"
           >
-            <h4 className="font-display text-3xl xl:text-5xl 2xl:text-6xl">See Our Latest Work</h4>
-            <p className="md:text-xl lg:mx-auto lg:max-w-2/3 2xl:text-3xl">
+            <h4 className="font-display z-4 text-3xl xl:text-5xl 2xl:text-6xl">
+              See Our Latest Work
+            </h4>
+            <p className="z-4 md:text-xl lg:mx-auto lg:max-w-2/3 2xl:text-3xl">
               Explore how we’ve transformed ideas into impactful designs.
             </p>
-            <Button variant="primary">View Portofolio</Button>
+            <Button className="z-4" variant="primary">
+              View Portofolio
+            </Button>
           </RoyalSection>
         </NoticeSection>
       </section>

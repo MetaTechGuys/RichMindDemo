@@ -29,15 +29,20 @@ const links: LinkData[] = [
   },
 ];
 
-export default function Navbar({ className }: ComponentProps<'nav'>) {
+export default function Navbar({
+  className,
+  secondary,
+}: ComponentProps<'nav'> & { secondary?: boolean }) {
   const [showFixedNav, setFixedNav] = useState(false);
   const { scrollY } = useScroll({ axis: 'y' });
-  const showFixedNavMotion = useTransform(() => scrollY.get() >= window.innerHeight * 0.9);
+  const showFixedNavMotion = useTransform(
+    () => typeof window !== 'undefined' && scrollY.get() >= window.innerHeight * 0.9,
+  );
   useMotionValueEvent(showFixedNavMotion, 'change', setFixedNav);
 
   return (
     <AnimatePresence>
-      {showFixedNav ? (
+      {showFixedNav || secondary ? (
         <motion.nav
           key="fixed"
           initial={{ y: -50 }}
@@ -58,19 +63,21 @@ export default function Navbar({ className }: ComponentProps<'nav'>) {
           </div>
         </motion.nav>
       ) : null}
-      <motion.nav key="static" className={className}>
-        {links.map((link, i) => (
-          <Link key={i} className="contents" href={link.href}>
-            <motion.div
-              className="p-2 text-center"
-              initial={{ opacity: 0, y: 150 }}
-              animate={{ opacity: 1, y: 0, transition: { delay: 2.0 + i * 0.2 } }}
-            >
-              <motion.div whileHover={{ y: -5 }}>{link.title}</motion.div>
-            </motion.div>
-          </Link>
-        ))}
-      </motion.nav>
+      {!secondary ? (
+        <motion.nav key="static" className={className}>
+          {links.map((link, i) => (
+            <Link key={i} className="contents" href={link.href}>
+              <motion.div
+                className="p-2 text-center"
+                initial={{ opacity: 0, y: 150 }}
+                animate={{ opacity: 1, y: 0, transition: { delay: 2.0 + i * 0.2 } }}
+              >
+                <motion.div whileHover={{ y: -5 }}>{link.title}</motion.div>
+              </motion.div>
+            </Link>
+          ))}
+        </motion.nav>
+      ) : null}
     </AnimatePresence>
   );
 }

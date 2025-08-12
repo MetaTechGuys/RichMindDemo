@@ -49,6 +49,7 @@ export const MEDIA = {
   aus: CDN_BASE + '/video/Saudi.webm',
   jpn: CDN_BASE + '/video/Saudi.webm',
   try: CDN_BASE + '/video/Saudi.webm',
+  zaf: CDN_BASE + '/video/Saudi.webm',
 } as const;
 
 export const POSTERS = {
