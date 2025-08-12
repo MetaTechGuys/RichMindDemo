@@ -1,7 +1,7 @@
 {
   "name": "richmind",
-  "version": "0.9.3",
-  "version.stamp": 1755003763432,
+  "version": "0.9.4",
+  "version.stamp": 1755003814497,
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -1,8 +1,9 @@
 'use client';
-import { Button } from '@/atoms';
 import { companies, CompanyData } from '@/data';
 import { cn } from '@/utils/jsx-tools';
 import Image from 'next/image';
+import { motion } from 'motion/react';
+import Link from 'next/link';
 
 export default function CompaniesSection() {
   return (
@@ -23,9 +24,9 @@ export default function CompaniesSection() {
         </div>
         <div className="container mx-auto mt-24 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {companies.map((c) => (
-            <CompanyItem key={c.slug} value={c} />
-            // <Link key={c.slug} href={`/c/${c.slug}`} className="contents">
-            // </Link>
+            <Link key={c.slug} href={`/c/${c.slug}`} className="contents">
+              <CompanyItem key={c.slug} value={c} />
+            </Link>
           ))}
         </div>
       </div>
@@ -38,8 +39,13 @@ interface CompanyItemProps {
 }
 
 function CompanyItem({ value }: CompanyItemProps) {
+  const content = (
+    <>
+      <div className="font-display text-center text-4xl font-bold text-white">{value.title}</div>
+    </>
+  );
   return (
-    <div className="relative overflow-hidden rounded-3xl border-3 border-white transition-transform duration-700 will-change-transform perspective-dramatic hover:scale-105 hover:[&>img]:translate-z-2">
+    <div className="relative cursor-pointer overflow-hidden rounded-3xl border-3 border-white transition-transform duration-700 will-change-transform perspective-dramatic hover:scale-105 hover:[&>img]:translate-z-2">
       <Image
         src={value.image}
         alt={value.title}
@@ -48,13 +54,23 @@ function CompanyItem({ value }: CompanyItemProps) {
           value.imgClassName,
         )}
       />
-      <Button
-        className="absolute! right-0 bottom-3 left-0 z-10 mx-auto max-w-min min-w-1/2"
-        variant="glass"
-        innerClassName="text-center!"
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ amount: 'all' }}
+        transition={{ duration: 0.7 }}
+        className="absolute inset-0 flex items-center justify-center rounded-3xl bg-black/60 p-8 pointer-fine:hidden"
       >
-        {value.title}
-      </Button>
+        {content}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileHover={{ opacity: 1 }}
+        transition={{ duration: 0.7 }}
+        className="absolute inset-0 flex items-center justify-center rounded-3xl bg-black/60 p-8 pointer-coarse:hidden"
+      >
+        {content}
+      </motion.div>
     </div>
   );
 }
