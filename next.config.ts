@@ -1,7 +1,17 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import createMDX from '@next/mdx';
+import remarkFrontmatter from 'remark-frontmatter';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.(md|mdx)$/,
+  options: {
+    remarkPlugins: [remarkFrontmatter],
+  },
+});
+
+// Merge MDX config with Next.js config
+export default withMDX(nextConfig);

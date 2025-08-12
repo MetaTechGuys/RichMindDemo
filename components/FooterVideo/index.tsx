@@ -29,7 +29,7 @@ export default function FooterVideoSection() {
   return (
     <div className="group relative size-full overflow-clip">
       <video
-        src={MEDIA.aboutUsFooter}
+        src={MEDIA.richmindIntro}
         poster={POSTERS.richmindCorporate}
         className="max-h-screen w-full object-cover"
         controls
@@ -37,8 +37,8 @@ export default function FooterVideoSection() {
         onPlay={handlePlay}
         onPause={handlePause}
       >
-        <source src={MEDIA.aboutUsFooter} type="video/webm" />
-        <source src={MEDIA.aboutUsFooterFallback1} type="video/webm" />
+        <source src={MEDIA.richmindIntro} type="video/webm" />
+        <source src={MEDIA.richmindIntroFallback1} type="video/webm" />
         <audio loop id="hero-audio" ref={audioRef}>
           <source src={MEDIA.heroAudio} type="audio/mpeg" />
         </audio>
@@ -50,7 +50,7 @@ export default function FooterVideoSection() {
             transition={{ duration: 2 }}
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            src={MEDIA.aboutUsFooterDemo}
+            src={MEDIA.richmindIntroDemo}
             autoPlay
             muted
             loop

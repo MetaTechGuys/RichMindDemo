@@ -5,8 +5,8 @@ import { MEDIA, POSTERS } from '@/utils/constants';
 export default function GlobalStandardsSection() {
   return (
     <div className="size-full py-4">
-      <div className="relative flex size-full items-center overflow-hidden rounded-2xl bg-black px-8 py-8 md:px-16 lg:px-24 xl:px-32">
-        <div className="z-10 flex max-w-2xl flex-1 flex-col gap-5 text-lg text-white">
+      <div className="relative flex size-full items-center overflow-hidden rounded-2xl px-8 py-8 md:px-16 lg:px-24 xl:px-32">
+        <div className="z-10 flex max-w-2xl flex-1 flex-col gap-5 text-lg">
           <h4 className="font-display xs:text-4xl mb-5 text-2xl sm:text-6xl">
             High Standards in Global Investments
           </h4>
@@ -30,7 +30,7 @@ export default function GlobalStandardsSection() {
             autoPlay
             loop
             muted
-            className="size-full object-cover object-left"
+            className="size-full object-cover object-left mix-blend-exclusion hue-rotate-171"
             src={MEDIA.globe}
             poster={POSTERS.purpleglobe}
           />

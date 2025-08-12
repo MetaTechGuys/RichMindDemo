@@ -4,7 +4,15 @@ import { Button, Icon } from '@/atoms';
 import { MEDIA, POSTERS } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
 import { motion, useInView, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
-import { ComponentProps, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import {
+  ComponentProps,
+  RefObject,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import { useBoolean, useCountdown } from 'usehooks-ts';
 
 const tailLength = 3000;
@@ -13,12 +21,24 @@ const forceViewTime = process.env.NODE_ENV === 'production' ? 10 : 3;
 export default function GallerySection() {
   const ref = useRef<HTMLDivElement>(null);
   const vidRef = useRef<HTMLVideoElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const { value: isForced, setFalse: skipVideo, setTrue: forceWatch } = useBoolean(false);
   const { value: isLock, setFalse: lockAnimation } = useBoolean(false);
   const { value: isFullScreen, toggle: toggleIsFullscreen } = useBoolean(false);
   const [count, { startCountdown }] = useCountdown({
     countStart: forceViewTime,
   });
+
+  const handlePlay = useCallback(() => {
+    if (vidRef.current && audioRef.current) {
+      audioRef.current.currentTime = vidRef.current.currentTime;
+      audioRef.current?.play();
+    }
+  }, []);
+
+  const handlePause = useCallback(() => {
+    audioRef.current?.pause();
+  }, []);
 
   const [top, setTop] = useState(1000);
   const [scalefactor, setScalefactor] = useState(2);
@@ -95,17 +115,22 @@ export default function GallerySection() {
           <GalleryVideo
             id="main-gallery-video"
             ref={vidRef}
-            muted={false}
             className={cn(
               'size-full',
               isFullScreen ? 'object-contain md:object-cover' : 'object-cover',
             )}
-            poster={POSTERS.galleryMain}
+            poster={POSTERS.richmindCorporate}
             controls={!hasZoomAnimate}
+            onPlay={handlePlay}
+            onPause={handlePause}
             playsInline
           >
-            <source src={MEDIA.galleryMain} type="video/webm" />
-            <source src={MEDIA.galleryMainFallback1} type="video/webm" />
+            <source src={MEDIA.richmindIntro} type="video/webm" />
+            <source src={MEDIA.richmindIntroFallback1} type="video/webm" />
+
+            <audio loop id="hero-audio" ref={audioRef}>
+              <source src={MEDIA.heroAudio} type="audio/mpeg" />
+            </audio>
           </GalleryVideo>
           {isForced ? (
             <Button
@@ -157,22 +182,27 @@ const GalleryVideo = ({
   children,
   autoPlay = true,
   src,
+  ref: refEx,
   ...props
-}: ComponentProps<'video'> & Pick<ComponentProps<'source'>, 'src'>) => {
-  const ref = useRef<HTMLVideoElement>(null);
+}: ComponentProps<'video'> &
+  Pick<ComponentProps<'source'>, 'src'> & { ref?: RefObject<HTMLVideoElement | null> }) => {
+  const refIn = useRef<HTMLVideoElement>(null);
+  const ref = refEx ?? refIn;
   const inView = useInView(ref);
   return (
     <video
       ref={ref}
       muted
-      autoPlay={autoPlay && inView}
+      autoPlay={autoPlay}
+      data-inView={inView}
+      data-autoplay={autoPlay}
       loop
       preload="none"
       className={cn('size-full rounded-2xl object-cover', className)}
       {...props}
     >
       {src && inView ? <source src={src} /> : null}
-      {children}
+      {inView ? children : undefined}
     </video>
   );
 };

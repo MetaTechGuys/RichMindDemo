@@ -1,8 +1,6 @@
 import { PropsWithChildren } from 'react';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
 import Copyright from './components/Copyright';
-import { MEDIA, POSTERS } from '@/utils/constants';
+import Footer from './components/Footer';
 
 interface LayoutProps {
   secondary?: true;
@@ -13,21 +11,11 @@ export default function WebsiteLayout({ children, secondary }: PropsWithChildren
     <>
       <header className="contents">
         <ResponsiveHelper />
-        <Navbar hideLogo={secondary} />
+        {/* <Navbar hideLogo={secondary} /> */}
       </header>
       {children}
       <footer className="relative snap-end">
         <Footer secondary={secondary} />
-        {secondary ? null : (
-          <video
-            src={MEDIA.blackBackground}
-            className="fixed inset-0 -z-[1] h-screen w-screen object-cover"
-            poster={POSTERS.darkPurpleDot}
-            autoPlay
-            loop
-            muted
-          ></video>
-        )}
         <Copyright />
       </footer>
     </>

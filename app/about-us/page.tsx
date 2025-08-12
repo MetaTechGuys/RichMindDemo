@@ -4,7 +4,6 @@ import image3 from '@/assets/img/about-us/about-us-3.jpg';
 import image4l from '@/assets/img/about-us/about-us-4l.jpg';
 import image4r from '@/assets/img/about-us/about-us-4r.jpg';
 import { Parallax } from '@/atoms';
-import FooterVideoSection from '@/components/FooterVideo';
 import { MEDIA } from '@/utils/constants';
 import { motion } from 'motion/react';
 import Image from 'next/image';
@@ -215,9 +214,9 @@ export default function AboutUsPage() {
           </motion.div>
         </div>
       </section>
-      <section className="relative snap-center bg-black">
+      {/* <section className="relative snap-center bg-black">
         <FooterVideoSection />
-      </section>
+      </section> */}
     </main>
   );
 }

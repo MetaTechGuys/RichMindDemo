@@ -13,3 +13,7 @@
   --font-display: var(--google-font-serif);
   --font-body: var(--google-font-sans);
 }
+
+@utility glass {
+  @apply backdrop-filter backdrop-blur-sm
+}

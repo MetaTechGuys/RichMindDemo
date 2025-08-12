@@ -61,7 +61,7 @@ export default function Navbar({ hideLogo }: NavbarProps) {
           }}
           innerClassName="p-0!"
         >
-          <Icon name="align-right" className="size-full" />
+          <Icon name="align-right" className="text-gold size-full" />
         </Button>
       </nav>
       <AnimatePresence>
@@ -71,10 +71,11 @@ export default function Navbar({ hideLogo }: NavbarProps) {
               setOpen(false);
             }}
             ref={ref}
-            initial={{ height: 0 }}
-            animate={{ height: 400 }}
-            exit={{ height: 0 }}
-            className="bg-opacity-10 font-display fixed top-0 z-30 h-100 w-screen overflow-hidden bg-black/50 bg-clip-padding p-16 capitalize shadow backdrop-blur-sm backdrop-filter md:p-24"
+            initial={{ y: -400 }}
+            animate={{ y: 0 }}
+            exit={{ y: -400 }}
+            transition={{ ease: 'easeInOut' }}
+            className="glass font-display bg-gold-light/30 fixed top-0 z-30 h-100 w-screen overflow-hidden p-16 capitalize shadow-2xl md:p-24"
           >
             <div className="scroll-lock"></div>
             <div className="flex flex-col gap-4 text-xl md:col-start-2">
@@ -84,11 +85,6 @@ export default function Navbar({ hideLogo }: NavbarProps) {
               <Link className="lg:text-2xl 2xl:text-4xl" href="/about-us">
                 About Us
               </Link>
-              {/* <a href="#">Our Work</a> */}
-              {/* <a href="#">Our Agency</a> */}
-              {/* <a href="#">Services</a> */}
-              {/* <a href="#">Insights</a> */}
-              {/* <a href="#">SEO Checker</a> */}
               <a
                 className="lg:text-2xl 2xl:text-4xl"
                 href="#"

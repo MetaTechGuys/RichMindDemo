@@ -17,7 +17,7 @@ export default function Footer({ secondary }: FooterProps) {
   // }));
   return (
     <div
-      className={cn('overflow-x-hidden bg-black', secondary ? 'pt-12' : 'pt-24')}
+      className={cn('overflow-x-hidden bg-white', secondary ? 'pt-12' : 'pt-24')}
       // style={secondary ? secFooterStyle : footerStyle}
     >
       <div className="mx-auto grid grid-cols-1 gap-4 px-4 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:ps-48">

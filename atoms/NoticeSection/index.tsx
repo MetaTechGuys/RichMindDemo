@@ -1,25 +1,31 @@
 'use client';
 
-import { MEDIA, POSTERS } from '@/utils/constants';
 import { cn } from '@/utils/jsx-tools';
-import { useInView } from 'motion/react';
-import { ComponentProps, PropsWithChildren, useRef } from 'react';
+import { ComponentProps, PropsWithChildren } from 'react';
 
 export function NoticeSection({
   children,
   className,
   neon,
-  eager,
-}: Readonly<PropsWithChildren<ComponentProps<'div'> & { neon?: boolean; eager?: boolean }>>) {
-  const ref = useRef<HTMLVideoElement>(null);
-  const inView = useInView(ref);
+  innerClassName,
+  // eager,
+}: Readonly<
+  PropsWithChildren<
+    ComponentProps<'div'> & { neon?: boolean; eager?: boolean; innerClassName?: string }
+  >
+>) {
+  // const ref = useRef<HTMLVideoElement>(null);
+  // const inView = useInView(ref);
+
   return (
     <div className={cn('size-full py-8 sm:py-12 md:py-16 lg:py-20', className)}>
-      <div className={cn('relative overflow-hidden rounded-2xl', { 'neon-box': neon })}>
+      <div
+        className={cn('relative overflow-hidden rounded-2xl', { 'neon-box': neon }, innerClassName)}
+      >
         <div className="relative z-10">{children}</div>
-        <video
+        {/* <video
           ref={ref}
-          className="absolute inset-0 z-0 size-full object-cover"
+          className="absolute inset-0 z-0 size-full object-cover mix-blend-exclusion hue-rotate-171"
           poster={POSTERS.black}
           muted
           autoPlay
@@ -27,7 +33,7 @@ export function NoticeSection({
           preload={eager ? 'auto' : 'none'}
         >
           {inView ? <source src={MEDIA.black} /> : null}
-        </video>
+        </video> */}
       </div>
     </div>
   );

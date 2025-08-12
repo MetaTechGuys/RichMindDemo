@@ -1,26 +1,14 @@
 'use client';
-import investment from '@/assets/img/companies/box1-investment.webp';
-import virtualAssets from '@/assets/img/companies/box2-virtual-assets-2.webp';
-import media from '@/assets/img/companies/box3-media-2.webp';
-import properties from '@/assets/img/companies/box4-properties-3.webp';
-import projectManager from '@/assets/img/companies/box5-project-manager-2.webp';
-import development from '@/assets/img/companies/box6-development-2.webp';
-import holiday from '@/assets/img/companies/box7-holiday.webp';
-import cosmomed from '@/assets/img/companies/box8-cosmomed.webp';
-import vipClub from '@/assets/img/companies/box9-vip-club.webp';
-import sport from '@/assets/img/companies/box10-sport-3.webp';
-import academy from '@/assets/img/companies/box11-academy-2.webp';
-import trading from '@/assets/img/companies/box12-trading.webp';
-
-import Image, { StaticImageData } from 'next/image';
 import { Button } from '@/atoms';
+import { companies, CompanyData } from '@/data';
 import { cn } from '@/utils/jsx-tools';
+import Image from 'next/image';
 
 export default function CompaniesSection() {
   return (
     <div className="size-full max-w-full py-4">
-      <div className="size-full overflow-hidden rounded-2xl bg-black px-8 py-8 max-sm:w-full md:px-16 lg:px-24 xl:px-32">
-        <div className="z-10 flex flex-1 flex-col gap-5 text-lg text-white">
+      <div className="size-full overflow-hidden rounded-2xl px-8 py-8 max-sm:w-full md:px-16 lg:px-24 xl:px-32">
+        <div className="z-10 flex flex-1 flex-col gap-5 text-lg">
           <h4 className="font-display xs:text-4xl mb-5 text-2xl sm:text-6xl">
             RICHMIND Holding&apos;s Companies
           </h4>
@@ -35,18 +23,14 @@ export default function CompaniesSection() {
         </div>
         <div className="container mx-auto mt-24 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {companies.map((c) => (
-            <CompanyItem value={c} key={c.title} />
+            <CompanyItem key={c.slug} value={c} />
+            // <Link key={c.slug} href={`/c/${c.slug}`} className="contents">
+            // </Link>
           ))}
         </div>
       </div>
     </div>
   );
-}
-
-interface CompanyData {
-  title: string;
-  image: StaticImageData;
-  imgClassName?: string;
 }
 
 interface CompanyItemProps {
@@ -55,7 +39,7 @@ interface CompanyItemProps {
 
 function CompanyItem({ value }: CompanyItemProps) {
   return (
-    <div className="relative overflow-hidden rounded-3xl border-3 border-black transition-transform duration-700 will-change-transform perspective-dramatic hover:scale-105 hover:[&>img]:translate-z-2">
+    <div className="relative overflow-hidden rounded-3xl border-3 border-white transition-transform duration-700 will-change-transform perspective-dramatic hover:scale-105 hover:[&>img]:translate-z-2">
       <Image
         src={value.image}
         alt={value.title}
@@ -74,21 +58,3 @@ function CompanyItem({ value }: CompanyItemProps) {
     </div>
   );
 }
-
-const companies: CompanyData[] = [
-  {
-    title: 'investment',
-    image: investment,
-  },
-  { image: virtualAssets, title: 'Virtual Assets' },
-  { image: media, title: 'media' },
-  { image: properties, title: 'properties' },
-  { image: projectManager, title: 'project Manager' },
-  { image: development, title: 'development' },
-  { image: holiday, title: 'holiday' },
-  { image: cosmomed, title: 'cosmomed' },
-  { image: vipClub, title: 'vip Club' },
-  { image: sport, title: 'sport' },
-  { image: academy, title: 'academy', imgClassName: 'object-left' },
-  { image: trading, title: 'trading' },
-];
