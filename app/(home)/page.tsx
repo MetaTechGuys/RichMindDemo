@@ -10,6 +10,7 @@ import LogomotionVideo from '@/components/Logomotion';
 import WelcomeNotice from '@/components/notices/WelcomeNotice';
 import RichMindStrategySection from '@/components/RichMindStrategy';
 import WorldMapSection from '@/components/WorldMap';
+import NavLinks from '@/layouts/components/NavLinks';
 // import NavLinks from '@/layouts/components/NavLinks';
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
         className="flex h-screen items-center justify-center bg-[url(/white-flag-matterial.jpg)] bg-cover bg-blend-hard-light"
       >
         <div className="flex size-full flex-col items-center justify-end py-8 sm:gap-[calc(20vh_-_60px)]">
-          {/* <NavLinks /> */}
+          <NavLinks />
           <LogomotionVideo className="pointer-events-none absolute inset-0 size-full object-contain mix-blend-multiply max-sm:-translate-y-10 max-sm:scale-75 max-sm:object-cover" />
           <div className="z-2 h-10">
             <ScrollInviter className="sm:mt-10x mt-0 [animation-duration:3000ms]" />
