@@ -16,9 +16,9 @@ export default function NavLinks() {
           <motion.div
             className="p-2 text-center"
             initial={{ opacity: 0, y: 150 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: i * 0.2 } }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 1 + i * 0.2 } }}
           >
-            <motion.div whileHover={{ y: -5 }}>{link.title}</motion.div>
+            <motion.div whileHover={{ y: -3 }}>{link.title}</motion.div>
           </motion.div>
         </Link>
       ))}

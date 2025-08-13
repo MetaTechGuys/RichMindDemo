@@ -7,6 +7,7 @@ export const CDN_BASE = process.env.NODE_ENV === 'production' ? jsDeliverCDN : n
 
 export const MEDIA = {
   logomotion: CDN_BASE + '/video/logomotion.webm',
+  logomotionFallback1: CDN_BASE + '/video/logomotion.webm',
   heroAudio: CDN_BASE + '/audio/richmind-corporate-video-3-lq.mp3',
   globe: CDN_BASE + '/video/0101.webm',
   RAK: CDN_BASE + '/video/richmind-corporate-video-3-lq.webm',
@@ -53,6 +54,7 @@ export const MEDIA = {
 } as const;
 
 export const POSTERS = {
+  logomotion: '/posters/logomotion.webp',
   richmindCorporate: '/posters/richmind-corporate.webp',
   siteBanner: '/posters/site-banner.webp',
   RAK: '/posters/gallery-main.webp',
