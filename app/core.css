@@ -17,3 +17,7 @@
 @utility glass {
   @apply backdrop-filter backdrop-blur-sm
 }
+
+@utility card {
+  @apply bg-white shadow-lg rounded-xs p-2 overflow-clip border border-gray-100
+}

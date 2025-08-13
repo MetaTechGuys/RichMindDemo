@@ -1,7 +1,7 @@
 {
   "name": "richmind",
-  "version": "0.9.12",
-  "version.stamp": 1755011917885,
+  "version": "0.9.13",
+  "version.stamp": 1755090655867,
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -21,6 +21,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icomoon": "^2.6.1",
+    "react-photo-view": "^1.2.7",
     "remark-frontmatter": "^5.0.0",
     "swiper": "^11.2.8",
     "tailwind-merge": "^3.3.0",

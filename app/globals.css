@@ -1,8 +1,7 @@
 :root {
   --golded-gradient: 320deg, oklab(0.54 0.02 0.08), oklab(0.6 0.01 0.08), oklab(0.74 0.01 0.08), oklab(0.49 0.02 0.06);
   --golded-gradient-2: 355deg, oklab(0.54 0.02 0.08), oklab(0.6 0.01 0.08), oklab(0.74 0.01 0.08), oklab(0.49 0.02 0.06), oklab(0.54 0.02 0.08), oklab(0.6 0.01 0.08), oklab(0.74 0.01 0.08), oklab(0.49 0.02 0.06);
-  
-  --golded-gulf: 180deg, #191970, #7eb5d3;
+  --midnight-blue: 180deg, #191970, #7eb5d3;
 }
 html {
   overflow-x: hidden;

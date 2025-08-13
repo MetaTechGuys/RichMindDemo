@@ -1,8 +1,116 @@
-export { default as image } from '@/assets/img/companies/box-7-holiday.webp'
+export { default as image } from '@/assets/img/companies/7-holiday/box.webp';
 
-export const title = 'Holiday'
-export const slug = 'holiday'
-export const link = 'https://richmindholding.com/'
+export { default as cover } from '@/assets/img/companies/7-holiday/cover.webp';
 
-# {title}
-demo content here
+import card1 from '@/assets/img/companies/7-holiday/gallery (1).webp';
+import card2 from '@/assets/img/companies/7-holiday/gallery (2).webp';
+import card3 from '@/assets/img/companies/7-holiday/gallery (3).webp';
+import card4 from '@/assets/img/companies/7-holiday/gallery (4).webp';
+import card5 from '@/assets/img/companies/7-holiday/gallery (5).webp';
+import card6 from '@/assets/img/companies/7-holiday/gallery (6).webp';
+import { PhotoView } from '@/components/PhotoViewer';
+import Image from 'next/image';
+
+export const label = 'Holiday';
+export const slug = 'holiday';
+export const link = 'https://richmindholding.com/';
+export const layout = 'design1';
+export const title = 'Rich Mind Holiday - An Experience Beyond Travel';
+
+<div className="grid grid-cols-3 lg:grid-cols-4 gap-4">
+  <h2 className="card col-span-full text-center font-bold py-4 m-0! ">{title}</h2>
+  <div className="card space-y-4 p-4 col-span-3 row-span-3">
+    <div className="flex flex-col sm:flex-row gap-4">
+      <div className="aspect-video flex-1">
+        <PhotoView {...card1}>
+          <Image src={card1} alt={title} className="m-0! size-full object-cover" />
+        </PhotoView>
+      </div>
+      <div className="flex-3">
+        <p>
+          At Rich Mind, we believe that travel is not just a leisure activity but a
+          necessity for the growth and expansion of the human mind. The encounter with
+          different cultures, lifestyles, and perspectives is one of humanity’s greatest
+          gifts, and we proudly offer this opportunity to our clients.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex flex-col sm:flex-row gap-4">
+      <div className="aspect-video flex-1">
+        <PhotoView {...card5}>
+          <Image src={card5} alt={title} className="m-0! size-full object-cover" />
+        </PhotoView>
+      </div>
+      <div className="flex-3">
+        <p>
+          Our tourism activities span across four continents, and our goal is to ensure that
+          travelers have the richest and most unforgettable experience during their
+          journeys. Our Services for Travelers
+        </p>
+      </div>
+    </div>
+
+    <div className="flex flex-col sm:flex-row gap-4">
+      <div className="aspect-video flex-1">
+        <PhotoView {...card6}>
+          <Image src={card6} alt={title} className="m-0! size-full object-cover" />
+        </PhotoView>
+      </div>
+      <div className="flex-3">
+        <h3>Individual Travel Services</h3>
+        <p>
+          From independent furnished apartments and villas to luxurious five-star hotel
+          rooms, from thrilling desert safaris to unforgettable cruise packages, we offer a
+          complete range of accommodation and entertainment options at the most competitive
+          rates. Our professional, multilingual team provides continuous support to ensure
+          that travelers enjoy a pleasant, efficient, and cost-effective experience
+          throughout their stay.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div className="card">
+    <PhotoView {...card3}>
+      <Image src={card3} alt={title} className="m-0! size-full object-cover" />
+    </PhotoView>
+  </div>
+  <div className="card">
+    <PhotoView {...card4}>
+      <Image src={card4} alt={title} className="m-0! size-full object-cover" />
+    </PhotoView>
+  </div>
+  <div className="card">
+    <PhotoView {...card2}>
+      <Image src={card2} alt={title} className="m-0! size-full object-cover" />
+    </PhotoView>
+  </div>
+</div>
+<div className="prose col-span-2 max-w-[initial] space-y-4">
+  <div className="overflow-clip px-8 py-4 card">
+    <h3>Family Holiday Packages</h3>
+    <p>
+      We offer tailored packages for families, ensuring that every moment of the trip is a
+      memorable experience for everyone, from the youngest to the oldest.
+    </p>
+    <h3>Group Travel Services</h3>
+    <p>
+      Whether it’s a small group of 10 rooms or large tours with over 1,000 passengers, we
+      provide comprehensive group travel services. These services include leisure groups,
+      special interest tours, conferences, incentive travel, exhibitions, and more. Our
+      services at every destination include multilingual tour guides, meet-and-assist
+      services, airport and hotel representation, and the best transportation options.
+    </p>
+    <h3>Our Services for Hoteliers</h3>
+    <p>
+      With a network of over 7,000 distribution partners worldwide and professional account
+      management services, our travel division helps hoteliers optimize their revenue and
+      expand their global reach.
+    </p>
+    <p>
+      If your hotel is not yet registered in our network, please contact us for more
+      information about our hotel partnership program and become a part of the Rich Mind
+      Holiday family.
+    </p>
+  </div>
+</div>

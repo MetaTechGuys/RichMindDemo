@@ -42,7 +42,7 @@ function CompanyItem({ value }: CompanyItemProps) {
   const content = (
     <>
       <div className="font-display bg-linear-(--golded-gradient) bg-clip-text text-center text-4xl font-bold text-transparent">
-        {value.title}
+        {value.label}
       </div>
     </>
   );

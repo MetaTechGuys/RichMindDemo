@@ -110,7 +110,7 @@ export default function RootLayout({
         className={cn(
           serif.variable,
           sans.variable,
-          `min-h-screen max-w-screen overflow-x-hidden bg-white text-black`,
+          `relative min-h-screen max-w-screen overflow-x-hidden bg-white text-black`,
         )}
       >
         {children}

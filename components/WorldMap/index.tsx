@@ -71,7 +71,7 @@ export default function WorldMapSection() {
   }, []);
 
   return (
-    <div className="size-full bg-linear-(--golded-gulf) p-8" ref={ref}>
+    <div className="size-full bg-linear-(--midnight-blue) p-8" ref={ref}>
       <div className="flex size-full flex-col-reverse justify-end rounded-2xl sm:p-8 md:flex-row">
         <Accordion
           inView={inview}

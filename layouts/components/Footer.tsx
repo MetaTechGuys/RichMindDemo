@@ -14,12 +14,14 @@ export default function Footer({ secondary }: FooterProps) {
   const [showSubmit, setShowSubmit] = useState(false);
   return (
     <div
-      className={cn('overflow-x-hidden bg-white', secondary ? 'pt-12' : 'pt-24')}
+      className={cn('overflow-x-hidden', secondary ? 'pt-12' : 'pt-24')}
       // style={secondary ? secFooterStyle : footerStyle}
     >
       <div className="mx-auto grid grid-cols-1 gap-4 px-4 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-3 xl:ps-48">
         <div className="flex flex-col gap-3">
-          <h4 className="font-display mb-4 text-3xl md:mb-10">Our Headquarters</h4>
+          <h4 className="font-display mb-4 text-3xl font-bold select-none md:mb-10">
+            Our Headquarters
+          </h4>
           <div className="2xs:flex-row flex max-w-[370px] flex-col flex-wrap gap-4">
             <Button variant="primary" className="flex-1 text-sm">
               Corporate
@@ -84,7 +86,7 @@ export default function Footer({ secondary }: FooterProps) {
           </div>
         </div>
         <div className="hidden flex-col gap-3 ps-4 lg:flex">
-          <h4 className="font-display mb-10 text-3xl">Useful Links</h4>
+          <h4 className="font-display mb-10 text-3xl font-bold select-none">Useful Links</h4>
           <div className="grid grid-cols-2 gap-4 underline underline-offset-4">
             <Link href="/">Home</Link>
             <Link href="/about-us">About Us</Link>
@@ -106,7 +108,7 @@ export default function Footer({ secondary }: FooterProps) {
           </div>
         </div>
         <div className="hidden flex-col gap-3 md:flex">
-          <h4 className="font-display mb-10 text-3xl">Newsletter</h4>
+          <h4 className="font-display mb-10 text-3xl font-bold select-none">Newsletter</h4>
           <p className="w-xs">
             Stay updated with the latest news and developments from RICHMIND Holding.
           </p>
@@ -137,7 +139,7 @@ export default function Footer({ secondary }: FooterProps) {
                 className="absolute z-10 flex size-full items-center justify-start bg-white"
               >
                 <div className="text-gold-darker">
-                  <div className="font-display text-xl font-bold">Thank you</div>
+                  <div className="font-display text-xl font-bold select-none">Thank you</div>
                   <p>for subscribing to our newsletter!</p>
                   <p>
                     <small>
@@ -155,7 +157,7 @@ export default function Footer({ secondary }: FooterProps) {
         style={footerStyle}
         className={cn(
           'absolute bottom-0 z-0 h-[10vw] w-full -translate-y-8 overflow-clip tracking-wider sm:-translate-y-10',
-          'font-display text-center text-[15vw] leading-[10vw] font-bold',
+          'font-display text-center text-[15vw] leading-[10vw] font-bold select-none',
           'brightness-75',
           secondary ? 'text-white' : 'text-transparent',
         )}

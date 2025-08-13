@@ -28,6 +28,6 @@
       "remark-frontmatter-mdx",
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "data/companies/holiday.mdx"],
   "exclude": ["node_modules"]
 }

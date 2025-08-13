@@ -2,27 +2,35 @@ import { PropsWithChildren } from 'react';
 import Copyright from './components/Copyright';
 import Footer from './components/Footer';
 import { MEDIA } from '@/utils/constants';
+import { cn } from '@/utils/jsx-tools';
 
 interface LayoutProps {
-  secondary?: true;
+  secondary?: boolean;
+  thirdinary?: boolean;
 }
 
-export default function WebsiteLayout({ children, secondary }: PropsWithChildren<LayoutProps>) {
+export default function WebsiteLayout({
+  children,
+  secondary,
+  thirdinary,
+}: PropsWithChildren<LayoutProps>) {
   return (
     <>
       <header className="contents">
         <ResponsiveHelper />
       </header>
       {children}
-      <footer className="relative snap-end">
-        <Footer secondary={secondary} />
+      {!thirdinary ? (
         <video
           src={MEDIA.blackBackground}
           muted
           autoPlay
           loop
-          className="fixed inset-0 -z-[1] h-screen w-screen object-cover mix-blend-difference hue-rotate-165"
-        ></video>
+          className="fixed inset-0 -z-1 h-screen w-screen object-cover mix-blend-difference hue-rotate-165"
+        />
+      ) : null}
+      <footer className={cn('relative snap-end', { 'bg-white': !thirdinary })}>
+        <Footer secondary={secondary} />
         <Copyright />
       </footer>
     </>

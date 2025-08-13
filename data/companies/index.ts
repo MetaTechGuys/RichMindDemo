@@ -15,9 +15,12 @@ import * as tradingMdx from './trading.mdx';
 import { StaticImageData } from 'next/image';
 
 export interface CompanyData {
+  label: string;
   title: string;
+  layout?: 'design1';
   slug: string;
   image: StaticImageData;
+  cover: StaticImageData;
   imgClassName?: string;
   link?: string;
 }
